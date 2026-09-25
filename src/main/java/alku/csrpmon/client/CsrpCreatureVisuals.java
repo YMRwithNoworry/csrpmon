@@ -34,6 +34,8 @@ import net.minecraft.world.entity.Mob;
 public final class CsrpCreatureVisuals {
     /** Client-side stand-ins, keyed by the Pokemon entity id they stand in for. */
     private static final Map<Integer, Mob> STAND_INS = new HashMap<>();
+    /** Upper bound on cached stand-ins, so a long session cannot grow the map without limit. */
+    private static final int MAX_STAND_INS = 128;
 
     private CsrpCreatureVisuals() {
     }
@@ -91,6 +93,9 @@ public final class CsrpCreatureVisuals {
         Entity created = wanted.create(level);
         if (!(created instanceof Mob mob)) {
             return null;
+        }
+        if (STAND_INS.size() > MAX_STAND_INS) {
+            STAND_INS.clear();
         }
         STAND_INS.put(pokemon.getId(), mob);
         return mob;

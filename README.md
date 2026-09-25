@@ -19,6 +19,15 @@ Pokémon standing in the field, waiting to be battled or caught.
 | **The creatures keep their own look** | Battles are rendered with CSRP's own models, textures and animations, not substitutes. |
 | **Wild levels follow the SRP progression** | A parasite's Pokémon level rises with the world's CSRP evolution phase, so late-game hives are genuinely dangerous. |
 
+## Verified working
+
+![A wild CSRP Rupter rendered inside a Cobblemon battle](docs/screenshots/battle-rupter.png)
+
+A wild CSRP `rupter` met in a real client: it started a normal Cobblemon battle, it is drawn with its
+own CSRP model rather than Cobblemon's Substitute placeholder, and the species name resolves in
+Chinese. The full evidence — including the production crash that the first implementation caused —
+is in [`docs/VERIFICATION.md`](docs/VERIFICATION.md).
+
 ## ⚠ Before you start: CSRP currently does not boot on its own
 
 While verifying this addon I found that **CSRP 1.10.8 crashes during startup by itself**, with no
@@ -168,10 +177,13 @@ Three pieces, each deliberately small:
    spawns a `PokemonEntity` carrying the matching species and calls Cobblemon's own
    `BattleBuilder.pve(player, entity)`. The battle itself belongs entirely to Cobblemon.
 3. **The model bridge** — Cobblemon resolves Pokémon models from its own Blockbench repository, so an
-   addon species would render as a Substitute doll. `PokemonRendererMixin` intercepts the top of
-   `PokemonRenderer.render` for `csrpmon` species and instead asks the creature's *own* CSRP
-   renderer to draw a mirrored client-side stand-in of the original entity. The creature therefore
-   appears with its real model, texture and animation, in the world and in battle.
+   addon species would render as a Substitute doll. `CsrpRenderEvents` catches NeoForge's ordinary
+   `RenderLivingEvent.Pre` for the Pokémon entity and, for `csrpmon` species, cancels Cobblemon's
+   model and asks the creature's *own* CSRP renderer to draw a mirrored client-side stand-in of the
+   original entity. The creature therefore appears with its real model, texture and animation, in the
+   world and in battle. This is deliberately an event rather than a Mixin into Cobblemon: the first
+   Mixin-based attempt crashed production clients even though its target descriptor was verifiably
+   correct (see [`docs/VERIFICATION.md`](docs/VERIFICATION.md) §2).
 
 Pacification is a fourth, independent piece: `ParasitePacifier` removes `NearestAttackableTargetGoal`
 from CSRP creatures on join and vetoes `LivingChangeTargetEvent` for any target the creature was not

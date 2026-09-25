@@ -99,42 +99,70 @@ Re-authoring 24 SRP creatures as Bedrock models was not an option: CSRP geometry
 (`assets/csrp/tabula/`) driven by CSRP's own Citadel animation runtime, and the two formats do not
 map onto each other without a converter.
 
-Instead `PokemonRendererMixin` injects at the head of the one method that decides what a Pokémon
-looks like:
+### The approach that failed
+
+The first implementation was a Mixin into Cobblemon's renderer:
 
 ```java
-@Inject(
-    method = "render(Lcom/cobblemon/mod/common/entity/pokemon/PokemonEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V",
-    at = @At("HEAD"), cancellable = true, remap = false)
-private void csrpmon$renderParasiteModel(PokemonEntity entity, ... , CallbackInfo ci) { ... }
+@Mixin(value = PokemonRenderer.class, remap = false)
+public abstract class PokemonRendererMixin {
+    @Inject(
+        method = "render(Lcom/cobblemon/mod/common/entity/pokemon/PokemonEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;I)V",
+        at = @At("HEAD"), cancellable = true, remap = false)
+    // ...
+}
 ```
 
-That exact descriptor was verified against the shipped jar with `javap`:
+The descriptor is byte-for-byte correct — `javap` against the shipped Cobblemon 1.8.1 jar shows
+exactly one matching method, and the mixin applies in a development client. **In a production client
+it crashes the game:**
 
 ```
-public void render(com.cobblemon.mod.common.entity.pokemon.PokemonEntity, float, float,
-                   com.mojang.blaze3d.vertex.PoseStack,
-                   net.minecraft.client.renderer.MultiBufferSource, int);
+Mixin apply for mod csrpmon failed csrpmon.client.mixins.json:PokemonRendererMixin
+  InvalidInjectionException: Critical injection failure: @Inject annotation on
+  csrpmon$renderParasiteModel could not find any targets matching 'render(...)V'
+  in com/cobblemon/mod/common/client/render/pokemon/PokemonRenderer. No refMap loaded.
 ```
 
-For a `csrpmon` species the mixin cancels Cobblemon's rendering and delegates to
-`CsrpCreatureVisuals`, which:
+`No refMap loaded` is the whole story: moddev generates no refmap for this project, and Mixin will
+not resolve a fully-specified selector against a *mod* target without one. A selector that happens to
+be correct is not the same as one Mixin will accept — and a cosmetic feature must never take the
+client down. The Mixin was removed, along with both mixin configs and their `[[mixins]]` entries.
 
-1. looks up the CSRP `EntityType` that the species maps back to,
+### What replaced it
+
+`CsrpRenderEvents` listens to an ordinary NeoForge event:
+
+```java
+@EventBusSubscriber(modid = Csrpmon.MODID, value = Dist.CLIENT)
+public final class CsrpRenderEvents {
+    @SubscribeEvent
+    public static void onRenderLivingPre(RenderLivingEvent.Pre<PokemonEntity, PosablePokemonEntityModel> event) {
+        // ...
+        if (CsrpCreatureVisuals.render(pokemon, yaw, event.getPartialTick(),
+                event.getPoseStack(), event.getMultiBufferSource(), event.getPackedLight())) {
+            event.setCanceled(true);
+        }
+    }
+}
+```
+
+This needs no method descriptor, so no signature change, mapping or missing refmap can break it. It
+fires only for the Pokémon entity type, and cancelling it skips Cobblemon's model while a CSRP
+renderer draws instead.
+
+`CsrpCreatureVisuals` then:
+
+1. identifies the species and maps it back to the CSRP `EntityType`,
 2. keeps a **client-side stand-in** of that entity (`EntityType#create(ClientLevel)`), one per
-   `PokemonEntity` id,
+   `PokemonEntity` id, capped at 128 entries,
 3. mirrors position, rotations, `tickCount`, `WalkAnimationState` and delta movement onto it every
    frame, so CSRP's animation code sees a normally-moving creature,
 4. fetches the creature's **own** renderer from
    `Minecraft.getInstance().getEntityRenderDispatcher().getRenderer(standIn)` and calls it.
 
-The creature therefore shows up with its real model, texture and animation — in the world and in the
-battle scene, where Cobblemon has already moved the `PokemonEntity` into position.
-
-Everything is wrapped in `try/catch`: if the bridge throws, the mixin does not cancel and Cobblemon
-renders the species normally, so a rendering problem can never break a battle. `remap = false` is
-correct because NeoForge 1.20.2+ runs with Mojang official names and does not remap mods, and
-Cobblemon's classes are unobfuscated in the released jar.
+Everything sits inside `try/catch`: a failure is logged once and leaves Cobblemon's own rendering in
+place, so a rendering problem degrades to a Substitute doll instead of crashing.
 
 ## 5. Pacification
 

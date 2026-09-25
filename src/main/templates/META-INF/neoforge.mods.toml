@@ -39,9 +39,3 @@ type="required"
 versionRange="[1.7,)"
 ordering="AFTER"
 side="BOTH"
-
-[[mixins]]
-config = "csrpmon.mixins.json"
-
-[[mixins]]
-config = "csrpmon.client.mixins.json"
