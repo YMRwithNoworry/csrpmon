@@ -19,6 +19,39 @@ Pokémon standing in the field, waiting to be battled or caught.
 | **The creatures keep their own look** | Battles are rendered with CSRP's own models, textures and animations, not substitutes. |
 | **Wild levels follow the SRP progression** | A parasite's Pokémon level rises with the world's CSRP evolution phase, so late-game hives are genuinely dangerous. |
 
+## ⚠ Before you start: CSRP currently does not boot on its own
+
+While verifying this addon I found that **CSRP 1.10.8 crashes during startup by itself**, with no
+addons installed at all:
+
+```
+Mod loading issue for: csrp
+Failure message: csrp encountered an error while dispatching the EntityAttributeCreationEvent event
+    java.lang.IllegalStateException: Cannot get config value before config is loaded.
+        at alku.csrp.config.MobsConfig.shycoHealthMultiplier(MobsConfig.java:391)
+        at alku.csrp.entity.LongarmsEntity.createAttributes(LongarmsEntity.java:88)
+```
+
+CSRP's own `run/crash-reports/` already contained this exact failure from before this addon existed.
+The cause is that `createAttributes()` reads `ModConfigSpec` values, while NeoForge fires
+`EntityAttributeCreationEvent` before config files are loaded.
+
+`tools/csrp_early_config_hotfix.mjs` fixes it in place (idempotent, `--dry-run` supported):
+
+```bat
+node tools/csrp_early_config_hotfix.mjs --csrp-src ../csrp/src/main/java/alku/csrp
+```
+
+It guards 465 config reads so they fall back to their declared default until the config is loaded,
+and behave exactly as before afterwards. Revert with:
+
+```bat
+cd ../csrp
+git checkout -- src/main/java/alku/csrp/Config.java src/main/java/alku/csrp/config
+```
+
+Full details and all verification evidence: [`docs/VERIFICATION.md`](docs/VERIFICATION.md).
+
 ## Requirements
 
 | Component | Version |
