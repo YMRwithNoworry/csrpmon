@@ -1,0 +1,99 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8023,
+  "name": "Ancient Dreadnaut",
+  "pokedex": [
+    "csrpmon.species.ancientdreadnaut.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier6"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 40,
+  "weight": 2400,
+  "primaryType": "steel",
+  "abilities": [
+    "h:filter",
+    "h:pressure"
+  ],
+  "eggGroups": [
+    "mineral"
+  ],
+  "baseStats": {
+    "hp": 140,
+    "attack": 126,
+    "defence": 140,
+    "special_attack": 96,
+    "special_defence": 106,
+    "speed": 52
+  },
+  "evYield": {
+    "hp": 3,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 460,
+  "experienceGroup": "slow",
+  "catchRate": 3,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 4,
+    "height": 4,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 1,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 4,
+    "entries": [
+      {
+        "item": "csrp:dispatcher_drop",
+        "quantityRange": "1-2"
+      },
+      {
+        "item": "csrp:bloody_iron_ingot",
+        "quantityRange": "2-4"
+      }
+    ]
+  },
+  "moves": [
+    "1:metalclaw",
+    "1:bite",
+    "1:dragonbreath",
+    "60:ironhead",
+    "66:dragonclaw",
+    "72:flashcannon",
+    "78:heavyslam",
+    "85:hyperbeam"
+  ],
+  "secondaryType": "dragon"
+}

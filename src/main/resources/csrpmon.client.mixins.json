@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "alku.csrpmon.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "PokemonRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

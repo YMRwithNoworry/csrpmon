@@ -1,0 +1,99 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8011,
+  "name": "Dredge",
+  "pokedex": [
+    "csrpmon.species.dredge.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier3"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 34,
+  "weight": 410,
+  "primaryType": "ground",
+  "abilities": [
+    "h:sandforce",
+    "sturdy",
+    "h:ironfist"
+  ],
+  "eggGroups": [
+    "mineral"
+  ],
+  "baseStats": {
+    "hp": 86,
+    "attack": 98,
+    "defence": 92,
+    "special_attack": 48,
+    "special_defence": 70,
+    "speed": 52
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 2,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 168,
+  "experienceGroup": "medium_slow",
+  "catchRate": 95,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 0.8,
+    "height": 3.4,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 2,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "csrp:bloody_iron_ingot",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "csrp:bone",
+        "quantityRange": "0-1"
+      }
+    ]
+  },
+  "moves": [
+    "1:mudslap",
+    "1:harden",
+    "25:bulldoze",
+    "30:metalclaw",
+    "36:ironhead",
+    "42:earthquake",
+    "48:flashcannon"
+  ],
+  "secondaryType": "steel"
+}

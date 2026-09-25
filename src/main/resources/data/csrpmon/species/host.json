@@ -1,0 +1,113 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8009,
+  "name": "Host",
+  "pokedex": [
+    "csrpmon.species.host.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier3"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 35,
+  "weight": 320,
+  "primaryType": "dark",
+  "abilities": [
+    "poisonpoint",
+    "h:regenerator"
+  ],
+  "eggGroups": [
+    "human_like"
+  ],
+  "baseStats": {
+    "hp": 88,
+    "attack": 86,
+    "defence": 82,
+    "special_attack": 70,
+    "special_defence": 78,
+    "speed": 62
+  },
+  "evYield": {
+    "hp": 2,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 184,
+  "experienceGroup": "medium_slow",
+  "catchRate": 75,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 0.9,
+    "height": 3.5,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 2,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "csrp:assimilated_flesh",
+        "quantityRange": "0-3"
+      },
+      {
+        "item": "csrp:ada_viscera_drop",
+        "percentage": 20
+      }
+    ]
+  },
+  "moves": [
+    "1:tackle",
+    "1:poisonsting",
+    "1:bite",
+    "30:sludgebomb",
+    "36:crunch",
+    "42:toxic",
+    "48:gunkshot"
+  ],
+  "secondaryType": "poison",
+  "evolutions": [
+    {
+      "id": "host_hostii",
+      "variant": "level_up",
+      "result": "hostii",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 50
+        }
+      ]
+    }
+  ]
+}

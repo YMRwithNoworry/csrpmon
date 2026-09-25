@@ -1,0 +1,135 @@
+plugins {
+    id 'java-library'
+    id 'idea'
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+version = mod_version
+group = mod_group_id
+
+base {
+    archivesName = mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url = 'https://maven.neoforged.net/releases' }
+    maven { url = 'https://maven.parchmentmc.org' }
+    maven { url = 'https://api.modrinth.com/maven' }
+    maven { url = 'https://maven.firstdark.dev/snapshots' }
+}
+
+// ---- Third party mod jars (not committed) ----------------------------------
+def csrpJarFile = file(project.findProperty('csrp_jar') ?: 'libs/csrp.jar')
+def cobblemonJarFile = file(project.findProperty('cobblemon_jar') ?: 'libs/cobblemon.jar')
+
+neoForge {
+    version = project.neo_version
+
+    runs {
+        client {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            gameDirectory = project.file('run')
+        }
+        server {
+            server()
+            programArgument '--nogui'
+            gameDirectory = project.file('run-server')
+        }
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all',
+                    '--output', file('src/generated/resources/').getAbsolutePath(),
+                    '--existing', file('src/main/resources/').getAbsolutePath()
+            gameDirectory = project.file('run-data')
+        }
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+dependencies {
+    // CSRP (Scape and Run: Parasites) - compile against the built mod jar
+    compileOnly files(csrpJarFile)
+    // Cobblemon - compile against the official NeoForge 1.21.1 artifact
+    compileOnly files(cobblemonJarFile)
+    // Cobblemon is written in Kotlin; javac needs the stdlib to read its annotations/metadata.
+    compileOnly 'org.jetbrains.kotlin:kotlin-stdlib:2.0.21'
+}
+
+// ---------------------------------------------------------------------------------------------
+// Dev runs are fed from the run directory's mods/ folder rather than the compiler classpath:
+// FML scans mods/ for mod files, and putting them on the classpath as well makes the module
+// layer explode ("reads more than one module named kotlinforforge.all"). These tasks keep that
+// folder in sync so runClient/runServer work with a single command.
+// ---------------------------------------------------------------------------------------------
+def devRuntimeJars = [
+        'libs/kotlinforforge-5.12.0-all.jar',
+        'libs/citadel-2.7.1-1.21.1.jar',
+        'libs/ldlib2.jar'
+].collect { file(it) }
+
+def devModJars = files(csrpJarFile, cobblemonJarFile, devRuntimeJars)
+
+tasks.register('syncRunMods', Sync) {
+    group = 'neoforge'
+    description = 'Copies CSRP, Cobblemon and their dependencies into run/mods for dev runs.'
+    from devModJars
+    into layout.projectDirectory.dir('run/mods')
+}
+
+tasks.register('syncRunServerMods', Sync) {
+    group = 'neoforge'
+    description = 'Copies CSRP, Cobblemon and their dependencies into run-server/mods for dev runs.'
+    from devModJars
+    into layout.projectDirectory.dir('run-server/mods')
+}
+
+tasks.matching { it.name == 'runClient' }.configureEach { dependsOn 'syncRunMods' }
+tasks.matching { it.name == 'runServer' }.configureEach { dependsOn 'syncRunServerMods' }
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+var generateModMetadata = tasks.register('generateModMetadata', ProcessResources) {
+    var replaceProperties = [minecraft_version      : minecraft_version,
+                             minecraft_version_range: minecraft_version_range,
+                             neo_version            : neo_version,
+                             neo_version_range      : neo_version_range,
+                             loader_version_range   : loader_version_range,
+                             mod_id                 : mod_id,
+                             mod_name               : mod_name,
+                             mod_license            : mod_license,
+                             mod_version            : mod_version,
+                             mod_authors            : mod_authors,
+                             mod_description        : mod_description]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from 'src/main/templates'
+    into 'build/generated/sources/modMetadata'
+}
+
+sourceSets.main.resources.srcDir generateModMetadata
+neoForge.ideSyncTask generateModMetadata
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}

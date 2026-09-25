@@ -1,0 +1,100 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8022,
+  "name": "Kirin",
+  "pokedex": [
+    "csrpmon.species.kirin.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier6"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 89,
+  "weight": 1860,
+  "primaryType": "electric",
+  "abilities": [
+    "h:download",
+    "h:sheerforce",
+    "h:teravolt"
+  ],
+  "eggGroups": [
+    "dragon"
+  ],
+  "baseStats": {
+    "hp": 122,
+    "attack": 112,
+    "defence": 100,
+    "special_attack": 134,
+    "special_defence": 108,
+    "speed": 104
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 3,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 480,
+  "experienceGroup": "slow",
+  "catchRate": 3,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 2.1271334,
+    "height": 8.85,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 1,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 4,
+    "entries": [
+      {
+        "item": "csrp:dispatcher_drop",
+        "quantityRange": "1-3"
+      },
+      {
+        "item": "minecraft:nether_star",
+        "percentage": 5
+      }
+    ]
+  },
+  "moves": [
+    "1:thundershock",
+    "1:dragonbreath",
+    "1:quickattack",
+    "60:thunderbolt",
+    "66:dragonclaw",
+    "72:thunder",
+    "78:outrage",
+    "85:extremespeed"
+  ],
+  "secondaryType": "dragon"
+}

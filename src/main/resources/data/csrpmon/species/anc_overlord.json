@@ -1,0 +1,100 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8024,
+  "name": "Ancient Overlord",
+  "pokedex": [
+    "csrpmon.species.ancientoverlord.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier6"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 29,
+  "weight": 2100,
+  "primaryType": "dark",
+  "abilities": [
+    "h:moldbreaker",
+    "h:adaptability",
+    "h:pressure"
+  ],
+  "eggGroups": [
+    "dragon"
+  ],
+  "baseStats": {
+    "hp": 120,
+    "attack": 132,
+    "defence": 102,
+    "special_attack": 128,
+    "special_defence": 100,
+    "speed": 98
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 3,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 500,
+  "experienceGroup": "slow",
+  "catchRate": 3,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 2.4,
+    "height": 2.9,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 1,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 4,
+    "entries": [
+      {
+        "item": "csrp:dispatcher_drop",
+        "quantityRange": "1-3"
+      },
+      {
+        "item": "minecraft:nether_star",
+        "percentage": 8
+      }
+    ]
+  },
+  "moves": [
+    "1:bite",
+    "1:dragonbreath",
+    "1:crunch",
+    "62:dragonclaw",
+    "68:darkpulse",
+    "74:outrage",
+    "80:hyperbeam",
+    "88:closecombat"
+  ],
+  "secondaryType": "dragon"
+}

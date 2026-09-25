@@ -1,0 +1,113 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8008,
+  "name": "Thrall",
+  "pokedex": [
+    "csrpmon.species.thrall.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier3"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 31,
+  "weight": 260,
+  "primaryType": "dark",
+  "abilities": [
+    "guts",
+    "h:sheerforce"
+  ],
+  "eggGroups": [
+    "human_like"
+  ],
+  "baseStats": {
+    "hp": 78,
+    "attack": 92,
+    "defence": 70,
+    "special_attack": 45,
+    "special_defence": 62,
+    "speed": 78
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 2,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 152,
+  "experienceGroup": "medium_fast",
+  "catchRate": 100,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 0.8,
+    "height": 3.05,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 2,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "csrp:assimilated_flesh",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "csrp:bloody_iron_ingot",
+        "percentage": 25
+      }
+    ]
+  },
+  "moves": [
+    "1:scratch",
+    "1:leer",
+    "1:furyswipes",
+    "23:karatechop",
+    "28:brickbreak",
+    "34:crunch",
+    "40:closecombat"
+  ],
+  "secondaryType": "fighting",
+  "evolutions": [
+    {
+      "id": "thrall_host",
+      "variant": "level_up",
+      "result": "host",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 36
+        }
+      ]
+    }
+  ]
+}

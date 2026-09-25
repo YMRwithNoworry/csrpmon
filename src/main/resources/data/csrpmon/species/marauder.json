@@ -1,0 +1,99 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8018,
+  "name": "Marauder",
+  "pokedex": [
+    "csrpmon.species.marauder.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier5"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 42,
+  "weight": 520,
+  "primaryType": "fighting",
+  "abilities": [
+    "h:moldbreaker",
+    "h:defiant"
+  ],
+  "eggGroups": [
+    "human_like"
+  ],
+  "baseStats": {
+    "hp": 110,
+    "attack": 128,
+    "defence": 90,
+    "special_attack": 58,
+    "special_defence": 82,
+    "speed": 102
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 3,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 288,
+  "experienceGroup": "slow",
+  "catchRate": 30,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 0.901,
+    "height": 4.2,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 1,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "csrp:bloody_iron_ingot",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "csrp:assimilated_flesh",
+        "quantityRange": "0-2"
+      }
+    ]
+  },
+  "moves": [
+    "1:scratch",
+    "1:leer",
+    "1:furyswipes",
+    "44:nightslash",
+    "50:brickbreak",
+    "56:crunch",
+    "62:closecombat",
+    "68:suckerpunch"
+  ],
+  "secondaryType": "dark"
+}

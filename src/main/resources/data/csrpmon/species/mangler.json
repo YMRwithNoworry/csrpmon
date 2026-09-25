@@ -1,0 +1,99 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8005,
+  "name": "Mangler",
+  "pokedex": [
+    "csrpmon.species.mangler.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier2"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 10,
+  "weight": 145,
+  "primaryType": "bug",
+  "abilities": [
+    "swarm",
+    "h:toughclaws"
+  ],
+  "eggGroups": [
+    "bug"
+  ],
+  "baseStats": {
+    "hp": 62,
+    "attack": 78,
+    "defence": 55,
+    "special_attack": 42,
+    "special_defence": 50,
+    "speed": 66
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 1,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 118,
+  "experienceGroup": "medium_fast",
+  "catchRate": 140,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1,
+    "height": 1,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 4,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "csrp:assimilated_flesh",
+        "quantityRange": "0-1"
+      },
+      {
+        "item": "csrp:bloody_bone",
+        "percentage": 20
+      }
+    ]
+  },
+  "moves": [
+    "1:scratch",
+    "1:leer",
+    "1:bugbite",
+    "15:furyswipes",
+    "20:slash",
+    "25:crunch",
+    "31:xscissor",
+    "37:nightslash"
+  ],
+  "secondaryType": "dark"
+}

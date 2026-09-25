@@ -1,0 +1,113 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8014,
+  "name": "Primitive Vermin",
+  "pokedex": [
+    "csrpmon.species.primitivevermin.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier3"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 14,
+  "weight": 240,
+  "primaryType": "bug",
+  "abilities": [
+    "h:adaptability",
+    "h:sniper"
+  ],
+  "eggGroups": [
+    "bug"
+  ],
+  "baseStats": {
+    "hp": 80,
+    "attack": 96,
+    "defence": 74,
+    "special_attack": 58,
+    "special_defence": 66,
+    "speed": 96
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 2,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 172,
+  "experienceGroup": "medium_fast",
+  "catchRate": 90,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1.1,
+    "height": 1.4,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 2,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "csrp:bone",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "csrp:assimilated_flesh",
+        "percentage": 30
+      }
+    ]
+  },
+  "moves": [
+    "1:scratch",
+    "1:leer",
+    "1:bugbite",
+    "26:fellstinger",
+    "32:xscissor",
+    "38:crunch",
+    "44:firstimpression"
+  ],
+  "secondaryType": "dark",
+  "evolutions": [
+    {
+      "id": "pri_vermin_pri_longarms",
+      "variant": "level_up",
+      "result": "pri_longarms",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 38
+        }
+      ]
+    }
+  ]
+}

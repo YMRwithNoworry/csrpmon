@@ -1,0 +1,113 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8007,
+  "name": "Heed",
+  "pokedex": [
+    "csrpmon.species.heed.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier2"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 19,
+  "weight": 88,
+  "primaryType": "psychic",
+  "abilities": [
+    "h:forewarn",
+    "telepathy",
+    "h:magicguard"
+  ],
+  "eggGroups": [
+    "amorphous"
+  ],
+  "baseStats": {
+    "hp": 58,
+    "attack": 40,
+    "defence": 52,
+    "special_attack": 74,
+    "special_defence": 66,
+    "speed": 48
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 1,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 86,
+  "experienceGroup": "medium_slow",
+  "catchRate": 160,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 0.9,
+    "height": 1.9,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 4,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "minecraft:ender_pearl",
+        "percentage": 20
+      },
+      {
+        "item": "csrp:bone",
+        "quantityRange": "0-1"
+      }
+    ]
+  },
+  "moves": [
+    "1:confusion",
+    "1:growl",
+    "7:psybeam",
+    "13:lightscreen",
+    "19:reflect",
+    "25:psyshock",
+    "31:psychic"
+  ],
+  "evolutions": [
+    {
+      "id": "heed_dredge",
+      "variant": "level_up",
+      "result": "dredge",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 26
+        }
+      ]
+    }
+  ]
+}

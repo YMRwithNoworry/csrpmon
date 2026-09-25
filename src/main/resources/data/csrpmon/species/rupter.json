@@ -1,0 +1,100 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8002,
+  "name": "Rupter",
+  "pokedex": [
+    "csrpmon.species.rupter.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier2"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 10,
+  "weight": 120,
+  "primaryType": "bug",
+  "abilities": [
+    "swarm",
+    "blaze",
+    "h:aftermath"
+  ],
+  "eggGroups": [
+    "bug"
+  ],
+  "baseStats": {
+    "hp": 58,
+    "attack": 62,
+    "defence": 50,
+    "special_attack": 55,
+    "special_defence": 48,
+    "speed": 62
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 1,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 108,
+  "experienceGroup": "medium_fast",
+  "catchRate": 150,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 0.85,
+    "height": 1,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 4,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "csrp:rupter_viscera",
+        "quantityRange": "0-1"
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "percentage": 40
+      }
+    ]
+  },
+  "moves": [
+    "1:tackle",
+    "1:stringshot",
+    "1:bugbite",
+    "13:ember",
+    "17:bite",
+    "21:flamecharge",
+    "26:lunge",
+    "31:flamethrower"
+  ],
+  "secondaryType": "fire"
+}

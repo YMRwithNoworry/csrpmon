@@ -1,0 +1,99 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8021,
+  "name": "Draconite",
+  "pokedex": [
+    "csrpmon.species.draconite.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier6"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 38,
+  "weight": 1240,
+  "primaryType": "dragon",
+  "abilities": [
+    "h:multiscale",
+    "h:sheerforce"
+  ],
+  "eggGroups": [
+    "dragon"
+  ],
+  "baseStats": {
+    "hp": 118,
+    "attack": 124,
+    "defence": 110,
+    "special_attack": 88,
+    "special_defence": 96,
+    "speed": 64
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 3,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 420,
+  "experienceGroup": "slow",
+  "catchRate": 5,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 2.4,
+    "height": 3.8,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 1,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 4,
+    "entries": [
+      {
+        "item": "csrp:dispatcher_drop",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "minecraft:diamond",
+        "percentage": 15
+      }
+    ]
+  },
+  "moves": [
+    "1:rockthrow",
+    "1:bite",
+    "1:dragonbreath",
+    "55:rockslide",
+    "61:dragonclaw",
+    "67:stoneedge",
+    "73:outrage",
+    "80:dragonpulse"
+  ],
+  "secondaryType": "rock"
+}

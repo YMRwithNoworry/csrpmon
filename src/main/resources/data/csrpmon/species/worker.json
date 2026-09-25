@@ -1,0 +1,112 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8006,
+  "name": "Worker",
+  "pokedex": [
+    "csrpmon.species.worker.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier2"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 7,
+  "weight": 95,
+  "primaryType": "bug",
+  "abilities": [
+    "swarm",
+    "sturdy"
+  ],
+  "eggGroups": [
+    "bug"
+  ],
+  "baseStats": {
+    "hp": 55,
+    "attack": 52,
+    "defence": 62,
+    "special_attack": 38,
+    "special_defence": 55,
+    "speed": 40
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 1,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 74,
+  "experienceGroup": "medium_fast",
+  "catchRate": 180,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 0.65,
+    "height": 0.65,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 4,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "csrp:hive_scrap",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "csrp:bloody_iron_ingot",
+        "percentage": 15
+      }
+    ]
+  },
+  "moves": [
+    "1:tackle",
+    "1:harden",
+    "6:bugbite",
+    "12:irondefense",
+    "18:dig",
+    "24:xscissor",
+    "30:ironhead"
+  ],
+  "evolutions": [
+    {
+      "id": "worker_thrall",
+      "variant": "level_up",
+      "result": "thrall",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 24
+        }
+      ]
+    }
+  ]
+}

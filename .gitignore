@@ -1,0 +1,28 @@
+# Gradle / build output
+.gradle/
+build/
+run/
+run-server/
+run-data/
+out/
+*.log
+
+# Third party mod jars (large binaries, not redistributed)
+libs/*.jar
+libs/*.txt
+
+# Local reference checkouts (Cobblemon source used for API reference)
+.ref/
+
+# IDE
+.idea/
+*.iml
+.eclipse/
+.settings/
+.classpath
+.project
+.vscode/
+
+# OS
+Thumbs.db
+Desktop.ini

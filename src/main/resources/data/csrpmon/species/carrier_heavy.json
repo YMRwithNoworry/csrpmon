@@ -1,0 +1,98 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8013,
+  "name": "Heavy Carrier",
+  "pokedex": [
+    "csrpmon.species.heavycarrier.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier4"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 31,
+  "weight": 620,
+  "primaryType": "dark",
+  "abilities": [
+    "h:filter",
+    "sturdy"
+  ],
+  "eggGroups": [
+    "flying"
+  ],
+  "baseStats": {
+    "hp": 104,
+    "attack": 112,
+    "defence": 118,
+    "special_attack": 52,
+    "special_defence": 84,
+    "speed": 46
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 2,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 218,
+  "experienceGroup": "slow",
+  "catchRate": 50,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1.3,
+    "height": 3.1,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 2,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "csrp:bloody_iron_ingot",
+        "quantityRange": "1-3"
+      },
+      {
+        "item": "csrp:assimilated_flesh",
+        "quantityRange": "0-2"
+      }
+    ]
+  },
+  "moves": [
+    "1:tackle",
+    "1:metalclaw",
+    "1:wingattack",
+    "40:ironhead",
+    "46:bodyslam",
+    "52:crunch",
+    "58:heavyslam"
+  ],
+  "secondaryType": "steel"
+}

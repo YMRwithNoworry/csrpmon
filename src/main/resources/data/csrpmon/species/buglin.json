@@ -1,0 +1,111 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8001,
+  "name": "Buglin",
+  "pokedex": [
+    "csrpmon.species.buglin.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier1"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 3,
+  "weight": 18,
+  "primaryType": "bug",
+  "abilities": [
+    "swarm",
+    "h:compoundeyes"
+  ],
+  "eggGroups": [
+    "bug"
+  ],
+  "baseStats": {
+    "hp": 50,
+    "attack": 48,
+    "defence": 40,
+    "special_attack": 36,
+    "special_defence": 40,
+    "speed": 60
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 1
+  },
+  "baseExperienceYield": 42,
+  "experienceGroup": "medium_fast",
+  "catchRate": 225,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 0.5,
+    "height": 0.3,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 4,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 1,
+    "entries": [
+      {
+        "item": "csrp:bone",
+        "quantityRange": "0-1"
+      },
+      {
+        "item": "minecraft:rotten_flesh",
+        "percentage": 25
+      }
+    ]
+  },
+  "moves": [
+    "1:tackle",
+    "1:stringshot",
+    "4:bugbite",
+    "8:leechlife",
+    "12:bite",
+    "16:furyswipes"
+  ],
+  "evolutions": [
+    {
+      "id": "buglin_rupter",
+      "variant": "level_up",
+      "result": "rupter",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 14
+        }
+      ]
+    }
+  ]
+}

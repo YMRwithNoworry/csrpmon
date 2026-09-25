@@ -1,0 +1,98 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8019,
+  "name": "Architect",
+  "pokedex": [
+    "csrpmon.species.architect.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier5"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 26,
+  "weight": 690,
+  "primaryType": "steel",
+  "abilities": [
+    "h:filter",
+    "h:bulletproof"
+  ],
+  "eggGroups": [
+    "mineral"
+  ],
+  "baseStats": {
+    "hp": 115,
+    "attack": 86,
+    "defence": 122,
+    "special_attack": 108,
+    "special_defence": 102,
+    "speed": 48
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 3,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 302,
+  "experienceGroup": "slow",
+  "catchRate": 25,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 1.9,
+    "height": 2.6,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 1,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "csrp:bloody_iron_ingot",
+        "quantityRange": "1-2"
+      },
+      {
+        "item": "csrp:assimilated_flesh",
+        "quantityRange": "0-2"
+      }
+    ]
+  },
+  "moves": [
+    "1:confusion",
+    "1:harden",
+    "1:metalclaw",
+    "48:irondefense",
+    "54:flashcannon",
+    "60:psychic",
+    "66:ironhead"
+  ],
+  "secondaryType": "psychic"
+}
