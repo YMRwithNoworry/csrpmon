@@ -1,0 +1,183 @@
+{
+  "id": "pri_reeker",
+  "dex": 8039,
+  "zh": "原初腐嗅",
+  "en": "Primitive Reeker",
+  "types": [
+    "虫",
+    "毒"
+  ],
+  "kind": "毒雾喷散寄生宝可梦",
+  "height": 1.8,
+  "weight": 58,
+  "stats": [
+    74,
+    66,
+    58,
+    82,
+    68,
+    54
+  ],
+  "statNote": "总和 402。特攻 82 明显高于攻击 66——它的伤害主要来自**喷散**而不是撕咬。SRP 中它的近战效果是一整套：中毒 100 tick，并**根据皮肤**追加 Viral 或 Bleed，同时 `launchSlime(target)` 把目标弹飞。",
+  "core": "“它身上那层皮决定了你中的是什么毒——同一只生物，五种不同的坏消息。”",
+  "visual": [
+    [
+      "头部",
+      "前端是一圈可外翻的喷散腔，没有明显颚部",
+      "SRP Reeker kind 的喷散结构"
+    ],
+    [
+      "眼睛",
+      "四枚分散在喷散腔周围的黄绿色点",
+      "SRP 模型头部结构"
+    ],
+    [
+      "皮肤",
+      "**体表有多套可替换的皮**：正常 / 脆弱 / 病毒 / 狂战 / 厚重",
+      "`REEKER_SKIN_NORMAL/FRAGILE/VIRULENT/BERSERKER/HEAVY = 0/1/5/6/7`"
+    ],
+    [
+      "背腺",
+      "成排的囊状腺体，不同皮肤下颜色不同",
+      "皮肤决定命中追加效果的机制"
+    ],
+    [
+      "肢体",
+      "四足短粗，几乎不用于战斗",
+      "攻击力 66 的外形依据"
+    ],
+    [
+      "颜色",
+      "随皮肤变化：正常暗红 / 病毒暗紫 / 狂战猩红 / 厚重深灰",
+      "SRP 皮肤系统"
+    ]
+  ],
+  "pose": "身体鼓起、喷散腔半开，随时准备喷出内容物；使用冲锋时会把整个身体拉成一条线。",
+  "preserved": [
+    "**中毒近战**——`target.addEffect(new MobEffectInstance(MobEffects.POISON, 100, 0), this)`",
+    "**皮肤决定追加效果**——`REEKER_SKIN_VIRULENT` → `EffectStacking.apply(target, ModMobEffects.VIRAL, 40, 0)`；`REEKER_SKIN_BERSERKER` → `EffectStacking.apply(target, ModMobEffects.BLEED, 40, 0)`",
+    "**弹飞目标**——`launchSlime(target)`",
+    "**招募同伴**——`ReekerRecruitFollowersGoal`：无目标且无 leader 时每 20 tick 尝试一次",
+    "**冲锋蓄力**——`REEKER_CHARGE_TICKS = 40`，含 `REEKER_CHARGE_NONE / WINDUP / CHARGING` 三态",
+    "**专属球体效果**——`MobsConfig.reekerOrbEffects()`",
+    "**Ricardo 变体自爆**——`isRicardoVariant()` 时以 1.8F 强度爆炸"
+  ],
+  "pokemonized": [
+    "**皮肤系统是我见过最现成的宝可梦化素材**：五种皮肤（正常/脆弱/病毒/狂战/厚重）各自改变命中追加效果。我把它做成特性——**同一只生物，配置不同就是不同的对手**",
+    "`launchSlime()` 把目标弹飞，这个动作在宝可梦里翻译成\"强制对手换场\"是过度解读——所以我只做成**降低速度并打断连续行动**，不虚构换场效果",
+    "招募同伴是明确写出的目标（`ReekerRecruitFollowersGoal`），所以我给了它召唤类招式，且召唤物必须来自正典"
+  ],
+  "designNote": "**资料冲突记录**：源码中存在 `isRicardoVariant()` 分支（该变体死亡时以 1.8F 强度爆炸）。这是一个具名变体，但其来源未在代码中说明。我**不把它当作独立生物**，也不为它单独设计——只在描述中记录该行为存在。",
+  "ability": {
+    "name": "皮肤分化（`skindifferentiation`）",
+    "effect": "出场时随机获得一种皮肤，决定自身接触类招式的追加效果：正常＝无追加；脆弱＝自身防御 -1 阶段但速度 +1；病毒＝附加【病毒侵蚀】；狂战＝附加流血；厚重＝速度 -1 但受到伤害 -15%。对应 `REEKER_SKIN_*` 常量。"
+  },
+  "hidden": {
+    "name": "喷散腺体（`sprayglands`）",
+    "effect": "自身使用毒属性招式后，目标速度下降 1 阶段。对应 `launchSlime(target)` 的弹飞效果在宝可梦侧的等价表达（位移 → 减速）。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "reekerspray",
+      "zh": "腐嗅喷散",
+      "en": "Reeker Spray",
+      "cat": "A",
+      "type": "毒",
+      "cls": "特殊",
+      "pow": 80,
+      "acc": 95,
+      "pp": 10,
+      "range": "全体对手",
+      "effect": "对场上所有对手造成伤害并使其中毒。**根据当前皮肤追加不同效果**：病毒皮肤 → 额外附加【病毒侵蚀】；狂战皮肤 → 额外附加流血；厚重皮肤 → 威力提高 20%；脆弱皮肤 → 自身速度提升 1 阶段。",
+      "trigger": "效果取决于出场时随机到的皮肤，不可主动更换。",
+      "visual": "喷散腔完全外翻，不同皮肤下喷出的雾色不同（暗绿 / 暗紫 / 猩红 / 深灰），雾体贴地扩散。",
+      "why": "近战那套 `POISON + 皮肤决定 Viral/Bleed` 的机制被提升为一个主动招式。**这是全族唯一\"同一个招式因个体皮肤而完全不同\"的技能**——它把 SRP 的外观变体系统变成了实际的战斗变量。"
+    }
+  ],
+  "common": [
+    {
+      "id": "vomit",
+      "why": "喷散腔的吐出行为"
+    },
+    {
+      "id": "parasiticspores",
+      "why": "雾体扩散与孢子传播同源"
+    },
+    {
+      "id": "corrosivebite",
+      "why": "毒液具备腐蚀性"
+    },
+    {
+      "id": "parasiticcontact",
+      "why": "接触注入是基础机制"
+    },
+    {
+      "id": "adaptivelearning",
+      "why": "原生体层级 supportsDamageAdaptation() 返回 true"
+    },
+    {
+      "id": "infectionorb",
+      "why": "`MobsConfig.reekerOrbEffects()` 明确记录它的球体效果"
+    },
+    {
+      "id": "motorlag",
+      "why": "中毒与弹飞都会影响目标行动"
+    },
+    {
+      "id": "callreinforcement",
+      "why": "`ReekerRecruitFollowersGoal` 是源码中存在的招募行为"
+    }
+  ],
+  "normal": [
+    "污泥攻击",
+    "剧毒",
+    "酸液炸弹",
+    "浊雾",
+    "清除之烟",
+    "虫鸣"
+  ],
+  "loop": [
+    [
+      "起手",
+      "腐嗅喷散",
+      "先按皮肤给全场上毒并追加效果"
+    ],
+    [
+      "核心",
+      "有毒污泥 / 剧毒",
+      "在中毒基础上继续压低血线"
+    ],
+    [
+      "强化",
+      "适应学习",
+      "记录受到的属性并针对性减伤"
+    ],
+    [
+      "控制",
+      "动作迟滞 / 腐蚀撕咬",
+      "限制目标移动并削弱防御"
+    ],
+    [
+      "收尾",
+      "酸液炸弹",
+      "在对手被毒与减益拖垮后收场"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "感染区的低洼与潮湿处——雾体需要贴地扩散",
+    "食物": "被毒倒的猎物，雾化吸收",
+    "猎物": "成群的目标（喷散是范围手段）",
+    "天敌": "免疫毒属性的对手；它 66 的攻击力很难靠物理解决",
+    "行为": "游走喷散，不主动缠斗。没有目标时会尝试招募附近同伴",
+    "群体": "会主动聚集——`ReekerRecruitFollowersGoal` 记录它寻找 leader 的行为",
+    "巢穴": "巢穴的**化学单位**，负责区域压制",
+    "繁殖": "不繁殖",
+    "与其他 SRP 宝可梦关系": "适应腐嗅的前置形态（`pri_reeker -> ada_reeker`）"
+  },
+  "evolution": "来源：无（PRIMITIVE 起点）\n  ↓\n当前：原初腐嗅（`csrp:pri_reeker`）\n  ↓  适应\n适应腐嗅（`csrp:ada_reeker`）\n\n证据：`ParasiteTransformation.evolutionType()` 的 `pri_ -> ada_` 路径规则。",
+  "dex1": "它身上那层皮一共能分出五种样子，每一种让你中的东西都不一样。它自己不太能打——但它喷出来的雾能。",
+  "dex2": "观察记录：同一物种的两只样本，一只追加病毒侵蚀，一只追加流血。\n剖检确认是皮肤差异，不是两个亚种。\n ——结论：**看皮判断打法**。正常皮最无害，厚重皮最难磨。",
+  "gameplay": "输出（范围毒 + 皮肤变量）、控制（中毒 + 减速 + 腐蚀）、支援（招募）——PRIMITIVE 层的范围化学单位",
+  "similarity": "与适应腐嗅的区别被限定为**机动性**：原初形态靠喷散与招募打阵地，适应形态拿到 `ChargeGoal` 与 1.35 的近战速度，变成能主动贴上去的版本。皮肤机制两者共享。"
+}

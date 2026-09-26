@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 25 / 129**
+**Designed: 29 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -11,8 +11,8 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 |---|---|---|
 | INBORN | 10 | 10 |
 | CRUDE | 11 | 11 |
-| PRIMITIVE | 2 | 12 |
-| ADAPTED | 2 | 12 |
+| PRIMITIVE | 4 | 12 |
+| ADAPTED | 4 | 12 |
 | ASSIMILATED | 0 | 13 |
 | WALKING_HEAD | 0 | 10 |
 | ASSIMARA | 0 | 6 |
@@ -66,9 +66,9 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | 2 | `csrp:pri_bolster` | 原始协增兽 / Primitive Bolster | - | pending |
 | 2 | `csrp:pri_burrower` | 原始掘地兽 / Primitive Burrower | - | pending |
 | 2 | `csrp:pri_devourer` | 原始吞噬兽 / Primitive Devourer | - | pending |
-| 2 | `csrp:pri_longarms` | 原始长臂兽 / Primitive Longarms | - | pending |
+| 2 | `csrp:pri_longarms` | 原始长臂兽 / Primitive Longarms | - | [designed](pri_longarms.md) |
 | 2 | `csrp:pri_manducater` | 原始咀骨兽 / Primitive Manducater | - | [designed](pri_manducater.md) |
-| 2 | `csrp:pri_reeker` | 原始毒腥兽 / Primitive Reeker | - | pending |
+| 2 | `csrp:pri_reeker` | 原始毒腥兽 / Primitive Reeker | - | [designed](pri_reeker.md) |
 | 2 | `csrp:pri_summoner` | 原始召唤兽 / Primitive Summoner | - | [designed](pri_summoner.md) |
 | 2 | `csrp:pri_tozoon` | 原始潜地兽 / Primitive Tozoon | - | pending |
 | 2 | `csrp:pri_vermin` | 原始孕虫兽 / Primitive Vermin | - | pending |
@@ -83,9 +83,9 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | 3 | `csrp:ada_bolster` | 适应协增兽 / Adapted Bolster | - | pending |
 | 1 | `csrp:ada_burrower` | 适应掘地兽 / Adapted Burrower | - | pending |
 | 1 | `csrp:ada_devourer` | 适应吞噬兽 / Adapted Devourer | - | pending |
-| 3 | `csrp:ada_longarms` | 适应长臂兽 / Adapted Longarms | - | pending |
+| 3 | `csrp:ada_longarms` | 适应长臂兽 / Adapted Longarms | - | [designed](ada_longarms.md) |
 | 3 | `csrp:ada_manducater` | 适应咀骨兽 / Adapted Manducater | - | [designed](ada_manducater.md) |
-| 3 | `csrp:ada_reeker` | 适应毒腥兽 / Adapted Reeker | - | pending |
+| 3 | `csrp:ada_reeker` | 适应毒腥兽 / Adapted Reeker | - | [designed](ada_reeker.md) |
 | 3 | `csrp:ada_summoner` | 适应召唤兽 / Adapted Summoner | - | [designed](ada_summoner.md) |
 | 1 | `csrp:ada_tozoon` | 适应潜地兽 / Adapted Tozoon | - | pending |
 | 3 | `csrp:ada_viscera` | 适应脏腑兽 / Adapted Viscera | - | pending |
