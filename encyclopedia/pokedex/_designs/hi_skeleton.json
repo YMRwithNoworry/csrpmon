@@ -1,0 +1,174 @@
+{
+  "id": "hi_skeleton",
+  "dex": 8090,
+  "zh": "劫持骷髅",
+  "en": "Hijacked Skeleton",
+  "types": [
+    "虫",
+    "幽灵"
+  ],
+  "kind": "远程骨刺劫持宝可梦",
+  "height": 1.95,
+  "weight": 28,
+  "stats": [
+    52,
+    46,
+    42,
+    84,
+    48,
+    58
+  ],
+  "statNote": "总和 330。SRP 中基础值为 health **27.0** / armor **3.5**——**但它与另外两个劫持体不同：它的数值是配置驱动的**。源码注释原文：Legacy SRPConfigMobs.hiskeleton per-mob multipliers (default 1.0F in the original)。",
+  "core": "“骷髅本来就会在远处射箭。被劫持之后它换了一种箭——**还是站得很远**。”",
+  "visual": [
+    [
+      "头部",
+      "骷髅的头骨保留，眼窝里是两处暗红光点",
+      "宿主外形保留"
+    ],
+    [
+      "躯干",
+      "骨架结构保留，骨缝间填满寄生组织",
+      "宿主结构"
+    ],
+    [
+      "手臂",
+      "右臂骨被改造成骨刺球发射腔",
+      "ranged spineball attacker"
+    ],
+    [
+      "弓",
+      "**原来的弓已经不在了**——它不再需要",
+      "射程由自身提供"
+    ],
+    [
+      "背脊",
+      "脊骨沿线上长出一排骨刺",
+      "damage 来源"
+    ],
+    [
+      "颜色",
+      "暗红寄生组织 + 发黄的骨骼",
+      "SRP 模型配色"
+    ]
+  ],
+  "pose": "直立、双臂保持拉弓的姿势（习惯残留），但手上没有弓；发射时骨刺球直接从右臂射出。",
+  "preserved": [
+    "**远程攻击者的定位**——类注释：ranged spineball attacker",
+    "**骨架结构与站姿**——宿主外形完整保留",
+    "**配置驱动的数值**——MobsConfig.hiskeletonHealthMultiplier() 等逐项倍率",
+    "**骨刺球**——与其他两个劫持体共用的 fireSpineball 实现",
+    "**宿主战斗方式完整保留**——HijackedParasiteEntity 类注释：Shared hostile state for legacy hijacked mobs。",
+    "**骨刺球投射物**——三个劫持体共用 fireSpineball(LivingEntity target) 实现",
+    "**实现层级为 Primitive**——源码中 HijackedParasiteEntity extends PrimitiveParasiteEntity"
+  ],
+  "pokemonized": [
+    "**「手上没有弓了，姿势还是拉弓」**——这是我为它设计的核心视觉。宿主的行为模式被保留了，工具被替换了",
+    "**它的数值是配置驱动的**，这一点我如实记录：源码用的是 MobsConfig.hiskeleton 逐项倍率（原版默认 1.0F）。所以它的强度**取决于玩家配置**，不是固定值",
+    "它与劫持烈焰人都是远程，但方向不同：烈焰人**从空中齐射并照明**，骷髅**站在地面单发点射**"
+  ],
+  "ability": {
+    "name": "骨刺装填（`boneloading`）",
+    "effect": "自身使用骨刺球类招式后，若目标未更换，下一回合的骨刺球招式威力提高 20%（连续点射同一目标）。对应 ranged spineball attacker 的定位。"
+  },
+  "hidden": {
+    "name": "配置驱动（`configdriven`）",
+    "effect": "—（说明性特性）：源码中它的全部属性由 MobsConfig.hiskeleton 逐项倍率决定（原版默认 1.0F），因此本条目给出的数值是**默认倍率下的基准值**，实际强度随配置变化。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "bonespineshot",
+      "zh": "骨刺点射",
+      "en": "Bone Spine Shot",
+      "cat": "G",
+      "type": "虫",
+      "cls": "特殊",
+      "pow": 70,
+      "acc": 100,
+      "pp": 15,
+      "range": "单体，全场",
+      "effect": "无视距离造成伤害并附加 1 层【感染】（对应 followRange 48）。**若上一回合也对同一目标使用过本招式，威力提高 20%**。",
+      "trigger": "连续点射同一目标时生效。",
+      "visual": "右臂骨腔张开并射出一枚高速旋转的骨刺球，弹道笔直，发射后手臂短暂后坐。",
+      "why": "ranged spineball attacker 与 fireSpineball 的翻译。**与劫持烈焰人的齐射形成对照**：烈焰人是 3 发小威力齐射，骷髅是单发高威力点射——同样是骨刺球，两种用法。"
+    }
+  ],
+  "common": [
+    {
+      "id": "parasiticcontact",
+      "why": "接触注染仍然存在"
+    },
+    {
+      "id": "infectionorb",
+      "why": "骨刺球属于球体类投射物"
+    },
+    {
+      "id": "markedprey",
+      "why": "点射前必须锁定目标"
+    },
+    {
+      "id": "needlesting",
+      "why": "骨刺属于针刺系"
+    },
+    {
+      "id": "motorlag",
+      "why": "连续点射影响目标行动"
+    },
+    {
+      "id": "laceration",
+      "why": "骨刺造成穿刺撕裂"
+    }
+  ],
+  "normal": [
+    "飞叶快刀",
+    "暗影球",
+    "虫鸣",
+    "突袭",
+    "守住",
+    "高速移动"
+  ],
+  "loop": [
+    [
+      "起手",
+      "猎物标记",
+      "锁定点射目标"
+    ],
+    [
+      "核心",
+      "骨刺点射",
+      "连续点射同一目标累积增伤"
+    ],
+    [
+      "强化",
+      "骨刺装填（特性）",
+      "用连续性换威力"
+    ],
+    [
+      "控制",
+      "动作迟滞 / 针刺",
+      "削弱目标行动与防御"
+    ],
+    [
+      "收尾",
+      "暗影球",
+      "在目标被削弱后收场"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "感染区各处——它需要视野，不需要距离",
+    "食物": "不需要",
+    "猎物": "视野内的任何目标",
+    "天敌": "能快速贴近它的近战单位；27 点生命经不起贴身",
+    "行为": "远距离单发点射。**姿势仍是拉弓，但已经不需要弓**",
+    "群体": "通常 2~3 只分散站位",
+    "巢穴": "巢穴的**远程点射单位**",
+    "繁殖": "不繁殖",
+    "与其他 SRP 宝可梦关系": "与劫持烈焰人同为远程但分工不同（齐射 + 照明 vs 单发点射）"
+  },
+  "evolution": "来源：被劫持的骷髅\n  ↓\n当前：劫持骷髅（csrp:hi_skeleton）\n  ↓\n【无直接宝可梦进化】\n\n证据：HiSkeletonEntity 类注释（ranged spineball attacker）与\nMobsConfig.hiskeletonHealthMultiplier() 等逐项倍率。",
+  "dex1": "它还站着拉弓的姿势，但手里已经没有弓了。射出来的东西也不是箭。",
+  "dex2": "观察记录：基础生命 27.0、护甲 3.5；实际强度随 MobsConfig.hiskeleton 倍率变化。\n连续 3 次点射同一目标，命中效率递增。\n ——结论：**姿势是习惯，工具已经换了**。",
+  "gameplay": "输出（无视距离的连续点射）、控制（针刺 + 减速）、扩散（感染）——HIJACKED 层的远程点射单位",
+  "similarity": "与劫持烈焰人的对照：同样是骨刺球，**烈焰人是 3 发齐射 + 照明光环，骷髅是单发点射 + 连续增伤**。与劫持铁傀儡：一个远程骚扰，一个近身重压。"
+}

@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 77 / 129**
+**Designed: 80 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -16,7 +16,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | ASSIMILATED | 13 | 13 |
 | WALKING_HEAD | 10 | 10 |
 | ASSIMARA | 0 | 6 |
-| HIJACKED | 0 | 3 |
+| HIJACKED | 3 | 3 |
 | FERAL | 9 | 9 |
 | NEXUS | 0 | 13 |
 | DETERRENT | 0 | 5 |
@@ -140,9 +140,9 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 1 | `csrp:hi_blaze` | 被操纵的烈焰人 / Hijacked Blaze | - | pending |
-| 1 | `csrp:hi_golem` | 被操纵的铁傀儡 / Hijacked Golem | - | pending |
-| 1 | `csrp:hi_skeleton` | 被操纵的骷髅 / Hijacked Skeleton | - | pending |
+| 1 | `csrp:hi_blaze` | 被操纵的烈焰人 / Hijacked Blaze | - | [designed](hi_blaze.md) |
+| 1 | `csrp:hi_golem` | 被操纵的铁傀儡 / Hijacked Golem | - | [designed](hi_golem.md) |
+| 1 | `csrp:hi_skeleton` | 被操纵的骷髅 / Hijacked Skeleton | - | [designed](hi_skeleton.md) |
 
 ## FERAL (9)
 
