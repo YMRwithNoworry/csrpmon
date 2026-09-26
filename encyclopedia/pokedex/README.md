@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 114 / 129**
+**Designed: 119 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -18,7 +18,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | ASSIMARA | 6 | 6 |
 | HIJACKED | 3 | 3 |
 | FERAL | 9 | 9 |
-| NEXUS | 8 | 13 |
+| NEXUS | 13 | 13 |
 | DETERRENT | 5 | 5 |
 | PURE | 7 | 7 |
 | PREEMINENT | 8 | 8 |
@@ -170,11 +170,11 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | 2 | `csrp:dispatcher_sii` | II阶调度柱 / Stage II Dispatcher | - | [designed](dispatcher_sii.md) |
 | 3 | `csrp:dispatcher_siii` | III阶调度柱 / Stage III Dispatcher | - | [designed](dispatcher_siii.md) |
 | 4 | `csrp:dispatcher_siv` | IV阶调度柱 / Stage IV Dispatcher | - | [designed](dispatcher_siv.md) |
-| 1 | `csrp:rooter_si` | I阶支庇柱 / Stage I Rooter | - | pending |
-| 2 | `csrp:rooter_sii` | II阶支庇柱 / Stage II Rooter | - | pending |
-| 3 | `csrp:rooter_siii` | III阶支庇柱 / Stage III Rooter | - | pending |
-| 4 | `csrp:rooter_siv` | IV阶支庇柱 / Stage IV Rooter | - | pending |
-| 1 | `csrp:rooterball` | 支庇柱囊块 / Rootmass Cyst | - | pending |
+| 1 | `csrp:rooter_si` | I阶支庇柱 / Stage I Rooter | - | [designed](rooter_si.md) |
+| 2 | `csrp:rooter_sii` | II阶支庇柱 / Stage II Rooter | - | [designed](rooter_sii.md) |
+| 3 | `csrp:rooter_siii` | III阶支庇柱 / Stage III Rooter | - | [designed](rooter_siii.md) |
+| 4 | `csrp:rooter_siv` | IV阶支庇柱 / Stage IV Rooter | - | [designed](rooter_siv.md) |
+| 1 | `csrp:rooterball` | 支庇柱囊块 / Rootmass Cyst | - | [designed](rooterball.md) |
 
 ## DETERRENT (5)
 

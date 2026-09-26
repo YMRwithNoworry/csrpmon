@@ -1,0 +1,180 @@
+{
+  "id": "rooter_sii",
+  "dex": 8126,
+  "zh": "根须柱·二阶",
+  "en": "Stage II Rooter",
+  "types": [
+    "虫",
+    "地面"
+  ],
+  "kind": "战场加持宝可梦",
+  "height": 2.6,
+  "weight": 240,
+  "stats": [
+    84,
+    48,
+    74,
+    88,
+    74,
+    14
+  ],
+  "statNote": "总和 382。SRP 中 health 80 / armor 14 / damage 6 / bombCount 5 / activeCap 5 / summonCooldown 55 / maxBlockHardness **2.0F** / blockRange **6.0D** / experience 32。**加持半径 = 16 + 4×stage = 24 格**；**PIVOT 与 PARATE 等级 = stage − 1 = 1**。",
+  "core": "“同一套加持，半径 24 格，等级 1。**它一个兵都不放。**”",
+  "visual": [
+    [
+      "头部",
+      "冠状核心逐步增大，始终没有召唤口",
+      "**它不是召唤单位**"
+    ],
+    [
+      "眼睛",
+      "环绕核心的暗红光点朝下，看向地面",
+      "加持对象在地面"
+    ],
+    [
+      "躯干",
+      "柱体逐步加粗，根系外露",
+      "柱体形态"
+    ],
+    [
+      "根系",
+      "**范围 24 格的根系网**，向四周延伸",
+      "inflate(16.0 + stage * 4.0)"
+    ],
+    [
+      "节点",
+      "根系末端有规律的脉动节点",
+      "每 50 tick 脉动一次"
+    ],
+    [
+      "颜色",
+      "暗红寄生组织 + 根系暗褐 + 核心暗紫",
+      "SRP 模型配色"
+    ]
+  ],
+  "pose": "**完全静止**。根系每 50 tick 向 ${radius[i]} 格内的寄生体释放一次脉动。",
+  "preserved": [
+    "**加持半径随阶数增长**——`getBoundingBox().inflate(16.0D + stage * 4.0D)`，本阶 **24 格**",
+    "**两个命名效果 PIVOT 与 PARATE**——等级 `Math.max(0, stage - 1)` = **1**，持续 300 tick",
+    "**建立从属关系**——`StatusEffectEvents.linkToRooter(ally, this)` 把友军登记进 `ROOTER_OWNERS` 映射",
+    "**排除同类**——`if (nexus.activeKind().family == Family.ROOTER || nexus.activeKind().isRooterBall()) continue;` 不给根须柱自己人加",
+    "**固定脉动节奏**——`supportCooldown = 50`"
+  ],
+  "pokemonized": [
+    "**这是三个家族里最容易被误解的一个**：它和召唤柱共用数值表，但源码里 `applyRooterSupport()` 对它做的是**给周围寄生体加两个效果并登记从属**——**它一个兵都不放**",
+    "**半径公式 `16.0D + stage * 4.0D` 是源码写死的**：24 格。这个半径比召唤柱与调度柱的 `blockRange` 大得多（后者四阶才是 18 格），说明**它的定位是\"覆盖整个战场\"而不是\"影响一片区域\"**",
+    "**`linkToRooter` 会把友军写进一个 `ROOTER_OWNERS` 映射**——这是我在整个模组里见过的唯一一处\"建立从属关系\"的实现。我把它做成了机制：**它的增益只在它活着的时候有效**"
+  ],
+  "ability": {
+    "name": "二阶根系（rooterlink）",
+    "effect": "自身每回合结束时，为**自身 24 格内的所有寄生系友方**施加 PIVOT 与 PARATE 效果，等级 1，持续 3 回合。**同类不享受此效果**（源码明确排除 ROOTER 与 ROOTERBALL）。"
+  },
+  "hidden": {
+    "name": "从属登记（rooterowners）",
+    "effect": "被自身加持过的友方**在自身存活期间**额外获得 10% 速度。**自身被击倒时该增益立即消失**（对应 `ROOTER_OWNERS` 映射的生命周期）。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "rooterpulse2",
+      "zh": "根系脉动·二阶",
+      "en": "Rooter Pulse II",
+      "cat": "N",
+      "type": "地面",
+      "cls": "变化",
+      "pow": 0,
+      "acc": true,
+      "pp": 15,
+      "range": "自身周围 24 格",
+      "effect": "为范围内**所有寄生系友方**施加 PIVOT 与 PARATE 各 1 级（本阶半径 **24 格**，等级 **1**），持续 3 回合。**同类不享受**。造成 0 点伤害。",
+      "trigger": "无。",
+      "visual": "根系末端的脉动节点同时亮起，一圈暗褐色脉冲沿根系向四周扩散至 24 格外，被扫过的寄生体体表浮现暗红光泽。",
+      "why": "`applyRooterSupport(stage)` 的逐字翻译：半径 `16.0 + stage * 4.0`、等级 `Math.max(0, stage - 1)`、排除同类。**它是全族唯一「一个伤害都不造成、也不召唤任何东西」的专属招式**。"
+    }
+  ],
+  "common": [
+    {
+      "id": "hivespread",
+      "why": "NEXUS 根须柱的职能来源"
+    },
+    {
+      "id": "nestestablishment",
+      "why": "NEXUS 根须柱的职能来源"
+    },
+    {
+      "id": "infestedground",
+      "why": "NEXUS 根须柱的职能来源"
+    },
+    {
+      "id": "infectionpulse",
+      "why": "NEXUS 根须柱的职能来源"
+    },
+    {
+      "id": "parasiticfield",
+      "why": "NEXUS 根须柱的职能来源"
+    },
+    {
+      "id": "hivemothercall",
+      "why": "NEXUS 根须柱的职能来源"
+    },
+    {
+      "id": "markedprey",
+      "why": "NEXUS 根须柱的职能来源"
+    },
+    {
+      "id": "hiveoppression",
+      "why": "NEXUS 根须柱的职能来源"
+    }
+  ],
+  "normal": [
+    "扎根",
+    "帮助",
+    "光墙",
+    "守住",
+    "替身",
+    "接棒"
+  ],
+  "loop": [
+    [
+      "起手",
+      "根系脉动·二阶",
+      "先给全场上加持"
+    ],
+    [
+      "核心",
+      "帮助 / 寄生领域",
+      "把加持转化成实际压制"
+    ],
+    [
+      "强化",
+      "从属登记（特性）",
+      "让被加持的友方更难被摆脱"
+    ],
+    [
+      "控制",
+      "巢穴威压 / 感染脉冲",
+      "压制对手节奏"
+    ],
+    [
+      "收尾",
+      "接棒",
+      "把加持状态交给下一阶或队友"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "感染区的地表——它的根系决定它的影响范围",
+    "食物": "通过庞大的根系网吸取养分",
+    "猎物": "无。**它不召唤也不狩猎**",
+    "天敌": "任何东西。它不召唤生物，因此没有前排",
+    "行为": "**完全静止**。脉动—加持—再脉动。每 50 tick 一次",
+    "群体": "周围有被它加持的寄生体活动，但它自己不参与战斗",
+    "巢穴": "**巢穴的支援层**，九阶体系第 2 环",
+    "繁殖": "不繁殖，通过根系扩张",
+    "与其他 SRP 宝可梦关系": "**ROOTER 家族第 2 阶**；与 BECKON（召唤）和 DISPATCHER（收纳+铺雾）共用数值表但**职能完全不同——它只加持**"
+  },
+  "evolution": "来源：根须柱·初阶（`csrp:rooter_si`）\n  ↓  阶段提升\n当前：根须柱·二阶（`csrp:rooter_sii`）\n  ↓\n根须柱·三阶（`csrp:rooter_siii`）→ 四阶\n\n证据：`Kind.ROOTER_SII(Family.ROOTER, 2, 80D, 14D, 6D, 5, 5, 55, 2.0F, 6.0D, 32)`\n与 `applyRooterSupport(2)`：半径 `16.0D + 2 * 4.0D` = 24，等级 `Math.max(0, 2 - 1)` = 1。",
+  "dex1": "它的根越铺越远。你能感觉到范围在变大，但看不到它放出任何一个东西。",
+  "dex2": "观察记录：加持半径 24 格（公式 16 + 4×stage），效果等级 1，脉动间隔 50 tick。\n同类不享受加持（源码 `continue` 排除 ROOTER 与 ROOTERBALL）。\n ——结论：**它一个兵都不放。它只负责让别人的兵更好用**。",
+  "gameplay": "支援（范围内全体加持 + 速度增益）、环境（寄生领域 + 感染）、扩散 —— NEXUS 根须柱体系的第 2 阶",
+  "similarity": "与上一阶是**同一招式的范围与等级强化版**（半径 20→24，等级 0→1）。与另两个家族同阶对比：它的加持半径远大于两者的 blockRange。"
+}

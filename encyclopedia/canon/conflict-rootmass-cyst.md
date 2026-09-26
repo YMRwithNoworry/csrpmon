@@ -1,16 +1,13 @@
 # 【资料冲突】Rootmass Cyst 的 tier 归属
 
+> **状态：已解决（第 28 轮完成设计）**。本记录保留冲突的完整过程。
+
 ## 冲突内容
 
 任务白名单的 **J. Deterrent Parasites** 一节列出了六个名字：
 
 ```
-Dispatcher Tentacle
-Kyphosis
-Rootmass Cyst
-Seizer
-Sentry
-Worm
+Dispatcher Tentacle / Kyphosis / Rootmass Cyst / Seizer / Sentry / Worm
 ```
 
 但 CSRP 源码中，DETERRENT 层只有 **5** 个成员。
@@ -24,33 +21,51 @@ Rootmass Cyst 属于 DETERRENT。
 ```
 entity.csrp.rooterball = "Rootmass Cyst"     ← 语言文件
 bestiary/rooterball.json  "tier": "NEXUS"    ← 数据层
+Kind.ROOTERBALL(Family.ROOTERBALL, 0, ...)   ← 代码
 ```
 
-**"Rootmass Cyst" 就是 `csrp:rooterball`**，而它的 bestiary tier 字段写的是 **NEXUS**。
-它由 Rooter（`rooter_si` … `rooter_siv`）产生，属于 Nexus 层。
+**"Rootmass Cyst" 就是 `csrp:rooterball`**，tier 字段写的是 **NEXUS**。
 
-### 已在正典中的记录
-`srp-creatures.json` 中 `rooterball` 的 tierCode 与 tierBestiary 均为 NEXUS，
-因此本轮之前它一直被计入 NEXUS（13 只），而不是 DETERRENT。
-
-## 当前设计采用
+## 采用
 
 **DETERRENT = 5 只**（dispatcherten / kyphosis / seizer / sentry / worm），
-Rootmass Cyst 保留在 **NEXUS** 层设计。
+Rootmass Cyst 归入 **NEXUS**，已于第 28 轮完成设计（`pokedex/rooterball.md`）。
 
 ## 理由
 
-1. CSRP 的 bestiary 数据是权威 tier 来源之一，它明确写 NEXUS。
-2. 源码中 Rootmass Cyst 由 Rooter 阶段体系产生，行为上属于巢穴核心而非外围阻遏。
-3. 更重要的：**不为凑满白名单而虚构第六只阻遏体**。规则 1 明确禁止为了补齐名单而创造不存在的 SRP 生物。
+1. CSRP 的 bestiary 数据是权威 tier 来源之一，明确写 NEXUS。
+2. 源码中它由 Rooter 阶段体系产生（`Family.ROOTERBALL`），属于巢穴核心结构。
+3. **不为凑满白名单而虚构第六只阻遏体**（规则 1）。
+
+## 第 28 轮补充的关键证据
+
+源码 `NexusParasiteEntity.tick()` 中：
+
+```java
+if (activeKind.isRooterBall()) {
+    return;
+}
+```
+
+该判断位于 tick 的**早期**，在移动、感知、召唤、铺雾、加持、成长之前。
+**它跳过全部后续逻辑。**
+
+配合它的枚举值：
+
+```java
+ROOTERBALL(Family.ROOTERBALL, 0, 20.0D, 10.0D, 0.0D, 0, 0, 0, 0.0F, 0.0D, 0)
+```
+
+——**攻击力、召唤数、同场上限、召唤冷却、方块硬度、方块范围、经验值，全部为 0。**
+
+因此：
+
+- 它不是阻遏体（阻遏体有攻击力、能铺雾、能擒握）
+- 它是**全模组唯一的零行为结构体**
+- 归入 NEXUS 是正确的：它是 Rooter 的产物，属于巢穴结构层
 
 ## 未做的事
 
 - 没有把 `rooterball` 改判为 DETERRENT 以迎合名单。
 - 没有创造一只新的阻遏体来填第 6 个位置。
-- 没有把 `dispatcherten` 之外的任何实体重新命名。
-
-## 影响
-
-任务白名单的 DETERRENT 一节将**永远只有 5 只被设计**。
-第 6 个位置（Rootmass Cyst）会在 NEXUS 层完成设计，并在此处交叉引用。
+- 没有为它发明任何攻击或召唤能力（源码里全部为 0）。
