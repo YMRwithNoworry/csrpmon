@@ -40,7 +40,12 @@
         "CRUDE",
         "PRIMITIVE",
         "ADAPTED",
-        "PURE"
+        "PURE",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "虫",
       "cls": "物理",
@@ -52,7 +57,8 @@
       "cd": "无",
       "vis": "口器接触处渗出黑色丝状物并短暂连向使用者。",
       "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / NEXUS / ANCIENT / DERIVED 不学习——它们不靠接触传播。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "infectingbite",
@@ -64,7 +70,12 @@
         "INBORN",
         "CRUDE",
         "PRIMITIVE",
-        "ADAPTED"
+        "ADAPTED",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "虫",
       "cls": "物理",
@@ -76,7 +87,8 @@
       "cd": "无",
       "vis": "咬合瞬间从伤口喷出细小孢子。",
       "denied": "NEXUS / ANCIENT / DERIVED。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "hivespread",
@@ -90,7 +102,12 @@
         "ADAPTED",
         "PURE",
         "PREEMINENT",
-        "NEXUS"
+        "NEXUS",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "虫",
       "cls": "变化",
@@ -102,7 +119,8 @@
       "cd": "3 回合",
       "vis": "一圈可见的孢子波从使用者脚下扩散出去。",
       "denied": "INBORN 低阶（buglin/gnat/lice）只能通过寄生接触传播，不学此招。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "infectionpulse",
@@ -141,7 +159,12 @@
         "PRIMITIVE",
         "ADAPTED",
         "NEXUS",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "草",
       "cls": "变化",
@@ -153,7 +176,8 @@
       "cd": "场地消失前不能再次使用",
       "vis": "地面浮现暗绿色孢子云。",
       "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL（它们是宿主，不是播种者）。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "hivemothercall",
@@ -219,7 +243,12 @@
         "PURE",
         "NEXUS",
         "PREEMINENT",
-        "ANCIENT"
+        "ANCIENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "虫",
       "cls": "变化",
@@ -232,7 +261,8 @@
       "vis": "目标身上出现悬浮的红色巢群印记。",
       "denied": "无——INBORN 是巢群的前哨，本来就负责替后续单位指认目标。",
       "note": "v2 修正：原本禁止 INBORN 学习，但校验器发现虫崽兽的设计里用到了它。INBORN 作为巢群前哨指认目标是其生态职责，因此放开。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "adaptivelearning",
@@ -247,7 +277,12 @@
         "ADAPTED",
         "PURE",
         "PREEMINENT",
-        "ANCIENT"
+        "ANCIENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "超能",
       "cls": "变化",
@@ -260,7 +295,8 @@
       "vis": "使用者体表短暂浮现该属性颜色的纹路。",
       "denied": "INBORN / CRUDE / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / NEXUS / DERIVED 不学——只有带 Adaptation 能力的种类才有。",
       "minStage": 1,
-      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。"
+      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。",
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "damageanalysis",
@@ -274,7 +310,12 @@
         "PRIMITIVE",
         "ADAPTED",
         "PURE",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "超能",
       "cls": "变化",
@@ -287,7 +328,8 @@
       "vis": "使用者眼中的复眼结构高速对焦。",
       "denied": "INBORN / NEXUS / ANCIENT / DERIVED。",
       "minStage": 1,
-      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。"
+      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。",
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "rapidadaptation",
@@ -300,7 +342,12 @@
         "INBORN",
         "ADAPTED",
         "PREEMINENT",
-        "ANCIENT"
+        "ANCIENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "超能",
       "cls": "变化",
@@ -313,7 +360,8 @@
       "vis": "体表纹路瞬间全部点亮。",
       "denied": "PRIMITIVE 只能学适应学习，不能学快速适应——这是 Primitive→Adapted 的技能层级分界。",
       "minStage": 1,
-      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。"
+      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。",
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "resistancelog",
@@ -327,7 +375,12 @@
         "ADAPTED",
         "PURE",
         "PREEMINENT",
-        "ANCIENT"
+        "ANCIENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "钢",
       "cls": "变化",
@@ -340,7 +393,8 @@
       "vis": "外壳析出对应属性的结晶层。",
       "denied": "PRIMITIVE / NEXUS。",
       "minStage": 1,
-      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。"
+      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。",
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "combatevolution",
@@ -354,7 +408,12 @@
         "ADAPTED",
         "PREEMINENT",
         "ANCIENT",
-        "DERIVED"
+        "DERIVED",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "超能",
       "cls": "变化",
@@ -367,7 +426,8 @@
       "vis": "全身寄生组织重新排列并膨胀。",
       "denied": "INBORN / ASSIMILATED / HIJACKED / FERAL / NEXUS。",
       "minStage": 1,
-      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。"
+      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。",
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "adaptiverebuild",
@@ -380,7 +440,12 @@
         "INBORN",
         "ADAPTED",
         "PREEMINENT",
-        "ANCIENT"
+        "ANCIENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "超能",
       "cls": "变化",
@@ -393,7 +458,8 @@
       "vis": "伤口被快速生长的寄生组织填满。",
       "denied": "INBORN / CRUDE / PRIMITIVE。",
       "minStage": 1,
-      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。"
+      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。",
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "laceration",
@@ -408,7 +474,12 @@
         "ADAPTED",
         "PURE",
         "PREEMINENT",
-        "ANCIENT"
+        "ANCIENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "一般",
       "cls": "物理",
@@ -420,7 +491,8 @@
       "cd": "无",
       "vis": "伤口处持续滴落暗红色粒子。",
       "denied": "无特殊限制——流血是 SRP 最基础的伤害机制之一。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "deeplaceration",
@@ -434,7 +506,12 @@
         "ADAPTED",
         "PURE",
         "PREEMINENT",
-        "ANCIENT"
+        "ANCIENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "恶",
       "cls": "物理",
@@ -447,7 +524,7 @@
       "vis": "三道深可见骨的爪痕。",
       "denied": "INBORN 只能学裂创。",
       "minStage": 2,
-      "matrixNote": "深度撕裂比裂创更深，只有体型增大的第二形态以上才能造成。"
+      "matrixNote": "深度撕裂比裂创更深，只有体型增大的第二形态以上才能造成。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "bloodrush",
@@ -460,7 +537,11 @@
         "PRIMITIVE",
         "ADAPTED",
         "FERAL",
-        "PURE"
+        "PURE",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED"
       ],
       "type": "恶",
       "cls": "变化",
@@ -472,7 +553,8 @@
       "cd": "2 回合",
       "vis": "目标身上血雾变浓。",
       "denied": "NEXUS / ANCIENT / DERIVED。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "rendingpursuit",
@@ -486,7 +568,11 @@
         "PRIMITIVE",
         "ADAPTED",
         "FERAL",
-        "PURE"
+        "PURE",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED"
       ],
       "type": "恶",
       "cls": "物理",
@@ -499,7 +585,7 @@
       "vis": "残影扑击，落点留下血痕。",
       "denied": "NEXUS / ANCIENT / DETERRENT。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：原本只列 INBORN 与更高阶，漏了夹在中间的 CRUDE。CRUDE 处于 INBORN 之上，不可能反而失去这个基础追击招式。"
+      "matrixNote": "矩阵修正：原本只列 INBORN 与更高阶，漏了夹在中间的 CRUDE。CRUDE 处于 INBORN 之上，不可能反而失去这个基础追击招式。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "corrosivebite",
@@ -513,7 +599,12 @@
         "PRIMITIVE",
         "ADAPTED",
         "PURE",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "毒",
       "cls": "物理",
@@ -525,7 +616,8 @@
       "cd": "无",
       "vis": "咬痕边缘冒酸雾。",
       "denied": "ANCIENT / DERIVED 不学——它们改用装甲溶解。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "acidspray",
@@ -588,7 +680,12 @@
         "PRIMITIVE",
         "ADAPTED",
         "PURE",
-        "NEXUS"
+        "NEXUS",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "毒",
       "cls": "变化",
@@ -600,7 +697,8 @@
       "cd": "无",
       "vis": "目标脚下出现环形腐蚀符。",
       "denied": "与装甲溶解互斥，学会其一即不能学另一。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "humicburst",
@@ -715,7 +813,12 @@
         "PURE",
         "PREEMINENT",
         "ANCIENT",
-        "DERIVED"
+        "DERIVED",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "恶",
       "cls": "变化",
@@ -727,7 +830,8 @@
       "cd": "无",
       "vis": "使用者眼部发光，视线处空气扭曲。",
       "denied": "INBORN 不学——低阶没有产生恐惧的体型。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "direhowl",
@@ -816,7 +920,12 @@
         "PRIMITIVE",
         "ADAPTED",
         "PURE",
-        "DETERRENT"
+        "DETERRENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "虫",
       "cls": "物理",
@@ -828,7 +937,8 @@
       "cd": "无",
       "vis": "细小针状物嵌入目标体表并持续闪烁。",
       "denied": "NEXUS / ANCIENT / DERIVED（它们用爆发而非累积）。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "venomneedleburst",
@@ -842,7 +952,12 @@
         "ADAPTED",
         "PURE",
         "DETERRENT",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "虫",
       "cls": "物理",
@@ -855,7 +970,7 @@
       "vis": "密集针雨从口器射出。",
       "denied": "INBORN 只能学针刺。",
       "minStage": 2,
-      "matrixNote": "针刺是多段攻击形态：基础针刺属于全族，爆发形态从第二形态（裂噬兽）起才具备。"
+      "matrixNote": "针刺是多段攻击形态：基础针刺属于全族，爆发形态从第二形态（裂噬兽）起才具备。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "piercingspore",
@@ -920,7 +1035,12 @@
         "PURE",
         "PREEMINENT",
         "NEXUS",
-        "ANCIENT"
+        "ANCIENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "恶",
       "cls": "变化",
@@ -932,7 +1052,8 @@
       "cd": "场地消失前不能再次使用",
       "vis": "场地色调变暗，食物类粒子消失。",
       "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "devourinstinct",
@@ -946,7 +1067,11 @@
         "PRIMITIVE",
         "ADAPTED",
         "FERAL",
-        "PURE"
+        "PURE",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED"
       ],
       "type": "恶",
       "cls": "物理",
@@ -958,7 +1083,8 @@
       "cd": "无",
       "vis": "命中处生物质被吸入使用者体内。",
       "denied": "NEXUS / DETERRENT / DERIVED。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "parasiticdrain",
@@ -972,7 +1098,12 @@
         "PRIMITIVE",
         "ADAPTED",
         "PURE",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "虫",
       "cls": "特殊",
@@ -984,7 +1115,8 @@
       "cd": "无",
       "vis": "黑色丝线从目标连到使用者身上。",
       "denied": "NEXUS / ANCIENT。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "motorlag",
@@ -998,7 +1130,12 @@
         "ADAPTED",
         "PURE",
         "DETERRENT",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "地面",
       "cls": "变化",
@@ -1010,7 +1147,8 @@
       "cd": "无",
       "vis": "目标四肢被半透明丝线缠住。",
       "denied": "INBORN 不学。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "limbnumbness",
@@ -1073,7 +1211,12 @@
         "PRIMITIVE",
         "ADAPTED",
         "PURE",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "恶",
       "cls": "物理",
@@ -1085,7 +1228,8 @@
       "cd": "无",
       "vis": "目标解体为黑色生物质被吸入。",
       "denied": "INBORN 只能通过寄生吸收获取资源，不能掠夺成长。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "killingevolution",
@@ -1125,7 +1269,11 @@
         "ADAPTED",
         "FERAL",
         "PURE",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED"
       ],
       "type": "恶",
       "cls": "变化",
@@ -1137,7 +1285,8 @@
       "cd": "3 回合",
       "vis": "体表渗出红色雾气，动作变快。",
       "denied": "NEXUS / DETERRENT / ANCIENT（它们不靠自残换输出）。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "berserkinfection",
@@ -1151,7 +1300,11 @@
         "ADAPTED",
         "FERAL",
         "PURE",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED"
       ],
       "type": "恶",
       "cls": "变化",
@@ -1163,7 +1316,8 @@
       "cd": "3 回合",
       "vis": "目标眼睛变红并出现抖动。",
       "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / NEXUS。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "laststandrage",
@@ -1250,7 +1404,12 @@
         "ADAPTED",
         "PURE",
         "PREEMINENT",
-        "NEXUS"
+        "NEXUS",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "毒",
       "cls": "特殊",
@@ -1262,7 +1421,8 @@
       "cd": "2 回合",
       "vis": "黑色球体拖着尾迹飞向目标。",
       "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / ANCIENT。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "parasiticfield",
@@ -1352,7 +1512,12 @@
         "CRUDE",
         "PRIMITIVE",
         "ADAPTED",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "虫",
       "cls": "变化",
@@ -1364,7 +1529,8 @@
       "cd": "每场 2 次",
       "vis": "背部裂开并喷出幼虫群。",
       "denied": "NEXUS / ANCIENT / DETERRENT——它们的召唤是领域级，不走\"释放\"通道。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "hiverecall",
@@ -1400,7 +1566,12 @@
         "PRIMITIVE",
         "ADAPTED",
         "PURE",
-        "NEXUS"
+        "NEXUS",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "草",
       "cls": "变化",
@@ -1412,7 +1583,8 @@
       "cd": "2 回合",
       "vis": "伤口被快速生长的白色组织覆盖。",
       "denied": "ANCIENT / DERIVED 不学——它们用重构而非再生。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "dormancyregen",
@@ -1425,7 +1597,12 @@
         "PRIMITIVE",
         "ADAPTED",
         "NEXUS",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "草",
       "cls": "变化",
@@ -1437,7 +1614,8 @@
       "cd": "3 回合",
       "vis": "使用者蜷缩成球状并被生物质包裹。",
       "denied": "PURE / ANCIENT / DERIVED——纯战斗单位不进入休眠。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "parasiticblink",
@@ -1472,6 +1650,7 @@
       "cat": "P. 空间系",
       "source": "Feral Enderman 的传送到目标背后",
       "tiers": [
+        "ASSIMILATED",
         "FERAL",
         "ADAPTED",
         "PREEMINENT"
@@ -1486,7 +1665,8 @@
       "cd": "2 回合",
       "vis": "使用者瞬间出现在目标身后并挥击。",
       "denied": "不具备传送原型的实体一律不学。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED。同化末影人（sim_enderman）本身就是以传送为核心的宿主，类注释写明它 teleports itself and idle parasite allies；排除它反而不合理。"
     },
     {
       "id": "infestedground",
@@ -1501,7 +1681,12 @@
         "ADAPTED",
         "PURE",
         "NEXUS",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED",
+        "FERAL"
       ],
       "type": "地面",
       "cls": "变化",
@@ -1514,7 +1699,7 @@
       "vis": "地面长出黑色菌毯与肉质组织。",
       "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / DETERRENT / ANCIENT。",
       "minStage": 1,
-      "matrixNote": "证据：WorkerEntity 的 BuildColonyGoal 就是产生感染地面的行为，工虫必须能学。"
+      "matrixNote": "证据：WorkerEntity 的 BuildColonyGoal 就是产生感染地面的行为，工虫必须能学。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "nestestablishment",
@@ -1550,7 +1735,11 @@
         "PRIMITIVE",
         "ADAPTED",
         "PURE",
-        "FERAL"
+        "FERAL",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED"
       ],
       "type": "水",
       "cls": "物理",
@@ -1562,7 +1751,8 @@
       "cd": "2 回合",
       "vis": "水面炸开并窜出寄生体。",
       "denied": "**不得全族通用**：不具备水域行为的实体（NEXUS / ANCIENT / DETERRENT / HIJACKED）不学。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "drowningpursuit",
@@ -1571,6 +1761,7 @@
       "cat": "R. 水域系",
       "source": "SRP 水域追猎",
       "tiers": [
+        "ASSIMILATED",
         "PRIMITIVE",
         "ADAPTED",
         "FERAL"
@@ -1585,7 +1776,8 @@
       "cd": "3 回合",
       "vis": "水面下持续追猎的暗影。",
       "denied": "非水域谱系一律不学。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED。被感染的鱿鱼（sim_squid）是水域掠食者，源码用 WaterBoundPathNavigation 绑定水域，它必须能学水域系技能。"
     },
     {
       "id": "vomit",
@@ -1600,7 +1792,10 @@
         "CRUDE",
         "PRIMITIVE",
         "ADAPTED",
-        "PREEMINENT"
+        "PREEMINENT",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED"
       ],
       "type": "毒",
       "cls": "特殊",
@@ -1613,7 +1808,7 @@
       "vis": "口部喷出黑色半固态物质。",
       "denied": "NEXUS / ANCIENT / DERIVED。",
       "minStage": 1,
-      "matrixNote": "载虫的 spawnLingeringCloud() 就是吐出体内生物质形成毒云，与呕吐同源，因此放开 INBORN。"
+      "matrixNote": "载虫的 spawnLingeringCloud() 就是吐出体内生物质形成毒云，与呕吐同源，因此放开 INBORN。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "heightenedsenses",
@@ -1628,7 +1823,11 @@
         "PURE",
         "PREEMINENT",
         "FERAL",
-        "DETERRENT"
+        "DETERRENT",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED"
       ],
       "type": "一般",
       "cls": "变化",
@@ -1640,7 +1839,8 @@
       "cd": "3 回合",
       "vis": "使用者头部震颤，眼睛出现复眼反光。",
       "denied": "NEXUS / ANCIENT——它们的感知是领域级而非个体级。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "markedprey",
@@ -1654,7 +1854,11 @@
         "CRUDE",
         "PRIMITIVE",
         "ADAPTED",
-        "PURE"
+        "PURE",
+        "ASSIMILATED",
+        "WALKING_HEAD",
+        "ASSIMARA",
+        "HIJACKED"
       ],
       "type": "一般",
       "cls": "变化",
@@ -1666,7 +1870,8 @@
       "cd": "无",
       "vis": "目标头顶出现暗红色标记。",
       "denied": "NEXUS / DETERRENT。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
     },
     {
       "id": "parasiticsmoke",
@@ -1719,5 +1924,5 @@
       "minStage": 1
     }
   ],
-  "permissionModel": "每个技能有三重约束：tiers（哪些 Tier 可学）、minStage（最低形态阶段：1 基础/2 中间/3 最终/4 巢穴 IV）、denied（明确排除者）。stage 由 relationships.json 中已被证明的成长链推导。 另外，B. 适应系的全部技能受 speciesGate 约束：只有源码中 supportsDamageAdaptation() 返回 true 的生物可学——这是 Species Restriction 的机器化实现。"
+  "permissionModel": "每个技能有三重约束：tiers（哪些 Tier 可学）、minStage（最低形态阶段：1 基础/2 中间/3 最终/4 巢穴 IV）、denied（明确排除者）。stage 由 relationships.json 中已被证明的成长链推导。 另外，B. 适应系的全部技能受 speciesGate 约束：只有源码中 supportsDamageAdaptation() 返回 true 的生物可学——这是 Species Restriction 的机器化实现。 被感染的宿主层级（ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL）共享 INBORN 与 CRUDE 的基础工具集，因为它们本身就是寄生宿主。 传送系技能以 ASSIMILATED 的同化末影人为原型。"
 }
