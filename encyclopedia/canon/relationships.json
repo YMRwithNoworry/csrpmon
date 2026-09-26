@@ -1,7 +1,7 @@
 {
-  "note": "Only relations the CSRP source proves. The evolution graph is parsed directly out of ParasiteTransformation.java, which is the mod's own evolve/devolve implementation - not inferred from naming alone. Inheritance edges are added where one creature class literally extends another creature class. Inheritance edges are added where one creature class literally extends another creature class.",
+  "note": "Only relations the CSRP source proves. The evolution graph is parsed directly out of ParasiteTransformation.java, which is the mod's own evolve/devolve implementation - not inferred from naming alone. Inheritance edges are added where one creature class literally extends another creature class. Inheritance edges are added where one creature class literally extends another creature class. Note: two independent conversion systems exist - ParasiteTransformation (the wand) and AssimilatedParasiteEntity.transformToFeral() / AssimilatedVariantEntity (the melt system). They disagree about sim_wolf: the wand excludes it, the melt system converts it to fer_wolf.",
   "counts": {
-    "evolves-into": 22,
+    "evolves-into": 23,
     "devolves-into": 6,
     "nexus-stage-up": 9,
     "evolves-into-random": 12,
@@ -328,6 +328,12 @@
       "to": "csrp:incompleteform_medium",
       "kind": "matures-from",
       "evidence": "class inheritance: IncompleteFormMediumEntity extends IncompleteFormSmallEntity in the CSRP source"
+    },
+    {
+      "from": "csrp:sim_wolf",
+      "to": "csrp:fer_wolf",
+      "kind": "evolves-into",
+      "evidence": "AssimilatedParasiteEntity.transformToFeral() maps Kind.WOLF to ModEntities.FER_WOLF - a SECOND conversion path, separate from ParasiteTransformation, which is the one that excludes sim_wolf"
     }
   ]
 }

@@ -43,12 +43,12 @@
 3. **驯化纹理**——`TAMED_TEXTURE` 同步数据
 4. **进食标记**——`SHRIMP_FED` 同步数据
 5. **熔解时长最短**——`WOLF(..., meltDuration = 19, mergeValue = 1)`，其他同化体多在 63~127
-6. **唯一被排除在 syn -> fer 之外的宿主**——`AssimilatedParasiteEntity` 与 `ParasiteTransformation` 中 `sim_wolf` 都不参与该路径
+6. **两套转化系统的分歧点**——`ParasiteTransformation.evolutionType()` 明确排除 `sim_wolf`，但 `AssimilatedParasiteEntity.transformToFeral()` 中 `case WOLF -> ModEntities.FER_WOLF.get().create(level)` 又确实会把它转成野化狼。**两套机制不一致，本图鉴如实记录**
 
 ## 宝可梦化改造
 
 * **"缩解"是这个模组里最诡异的机制之一**：它不是爆炸式变形，而是**体积一帧一帧地缩小**（0.005/0.01 每 tick），到 0.7 阈值才转化。我把它做成"每回合失去一部分体型，但获得速度"的倒计时机制
-* **它是唯一不按 sim → fer 规则走的同化体**，因为源码给了它自己的转化系统。我没有强行把它塞进野化链，而是如实记录
+* **它是两套转化系统的分歧点**：`ParasiteTransformation`（进化法杖）明确排除它，而 `AssimilatedParasiteEntity.transformToFeral()`（熔解系统）中 `case WOLF -> FER_WOLF` 又会转化它。**同一份源码里两种说法**，我两处都记，不替它选一个
 * `TAMED_TEXTURE` 说明**被驯服的狼也会被同化**——这一点我保留在特性里：它对人形目标有特殊的追击倾向
 
 ## 特性
@@ -154,5 +154,5 @@
 | Common Skill Check | **YES** — 7 个，且全部通过 tier 许可校验 |
 | Lore Check | **NO 违规** — 见“宝可梦化改造”，原创机制均已标注为宝可梦化产物 |
 | Gameplay Check | 输出（先制突袭 + 防御换威力的成长）、机动（速度 84 全同化体最高）、控制（流血 + 恐惧）——ASSIMILATED 层的高速猎手 |
-| Similarity Check | 与其他同化体的区别：唯一拥有缩解系统，唯一被排除在野化链之外，唯一速度超过 80，唯一耐久低到 armor 2.0。牛/猪/羊是被改造成战士的家畜，它是一台会自我拆解的猎杀机器。 |
+| Similarity Check | 与其他同化体的区别：唯一拥有缩解系统，唯一在两套转化系统中记载不一致，唯一速度超过 80，唯一耐久低到 armor 2.0。牛/猪/羊是被改造成战士的家畜，它是一台会自我拆解的猎杀机器。 |
 

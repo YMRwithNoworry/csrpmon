@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 68 / 129**
+**Designed: 72 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -17,7 +17,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | WALKING_HEAD | 10 | 10 |
 | ASSIMARA | 0 | 6 |
 | HIJACKED | 0 | 3 |
-| FERAL | 0 | 9 |
+| FERAL | 4 | 9 |
 | NEXUS | 0 | 13 |
 | DETERRENT | 0 | 5 |
 | PURE | 0 | 7 |
@@ -148,15 +148,15 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 2 | `csrp:fer_bear` | 狂化熊 / Feral Bear | - | pending |
-| 2 | `csrp:fer_cow` | 狂化牛 / Feral Cow | - | pending |
-| 2 | `csrp:fer_enderman` | 狂化末影人 / Feral Enderman | - | pending |
+| 2 | `csrp:fer_bear` | 狂化熊 / Feral Bear | - | [designed](fer_bear.md) |
+| 2 | `csrp:fer_cow` | 狂化牛 / Feral Cow | - | [designed](fer_cow.md) |
+| 2 | `csrp:fer_enderman` | 狂化末影人 / Feral Enderman | - | [designed](fer_enderman.md) |
 | 2 | `csrp:fer_horse` | 狂化马 / Feral Horse | - | pending |
 | 2 | `csrp:fer_human` | 狂化人类 / Feral Human | - | pending |
 | 2 | `csrp:fer_pig` | 狂化猪 / Feral Pig | - | pending |
 | 2 | `csrp:fer_sheep` | 狂化羊 / Feral Sheep | - | pending |
 | 2 | `csrp:fer_villager` | 狂化村民 / Feral Villager | - | pending |
-| 1 | `csrp:fer_wolf` | 狂化狼 / Feral Wolf | - | pending |
+| 2 | `csrp:fer_wolf` | 狂化狼 / Feral Wolf | - | [designed](fer_wolf.md) |
 
 ## NEXUS (13)
 

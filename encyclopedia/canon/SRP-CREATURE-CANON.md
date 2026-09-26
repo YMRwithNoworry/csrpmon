@@ -18,7 +18,7 @@ bestiary entry for it.
 
 Registered entity ids: **157**. Bestiary entries: **126**.
 Creatures (MobCategory `MONSTER`/`CREATURE`): **129**. Excluded as non-creatures: **34**.
-Proven relations: **53** - {"evolves-into":22,"devolves-into":6,"nexus-stage-up":9,"evolves-into-random":12,"head-of":1,"deploys":1,"spawns-part":1,"matures-from":1}
+Proven relations: **54** - {"evolves-into":23,"devolves-into":6,"nexus-stage-up":9,"evolves-into-random":12,"head-of":1,"deploys":1,"spawns-part":1,"matures-from":1}
 
 | Tier | Count |
 |---|---|
@@ -169,7 +169,7 @@ Proven relations: **53** - {"evolves-into":22,"devolves-into":6,"nexus-stage-up"
 | 2 | `csrp:fer_pig` | Feral Pig | 狂化猪 | - | code+bestiary |  |
 | 2 | `csrp:fer_sheep` | Feral Sheep | 狂化羊 | - | code+bestiary |  |
 | 2 | `csrp:fer_villager` | Feral Villager | 狂化村民 | - | code+bestiary |  |
-| 1 | `csrp:fer_wolf` | Feral Wolf | 狂化狼 | - | code+bestiary |  |
+| 2 | `csrp:fer_wolf` | Feral Wolf | 狂化狼 | - | code+bestiary |  |
 
 ### NEXUS (13)
 
@@ -258,7 +258,7 @@ Proven relations: **53** - {"evolves-into":22,"devolves-into":6,"nexus-stage-up"
 
 Parsed out of `ParasiteTransformation.java`, which is the mod's own evolve/devolve code.
 
-### evolves-into (22)
+### evolves-into (23)
 
 - `csrp:buglin` -> `csrp:rupter`
 - `csrp:rupter` -> `csrp:mangler`
@@ -282,6 +282,7 @@ Parsed out of `ParasiteTransformation.java`, which is the mod's own evolve/devol
 - `csrp:pri_vermin` -> `csrp:ada_vermin`
 - `csrp:pri_viscera` -> `csrp:ada_viscera`
 - `csrp:pri_yelloweye` -> `csrp:ada_yelloweye`
+- `csrp:sim_wolf` -> `csrp:fer_wolf`
 
 ### devolves-into (6)
 
