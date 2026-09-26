@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 98 / 129**
+**Designed: 106 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -21,7 +21,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | NEXUS | 0 | 13 |
 | DETERRENT | 5 | 5 |
 | PURE | 7 | 7 |
-| PREEMINENT | 0 | 8 |
+| PREEMINENT | 8 | 8 |
 | DERIVED | 0 | 2 |
 | ANCIENT | 0 | 4 |
 | ABOMINATION | 0 | 2 |
@@ -202,14 +202,14 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 1 | `csrp:bogle` | 怖怪体 / Bogle | - | pending |
-| 1 | `csrp:carrier_colony` | 聚生载体 / Colony Carrier | - | pending |
-| 1 | `csrp:haunter` | 逐猎兽 / Haunter | - | pending |
-| 1 | `csrp:bomber_heavy` | 重型轰炸兽 / Heavy Bomber | - | pending |
-| 1 | `csrp:wraith` | 幽鬼体 / Wraith | - | pending |
-| 1 | `csrp:succor` | 援助泡 / Succor | EntityFlam | pending |
-| 1 | `csrp:architect` | 构筑体 / Architect | EntityTenn | pending |
-| 1 | `csrp:seeker` | 追迹兽 / Seeker | - | pending |
+| 1 | `csrp:bogle` | 怖怪体 / Bogle | - | [designed](bogle.md) |
+| 1 | `csrp:carrier_colony` | 聚生载体 / Colony Carrier | - | [designed](carrier_colony.md) |
+| 1 | `csrp:haunter` | 逐猎兽 / Haunter | - | [designed](haunter.md) |
+| 1 | `csrp:bomber_heavy` | 重型轰炸兽 / Heavy Bomber | - | [designed](bomber_heavy.md) |
+| 1 | `csrp:wraith` | 幽鬼体 / Wraith | - | [designed](wraith.md) |
+| 1 | `csrp:succor` | 援助泡 / Succor | EntityFlam | [designed](succor.md) |
+| 1 | `csrp:architect` | 构筑体 / Architect | EntityTenn | [designed](architect.md) |
+| 1 | `csrp:seeker` | 追迹兽 / Seeker | - | [designed](seeker.md) |
 
 ## DERIVED (2)
 

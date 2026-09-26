@@ -1,0 +1,176 @@
+{
+  "id": "architect",
+  "dex": 8115,
+  "zh": "纯化筑巢者",
+  "en": "Architect",
+  "types": [
+    "虫",
+    "超能"
+  ],
+  "kind": "巢群构筑宝可梦",
+  "height": 2.8,
+  "weight": 190,
+  "stats": [
+    92,
+    86,
+    96,
+    90,
+    84,
+    64
+  ],
+  "statNote": "总和 512。SRP 中 health **80.0** / armor 20.0 / damage 22.0 / speed 0.30 / followRange 32。**它是 PREEMINENT 层唯一数值低于 300 的成员**（其余四只为 310~420）——因为它不是战斗单位，而是**构筑单位**。类注释：*\"Legacy flying colony architect (EntityTenn).\"*",
+  "core": "“其他 Preeminent 负责拆。**它负责盖**——你打坏的每一处巢穴结构，都是它补回去的。”",
+  "visual": [
+    [
+      "头部",
+      "多面体状的头部，表面有多个朝向不同的作业面",
+      "构筑定位"
+    ],
+    [
+      "眼睛",
+      "每个作业面上各有一枚暗红光点",
+      "多向作业"
+    ],
+    [
+      "肢体",
+      "**六条细长的作业肢**，末端为不同形状的构筑工具",
+      "建造与修复"
+    ],
+    [
+      "背部",
+      "背侧有一组可展开的膜翼状结构",
+      "类注释中的 flying"
+    ],
+    [
+      "体表",
+      "装甲中等，作业肢关节处最薄",
+      "armor 20.0"
+    ],
+    [
+      "颜色",
+      "暗红寄生组织 + 作业肢的暗紫色",
+      "SRP 模型配色"
+    ]
+  ],
+  "pose": "悬浮在待修复的结构旁，六条作业肢同时展开并各自作业，头部多面体缓慢转动以覆盖不同方向。",
+  "preserved": [
+    "**构筑与修复职能**——*Architect* 之名与类注释 *\"flying colony architect\"*",
+    "**独立实现类**——`ArchitectEntity`，与其余四只 Preeminent 不同",
+    "**数值显著低于同层**——health 80.0，其余四只为 310~420",
+    "**配置驱动生命值**——`getAttribute(Attributes.MAX_HEALTH).setBaseValue(MobsConfig.overseerHealth())`",
+    "**原始类名**——类注释：Legacy ... (EntityTenn)"
+  ],
+  "pokemonized": [
+    "**它的生命只有 80，而同一层其余四只是 310~420**——这个巨大的落差说明源码**没有把它当作战斗单位**。所以我把它设计成**场地/结构型**，而不是又一个高数值战士",
+    "**它是 PREEMINENT 层唯一有「建造」职能的生物**，正好对应你规则中 Nexus 层的「环境控制」——但它的 tier 确实是 PREEMINENT，我按源码来",
+    "它的生命值由 `MobsConfig.overseerHealth()` 驱动，这一点我如实记录"
+  ],
+  "ability": {
+    "name": "构筑作业（construction）",
+    "effect": "自身在场时，**场地类效果（隐形岩、撒菱、毒菱等）不会被对手清除**，且我方场地效果每回合延长 1 回合。对应 Architect 的构筑与修复职能。"
+  },
+  "hidden": {
+    "name": "配置驱动（configdriven）",
+    "effect": "—（说明性特性）：源码中它的生命值由 `MobsConfig.overseerHealth()` 决定，因此本条目给出的 80.0 是**默认配置下的数值**，实际强度随配置变化。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "colonyconstruct",
+      "zh": "巢群构筑",
+      "en": "Colony Construction",
+      "cat": "Q",
+      "type": "虫",
+      "cls": "变化",
+      "pow": 0,
+      "acc": true,
+      "pp": 10,
+      "range": "场地",
+      "effect": "在场上建立**巢穴结构**（持续 4 回合）：期间我方 PREEMINENT / PURE 层级宝可梦每回合回复 8% 最大 HP，且对手每回合结束获得 1 层【感染】。造成 0 点伤害。",
+      "trigger": "无。",
+      "visual": "六条作业肢同时向地面与垂直面延伸，迅速堆叠出暗红色的巢穴结构，结构表面持续脉动并向外释放孢子。",
+      "why": "*\"flying colony architect\"* 与它 80 点生命（同层其余为 310~420）的翻译。**它是全族唯一以「建造场地」为唯一职能的 Preeminent**——它不打架，它盖房子。"
+    }
+  ],
+  "common": [
+    {
+      "id": "infestedground",
+      "why": "构筑的产物就是污染地面"
+    },
+    {
+      "id": "hivespread",
+      "why": "巢穴结构本身是扩散节点"
+    },
+    {
+      "id": "parasiticcontact",
+      "why": "接触注染仍然存在"
+    },
+    {
+      "id": "parasiterelease",
+      "why": "结构用于投放与储存"
+    },
+    {
+      "id": "infectionpulse",
+      "why": "结构是范围感染源"
+    },
+    {
+      "id": "tissueregeneration",
+      "why": "修复是它的核心职能"
+    },
+    {
+      "id": "markedprey",
+      "why": "构筑前锁定需要覆盖的区域"
+    }
+  ],
+  "normal": [
+    "隐形岩",
+    "撒菱",
+    "毒菱",
+    "光墙",
+    "守住",
+    "接棒"
+  ],
+  "loop": [
+    [
+      "起手",
+      "巢群构筑",
+      "先建立场地结构"
+    ],
+    [
+      "核心",
+      "隐形岩 / 撒菱",
+      "叠加多层场地效果"
+    ],
+    [
+      "强化",
+      "构筑作业（特性）",
+      "让场地无法被清除"
+    ],
+    [
+      "控制",
+      "毒菱 / 感染脉冲",
+      "持续压制换入的目标"
+    ],
+    [
+      "收尾",
+      "接棒",
+      "把构筑好的场面交给队友"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "感染区的巢穴结构附近——它负责建造与修复",
+    "食物": "靠巢穴供给",
+    "猎物": "无。它不狩猎",
+    "天敌": "能快速打掉 80 点生命的手段",
+    "行为": "悬浮—构筑—修复。**它不参与战斗**",
+    "群体": "通常单独作业，周围有守卫单位保护",
+    "巢穴": "巢穴的**建造与维修单位**",
+    "繁殖": "不繁殖，由巢穴生产",
+    "与其他 SRP 宝可梦关系": "PREEMINENT 层唯一的构筑单位；**生命值 80 而同层其余为 310~420**，源码层面就不把它当战斗单位"
+  },
+  "evolution": "来源：无（PREEMINENT 起点）\n  ↓\n当前：纯化筑巢者（`csrp:architect`）\n  ↓\n【无直接宝可梦进化】\n\n证据：`ArchitectEntity` 类注释（Legacy flying colony architect (EntityTenn)）与属性\n`MAX_HEALTH = 80.0D` / `ARMOR = 20.0D` / `ATTACK_DAMAGE = 22.0D` / `MOVEMENT_SPEED = 0.30D` / `FOLLOW_RANGE = 32.0D`；\n生命值另由 `MobsConfig.overseerHealth()` 覆盖。",
+  "dex1": "它不打架。它只是在旁边一点一点地盖东西——等你回头的时候，整片地形已经换了。",
+  "dex2": "观察记录：生命 80.0，而同层其余四只为 310~420；职能为构筑与修复。\n其建成的结构无法被常规手段清除。\n ——结论：**它不是来赢的，它是来让战场变成巢穴的**。",
+  "gameplay": "环境控制（场地构筑 + 不可清除 + 持续回复）、扩散（结构释放感染）——PREEMINENT 层的构筑单位",
+  "similarity": "与其余 4 只 Preeminent 的区别：**唯一生命低于 300**，唯一以构筑场地为职能。缠祟负责拆，它负责盖——**同一层里的一对反义存在**。"
+}

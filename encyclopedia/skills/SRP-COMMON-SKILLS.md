@@ -49,7 +49,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `parasiticcontact`
 - **来源机制**: Call Of The Hive (mob effect `coth`)
-- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, PURE, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL, DETERRENT
+- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, PURE, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL, DETERRENT, PREEMINENT
 - **属性 / 类别**: 虫 / 物理
 - **威力 / 命中 / PP**: 40 / 100 / 25
 - **效果**: 接触并把巢群信号注入目标。命中后目标获得 1 层【感染】。若使用者连续两回合对同一目标使用，层数再 +1（同一招式的连击计数从 SRP 的持续接触时间转化而来）。
@@ -57,13 +57,13 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 无
 - **视觉表现**: 口器接触处渗出黑色丝状物并短暂连向使用者。
 - **不能学习者**: ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / NEXUS / ANCIENT / DERIVED 不学习——它们不靠接触传播。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。
 
 ### 感染撕咬 / Infecting Bite
 
 - **ID**: `infectingbite`
 - **来源机制**: Call Of The Hive + 寄生体近战撕咬
-- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL, DETERRENT
+- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL, DETERRENT, PREEMINENT
 - **属性 / 类别**: 虫 / 物理
 - **威力 / 命中 / PP**: 65 / 95 / 20
 - **效果**: 造成伤害后有 50% 概率附加 1 层【感染】。目标已中毒时改为附加 2 层。
@@ -71,7 +71,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 无
 - **视觉表现**: 咬合瞬间从伤口喷出细小孢子。
 - **不能学习者**: NEXUS / ANCIENT / DERIVED。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。
 
 ### 群巢传播 / Hive Spread
 
@@ -276,7 +276,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `bloodrush`
 - **来源机制**: bleed 与移动创伤的组合
-- **适用 Tier**: CRUDE, PRIMITIVE, ADAPTED, FERAL, PURE, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, DETERRENT
+- **适用 Tier**: CRUDE, PRIMITIVE, ADAPTED, FERAL, PURE, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, DETERRENT, PREEMINENT
 - **属性 / 类别**: 恶 / 变化
 - **威力 / 命中 / PP**: - / 100 / 15
 - **效果**: 把目标已流血的层数翻倍（上限 3），并使目标速度提升 1 阶段——层数越高，其移动带来的额外流血伤害越重。
@@ -284,13 +284,13 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 2 回合
 - **视觉表现**: 目标身上血雾变浓。
 - **不能学习者**: NEXUS / ANCIENT / DERIVED。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。
 
 ### 撕裂追击 / Rending Pursuit
 
 - **ID**: `rendingpursuit`
 - **来源机制**: SRP 追猎行为 + bleed
-- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, FERAL, PURE, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, DETERRENT
+- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, FERAL, PURE, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, DETERRENT, PREEMINENT
 - **属性 / 类别**: 恶 / 物理
 - **威力 / 命中 / PP**: 50 / 100 / 20
 - **效果**: 先制 +1。若目标身上有流血层数，威力提升为 50×(1+层数×0.5)；目标替换下场时该招式在入场者身上立即再结算一次流血伤害。
@@ -298,7 +298,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 无
 - **视觉表现**: 残影扑击，落点留下血痕。
 - **不能学习者**: NEXUS / ANCIENT / DETERRENT。
-- **矩阵修正记录**: 矩阵修正：原本只列 INBORN 与更高阶，漏了夹在中间的 CRUDE。CRUDE 处于 INBORN 之上，不可能反而失去这个基础追击招式。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。
+- **矩阵修正记录**: 矩阵修正：原本只列 INBORN 与更高阶，漏了夹在中间的 CRUDE。CRUDE 处于 INBORN 之上，不可能反而失去这个基础追击招式。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。
 
 ## D. 腐蚀系 (5)
 
@@ -346,7 +346,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `corrosionmark`
 - **来源机制**: corrosion 的标记面向
-- **适用 Tier**: CRUDE, PRIMITIVE, ADAPTED, PURE, NEXUS, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL, DETERRENT
+- **适用 Tier**: CRUDE, PRIMITIVE, ADAPTED, PURE, NEXUS, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL, DETERRENT, PREEMINENT
 - **属性 / 类别**: 毒 / 变化
 - **威力 / 命中 / PP**: - / 100 / 15
 - **效果**: 标记目标 3 回合：其受到的钢/岩属性抗性视作不存在（弱点照常计算），且每回合结束防御 -1 阶段（最多 -3）。
@@ -354,7 +354,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 无
 - **视觉表现**: 目标脚下出现环形腐蚀符。
 - **不能学习者**: 与装甲溶解互斥，学会其一即不能学另一。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。
 
 ### 腐殖爆裂 / Humic Burst
 
@@ -472,7 +472,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `needlesting`
 - **来源机制**: mob effect `needler`
-- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, PURE, DETERRENT, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL
+- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, PURE, DETERRENT, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL, PREEMINENT
 - **属性 / 类别**: 虫 / 物理
 - **威力 / 命中 / PP**: 35 / 100 / 30
 - **效果**: 命中后附加 1 层【针刺】。
@@ -480,7 +480,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 无
 - **视觉表现**: 细小针状物嵌入目标体表并持续闪烁。
 - **不能学习者**: NEXUS / ANCIENT / DERIVED（它们用爆发而非累积）。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。
 
 ### 毒针爆发 / Venom Needle Burst
 
@@ -542,7 +542,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `devourinstinct`
 - **来源机制**: SRP 寄生体吞噬生物质
-- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, FERAL, PURE, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, DETERRENT
+- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, FERAL, PURE, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, DETERRENT, PREEMINENT
 - **属性 / 类别**: 恶 / 物理
 - **威力 / 命中 / PP**: 70 / 100 / 15
 - **效果**: 造成伤害后回复伤害的 40%；若该次攻击击倒目标，额外回复 25%。
@@ -550,7 +550,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 无
 - **视觉表现**: 命中处生物质被吸入使用者体内。
 - **不能学习者**: NEXUS / DETERRENT / DERIVED。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。
 
 ### 寄生吸收 / Parasitic Drain
 
@@ -798,7 +798,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `tissueregeneration`
 - **来源机制**: Parasite 的脱战/持续恢复
-- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, PURE, NEXUS, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL, DETERRENT
+- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, PURE, NEXUS, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL, DETERRENT, PREEMINENT
 - **属性 / 类别**: 草 / 变化
 - **威力 / 命中 / PP**: - / 必中 / 10
 - **效果**: 3 回合内每回合结束回复 1/16 最大 HP；若期间未受到火属性伤害，回复量提升为 1/8。
@@ -806,7 +806,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 2 回合
 - **视觉表现**: 伤口被快速生长的白色组织覆盖。
 - **不能学习者**: ANCIENT / DERIVED 不学——它们用重构而非再生。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。
 
 ### 休眠再生 / Dormancy Regeneration
 
@@ -887,7 +887,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `waterambush`
 - **来源机制**: SRP 的水域伏击行为
-- **适用 Tier**: CRUDE, PRIMITIVE, ADAPTED, PURE, FERAL, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, DETERRENT
+- **适用 Tier**: CRUDE, PRIMITIVE, ADAPTED, PURE, FERAL, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, DETERRENT, PREEMINENT
 - **属性 / 类别**: 水 / 物理
 - **威力 / 命中 / PP**: 70 / 95 / 15
 - **效果**: 先制 +1；仅在"水边/水下"场地条件下可用（雨天、水域场地或水系场地）。命中后目标速度下降 1 阶段。
@@ -895,13 +895,13 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 2 回合
 - **视觉表现**: 水面炸开并窜出寄生体。
 - **不能学习者**: **不得全族通用**：不具备水域行为的实体（NEXUS / ANCIENT / DETERRENT / HIJACKED）不学。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。
 
 ### 溺杀追猎 / Drowning Pursuit
 
 - **ID**: `drowningpursuit`
 - **来源机制**: SRP 水域追猎
-- **适用 Tier**: ASSIMILATED, PRIMITIVE, ADAPTED, FERAL
+- **适用 Tier**: ASSIMILATED, PRIMITIVE, ADAPTED, FERAL, PREEMINENT
 - **属性 / 类别**: 水 / 物理
 - **威力 / 命中 / PP**: 60 / 100 / 10
 - **效果**: 连续 3 回合锁定目标，每回合自动造成威力 60 的伤害；目标替换下场则中断。
@@ -909,7 +909,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 3 回合
 - **视觉表现**: 水面下持续追猎的暗影。
 - **不能学习者**: 非水域谱系一律不学。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED。被感染的鱿鱼（sim_squid）是水域掠食者，源码用 WaterBoundPathNavigation 绑定水域，它必须能学水域系技能。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED。被感染的鱿鱼（sim_squid）是水域掠食者，源码用 WaterBoundPathNavigation 绑定水域，它必须能学水域系技能。 矩阵修正：加入 PREEMINENT。纯化聚落载虫（carrier_colony）是 PREEMINENT 层唯一的水域单位（源码注册 CarrierSwimmingGoal 与 CarrierWaterLeapGoal），排除水域系技能等于取消它的生态位。
 
 ## S. 特殊状态系 (5)
 
@@ -945,7 +945,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `markedprey`
 - **来源机制**: mob effect `prey`
-- **适用 Tier**: INBORN, FERAL, CRUDE, PRIMITIVE, ADAPTED, PURE, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, DETERRENT
+- **适用 Tier**: INBORN, FERAL, CRUDE, PRIMITIVE, ADAPTED, PURE, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, DETERRENT, PREEMINENT
 - **属性 / 类别**: 一般 / 变化
 - **威力 / 命中 / PP**: - / 100 / 20
 - **效果**: 标记目标 3 回合：本阵营对其造成的伤害 +15%，且其逃跑必定失败。
@@ -953,7 +953,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 无
 - **视觉表现**: 目标头顶出现暗红色标记。
 - **不能学习者**: NEXUS / DETERRENT。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。
 
 ### 烟幕轨迹 / Parasitic Smoke Trail
 

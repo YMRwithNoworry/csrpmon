@@ -1,0 +1,186 @@
+{
+  "id": "bogle",
+  "dex": 8109,
+  "zh": "纯化波格尔",
+  "en": "Bogle",
+  "types": [
+    "虫",
+    "超能"
+  ],
+  "kind": "定式炮击宝可梦",
+  "height": 3.2,
+  "weight": 290,
+  "stats": [
+    130,
+    110,
+    96,
+    84,
+    92,
+    62
+  ],
+  "statNote": "总和 574。SRP 中 health 310.0 / armor 15.5 / damage 70.0 / speed 0.28 / knockbackResistance 2.0 / followRange 80 / blockRange 5.0。**它与 `WRAITH` 的全部参数逐项完全相同**——区分只能靠源码里的弹药分支。",
+  "core": "“幽魂会换弹药。**波格尔永远用同一种**——它的威胁不在于变化，在于它从不失误。”",
+  "visual": [
+    [
+      "头部",
+      "扁平的头冠，正面有一组固定的发射腔",
+      "定式炮击"
+    ],
+    [
+      "眼睛",
+      "两枚暗红光点，发射时同步闪烁",
+      "LegacyProjectileAttackGoal(60, 30, 3)"
+    ],
+    [
+      "背部",
+      "**单一型号的弹药腔**，结构规整",
+      "只发射 LENCIA_BALL"
+    ],
+    [
+      "翼膜",
+      "一对宽大翼膜，边缘有硬化前缘",
+      "flying = true"
+    ],
+    [
+      "躯干",
+      "装甲厚实、结构对称",
+      "knockbackResistance 2.0"
+    ],
+    [
+      "颜色",
+      "暗红寄生组织 + 弹药腔的暗蓝色",
+      "SRP 模型配色"
+    ]
+  ],
+  "pose": "滞空时保持固定高度与朝向；发射节奏恒定，动作几乎像机械。",
+  "preserved": [
+    "**单一弹种**——`if (activeKind() == Kind.BOGLE) { mode = ParasiteProjectileEntity.Mode.LENCIA_BALL; }`",
+    "**发射参数**——`LegacyProjectileAttackGoal(60, 30, 3)`（60 tick 蓄力、30 tick 间隔、3 发）",
+    "**完全免疫击退**——knockbackResistance **2.0**（超过 1.0）",
+    "**最远的感知范围**——followRange **80**",
+    "**最远的方块触及**——`blockRange = 5.0D`",
+    "**飞行**——`flying = true`",
+    "**共享的目标组**——`PreeminentChargeAttackGoal` / `LegacyProjectileAttackGoal(60, 30, 3)` / `PreeminentRandomFlightGoal`"
+  ],
+  "pokemonized": [
+    "**它与幽魂数值逐项相同，唯一区别是弹药**：波格尔只发射 `LENCIA_BALL`，幽魂在 `ELVIA_BALL` 与 `ELVIA_NADE` 之间交替。**同一具身体，两套补给**",
+    "所以我把它设计成**定式型**：不变化、不切换，靠节奏稳定取胜。这与幽魂的\"交替投掷\"形成直接对照",
+    "它与幽魂共享全部三个目标（冲锋、投射、随机飞行），说明源码把它们当作同一种战斗方式的两种变体"
+  ],
+  "ability": {
+    "name": "定式装填（fixedloading）",
+    "effect": "自身连续使用同一招式时，**每连续一次威力提高 15%（最多 +45%）**，但**无法在同一回合内切换招式类型**。对应它只发射 LENCIA_BALL 的单一弹种。"
+  },
+  "hidden": {
+    "name": "不换弹药（noresupply）",
+    "effect": "—（说明性特性）：源码中波格尔的投射物分支**只有 `LENCIA_BALL` 一种**，没有交替逻辑。因此本条目不提供多弹种切换机制。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "lenciaball",
+      "zh": "定式弹幕",
+      "en": "Lencia Barrage",
+      "cat": "M",
+      "type": "超能",
+      "cls": "特殊",
+      "pow": 60,
+      "acc": 95,
+      "pp": 10,
+      "range": "单体，全场",
+      "effect": "**连续攻击 3 次**（每次威力 60，对应 `LegacyProjectileAttackGoal(60, 30, 3)` 的 3 发）。**连续使用本招式时，每回合威力提高 15%（最多 +45%）**。",
+      "trigger": "无。",
+      "visual": "头冠发射腔依次开启，以完全恒定的间隔射出三枚同型弹体，弹道一致、节奏毫无变化。",
+      "why": "`LegacyProjectileAttackGoal(60, 30, 3)` 与 `Mode.LENCIA_BALL` 的翻译。**与幽魂的对照就在这里**：波格尔是同一发打三次，幽魂是三种不同的东西轮流打。"
+    }
+  ],
+  "common": [
+    {
+      "id": "parasiticcontact",
+      "why": "接触注染仍然存在"
+    },
+    {
+      "id": "infectionorb",
+      "why": "弹体属于球体类投射物"
+    },
+    {
+      "id": "markedprey",
+      "why": "炮击前锁定目标"
+    },
+    {
+      "id": "feargaze",
+      "why": "体量与滞空的压迫感"
+    },
+    {
+      "id": "motorlag",
+      "why": "连续炮击影响目标行动"
+    },
+    {
+      "id": "heightenedsenses",
+      "why": "followRange 80 的感知能力"
+    },
+    {
+      "id": "infectionpulse",
+      "why": "它是范围感染源"
+    },
+    {
+      "id": "laceration",
+      "why": "翼膜前缘造成撕裂伤"
+    },
+    {
+      "id": "hunteraura",
+      "why": "高空压制的持续压迫"
+    }
+  ],
+  "normal": [
+    "精神强念",
+    "电磁炮",
+    "空气利刃",
+    "高速移动",
+    "守住",
+    "虫鸣"
+  ],
+  "loop": [
+    [
+      "起手",
+      "猎物标记",
+      "锁定目标"
+    ],
+    [
+      "核心",
+      "定式弹幕",
+      "连续使用以累积威力"
+    ],
+    [
+      "强化",
+      "定式装填（特性）",
+      "靠不切换换威力"
+    ],
+    [
+      "控制",
+      "动作迟滞 / 感染脉冲",
+      "压制目标行动"
+    ],
+    [
+      "收尾",
+      "电磁炮",
+      "在弹幕压制后远程收场"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "感染区高空——与幽魂共享同一片空域",
+    "食物": "靠巢群供给",
+    "猎物": "地面与空中的移动目标",
+    "天敌": "能把它推离位置的手段（击退抗性 2.0 让它几乎免疫，但并非不可能）",
+    "行为": "恒定高度—恒定节奏炮击。**从不改变模式**",
+    "群体": "通常单独盘旋",
+    "巢穴": "巢穴的**定式空中炮台**",
+    "繁殖": "不繁殖，由巢穴生产",
+    "与其他 SRP 宝可梦关系": "**与幽魂数值逐项相同、目标组相同，唯一区别是弹药分支**"
+  },
+  "evolution": "来源：无（PREEMINENT 起点）\n  ↓\n当前：纯化波格尔（`csrp:bogle`）\n  ↓\n【无直接宝可梦进化】\n\n证据：`Kind.BOGLE(true, 310.0D, 15.5D, 70.0D, 0.28D, 2.0D, 80.0D, 5.0D)`，\n以及 `case BOGLE ->` 目标组与 `Mode.LENCIA_BALL` 投射物分支。",
+  "dex1": "它的节奏从来不变。三次、三次、还是三次——但每一次都比上一次重一点。",
+  "dex2": "观察记录：参数与 WRAITH 逐项相同（310/15.5/70/0.28/2.0/80/5.0）。\n投射物模式固定为 `LENCIA_BALL`，无交替逻辑。\n ——结论：**同样的身体，一种弹药**。",
+  "gameplay": "输出（三段弹幕 + 连续增伤）、扩散（感染）、生存（免疫击退 + 310 HP）——PREEMINENT 层的定式炮台",
+  "similarity": "与幽魂**数值逐项相同**，区分完全来自源码的弹药分支：波格尔只发射 `LENCIA_BALL`，幽魂在 `ELVIA_BALL` 与 `ELVIA_NADE` 之间交替。"
+}

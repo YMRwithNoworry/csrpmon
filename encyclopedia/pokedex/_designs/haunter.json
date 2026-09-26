@@ -1,0 +1,205 @@
+{
+  "id": "haunter",
+  "dex": 8111,
+  "zh": "纯化缠祟",
+  "en": "Haunter",
+  "types": [
+    "虫",
+    "幽灵"
+  ],
+  "kind": "超重击宝可梦",
+  "height": 3.6,
+  "weight": 410,
+  "stats": [
+    136,
+    168,
+    104,
+    52,
+    88,
+    58
+  ],
+  "statNote": "总和 **706——全图鉴最高**（第二是同化末影龙 614）。SRP 中 health 360.0 / armor 15.5 / **attackDamage 110.0（全图鉴最高伤害）** / speed 0.283 / knockbackResistance 2.0 / followRange 80 / blockRange 5.0。**`flying = false`。**",
+  "core": "“它是全族唯一同时会潜水、闪避、近战范围与远程追踪的东西——**两套完整的战斗系统装在一具身体里。**”",
+  "visual": [
+    [
+      "头部",
+      "头骨极度拉长，前方是一整片楔形撞击面",
+      "damage 110.0"
+    ],
+    [
+      "眼睛",
+      "两处深陷的暗红凹坑，没有眼珠",
+      "Haunter 之名"
+    ],
+    [
+      "前肢",
+      "**一对异常粗大的锤状前肢**，末端为整块骨板",
+      "全图鉴最高伤害"
+    ],
+    [
+      "躯干",
+      "躯干厚重但无翼，完全地面型",
+      "flying = false"
+    ],
+    [
+      "体表",
+      "甲板之间渗出的生物质呈暗紫色",
+      "幽灵系属性来源"
+    ],
+    [
+      "颜色",
+      "暗红寄生组织 + 暗紫渗出物 + 骨灰白锤板",
+      "SRP 模型配色"
+    ],
+    [
+      "水下形态",
+      "潜水时双锤收起、身体变为流线型",
+      "`HaunterSwimmingDivingGoal`"
+    ]
+  ],
+  "pose": "直立、重心极低、双锤垂地；攻击时不挥动，而是**把整个身体连同双锤压下去**。",
+  "preserved": [
+    "**八套目标，全族最多**——源码 `case HAUNTER ->` 中注册了 8 个 goal：`HaunterSwimmingDivingGoal`（潜水）、`HaunterMeleeAoeGoal`（近战范围）、`HaunterEvadeDashGoal`（闪避突进）、`HaunterTargetMaintenanceGoal`（锁定维持）、`HaunterRangedPositionGoal`（远程站位）、`HaunterMeleeRangeSwitchGoal`（远近切换）、`HaunterHomingBurstGoal`（追踪爆发）、`HaunterBlockBreakGoal`（破坏方块）",
+    "**全图鉴最高攻击力**——damage **110.0**",
+    "**极高生命**——health 360.0",
+    "**完全免疫击退**——knockbackResistance **2.0**（超过 1.0，源码允许溢出）",
+    "**最远的感知范围**——followRange **80**",
+    "**不飞行**——`Kind.HAUNTER(false, ...)`",
+    "**最远的方块触及**——`blockRange = 5.0D`",
+    "**不飞行**——`Kind.HAUNTER(false, ...)`，但会潜水（`HaunterSwimmingDivingGoal`）"
+  ],
+  "pokemonized": [
+    "**源码给它注册了 8 个目标，是全族最多的一只。** 这 8 个可以清晰分成两组：**近战组**（MeleeAoe / MeleeRangeSwitch / EvadeDash）与**远程组**（RangedPosition / HomingBurst / SwimmingDiving）",
+    "这正是你的规则对 PREEMINENT 层的要求——**需要至少两个相互配合的战斗系统**。所以我把它设计成远近双形态，而不是单纯的高伤害单位",
+    "**`HaunterSwimmingDivingGoal` 说明它会潜水**，而 `flying = false`。它不会飞，但会下潜——这是很少见的能力组合，我完整保留",
+    "**`HaunterBlockBreakGoal` 说明它能破坏方块**，所以我给了它场地破坏类效果，而不是只做伤害"
+  ],
+  "ability": {
+    "name": "远近切换（rangeswitch）",
+    "effect": "自身可以在**近战形态**与**远程形态**之间切换（每回合开始时可免费切换一次）：近战形态受到的接触伤害减少 25%；远程形态受到的远程伤害减少 25%。对应 `HaunterMeleeRangeSwitchGoal`。"
+  },
+  "hidden": {
+    "name": "追踪爆发（homingburst）",
+    "effect": "自身在远程形态下使用的投射类招式**必定命中**（追踪弹），但威力降低 15%。对应 `HaunterHomingBurstGoal`。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "obliteratingmaul",
+      "zh": "处决重锤",
+      "en": "Obliterating Maul",
+      "cat": "A",
+      "type": "幽灵",
+      "cls": "物理",
+      "pow": 170,
+      "acc": 95,
+      "pp": 5,
+      "range": "自身周围 1 格",
+      "effect": "对接触范围内**所有**对手造成极高伤害（对应 damage 110.0，全图鉴最高）。**只在近战形态可用**。对应 `HaunterMeleeAoeGoal`——它是范围近战，不是单体。",
+      "trigger": "**必须处于近战形态**。",
+      "visual": "双锤高举至极限后连同整个身体垂直压下，落点产生深坑与放射状裂纹，周围一圈目标同时被波及。",
+      "why": "attackDamage **110.0** 与 `HaunterMeleeAoeGoal` 的组合翻译。**它是全族唯一威力超过 150 的范围招式**——高伤害与范围同时成立，正是 PREEMINENT「两套系统」的体现。"
+    },
+    {
+      "moveId": "homingburst",
+      "zh": "追踪爆发",
+      "en": "Homing Burst",
+      "cat": "M",
+      "type": "幽灵",
+      "cls": "特殊",
+      "pow": 85,
+      "acc": true,
+      "pp": 10,
+      "range": "单体，全场",
+      "effect": "**必定命中**（追踪弹，对应 `HaunterHomingBurstGoal`）。**只在远程形态可用**。命中后自身立即切换为近战形态。",
+      "trigger": "**必须处于远程形态**。",
+      "visual": "从躯干两侧同时射出数枚暗紫色追踪弹，弹道中途自行拐弯；命中后整具身体立刻向目标方向俯冲。",
+      "why": "`HaunterHomingBurstGoal` 的翻译，也是**两套系统联动的核心**：远程追踪命中后强制转入近战，形成「远距离起手 → 贴身处决」的完整链条。"
+    }
+  ],
+  "common": [
+    {
+      "id": "parasiticcontact",
+      "why": "锤板接触即注染"
+    },
+    {
+      "id": "laceration",
+      "why": "骨板边缘造成撕裂伤"
+    },
+    {
+      "id": "feargaze",
+      "why": "Haunter 之名的凝视压迫感最强"
+    },
+    {
+      "id": "motorlag",
+      "why": "重压冲击彻底打乱目标行动"
+    },
+    {
+      "id": "corrosionmark",
+      "why": "渗出物持续腐蚀护甲"
+    },
+    {
+      "id": "hunteraura",
+      "why": "缓慢逼近的绝对压迫"
+    },
+    {
+      "id": "infestedground",
+      "why": "落点地面被彻底污染"
+    },
+    {
+      "id": "growthdevour",
+      "why": "高生命带来的长期成长"
+    }
+  ],
+  "normal": [
+    "逆鳞",
+    "臂锤",
+    "泰山压顶",
+    "剑舞",
+    "地震",
+    "蛮力"
+  ],
+  "loop": [
+    [
+      "起手",
+      "追踪爆发",
+      "远程形态必定命中并强制转入近战"
+    ],
+    [
+      "核心",
+      "处决重锤",
+      "近战形态的范围处决"
+    ],
+    [
+      "强化",
+      "远近切换（特性）",
+      "按对手类型选择减伤形态"
+    ],
+    [
+      "控制",
+      "恐惧凝视 / 腐蚀标记",
+      "在形态切换间隙压制对手"
+    ],
+    [
+      "收尾",
+      "地震",
+      "在对手被重锤打残后范围收场"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "感染区核心地带——它是被派去解决难缠目标的存在",
+    "食物": "被感染的猎物",
+    "猎物": "不筛选，一次一个",
+    "天敌": "能在它复位回合内爆发的手段；除此之外几乎没有",
+    "行为": "逼近—一击—复位。**它不追击，因为不需要**",
+    "群体": "从不群居——它单独出现",
+    "巢穴": "巢穴的**处决单位**",
+    "繁殖": "不繁殖，由巢穴生产",
+    "与其他 SRP 宝可梦关系": "与掠夺者形成对照：**掠夺者制造生物（120/40），它摧毁生物（360/110）**"
+  },
+  "evolution": "来源：无（PREEMINENT 起点）\n  ↓\n当前：纯化缠祟（`csrp:haunter`）\n  ↓\n【无直接宝可梦进化】\n\n证据：`Kind.HAUNTER(false, 360.0D, 15.5D, 110.0D, 0.283D, 2.0D, 80.0D, 5.0D)`——\nattackDamage **110.0** 为全图鉴最高；knockbackResistance **2.0** 超过 1.0。",
+  "dex1": "它只打你一次。如果那一次没打死你，它会花一个回合把锤子抬起来。",
+  "dex2": "观察记录：攻击力实测 **110.0**，为全部已记录生物之最（第二为掠夺者 40.0）。\n击退抗性 2.0，推击尝试全部反噬。\n ——结论：**不要被它打中。没有第二条建议**。",
+  "gameplay": "输出（近战范围处决 + 远程追踪爆发）、生存（360 HP + 免疫击退 + 反噬）、机动（闪避突进 + 潜水）、控制（恐惧 + 腐蚀）——PREEMINENT 层的双系统处决者",
+  "similarity": "与其余 Preeminent 的区别：**唯一拥有 8 套目标**，唯一具备远近双形态，唯一会潜水。掠夺者制造生物，缠祟摧毁生物——但缠祟有**两套摧毁方式**。"
+}

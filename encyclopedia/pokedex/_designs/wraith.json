@@ -1,0 +1,187 @@
+{
+  "id": "wraith",
+  "dex": 8113,
+  "zh": "纯化幽魂",
+  "en": "Wraith",
+  "types": [
+    "虫",
+    "幽灵"
+  ],
+  "kind": "交替投掷宝可梦",
+  "height": 3.2,
+  "weight": 280,
+  "stats": [
+    130,
+    110,
+    96,
+    84,
+    92,
+    62
+  ],
+  "statNote": "总和 574。SRP 中 health 310.0 / armor 15.5 / damage 70.0 / speed 0.28 / knockbackResistance 2.0 / followRange 80 / blockRange 5.0。**与 `BOGLE` 逐项完全相同**。区分在于一个计数器：**`wraithProjectileCount`**——它在 `ELVIA_BALL` 与 `ELVIA_NADE` 之间交替。",
+  "core": "“波格尔每次都用同一种。**幽魂会换**——一发球，一发雷，再一发球。”",
+  "visual": [
+    [
+      "头部",
+      "扁平头冠与波格尔相同，但发射腔分为两组",
+      "交替投掷"
+    ],
+    [
+      "眼睛",
+      "两枚暗红光点，投掷雷体时转为暗紫",
+      "ELVIA_NADE"
+    ],
+    [
+      "背部",
+      "**两组不同规格的弹药腔**，交替开启",
+      "ELVIA_BALL / ELVIA_NADE"
+    ],
+    [
+      "翼膜",
+      "与波格尔相同的宽大翼膜",
+      "flying = true"
+    ],
+    [
+      "躯干",
+      "装甲厚实，体表有暗紫色的渗出纹",
+      "幽灵系属性来源"
+    ],
+    [
+      "颜色",
+      "暗红寄生组织 + 暗紫渗出纹",
+      "SRP 模型配色"
+    ]
+  ],
+  "pose": "滞空高度与波格尔相同，但发射时会有一次明显的\"停顿—切换\"动作——两组弹药腔交替工作。",
+  "preserved": [
+    "**交替弹种**——`if (activeKind() == Kind.WRAITH) { wraithProjectileCount++; }` 与 `else if (wraithProjectileCount >= 1) { mode = Mode.ELVIA_NADE; } else { mode = Mode.ELVIA_BALL; }`",
+    "**专用计数器**——`wraithProjectileCount`，波格尔没有这个字段",
+    "**共享发射参数**——`LegacyProjectileAttackGoal(60, 30, 3)`",
+    "**完全免疫击退**——knockbackResistance **2.0**（超过 1.0）",
+    "**最远的感知范围**——followRange **80**",
+    "**最远的方块触及**——`blockRange = 5.0D`",
+    "**飞行**——`flying = true`",
+    "**共享的目标组**——`PreeminentChargeAttackGoal` / `LegacyProjectileAttackGoal(60, 30, 3)` / `PreeminentRandomFlightGoal`"
+  ],
+  "pokemonized": [
+    "**`wraithProjectileCount` 是一个只属于幽魂的字段**——波格尔没有。它存在的唯一目的就是让弹药在球体与雷体之间交替",
+    "所以我把它设计成**交替型**：一发球、一发雷、再一发球。**同样的数值，完全不同的节奏感**",
+    "它与波格尔是同一层里最典型的一对\"数值相同、机制不同\"——这也是本项目第五次遇到这种情况，而这次连目标组都完全相同，**唯一的区别就是那三行弹药代码**"
+  ],
+  "ability": {
+    "name": "交替装填（alternateloading）",
+    "effect": "自身使用的投射物招式**自动交替两种形态**：第一次为普通弹（无附加效果），第二次为**雷弹**（威力 -20% 但命中后使目标速度下降 1 阶段）。对应 `wraithProjectileCount` 的交替逻辑。"
+  },
+  "hidden": {
+    "name": "计数交替（counterswitch）",
+    "effect": "—（说明性特性）：源码中幽魂拥有专属字段 `wraithProjectileCount`，波格尔没有。该字段唯一的作用就是驱动弹药交替。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "elviaalternate",
+      "zh": "幽魂交替投掷",
+      "en": "Elvia Alternating Throw",
+      "cat": "M",
+      "type": "幽灵",
+      "cls": "特殊",
+      "pow": 75,
+      "acc": 95,
+      "pp": 10,
+      "range": "单体，全场",
+      "effect": "**连续攻击 3 次**，但三次的形态不同：**第 1 发为普通弹**（威力 75）、**第 2 发为雷弹**（威力 60，命中后目标速度下降 1 阶段）、**第 3 发为普通弹**。对应 `ELVIA_BALL → ELVIA_NADE → ELVIA_BALL` 的交替。",
+      "trigger": "无。",
+      "visual": "第一发是暗蓝色的球体，第二发换成拖着暗紫尾迹的雷体并在命中处炸开，第三发又变回球体——三发的形态肉眼可辨。",
+      "why": "`wraithProjectileCount` 交替逻辑的逐字翻译。**与波格尔的定式弹幕形成直接对照**：同样 3 发，波格尔三发一样，幽魂一发一换。"
+    }
+  ],
+  "common": [
+    {
+      "id": "parasiticcontact",
+      "why": "接触注染仍然存在"
+    },
+    {
+      "id": "infectionorb",
+      "why": "弹体属于球体类投射物"
+    },
+    {
+      "id": "markedprey",
+      "why": "投掷前锁定目标"
+    },
+    {
+      "id": "feargaze",
+      "why": "幽魂之名的凝视压迫感"
+    },
+    {
+      "id": "motorlag",
+      "why": "雷弹的减速是它的核心控制"
+    },
+    {
+      "id": "heightenedsenses",
+      "why": "followRange 80 的感知能力"
+    },
+    {
+      "id": "infectionpulse",
+      "why": "它是范围感染源"
+    },
+    {
+      "id": "laceration",
+      "why": "翼膜前缘造成撕裂伤"
+    },
+    {
+      "id": "hunteraura",
+      "why": "高空压制的持续压迫"
+    }
+  ],
+  "normal": [
+    "暗影球",
+    "电磁炮",
+    "空气利刃",
+    "高速移动",
+    "守住",
+    "虫鸣"
+  ],
+  "loop": [
+    [
+      "起手",
+      "猎物标记",
+      "锁定目标"
+    ],
+    [
+      "核心",
+      "幽魂交替投掷",
+      "用雷弹压制目标速度"
+    ],
+    [
+      "强化",
+      "交替装填（特性）",
+      "把两种弹体串成节奏"
+    ],
+    [
+      "控制",
+      "动作迟滞 / 雷弹减速",
+      "限制目标机动"
+    ],
+    [
+      "收尾",
+      "暗影球",
+      "在目标被减速后远程收场"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "感染区高空——与波格尔共享同一片空域",
+    "食物": "靠巢群供给",
+    "猎物": "地面与空中的移动目标",
+    "天敌": "能把它推离位置的手段",
+    "行为": "恒定高度—**交替投掷**。与波格尔的固定节奏形成对比",
+    "群体": "通常单独盘旋",
+    "巢穴": "巢穴的**交替投掷空中单位**",
+    "繁殖": "不繁殖，由巢穴生产",
+    "与其他 SRP 宝可梦关系": "**与波格尔数值逐项相同、目标组相同，唯一区别是 `wraithProjectileCount` 驱动的弹药交替**"
+  },
+  "evolution": "来源：无（PREEMINENT 起点）\n  ↓\n当前：纯化幽魂（`csrp:wraith`）\n  ↓\n【无直接宝可梦进化】\n\n证据：`Kind.WRAITH(true, 310.0D, 15.5D, 70.0D, 0.28D, 2.0D, 80.0D, 5.0D)`，\n专属字段 `wraithProjectileCount`，以及 `Mode.ELVIA_BALL` / `Mode.ELVIA_NADE` 交替分支。",
+  "dex1": "它和波格尔长得一样、打得一样重。但它会换东西——第二发总是有点不一样。",
+  "dex2": "观察记录：参数与 BOGLE 逐项相同（310/15.5/70/0.28/2.0/80/5.0）。\n投射物序列为 `ELVIA_BALL → ELVIA_NADE → ELVIA_BALL`，由 `wraithProjectileCount` 驱动。\n ——结论：**同样的身体，两套弹药**。",
+  "gameplay": "输出（三段异质投掷）、控制（雷弹减速）、生存（免疫击退 + 310 HP）——PREEMINENT 层的交替投掷单位",
+  "similarity": "与波格尔**数值逐项相同、目标组完全相同**，区分只来自三行弹药代码：幽魂在两种弹体之间交替，波格尔只发射一种。这是本项目第五组「必须靠源码而非数值区分」的案例。"
+}

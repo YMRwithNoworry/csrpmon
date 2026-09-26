@@ -1,0 +1,185 @@
+{
+  "id": "carrier_colony",
+  "dex": 8110,
+  "zh": "纯化聚落载虫",
+  "en": "Colony Carrier",
+  "types": [
+    "虫",
+    "水"
+  ],
+  "kind": "水域招募宝可梦",
+  "height": 3,
+  "weight": 480,
+  "stats": [
+    142,
+    102,
+    96,
+    70,
+    96,
+    26
+  ],
+  "statNote": "总和 532。SRP 中 health **390.0** / armor 15.5 / damage 45.0 / **speed 0.242（PREEMINENT 层最慢）** / knockbackResistance 2.0 / followRange 80 / blockRange 5.0。**`flying = false`**——它是这一层唯一的**水域**单位。",
+  "core": "“其他 Preeminent 在天上。**它在水里，而且它在拉人**——你打它的时候，队伍正在变大。”",
+  "visual": [
+    [
+      "头部",
+      "宽扁的头部，正面有可开合的吸水腔",
+      "CarrierSwimmingGoal"
+    ],
+    [
+      "眼睛",
+      "两排位于头顶的单眼，出水时才会张开",
+      "潜水与跃出两种状态"
+    ],
+    [
+      "躯干",
+      "**流线型厚重躯体**，体表覆有可闭合的甲板缝",
+      "水域形态"
+    ],
+    [
+      "尾部",
+      "粗大的尾部推进结构",
+      "speed 0.242 + WaterLeap"
+    ],
+    [
+      "背部",
+      "背侧有多个可容纳同伴的凹槽",
+      "CarrierRecruitGoal"
+    ],
+    [
+      "颜色",
+      "暗红寄生组织 + 水域形态下的暗青色膜层",
+      "SRP 模型配色"
+    ]
+  ],
+  "pose": "水中平游时完全流线型；出水跃起时甲板缝同时张开。**从不长时间离水。**",
+  "preserved": [
+    "**游泳**——`CarrierSwimmingGoal`",
+    "**水域跃出**——`CarrierWaterLeapGoal`",
+    "**持续增益**——`CarrierBuffGoal`，其 `canUse()` 直接返回 `true`（**无时无刻不在生效**）",
+    "**招募同伴**——`CarrierRecruitGoal`：`tickCount % 20 == 0 && getLeader() == null && getTarget() == null`",
+    "**最慢速度**——speed **0.242**，PREEMINENT 层最低",
+    "**不飞行**——`Kind.CARRIER_COLONY(false, ...)`"
+  ],
+  "pokemonized": [
+    "**`CarrierBuffGoal` 的 `canUse()` 直接 `return true`**——这是我在整个模组里见到的唯一一个**无条件常驻**的目标。它意味着这只生物**每一刻都在给周围的东西加 buff**",
+    "**`CarrierRecruitGoal` 的触发条件很明确**：每 20 tick 检查一次，且只有在**没有队长、没有目标**时才招募。也就是说——**它不打仗的时候在拉人**",
+    "它是 PREEMINENT 层唯一的**水域**单位（`flying = false` 且有完整的游泳/跃出目标组）。我给了它水属性，因为源码就是这么写的"
+  ],
+  "ability": {
+    "name": "聚落常在（colonyaura）",
+    "effect": "自身在场时，我方**所有寄生系宝可梦每回合结束回复 5% 最大 HP**。对应 `CarrierBuffGoal` 的 `canUse() { return true; }`——**常驻、无条件、永不中断**。"
+  },
+  "hidden": {
+    "name": "招募本能（recruitinstinct）",
+    "effect": "自身**未成为对手的攻击目标时**，每 2 回合可从以下选择一项：回复 15% 最大 HP、或使我方全体速度提升 1 阶段。对应 `CarrierRecruitGoal` 的\"无目标时才招募\"。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "colonyrecruit",
+      "zh": "聚落招募",
+      "en": "Colony Recruit",
+      "cat": "N",
+      "type": "虫",
+      "cls": "变化",
+      "pow": 0,
+      "acc": true,
+      "pp": 5,
+      "range": "我方全体",
+      "effect": "**只有自身当前不是对手攻击目标时可用**。为我方全体回复 20% 最大 HP 并各清除 1 层【感染】；同时使自己在本回合内**不会被选为攻击目标**（对应\"无目标时才招募\"）。造成 0 点伤害。",
+      "trigger": "**自身必须未被锁定**。",
+      "visual": "背侧凹槽同时张开，向四周释放一圈暗青色脉冲，被扫过的同伴身上寄生组织转为稳定色，而它自己沉入水中只露出头顶的单眼。",
+      "why": "`CarrierRecruitGoal` 的逐字翻译（`getTarget() == null` 才启动）。**它是全族唯一「必须不被注意才能发动」的辅助招式**——一个在大后方不断扩军的单位。"
+    }
+  ],
+  "common": [
+    {
+      "id": "parasiticcontact",
+      "why": "接触注染仍然存在"
+    },
+    {
+      "id": "waterambush",
+      "why": "它的全部战斗都在水中发生"
+    },
+    {
+      "id": "drowningpursuit",
+      "why": "水域追猎是它的主场"
+    },
+    {
+      "id": "parasiterelease",
+      "why": "它的职能就是投放与扩军"
+    },
+    {
+      "id": "tissueregeneration",
+      "why": "CarrierBuffGoal 的常驻增益"
+    },
+    {
+      "id": "hivespread",
+      "why": "它是巢群的扩散与集结节点"
+    },
+    {
+      "id": "infectionpulse",
+      "why": "它是范围感染源"
+    },
+    {
+      "id": "infestedground",
+      "why": "水域被它彻底污染"
+    },
+    {
+      "id": "markedprey",
+      "why": "跃出前锁定岸上的目标"
+    }
+  ],
+  "normal": [
+    "水流裂破",
+    "潜水",
+    "冲浪",
+    "帮助",
+    "守住",
+    "接棒"
+  ],
+  "loop": [
+    [
+      "起手",
+      "聚落招募",
+      "在未被锁定前先扩军"
+    ],
+    [
+      "核心",
+      "水流裂破 / 潜水",
+      "维持水域压制"
+    ],
+    [
+      "强化",
+      "聚落常在（特性）",
+      "常驻为全队回血"
+    ],
+    [
+      "控制",
+      "溺水追猎 / 感染脉冲",
+      "把目标限制在水中"
+    ],
+    [
+      "收尾",
+      "接棒",
+      "把扩大的优势交给队友"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "感染区的水体——它**不能长时间离开水**",
+    "食物": "水中的猎物",
+    "猎物": "被拖入水的目标",
+    "天敌": "能把它逼上岸的对手；speed 0.242 让它几乎无法脱离",
+    "行为": "**游动—增益—招募**。不打仗的时候就在拉人",
+    "群体": "它本身就是队伍的集结中心",
+    "巢穴": "巢穴的**水域集结节点**",
+    "繁殖": "不繁殖，由巢穴生产",
+    "与其他 SRP 宝可梦关系": "PREEMINENT 层唯一的水域单位；与其余四只的空/陆定位完全不同"
+  },
+  "evolution": "来源：无（PREEMINENT 起点）\n  ↓\n当前：纯化聚落载虫（`csrp:carrier_colony`）\n  ↓\n【无直接宝可梦进化】\n\n证据：`Kind.CARRIER_COLONY(false, 390.0D, 15.5D, 45.0D, 0.242D, 2.0D, 80.0D, 5.0D)`\n与 `case CARRIER_COLONY ->` 中注册的 5 个目标（Swimming / WaterLeap / Melee / Buff / Recruit）。",
+  "dex1": "它在水里，一直都在水里。你打它的时候不会觉得它变强了——你会觉得它身边的东西变多了。",
+  "dex2": "观察记录：`CarrierBuffGoal.canUse()` 直接返回 `true`，即**无条件常驻**。\n`CarrierRecruitGoal` 仅在自身无目标且无队长时触发，每 20 tick 检查一次。\n ——结论：**它不打你的时候，是在扩军**。",
+  "gameplay": "支援（常驻全队回复 + 招募扩军）、扩散（水域感染）、控制（水域限制）——PREEMINENT 层的水域集结节点",
+  "similarity": "与其余 4 只 Preeminent 的区别：**唯一水域单位**、唯一速度低于 0.25、唯一拥有无条件常驻增益。缠祟拆、筑巢者盖、它在**招人**。"
+}
