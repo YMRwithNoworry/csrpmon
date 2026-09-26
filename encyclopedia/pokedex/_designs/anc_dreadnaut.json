@@ -1,0 +1,205 @@
+{
+  "id": "anc_dreadnaut",
+  "dex": 8130,
+  "zh": "远古恐慑",
+  "en": "Ancient Dreadnaut",
+  "types": [
+    "虫",
+    "飞行"
+  ],
+  "kind": "灾害级空域宝可梦",
+  "height": 7.5,
+  "weight": 2400,
+  "stats": [
+    148,
+    120,
+    124,
+    110,
+    96,
+    58
+  ],
+  "statNote": "总和 656，**全图鉴第二高**（纯化缠祟 706）。SRP 中 health **200.0** / armor 15.0 / damage 15.0 / speed 0.30。**它拥有 `ServerBossEvent`（Boss 血条）与 `AncientPart[] bodyParts`（身体部位数组）**——这两项在整个模组里只有 ANCIENT 层才有。",
+  "core": "“它不是\"最强的寄生体\"。**它是一个会飞的、带部位的、有血条的灾害。**”",
+  "visual": [
+    [
+      "头部",
+      "巨大的楔形头骨，两侧各有一组发射腔",
+      "DreadVolleyGoal"
+    ],
+    [
+      "眼睛",
+      "一整排横向暗红光带，视野覆盖整个前半球",
+      "空域控制"
+    ],
+    [
+      "躯干",
+      "**分段式躯体，每一段都是独立的部位**",
+      "AncientPart[] bodyParts"
+    ],
+    [
+      "翼膜",
+      "**四对巨大翼膜**，跨度超过体型数倍",
+      "DreadFlightGoal"
+    ],
+    [
+      "空投腔",
+      "腹部有一整套空投结构",
+      "DreadPodGoal"
+    ],
+    [
+      "颜色",
+      "深红寄生组织 + 骨灰白甲板 + 核心暗紫",
+      "SRP 模型配色"
+    ]
+  ],
+  "pose": "持续滞空、盘旋高度极高；发动时四对翼膜完全展开，投下空投仓后立刻爬升。",
+  "preserved": [
+    "**Boss 级身份**——`private final ServerBossEvent bossEvent;`",
+    "**身体部位系统**——`private final AncientPart[] bodyParts;`",
+    "**三套专属目标**——`DreadVolleyGoal`（齐射）/ `DreadPodGoal`（空投）/ `DreadFlightGoal` + `DreadRandomFlightGoal`（飞行）",
+    "**专属移动控制**——`DreadMoveControl`",
+    "**极高数值**——health 200.0 / armor 15.0",
+    "**原始类名**——同族的地面触手类注释为 *\"Legacy Ancient Dreadnaut ground tendril (EntityOroncoTen)\"*"
+  ],
+  "pokemonized": [
+    "**`ServerBossEvent` 与 `AncientPart[]` 是 ANCIENT 层独有的两项**——前者是 Boss 血条，后者是身体部位数组。我据此把它做成**全图鉴唯二拥有独立部位血量的 Boss 之一**（另一只在这里是远古霸主）",
+    "**它有三个专属目标，构成三套协同系统**：齐射压制 → 空投投放地面单位 → 飞行重新定位。完全符合你规则对 ANCIENT「超大规模攻击 ＋ 阶段机制 ＋ 领域」的要求",
+    "**它的地面触手是另一个独立实体**（`anc_dreadnaut_ten`，50.0/3.75/2.0）——所以我把它设计成**本体与触手分离的空域要塞**"
+  ],
+  "ability": {
+    "name": "分段躯体（ancientparts）",
+    "effect": "自身拥有 **3 个独立部位**（对应 `AncientPart[] bodyParts`），每个部位耐久相当于最大 HP 的 25%。**每破坏一个部位，自身的齐射段数减少 1 段**。对应 `AncientPart[]` 与 `DreadVolleyGoal` 的联动。"
+  },
+  "hidden": {
+    "name": "灾害级血条（bosshp）",
+    "effect": "自身受到的伤害在**单次不超过最大 HP 的 20%**（对应 `ServerBossEvent` 的 Boss 定位）。**该保护在自身全部部位被破坏后失效**。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "dreadvolley",
+      "zh": "恐慑齐射",
+      "en": "Dread Volley",
+      "cat": "M",
+      "type": "虫",
+      "cls": "特殊",
+      "pow": 55,
+      "acc": 95,
+      "pp": 10,
+      "range": "全体对手",
+      "effect": "对场上**所有对手连续攻击 3 次**（每次威力 55）。**每破坏自身 1 个部位，段数减少 1 段**。对应 `DreadVolleyGoal`。",
+      "trigger": "无。",
+      "visual": "头部两侧的发射腔依次张开，连续三轮向全场倾泻暗红弹幕，翼膜每轮都因后坐而轻震一下。",
+      "why": "`DreadVolleyGoal` 的翻译，并与 `AncientPart[]` 绑定——**部位越少，齐射越稀**。"
+    },
+    {
+      "moveId": "dreadpod",
+      "zh": "恐慑空投",
+      "en": "Dread Pod",
+      "cat": "N",
+      "type": "飞行",
+      "cls": "变化",
+      "pow": 0,
+      "acc": true,
+      "pp": 5,
+      "range": "全场",
+      "effect": "从腹部投下 **1 具空投仓**（对应 `DreadPodGoal`），下回合从白名单中释放 **1 只寄生体**。**对应独立实体 `csrp:anc_pod`**。造成 0 点伤害。",
+      "trigger": "无。",
+      "visual": "腹部空投结构开启，一具暗红荚舱垂直落下并砸入地面，荚舱表面随即出现裂缝并渗出生物质。",
+      "why": "`DreadPodGoal` 与独立实体 `anc_pod`（Ancient Drop Pod，45.0/5.0/**0.0** 伤害）的翻译。**它不直接召唤，它先投下一个会自己打开的容器**——这是源码里两个实体的联动。"
+    }
+  ],
+  "common": [
+    {
+      "id": "parasiterelease",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "hivemothercall",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "hiveoppression",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "parasiticfield",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "infectionpulse",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "infestedground",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "hivespread",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "nestestablishment",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "markedprey",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "feargaze",
+      "why": "ANCIENT 层的灾害级职能来源"
+    }
+  ],
+  "normal": [
+    "逆鳞",
+    "龙之俯冲",
+    "空气利刃",
+    "地震",
+    "守住",
+    "蛮力"
+  ],
+  "loop": [
+    [
+      "起手",
+      "恐慑空投",
+      "先在地面投下空投仓"
+    ],
+    [
+      "核心",
+      "恐慑齐射",
+      "对全场连续三轮压制"
+    ],
+    [
+      "强化",
+      "分段躯体（特性）",
+      "用部位抵挡伤害"
+    ],
+    [
+      "控制",
+      "巢穴威压 / 恐惧凝视",
+      "压制全场节奏"
+    ],
+    [
+      "收尾",
+      "逆鳞",
+      "在对手被弹幕打散后全力收场"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "感染区高空——它的活动范围覆盖整片区域",
+    "食物": "不需要",
+    "猎物": "地面与空中一切",
+    "天敌": "能连续破坏它三个部位的手段",
+    "行为": "高空盘旋—齐射—空投—爬升。**从不落地**",
+    "群体": "从不群居——它是单独的灾害级个体",
+    "巢穴": "ANCIENT 层不属于巢穴体系，它是**灾害本身**",
+    "繁殖": "不繁殖",
+    "与其他 SRP 宝可梦关系": "**其地面触手是独立实体 `csrp:anc_dreadnaut_ten`**（50.0/3.75/2.0，类注释：*\"Legacy Ancient Dreadnaut ground tendril (EntityOroncoTen)\"*）；**其空投产物是独立实体 `csrp:anc_pod`**（45.0/5.0/0.0）"
+  },
+  "evolution": "来源：无（ANCIENT 起点）\n  ↓\n当前：远古恐慑（`csrp:anc_dreadnaut`）\n  ↓\n【无直接宝可梦进化】\n\n证据：`Kind.DREADNAUT(200.0D, 15.0D, 15.0D, 0.30D)`、`private final ServerBossEvent bossEvent;`、\n`private final AncientPart[] bodyParts;`，以及 `DreadVolleyGoal` / `DreadPodGoal` / `DreadFlightGoal` 三套目标。",
+  "dex1": "它飞得很高，大到不像同一个生态里的东西。它不追你——它把东西扔下来，然后继续飞。",
+  "dex2": "观察记录：生命 200.0，Boss 级血条，3 个独立部位。\n齐射段数随部位损毁递减；空投产物为 `anc_pod`（攻击力 **0.0**）。\n ——结论：**先打它的部位。打本体是最慢的解法**。",
+  "gameplay": "输出（全场三段齐射）、召唤（空投 → 释放）、生存（200 HP + 3 部位 + Boss 保护）、控制（威压 + 恐惧）——ANCIENT 层的空域灾害",
+  "similarity": "与远古争霸（`anc_overlord`）的区别：**它是空域型，争霸是近战型**。两者共享 `ServerBossEvent` 与 `AncientPart[]`，但目标组完全不同（它三套飞行相关，争霸是追踪与近战）。"
+}

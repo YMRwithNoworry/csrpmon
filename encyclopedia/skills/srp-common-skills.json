@@ -47,7 +47,8 @@
         "HIJACKED",
         "FERAL",
         "DETERRENT",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ANCIENT"
       ],
       "type": "虫",
       "cls": "物理",
@@ -60,7 +61,7 @@
       "vis": "口器接触处渗出黑色丝状物并短暂连向使用者。",
       "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / NEXUS / ANCIENT / DERIVED 不学习——它们不靠接触传播。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "infectingbite",
@@ -79,7 +80,8 @@
         "HIJACKED",
         "FERAL",
         "DETERRENT",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ANCIENT"
       ],
       "type": "虫",
       "cls": "物理",
@@ -92,7 +94,7 @@
       "vis": "咬合瞬间从伤口喷出细小孢子。",
       "denied": "NEXUS / ANCIENT / DERIVED。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "hivespread",
@@ -112,7 +114,8 @@
         "ASSIMARA",
         "HIJACKED",
         "FERAL",
-        "DETERRENT"
+        "DETERRENT",
+        "ANCIENT"
       ],
       "type": "虫",
       "cls": "变化",
@@ -125,7 +128,7 @@
       "vis": "一圈可见的孢子波从使用者脚下扩散出去。",
       "denied": "INBORN 低阶（buglin/gnat/lice）只能通过寄生接触传播，不学此招。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "infectionpulse",
@@ -173,7 +176,8 @@
         "ASSIMARA",
         "HIJACKED",
         "FERAL",
-        "DETERRENT"
+        "DETERRENT",
+        "ANCIENT"
       ],
       "type": "草",
       "cls": "变化",
@@ -186,7 +190,7 @@
       "vis": "地面浮现暗绿色孢子云。",
       "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL（它们是宿主，不是播种者）。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "hivemothercall",
@@ -327,7 +331,8 @@
         "ASSIMARA",
         "HIJACKED",
         "FERAL",
-        "DETERRENT"
+        "DETERRENT",
+        "ANCIENT"
       ],
       "type": "超能",
       "cls": "变化",
@@ -341,7 +346,7 @@
       "denied": "INBORN / NEXUS / ANCIENT / DERIVED。",
       "minStage": 1,
       "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。",
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "rapidadaptation",
@@ -561,7 +566,8 @@
         "ASSIMARA",
         "HIJACKED",
         "DETERRENT",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ANCIENT"
       ],
       "type": "恶",
       "cls": "变化",
@@ -574,7 +580,7 @@
       "vis": "目标身上血雾变浓。",
       "denied": "NEXUS / ANCIENT / DERIVED。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "rendingpursuit",
@@ -594,7 +600,8 @@
         "ASSIMARA",
         "HIJACKED",
         "DETERRENT",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ANCIENT"
       ],
       "type": "恶",
       "cls": "物理",
@@ -607,7 +614,7 @@
       "vis": "残影扑击，落点留下血痕。",
       "denied": "NEXUS / ANCIENT / DETERRENT。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：原本只列 INBORN 与更高阶，漏了夹在中间的 CRUDE。CRUDE 处于 INBORN 之上，不可能反而失去这个基础追击招式。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。"
+      "matrixNote": "矩阵修正：原本只列 INBORN 与更高阶，漏了夹在中间的 CRUDE。CRUDE 处于 INBORN 之上，不可能反而失去这个基础追击招式。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "corrosivebite",
@@ -627,7 +634,8 @@
         "ASSIMARA",
         "HIJACKED",
         "FERAL",
-        "DETERRENT"
+        "DETERRENT",
+        "ANCIENT"
       ],
       "type": "毒",
       "cls": "物理",
@@ -640,7 +648,7 @@
       "vis": "咬痕边缘冒酸雾。",
       "denied": "ANCIENT / DERIVED 不学——它们改用装甲溶解。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "acidspray",
@@ -710,7 +718,8 @@
         "HIJACKED",
         "FERAL",
         "DETERRENT",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ANCIENT"
       ],
       "type": "毒",
       "cls": "变化",
@@ -723,7 +732,7 @@
       "vis": "目标脚下出现环形腐蚀符。",
       "denied": "与装甲溶解互斥，学会其一即不能学另一。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "humicburst",
@@ -954,7 +963,8 @@
         "ASSIMARA",
         "HIJACKED",
         "FERAL",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ANCIENT"
       ],
       "type": "虫",
       "cls": "物理",
@@ -967,7 +977,7 @@
       "vis": "细小针状物嵌入目标体表并持续闪烁。",
       "denied": "NEXUS / ANCIENT / DERIVED（它们用爆发而非累积）。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "venomneedleburst",
@@ -986,7 +996,8 @@
         "WALKING_HEAD",
         "ASSIMARA",
         "HIJACKED",
-        "FERAL"
+        "FERAL",
+        "ANCIENT"
       ],
       "type": "虫",
       "cls": "物理",
@@ -999,7 +1010,7 @@
       "vis": "密集针雨从口器射出。",
       "denied": "INBORN 只能学针刺。",
       "minStage": 2,
-      "matrixNote": "针刺是多段攻击形态：基础针刺属于全族，爆发形态从第二形态（裂噬兽）起才具备。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
+      "matrixNote": "针刺是多段攻击形态：基础针刺属于全族，爆发形态从第二形态（裂噬兽）起才具备。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "piercingspore",
@@ -1103,7 +1114,8 @@
         "ASSIMARA",
         "HIJACKED",
         "DETERRENT",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ANCIENT"
       ],
       "type": "恶",
       "cls": "物理",
@@ -1116,7 +1128,7 @@
       "vis": "命中处生物质被吸入使用者体内。",
       "denied": "NEXUS / DETERRENT / DERIVED。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "parasiticdrain",
@@ -1136,7 +1148,8 @@
         "ASSIMARA",
         "HIJACKED",
         "FERAL",
-        "DETERRENT"
+        "DETERRENT",
+        "ANCIENT"
       ],
       "type": "虫",
       "cls": "特殊",
@@ -1149,7 +1162,7 @@
       "vis": "黑色丝线从目标连到使用者身上。",
       "denied": "NEXUS / ANCIENT。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "motorlag",
@@ -1168,7 +1181,8 @@
         "WALKING_HEAD",
         "ASSIMARA",
         "HIJACKED",
-        "FERAL"
+        "FERAL",
+        "ANCIENT"
       ],
       "type": "地面",
       "cls": "变化",
@@ -1181,7 +1195,7 @@
       "vis": "目标四肢被半透明丝线缠住。",
       "denied": "INBORN 不学。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "limbnumbness",
@@ -1250,7 +1264,8 @@
         "ASSIMARA",
         "HIJACKED",
         "FERAL",
-        "DETERRENT"
+        "DETERRENT",
+        "ANCIENT"
       ],
       "type": "恶",
       "cls": "物理",
@@ -1263,7 +1278,7 @@
       "vis": "目标解体为黑色生物质被吸入。",
       "denied": "INBORN 只能通过寄生吸收获取资源，不能掠夺成长。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "killingevolution",
@@ -1308,7 +1323,8 @@
         "WALKING_HEAD",
         "ASSIMARA",
         "HIJACKED",
-        "DETERRENT"
+        "DETERRENT",
+        "ANCIENT"
       ],
       "type": "恶",
       "cls": "变化",
@@ -1321,7 +1337,7 @@
       "vis": "体表渗出红色雾气，动作变快。",
       "denied": "NEXUS / DETERRENT / ANCIENT（它们不靠自残换输出）。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "berserkinfection",
@@ -1340,7 +1356,8 @@
         "WALKING_HEAD",
         "ASSIMARA",
         "HIJACKED",
-        "DETERRENT"
+        "DETERRENT",
+        "ANCIENT"
       ],
       "type": "恶",
       "cls": "变化",
@@ -1353,7 +1370,7 @@
       "vis": "目标眼睛变红并出现抖动。",
       "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / NEXUS。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "laststandrage",
@@ -1446,7 +1463,8 @@
         "ASSIMARA",
         "HIJACKED",
         "FERAL",
-        "DETERRENT"
+        "DETERRENT",
+        "ANCIENT"
       ],
       "type": "毒",
       "cls": "特殊",
@@ -1459,7 +1477,7 @@
       "vis": "黑色球体拖着尾迹飞向目标。",
       "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / ANCIENT。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "parasiticfield",
@@ -1557,7 +1575,8 @@
         "FERAL",
         "DETERRENT",
         "PURE",
-        "NEXUS"
+        "NEXUS",
+        "ANCIENT"
       ],
       "type": "虫",
       "cls": "变化",
@@ -1570,7 +1589,7 @@
       "vis": "背部裂开并喷出幼虫群。",
       "denied": "NEXUS / ANCIENT / DETERRENT——它们的召唤是领域级，不走\"释放\"通道。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PURE。掠夺者（marauder）本身就在 PURE 层，而它是全部 6 只 ASSIMARA 掠夺化体的来源，源码中类注释为 Legacy EntityEsor port，其身份就是投放/改造。排除它不合理。 矩阵修正：加入 NEXUS。Nexus 层的召唤柱（beckon_si 等）本身就是储存与释放寄生体的设施（源码字段 storedParasiteIds），召唤前必须指认目标。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PURE。掠夺者（marauder）本身就在 PURE 层，而它是全部 6 只 ASSIMARA 掠夺化体的来源，源码中类注释为 Legacy EntityEsor port，其身份就是投放/改造。排除它不合理。 矩阵修正：加入 NEXUS。Nexus 层的召唤柱（beckon_si 等）本身就是储存与释放寄生体的设施（源码字段 storedParasiteIds），召唤前必须指认目标。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "hiverecall",
@@ -1613,7 +1632,8 @@
         "HIJACKED",
         "FERAL",
         "DETERRENT",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ANCIENT"
       ],
       "type": "草",
       "cls": "变化",
@@ -1626,7 +1646,7 @@
       "vis": "伤口被快速生长的白色组织覆盖。",
       "denied": "ANCIENT / DERIVED 不学——它们用重构而非再生。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "dormancyregen",
@@ -1645,7 +1665,8 @@
         "ASSIMARA",
         "HIJACKED",
         "FERAL",
-        "DETERRENT"
+        "DETERRENT",
+        "ANCIENT"
       ],
       "type": "草",
       "cls": "变化",
@@ -1658,7 +1679,7 @@
       "vis": "使用者蜷缩成球状并被生物质包裹。",
       "denied": "PURE / ANCIENT / DERIVED——纯战斗单位不进入休眠。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "parasiticblink",
@@ -1733,7 +1754,8 @@
         "ASSIMARA",
         "HIJACKED",
         "FERAL",
-        "DETERRENT"
+        "DETERRENT",
+        "ANCIENT"
       ],
       "type": "地面",
       "cls": "变化",
@@ -1746,7 +1768,7 @@
       "vis": "地面长出黑色菌毯与肉质组织。",
       "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / DETERRENT / ANCIENT。",
       "minStage": 1,
-      "matrixNote": "证据：WorkerEntity 的 BuildColonyGoal 就是产生感染地面的行为，工虫必须能学。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。"
+      "matrixNote": "证据：WorkerEntity 的 BuildColonyGoal 就是产生感染地面的行为，工虫必须能学。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "nestestablishment",
@@ -1788,7 +1810,8 @@
         "ASSIMARA",
         "HIJACKED",
         "DETERRENT",
-        "PREEMINENT"
+        "PREEMINENT",
+        "ANCIENT"
       ],
       "type": "水",
       "cls": "物理",
@@ -1801,7 +1824,7 @@
       "vis": "水面炸开并窜出寄生体。",
       "denied": "**不得全族通用**：不具备水域行为的实体（NEXUS / ANCIENT / DETERRENT / HIJACKED）不学。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "drowningpursuit",
@@ -1846,7 +1869,8 @@
         "WALKING_HEAD",
         "ASSIMARA",
         "HIJACKED",
-        "DETERRENT"
+        "DETERRENT",
+        "ANCIENT"
       ],
       "type": "毒",
       "cls": "特殊",
@@ -1859,7 +1883,7 @@
       "vis": "口部喷出黑色半固态物质。",
       "denied": "NEXUS / ANCIENT / DERIVED。",
       "minStage": 1,
-      "matrixNote": "载虫的 spawnLingeringCloud() 就是吐出体内生物质形成毒云，与呕吐同源，因此放开 INBORN。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。"
+      "matrixNote": "载虫的 spawnLingeringCloud() 就是吐出体内生物质形成毒云，与呕吐同源，因此放开 INBORN。 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "heightenedsenses",
@@ -1878,7 +1902,8 @@
         "ASSIMILATED",
         "WALKING_HEAD",
         "ASSIMARA",
-        "HIJACKED"
+        "HIJACKED",
+        "ANCIENT"
       ],
       "type": "一般",
       "cls": "变化",
@@ -1891,7 +1916,7 @@
       "vis": "使用者头部震颤，眼睛出现复眼反光。",
       "denied": "NEXUS / ANCIENT——它们的感知是领域级而非个体级。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "markedprey",
@@ -1912,7 +1937,8 @@
         "HIJACKED",
         "DETERRENT",
         "PREEMINENT",
-        "NEXUS"
+        "NEXUS",
+        "ANCIENT"
       ],
       "type": "一般",
       "cls": "变化",
@@ -1925,7 +1951,7 @@
       "vis": "目标头顶出现暗红色标记。",
       "denied": "NEXUS / DETERRENT。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。 矩阵修正：加入 NEXUS。Nexus 层的召唤柱（beckon_si 等）本身就是储存与释放寄生体的设施（源码字段 storedParasiteIds），召唤前必须指认目标。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。 矩阵修正：加入 NEXUS。Nexus 层的召唤柱（beckon_si 等）本身就是储存与释放寄生体的设施（源码字段 storedParasiteIds），召唤前必须指认目标。 矩阵修正：加入 ANCIENT。远古层（AncientParasiteEntity）是灾害级生物，拥有 ServerBossEvent 与 AncientPart[] 部位系统，不可能缺少基础工具集。"
     },
     {
       "id": "parasiticsmoke",

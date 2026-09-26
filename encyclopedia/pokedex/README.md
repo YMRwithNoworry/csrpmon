@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 119 / 129**
+**Designed: 121 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -23,7 +23,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | PURE | 7 | 7 |
 | PREEMINENT | 8 | 8 |
 | DERIVED | 0 | 2 |
-| ANCIENT | 0 | 4 |
+| ANCIENT | 2 | 4 |
 | ABOMINATION | 0 | 2 |
 | UNTIERED | 0 | 2 |
 
@@ -222,8 +222,8 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 1 | `csrp:anc_dreadnaut` | 远古惧魔 / Ancient Dreadnaut | - | pending |
-| 1 | `csrp:anc_overlord` | 远古君魔 / Ancient Overlord | - | pending |
+| 1 | `csrp:anc_dreadnaut` | 远古惧魔 / Ancient Dreadnaut | - | [designed](anc_dreadnaut.md) |
+| 1 | `csrp:anc_overlord` | 远古君魔 / Ancient Overlord | - | [designed](anc_overlord.md) |
 | 1 | `csrp:anc_dreadnaut_ten` | 远古惧魔触须 / Ancient Dreadnaut Tendril | EntityOroncoTen | pending |
 | 1 | `csrp:anc_pod` | 空投吊舱 / Ancient Drop Pod | EntityDropPod | pending |
 

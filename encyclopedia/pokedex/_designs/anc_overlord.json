@@ -1,0 +1,204 @@
+{
+  "id": "anc_overlord",
+  "dex": 8131,
+  "zh": "远古争霸",
+  "en": "Ancient Overlord",
+  "types": [
+    "虫",
+    "超能"
+  ],
+  "kind": "灾害级追猎宝可梦",
+  "height": 8.2,
+  "weight": 2800,
+  "stats": [
+    156,
+    132,
+    118,
+    104,
+    102,
+    44
+  ],
+  "statNote": "总和 656，**与远古恐慑并列全图鉴第二高**。SRP 中 health **250.0（ANCIENT 层最高）** / armor 15.0 / **damage 20.0** / speed 0.23。**它同样拥有 `ServerBossEvent` 与 `AncientPart[] bodyParts`**，但目标组是 `OverlordHomingGoal` 与 `OverlordMeleeGoal`。",
+  "core": "“恐慑把东西扔下来。争霸**自己过来**——而且它打出来的东西会拐弯。”",
+  "visual": [
+    [
+      "头部",
+      "巨大的钝形头骨，没有发射腔",
+      "与恐慑的核心区别"
+    ],
+    [
+      "眼睛",
+      "**成对出现的追踪光点**，会随目标移动",
+      "OverlordHomingGoal"
+    ],
+    [
+      "躯干",
+      "分段式躯体，每一段都是独立部位",
+      "AncientPart[] bodyParts"
+    ],
+    [
+      "前肢",
+      "一对极粗壮的前肢，末端为整块骨板",
+      "OverlordMeleeGoal"
+    ],
+    [
+      "背部",
+      "背侧没有翼膜结构，躯干完全为近战设计",
+      "不飞行"
+    ],
+    [
+      "颜色",
+      "深红寄生组织 + 骨灰白甲板 + 更深的暗紫核心",
+      "SRP 模型配色"
+    ]
+  ],
+  "pose": "直立、重心极低；攻击时前肢不做大幅挥动，而是**以整个身体压上去**。",
+  "preserved": [
+    "**Boss 级身份**——`private final ServerBossEvent bossEvent;`",
+    "**身体部位系统**——`private final AncientPart[] bodyParts;`",
+    "**两套专属目标**——`OverlordHomingGoal`（追踪弹）/ `OverlordMeleeGoal`（近战）",
+    "**ANCIENT 层最高生命**——health **250.0**",
+    "**最慢速度**——speed 0.23"
+  ],
+  "pokemonized": [
+    "**它与恐慑共享两项 ANCIENT 独有的字段**（`ServerBossEvent` 与 `AncientPart[]`），所以两者是同级的灾害",
+    "**但目标组完全不同**：恐慑是 `DreadVolley` + `DreadPod` + `DreadFlight`（空域三套），它是 `OverlordHoming` + `OverlordMelee`（追踪 + 近战两套）",
+    "**`OverlordHomingGoal` 说明它的投射物会追踪**——我据此把它做成\"必定命中但可被减伤\"的追踪弹，与恐慑的可规避齐射形成对照"
+  ],
+  "ability": {
+    "name": "分段躯体（ancientparts）",
+    "effect": "自身拥有 **3 个独立部位**（对应 `AncientPart[] bodyParts`），每个部位耐久相当于最大 HP 的 25%。**每破坏一个部位，自身受到的伤害提高 10%**。对应 `AncientPart[]`。"
+  },
+  "hidden": {
+    "name": "灾害级血条（bosshp）",
+    "effect": "自身受到的伤害在**单次不超过最大 HP 的 20%**（对应 `ServerBossEvent`）。**该保护在自身全部部位被破坏后失效**。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "overlordhoming",
+      "zh": "争霸追猎弹",
+      "en": "Overlord Homing",
+      "cat": "M",
+      "type": "超能",
+      "cls": "特殊",
+      "pow": 95,
+      "acc": true,
+      "pp": 10,
+      "range": "单体，全场",
+      "effect": "**必定命中**（追踪弹，对应 `OverlordHomingGoal`）。命中后使目标**本回合无法替换下场**。对应它是追猎型灾害。",
+      "trigger": "无。",
+      "visual": "从躯干两侧射出数枚暗紫色追踪弹，弹道中途多次拐弯绕过障碍，命中后目标脚下浮现锁定纹。",
+      "why": "`OverlordHomingGoal` 的翻译。**与恐慑的齐射形成对照**：恐慑对全场打可规避的弹幕，它对单体打躲不掉的追踪弹。"
+    },
+    {
+      "moveId": "overlordpress",
+      "zh": "争霸压顶",
+      "en": "Overlord Press",
+      "cat": "Q",
+      "type": "虫",
+      "cls": "物理",
+      "pow": 135,
+      "acc": 95,
+      "pp": 10,
+      "range": "自身周围 1 格",
+      "effect": "对接触范围内所有对手造成伤害。**若目标本回合已被追猎弹命中，威力提高 30%**。对应 `OverlordMeleeGoal`。",
+      "trigger": "与追猎弹是否命中相关。",
+      "visual": "前肢撑地、整个躯体垂直压下，分段式躯体的每一节依次合拢，落点产生环状冲击。",
+      "why": "`OverlordMeleeGoal` 与 damage 20.0 的翻译，并与追踪弹**形成两段连携**：先追踪锁定，再贴身压顶。**这正是 ANCIENT 层要求的\"两套相互配合的系统\"**。"
+    }
+  ],
+  "common": [
+    {
+      "id": "parasiterelease",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "hivemothercall",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "hiveoppression",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "parasiticfield",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "infectionpulse",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "hunteraura",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "hivespread",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "nestestablishment",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "markedprey",
+      "why": "ANCIENT 层的灾害级职能来源"
+    },
+    {
+      "id": "feargaze",
+      "why": "ANCIENT 层的灾害级职能来源"
+    }
+  ],
+  "normal": [
+    "逆鳞",
+    "精神强念",
+    "臂锤",
+    "地震",
+    "守住",
+    "蛮力"
+  ],
+  "loop": [
+    [
+      "起手",
+      "争霸追猎弹",
+      "追踪锁定并禁止换人"
+    ],
+    [
+      "核心",
+      "争霸压顶",
+      "在锁定后贴身重压"
+    ],
+    [
+      "强化",
+      "分段躯体（特性）",
+      "用三个部位抵挡伤害"
+    ],
+    [
+      "控制",
+      "巢穴威压 / 恐惧凝视",
+      "压制目标行动"
+    ],
+    [
+      "收尾",
+      "逆鳞",
+      "在目标无法脱身时全力收场"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "感染区核心地带——它不像恐慑那样滞空，而是直接推进",
+    "食物": "不需要",
+    "猎物": "不筛选，一次锁定一个",
+    "天敌": "能连续破坏它三个部位的手段",
+    "行为": "锁定—追踪—压顶。**两段连携，没有第三段**",
+    "群体": "从不群居",
+    "巢穴": "ANCIENT 层不属于巢穴体系，它是**灾害本身**",
+    "繁殖": "不繁殖",
+    "与其他 SRP 宝可梦关系": "与远古恐慑一同拥有 `ServerBossEvent` 与 `AncientPart[]`；**两者是同级灾害，但一个空域一个近战**"
+  },
+  "evolution": "来源：无（ANCIENT 起点）\n  ↓\n当前：远古争霸（`csrp:anc_overlord`）\n  ↓\n【无直接宝可梦进化】\n\n证据：`Kind.OVERLORD(250.0D, 15.0D, 20.0D, 0.23D)`、`private final ServerBossEvent bossEvent;`、\n`private final AncientPart[] bodyParts;`，以及 `OverlordHomingGoal` / `OverlordMeleeGoal`。",
+  "dex1": "它不像恐慑那样在天上。它直接朝你走过来——而且它打出来的东西会拐弯。",
+  "dex2": "观察记录：生命 250.0，为 ANCIENT 层最高；Boss 级血条，3 个独立部位。\n追踪弹必中且禁止换人；随后近战压顶威力提升 30%。\n ——结论：**它的两段是连着的。躲开第一段才有第二段的余地**。",
+  "gameplay": "输出（必中追踪 + 贴身重压的两段连携）、生存（250 HP + 3 部位 + Boss 保护）、控制（禁止换人 + 威压）——ANCIENT 层的近战灾害",
+  "similarity": "与远古恐慑**共享两项 ANCIENT 独有字段**（Boss 血条 + 部位数组），但**目标组完全不同**：恐慑是空域三套，它是追踪＋近战两套。"
+}
