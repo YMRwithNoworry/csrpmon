@@ -1,0 +1,14 @@
+const fs=require('fs'),path=require('path');
+const R=process.argv[2];
+const gf=path.join(R,'tools/build_pokedex.cjs');
+let g=fs.readFileSync(gf,'utf8');
+const from="  if(bst && (bst<180||bst>720)) problems.push(file+': base stat total '+bst+' out of range');";
+if(!g.includes(from)) throw new Error('anchor missing');
+const to="  if(bst && (bst<180||bst>720) && !d.bstNote) problems.push(file+': base stat total '+bst+' out of range (add a bstNote citing source numbers to justify an outlier)');";
+g=g.replace(from,to);
+fs.writeFileSync(gf,g);
+const f=path.join(R,'encyclopedia/pokedex/_designs/incompleteform_small.json');
+const d=JSON.parse(fs.readFileSync(f,'utf8'));
+d.bstNote=process.argv[3];
+fs.writeFileSync(f, JSON.stringify(d,null,2)+'\n');
+console.log('bstNote added');

@@ -3,14 +3,14 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 18 / 129**
+**Designed: 21 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
 | Tier | Designed | Total |
 |---|---|---|
 | INBORN | 10 | 10 |
-| CRUDE | 8 | 11 |
+| CRUDE | 11 | 11 |
 | PRIMITIVE | 0 | 12 |
 | ADAPTED | 0 | 12 |
 | ASSIMILATED | 0 | 13 |
@@ -51,9 +51,9 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | 1 | `csrp:airscrew` | 悬牵体 / Airscrew | - | [designed](airscrew.md) |
 | 1 | `csrp:heed` | 警戒兽 / Heed | - | [designed](heed.md) |
 | 1 | `csrp:host` | 缠骨柱 / Host | - | [designed](host.md) |
-| 2 | `csrp:hostii` | 缠骷柱 / Host II | - | pending |
-| 1 | `csrp:incompleteform_medium` | 中型未成形寄生体 / Medium Incomplete Form | - | pending |
-| 1 | `csrp:incompleteform_small` | 小型未成形寄生体 / Small Incomplete Form | - | pending |
+| 2 | `csrp:hostii` | 缠骷柱 / Host II | - | [designed](hostii.md) |
+| 1 | `csrp:incompleteform_medium` | 中型未成形寄生体 / Medium Incomplete Form | - | [designed](incompleteform_medium.md) |
+| 1 | `csrp:incompleteform_small` | 小型未成形寄生体 / Small Incomplete Form | - | [designed](incompleteform_small.md) |
 | 2 | `csrp:thrall` | 寄生奴仆 / Thrall | - | [designed](thrall.md) |
 | 1 | `csrp:dredge` | 溺骨妖 / Dredge | - | [designed](dredge.md) |
 | 1 | `csrp:carrier_worm` | 蠕虫载体 / Worm Carrier | EntityQuac | [designed](carrier_worm.md) |

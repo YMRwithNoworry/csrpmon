@@ -1,5 +1,5 @@
 {
-  "note": "Only relations the CSRP source proves. The evolution graph is parsed directly out of ParasiteTransformation.java, which is the mod's own evolve/devolve implementation - not inferred from naming alone.",
+  "note": "Only relations the CSRP source proves. The evolution graph is parsed directly out of ParasiteTransformation.java, which is the mod's own evolve/devolve implementation - not inferred from naming alone. Inheritance edges are added where one creature class literally extends another creature class. Inheritance edges are added where one creature class literally extends another creature class.",
   "counts": {
     "evolves-into": 22,
     "devolves-into": 6,
@@ -7,7 +7,8 @@
     "evolves-into-random": 12,
     "head-of": 1,
     "deploys": 1,
-    "spawns-part": 1
+    "spawns-part": 1,
+    "matures-from": 1
   },
   "relations": [
     {
@@ -321,6 +322,12 @@
       "to": "csrp:anc_dreadnaut_ten",
       "kind": "spawns-part",
       "evidence": "anc_dreadnaut_ten is the Dreadnaut tentacle entity"
+    },
+    {
+      "from": "csrp:incompleteform_small",
+      "to": "csrp:incompleteform_medium",
+      "kind": "matures-from",
+      "evidence": "class inheritance: IncompleteFormMediumEntity extends IncompleteFormSmallEntity in the CSRP source"
     }
   ]
 }

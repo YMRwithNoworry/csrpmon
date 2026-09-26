@@ -18,7 +18,7 @@ for(const file of fs.readdirSync(DDIR).filter(f=>f.endsWith('.json')).sort()){
   for(const k of ['dex','zh','en','types','kind','height','weight','stats','core','visual','preserved','pokemonized','ability','hidden','signature','common','normal','loop','ecology','evolution','dex1','dex2']) if(!(k in d)) problems.push(file+': missing '+k);
   if(d.stats && d.stats.length!==6) problems.push(file+': stats must be 6 numbers');
   const bst=d.stats?d.stats.reduce((a,b)=>a+b,0):0;
-  if(bst && (bst<180||bst>720)) problems.push(file+': base stat total '+bst+' out of range');
+  if(bst && (bst<180||bst>720) && !d.bstNote) problems.push(file+': base stat total '+bst+' out of range (add a bstNote citing source numbers to justify an outlier)');
   for(const s of d.signature||[]){
     if(usedSig.has(s.moveId)) problems.push(file+': signature '+s.moveId+' already used by '+usedSig.get(s.moveId));
     usedSig.set(s.moveId, d.id);

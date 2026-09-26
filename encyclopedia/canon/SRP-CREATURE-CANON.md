@@ -18,7 +18,7 @@ bestiary entry for it.
 
 Registered entity ids: **157**. Bestiary entries: **126**.
 Creatures (MobCategory `MONSTER`/`CREATURE`): **129**. Excluded as non-creatures: **34**.
-Proven relations: **52** - {"evolves-into":22,"devolves-into":6,"nexus-stage-up":9,"evolves-into-random":12,"head-of":1,"deploys":1,"spawns-part":1}
+Proven relations: **53** - {"evolves-into":22,"devolves-into":6,"nexus-stage-up":9,"evolves-into-random":12,"head-of":1,"deploys":1,"spawns-part":1,"matures-from":1}
 
 | Tier | Count |
 |---|---|
@@ -330,6 +330,10 @@ Parsed out of `ParasiteTransformation.java`, which is the mod's own evolve/devol
 ### spawns-part (1)
 
 - `csrp:anc_dreadnaut` -> `csrp:anc_dreadnaut_ten`
+
+### matures-from (1)
+
+- `csrp:incompleteform_small` -> `csrp:incompleteform_medium`
 
 ## Conflicts and open questions
 
