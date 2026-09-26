@@ -15,9 +15,7 @@
   "weight": 120,
   "primaryType": "bug",
   "abilities": [
-    "swarm",
-    "blaze",
-    "h:aftermath"
+    "hiveswarm"
   ],
   "eggGroups": [
     "bug"
@@ -91,10 +89,25 @@
     "1:stringshot",
     "1:bugbite",
     "13:ember",
-    "17:bite",
-    "21:flamecharge",
+    "17:hivebite",
+    "21:bite",
     "26:lunge",
     "31:flamethrower"
   ],
-  "secondaryType": "fire"
+  "secondaryType": "poison",
+  "evolutions": [
+    {
+      "id": "rupter_mangler",
+      "variant": "level_up",
+      "result": "mangler",
+      "consumeHeldItem": false,
+      "learnableMoves": [],
+      "requirements": [
+        {
+          "variant": "level",
+          "minLevel": 36
+        }
+      ]
+    }
+  ]
 }

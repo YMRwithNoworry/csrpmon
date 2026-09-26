@@ -53,7 +53,10 @@ public final class ParasiteSpeciesMap {
         add("kirin", "kirin", 6, 58, 75);
         add("anc_dreadnaut", "anc_dreadnaut", 6, 58, 75);
         add("anc_overlord", "anc_overlord", 6, 60, 80);
-    }
+        // Beckon nest line
+        add("beckon_si", "beckon", 4, 34, 46);
+        add("beckon_siii", "beckon_queen", 5, 46, 58);
+        add("beckon_siv", "world_node", 6, 58, 80);    }
 
     private ParasiteSpeciesMap() {
     }

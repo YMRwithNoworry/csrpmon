@@ -88,20 +88,5 @@
     "9:leechlife",
     "14:fellstinger",
     "19:pinmissile"
-  ],
-  "evolutions": [
-    {
-      "id": "lice_mangler",
-      "variant": "level_up",
-      "result": "mangler",
-      "consumeHeldItem": false,
-      "learnableMoves": [],
-      "requirements": [
-        {
-          "variant": "level",
-          "minLevel": 16
-        }
-      ]
-    }
   ]
 }

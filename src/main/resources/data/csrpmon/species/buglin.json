@@ -15,8 +15,8 @@
   "weight": 18,
   "primaryType": "bug",
   "abilities": [
-    "swarm",
-    "h:compoundeyes"
+    "parasiticinstinct",
+    "h:colonyinfection"
   ],
   "eggGroups": [
     "bug"
@@ -88,6 +88,7 @@
   "moves": [
     "1:tackle",
     "1:stringshot",
+    "1:parasiticbite",
     "4:bugbite",
     "8:leechlife",
     "12:bite",
@@ -103,9 +104,10 @@
       "requirements": [
         {
           "variant": "level",
-          "minLevel": 14
+          "minLevel": 18
         }
       ]
     }
-  ]
+  ],
+  "secondaryType": "poison"
 }

@@ -1,0 +1,95 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8027,
+  "name": "World Node",
+  "pokedex": [
+    "csrpmon.species.worldnode.desc"
+  ],
+  "labels": [
+    "csrp",
+    "tier6",
+    "beckon"
+  ],
+  "aspects": [],
+  "maleRatio": -1,
+  "height": 69,
+  "weight": 1028,
+  "primaryType": "grass",
+  "secondaryType": "poison",
+  "abilities": [
+    "parasiticnest",
+    "h:regenerator"
+  ],
+  "eggGroups": [
+    "grass",
+    "amorphous"
+  ],
+  "baseStats": {
+    "hp": 140,
+    "attack": 80,
+    "defence": 150,
+    "special_attack": 145,
+    "special_defence": 145,
+    "speed": 30
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 3,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 480,
+  "experienceGroup": "slow",
+  "catchRate": 3,
+  "eggCycles": 40,
+  "baseFriendship": 0,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 0.8,
+    "height": 6.9,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": false
+    },
+    "herd": {
+      "maxSize": 1,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 3,
+    "entries": [
+      {
+        "item": "csrp:beckon_drop",
+        "quantityRange": "0-2"
+      },
+      {
+        "item": "csrp:hive_scrap",
+        "quantityRange": "1-2"
+      }
+    ]
+  },
+  "moves": [
+    "1:absorb",
+    "1:growth",
+    "1:poisonsting",
+    "1:nestsummon",
+    "20:megadrain",
+    "28:sludgebomb",
+    "36:gigadrain",
+    "44:toxic"
+  ]
+}

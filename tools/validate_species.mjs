@@ -52,6 +52,29 @@ if (!showdownDir || !fs.existsSync(path.join(showdownDir, 'data/abilities.js')))
 }
 const abilities = topLevelKeys(fs.readFileSync(path.join(showdownDir, 'data/abilities.js'), 'utf8'));
 const moves = topLevelKeys(fs.readFileSync(path.join(showdownDir, 'data/moves.js'), 'utf8'));
+
+// Abilities and moves this addon defines itself, in data/csrpmon/{abilities,moves}/*.js.
+// Cobblemon loads these into the same registries, so they are valid references too.
+const ourData = path.join(speciesDir, '../../..', 'data/csrpmon');
+for (const [kind, set] of [['abilities', abilities], ['moves', moves]]) {
+  const dir = path.resolve(ourData, kind);
+  if (!fs.existsSync(dir)) continue;
+  for (const file of fs.readdirSync(dir)) {
+    if (!file.endsWith('.js')) continue;
+    const id = path.basename(file, '.js').toLowerCase();
+    set.add(id);
+    const body = fs.readFileSync(path.join(dir, file), 'utf8');
+    if (/\/\//.test(body)) fail(kind + '/' + file + ': contains a // comment, which Cobblemon rejects');
+    if (!/^\s*\{/.test(body)) fail(kind + '/' + file + ': must begin with a curly brace');
+    const named = /name\s*:\s*"([^"]+)"/.exec(body);
+    if (!named) { fail(kind + '/' + file + ': has no name field'); continue; }
+    const derived = named[1].toLowerCase().replace(/[^a-z0-9]+/g, '');
+    if (derived !== id) {
+      fail(kind + '/' + file + ': Showdown derives the id from name "' + named[1] + '" as "' + derived + '", but the file is called "' + id + '". Cobblemon registers the effect under "' + derived + '", so anything referring to "' + id + '" will fail to load.');
+    }
+  }
+  console.log(kind + ' defined here: ' + [...set].filter(x => fs.existsSync(path.join(dir, x + '.js'))).length);
+}
 const types = new Set(['normal', 'fire', 'water', 'electric', 'grass', 'ice', 'fighting', 'poison',
   'ground', 'flying', 'psychic', 'bug', 'rock', 'ghost', 'dragon', 'dark', 'steel', 'fairy']);
 const eggGroups = new Set(['monster', 'water_1', 'bug', 'flying', 'field', 'fairy', 'grass',

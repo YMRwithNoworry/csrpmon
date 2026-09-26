@@ -223,3 +223,60 @@ Adding a creature is three edits and no code:
    `<lowercased name with non-alphanumerics removed>` form.
 
 Then run `tools/validate_species.mjs`, which fails the build if the two sides disagree.
+
+## 9. Custom abilities and moves are JavaScript, not JSON
+
+`Abilities` and `Moves` are `DataRegistry`s that do not read JSON at all. They collect every
+`data/<namespace>/{abilities,moves}/*.js`, hand the text to the bundled Showdown engine via
+`ShowdownService.service.sendRegistryData(map, "ability"|"move")`, and then read the engine's
+registry back:
+
+```kotlin
+manager.listResources("moves") { it.path.endsWith(".js") }.forEach { (identifier, resource) ->
+    moveScripts[identifier.path] = resource.open().bufferedReader().use { it.readText() }
+}
+ShowdownService.service.sendRegistryData(moveScripts, "move")
+val movesJson = ShowdownService.service.getRegistryData("move")
+```
+
+Each file is the bare body of a Showdown effect — a single `{ ... }`, no comments, no wrapper — and
+the engine fills in the id from the file name. Two consequences that are easy to get wrong:
+
+1. **The `name` field must produce the same id as the file name.** Showdown computes the id as
+   `name` lowercased with every non-alphanumeric removed, and Cobblemon registers the effect under
+   *that* id. `primitivewild.js` containing `name: "Primitive Wildness"` registers as
+   `primitivewildness`, and every reference to `primitivewild` silently resolves to nothing — which
+   fails the whole species it appears in. This is verified and guarded against in
+   `tools/validate_species.mjs`.
+2. New effects must **omit** `num`; only effects that replace a vanilla one should carry its number.
+
+The hooks used here were checked against the bundled engine rather than assumed, and each effect is
+derived from a real one: `onSourceDamagingHit` from `poisontouch`, `onSourceAfterFaint` from `moxie`,
+`onSetStatus` from `insomnia`, `onModifyAtk`/`onModifySpe` from `swarm`, `multihit`/`drain` from
+`bulletseed`/`absorb`.
+
+Cobblemon 1.8 cannot add new **status conditions** from a datapack, so the "寄生" (parasite) status is
+the existing Leech Seed volatile, applied by `parasiticinstinct`.
+
+## 10. Portraits come from the sprite path, not the model path
+
+The battle UI calls `drawPosablePortrait`, which is:
+
+```kotlin
+val sprite = VaryingModelRepository.getSprite(identifier, state, SpriteType.PORTRAIT)
+if (sprite == null) { ...render the 3D poser, falling back to Substitute... } else { ...draw the PNG... }
+```
+
+So a species that declares a `portrait` sprite never needs a Bedrock model for the GUI. The sprite is
+looked up through the same variation resolver as everything else, and `ModelAssetVariation` has all
+fields optional with `fits()` only checking aspects, so a resolver whose variation contains nothing
+but `sprites` is valid. When something does insist on a 3D model,
+`VaryingModelRepository.getPoser` catches the resulting `IllegalStateException` and falls back, so
+this cannot take the client down.
+
+The PNGs are produced offline by `tools/render_portraits.java`: the CSRP `.tbl` files are ZIPs
+holding a Tabula `model.json`, whose cubes carry `position` (a pivot relative to the parent), `offset`
+(the box minimum relative to that pivot), `dimensions`, `rotation`, `txOffset` and `children`. The
+tool accumulates absolute pivots, projects the tree isometrically, sorts cubes back to front and
+textures each visible face using Minecraft's box-UV layout, sampling the creature's own
+`textures/entity/<creature>.png`.

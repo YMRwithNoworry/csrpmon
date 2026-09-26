@@ -1,7 +1,7 @@
 {
   "implemented": true,
   "nationalPokedexNumber": 8015,
-  "name": "Primitive Longarms",
+  "name": "Primitox",
   "pokedex": [
     "csrpmon.species.primitivelongarms.desc"
   ],
@@ -15,8 +15,8 @@
   "weight": 340,
   "primaryType": "fighting",
   "abilities": [
-    "h:ironfist",
-    "h:reckless"
+    "swiftsymbiosis",
+    "h:primitivewildness"
   ],
   "eggGroups": [
     "human_like"
@@ -86,7 +86,7 @@
     ]
   },
   "moves": [
-    "1:scratch",
+    "1:rendingclaws",
     "1:leer",
     "1:furyswipes",
     "37:karatechop",
@@ -108,5 +108,6 @@
         }
       ]
     }
-  ]
+  ],
+  "secondaryType": "poison"
 }

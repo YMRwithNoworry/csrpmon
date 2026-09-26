@@ -97,46 +97,96 @@ wild battle. From there everything is standard Cobblemon:
 
 ### Species
 
-| CSRP creature | Pokémon species | Types | Tier |
-|---|---|---|---|
-| `buglin` | Buglin | Bug | 1 |
-| `gnat` | Gnat | Bug / Flying | 1 |
-| `lice` | Lice | Bug | 1 |
-| `rupter` | Rupter | Bug / Fire | 2 |
-| `mangler` | Mangler | Bug / Dark | 2 |
-| `worker` | Worker | Bug | 2 |
-| `heed` | Heed | Psychic | 2 |
-| `thrall` | Thrall | Dark / Fighting | 3 |
-| `host` | Host | Dark / Poison | 3 |
-| `dredge` | Dredge | Ground / Steel | 3 |
-| `carrier_light` | Light Carrier | Flying / Dark | 3 |
-| `pri_vermin` | Primitive Vermin | Bug / Dark | 3 |
-| `carrier_heavy` | Heavy Carrier | Dark / Steel | 4 |
-| `pri_longarms` | Primitive Longarms | Fighting | 4 |
-| `pri_summoner` | Primitive Summoner | Psychic / Dark | 4 |
-| `pri_viscera` | Primitive Viscera | Poison / Ghost | 4 |
-| `hostii` | Host II | Dark / Poison | 4 |
-| `marauder` | Marauder | Fighting / Dark | 5 |
-| `architect` | Architect | Steel / Psychic | 5 |
-| `crux` | Crux | Rock / Psychic | 5 |
-| `draconite` | Draconite | Dragon / Rock | 6 |
-| `kirin` | Kirin | Electric / Dragon | 6 |
-| `anc_dreadnaut` | Ancient Dreadnaut | Steel / Dragon | 6 |
-| `anc_overlord` | Ancient Overlord | Dark / Dragon | 6 |
+| CSRP creature | Pokémon | Types | Signature | Tier |
+|---|---|---|---|---|
+| `buglin` | 虫崽兽 Buglin | Bug / Poison | 寄生啃咬 | 1 |
+| `gnat` | 蠓虫 Gnat | Bug / Flying | — | 1 |
+| `lice` | 寄生虱 Lice | Bug | — | 1 |
+| `rupter` | 裂噬兽 Rupter | Bug / Poison | 蜂巢撕咬 | 2 |
+| `mangler` | 狂噬兽 Mangler | Bug / Dark | 吞噬进化 | 2 |
+| `worker` | 工虫 Worker | Bug | — | 2 |
+| `heed` | 凝视者 Heed | Psychic | — | 2 |
+| `thrall` | 奴役体 Thrall | Dark / Fighting | — | 3 |
+| `host` | 宿主 Host | Dark / Poison | — | 3 |
+| `dredge` | 深掘者 Dredge | Ground / Steel | — | 3 |
+| `carrier_light` | 轻型载虫 Light Carrier | Flying / Dark | — | 3 |
+| `pri_vermin` | 原始害兽 Primitive Vermin | Bug / Dark | — | 3 |
+| `carrier_heavy` | 重型载虫 Heavy Carrier | Dark / Steel | — | 4 |
+| `pri_longarms` | 长臂畸兽 Primitox | Fighting / Poison | 裂肉连爪 | 4 |
+| `pri_summoner` | 原始召唤者 Primitive Summoner | Psychic / Dark | — | 4 |
+| `pri_viscera` | 原始内脏 Primitive Viscera | Poison / Ghost | — | 4 |
+| `hostii` | 宿主 II Host II | Dark / Poison | — | 4 |
+| `marauder` | 掠夺者 Marauder | Fighting / Dark | — | 5 |
+| `architect` | 构造者 Architect | Steel / Psychic | — | 5 |
+| `crux` | 十字核心 Crux | Rock / Psychic | — | 5 |
+| `draconite` | 龙晶兽 Draconite | Dragon / Rock | — | 6 |
+| `kirin` | 麒麟 Kirin | Electric / Dragon | — | 6 |
+| `anc_dreadnaut` | 远古无畏舰 Ancient Dreadnaut | Steel / Dragon | — | 6 |
+| `anc_overlord` | 远古霸主 Ancient Overlord | Dark / Dragon | — | 6 |
+| `beckon_si` | 菌巢花 Beckon Bloom | Grass / Poison | 巢穴召引 | 4 |
+| `beckon_siii` | 菌巢皇后 Beckon Queen | Grass / Poison | 巢穴召引 | 5 |
+| `beckon_siv` | 世界节点 World Node | Grass / Poison | 巢穴召引 | 6 |
 
 ### Evolution lines
 
 ```
-buglin  --14--> rupter
-lice    --16--> mangler
+buglin --18--> rupter --36--> mangler
 gnat    --22--> carrier_light --40--> carrier_heavy
 worker  --24--> thrall --36--> host --50--> hostii
 heed    --26--> dredge
 pri_vermin --38--> pri_longarms --52--> pri_summoner
 crux    --55--> draconite
+beckon_si --40--> beckon_siii --60--> beckon_siv
 ```
 
-A caught parasite evolves the normal Cobblemon way: level it up.
+`lice` is a standalone species: it no longer evolves, because the `mangler` slot belongs to the
+`rupter` line now.
+
+## Abilities and moves
+
+Cobblemon 1.7+ lets a datapack define abilities and moves as JavaScript, so these are real battle
+engine effects rather than stat reskins. They live in `data/csrpmon/abilities/` and
+`data/csrpmon/moves/`.
+
+| Effect | Id | Belongs to | What it does |
+|---|---|---|---|
+| 疾速同化 | `swiftsymbiosis` | Primitox | Physical moves +20% while faster than the target; 30% chance to poison on contact |
+| 原始野性 | `primitivewildness` *(hidden)* | Primitox | Below half HP: +50% Speed, and sleep/paralysis cannot be inflicted |
+| 寄生本能 | `parasiticinstinct` | Buglin | 30% chance to seed the target on a damaging hit (Leech Seed) |
+| 群居感染 | `colonyinfection` *(hidden)* | Buglin | +50% Speed while another Bug type is on the field |
+| 蜂拥 | `hiveswarm` | Rupter | +30% damage against a seeded target |
+| 适应性突变 | `adaptivemutation` | Mangler | Each knockout raises one random stat by one stage |
+| 无限增殖 | `infiniteproliferation` *(hidden)* | Mangler | Below 30% HP: Attack and Speed both +50% |
+| 寄生巢 | `parasiticnest` | Beckon line | Damages every opponent for 1/16 max HP at the end of each turn |
+
+| Move | Id | Type | Effect |
+|---|---|---|---|
+| 裂肉连爪 | `rendingclaws` | Fighting, Physical | 2–5 hits; against a poisoned target always 5 hits and heals 20% of damage dealt |
+| 寄生啃咬 | `parasiticbite` | Bug, Physical | Recovers a third of the damage dealt |
+| 蜂巢撕咬 | `hivebite` | Bug, Physical | 2–3 hits; +50% damage against a target with a status condition |
+| 吞噬进化 | `devourevolution` | Dark, Physical | If it knocks out the target, the user gains one stage in a random stat |
+| 巢穴召引 | `nestsummon` | Grass, Status | Raises the user Sp. Atk and Sp. Def by one stage each |
+
+The "寄生" (parasite) condition is Cobblemon's existing **Leech Seed** volatile, which drains the
+host every turn. Cobblemon 1.8 does not let a datapack add new status conditions of its own, so the
+parasite status is built on that instead of a new one.
+
+## Portraits
+
+Cobblemon draws a Pokémon portrait from the species' model by default, which for an addon species
+falls back to the Substitute doll. `drawPosablePortrait` checks for a `portrait` **sprite** first, so
+each species ships a resolver that points at a PNG rendered from its own CSRP model:
+
+```json
+{"order":0,"species":"csrpmon:rupter","variations":[{"aspects":[],
+  "sprites":{"portrait":"csrpmon:textures/pokemon/rupter.png",
+             "profile":"csrpmon:textures/pokemon/rupter.png"}}]}
+```
+
+`tools/render_portraits.java` regenerates those 27 PNGs: it opens each CSRP Tabula model
+(`assets/csrp/tabula/<creature>.tbl`, which is a ZIP holding `model.json`), walks the cube tree,
+projects it isometrically with painter's-algorithm depth sorting, textures every visible face from
+the creature's own `textures/entity/<creature>.png`, and writes a 256×256 transparent PNG.
 
 ## Configuration
 
