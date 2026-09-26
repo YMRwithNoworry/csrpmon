@@ -78,7 +78,26 @@
 
 **为什么只有它**：*"ground tendril"* 与 damage 2.0 的翻译。**它几乎打不出伤害，它的作用是"别让你上天"**——好让本体的齐射命中。
 
-## SRP 通用技能（7 个）
+## 独家技能 2：触手拖拽 / Tendril Drag
+
+| 字段 | 值 |
+|---|---|
+| 属性 | 地面 |
+| 分类 | 物理 |
+| 威力 | 70 |
+| 命中 | 100 |
+| PP | 10 |
+| 范围 | 单体 |
+
+**效果**：造成伤害并把目标**向自身方向拖拽**（使其本回合无法替换下场，且下一次受到的齐射类伤害提高 20%）。对应它是恐慑的地面部件。
+
+**触发条件**：无。
+
+**视觉表现**：触手卷住目标后整根向地下收缩，把对方拖向本体正下方，地表留下一道明显的拖痕。
+
+**为什么只有它**：它是远古恐慑的 *ground tendril*（`EntityOroncoTen`），职责是把目标固定在本体的射程内。主招式禁止升空，**这一招直接把目标拖到本体脚下**。
+
+## SRP 通用技能（10 个）
 
 | 技能 | 属性 | 类别 | 效果 | 为什么它可以学 |
 |---|---|---|---|---|
@@ -89,6 +108,9 @@
 | [猎物标记](../skills/SRP-COMMON-SKILLS.md) | 一般 | 变化 | 标记目标 3 回合：本阵营对其造成的伤害 +15%，且其逃跑必定失败。… | ANCIENT 地面部件的职能来源 |
 | [群巢传播](../skills/SRP-COMMON-SKILLS.md) | 虫 | 变化 | 把使用者身上的【感染】层数原样复制给对手全队（双打时复制给两个对手），层数上限 2。… | ANCIENT 地面部件的职能来源 |
 | [腐蚀标记](../skills/SRP-COMMON-SKILLS.md) | 毒 | 变化 | 标记目标 3 回合：其受到的钢/岩属性抗性视作不存在（弱点照常计算），且每回合结束防御 -1 阶段（最多 -3）。… | ANCIENT 地面部件的职能来源 |
+| [寄生吸收](../skills/SRP-COMMON-SKILLS.md) | 虫 | 特殊 | 造成伤害并回复其 50%；若目标处于【感染】状态，改为回复 75% 并使其感染层数 -1。… | ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT） |
+| [成长吞噬](../skills/SRP-COMMON-SKILLS.md) | 恶 | 物理 | 造成伤害；若本次攻击击倒目标，使用者获得 1 阶段随机能力提升，并回复 25% 最大 HP。… | ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT） |
+| [恐惧凝视](../skills/SRP-COMMON-SKILLS.md) | 恶 | 变化 | 目标命中率下降 1 阶段；若目标 HP 已低于 50%，改为下降 2 阶段。… | ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT） |
 
 ## 普通技能
 
@@ -147,8 +169,8 @@
 | Canon Check | **YES** — `csrp:anc_dreadnaut_ten` 注册存在（MobCategory `MONSTER`），tier 由 ANCIENT 来源确认 |
 | Source ID Check | **YES** — `csrp:anc_dreadnaut_ten` |
 | Tier Check | **YES** — ANCIENT |
-| Skill Check | **YES** — 地脉横扫 |
-| Common Skill Check | **YES** — 7 个，且全部通过 tier 许可校验 |
+| Skill Check | **YES** — 地脉横扫、触手拖拽 |
+| Common Skill Check | **YES** — 10 个，且全部通过 tier 许可校验 |
 | Lore Check | **NO 违规** — 见“宝可梦化改造”，原创机制均已标注为宝可梦化产物 |
 | Gameplay Check | 控制（禁止升空 + 缠绕）、扩散（感染）、支援（提升本体齐射）——ANCIENT 层的地面部件 |
 | Similarity Check | 与本体**不是强弱关系而是分工关系**：本体在空中齐射与空投，它在地面留人。**源码把它们注册为两个独立实体**。 |

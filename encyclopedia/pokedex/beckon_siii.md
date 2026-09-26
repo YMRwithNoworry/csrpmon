@@ -79,6 +79,25 @@
 
 **为什么只有它**：**机制与一二阶完全相同**：装填 5→6、上限 6→8、冷却 45→40。**三阶没有任何新系统**——这是源码事实，也是你规则九要求的分阶方式。
 
+## 独家技能 2：临时塌缩·三阶 / Temporary Collapse III
+
+| 字段 | 值 |
+|---|---|
+| 属性 | 超能 |
+| 分类 | 变化 |
+| 威力 | - |
+| 命中 | 必中 |
+| PP | 5 |
+| 范围 | 自身 |
+
+**效果**：**主动塌缩自身**：立即移除自身在场上的全部召唤物，并按其数量对我方全体施加等量的攻击提升（每只 +1 阶段，最多 +3）。**自身被击倒**。对应 `TEMPORARY_BECKON_LIFETIME = 300` 的临时召唤柱机制。
+
+**触发条件**：无。
+
+**视觉表现**：柱顶核心向内急速收缩，所有召唤口同时闭合，被召回的单位体表纹路整体转亮一次，随后柱体从中段折断塌落。
+
+**为什么只有它**：源码中 BECKON 家族拥有 `temporaryLifetimeTicks` 与 `TEMPORARY_BECKON_LIFETIME = 300`——临时召唤柱会自行消失。主招式负责放出，**这一招负责主动收束并把资源转交**。
+
 ## SRP 通用技能（8 个）
 
 | 技能 | 属性 | 类别 | 效果 | 为什么它可以学 |
@@ -148,7 +167,7 @@
 | Canon Check | **YES** — `csrp:beckon_siii` 注册存在（MobCategory `MONSTER`），tier 由 NEXUS 来源确认 |
 | Source ID Check | **YES** — `csrp:beckon_siii` |
 | Tier Check | **YES** — NEXUS |
-| Skill Check | **YES** — 三级召唤 |
+| Skill Check | **YES** — 三级召唤、临时塌缩·三阶 |
 | Common Skill Check | **YES** — 8 个，且全部通过 tier 许可校验 |
 | Lore Check | **NO 违规** — 见“宝可梦化改造”，原创机制均已标注为宝可梦化产物 |
 | Gameplay Check | 召唤（6 只装填 + 8 只上限）、环境（寄生领域）、扩散（感染）——NEXUS 召唤柱体系的第三阶 |

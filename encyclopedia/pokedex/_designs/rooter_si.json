@@ -92,6 +92,22 @@
       "trigger": "无。",
       "visual": "根系末端的脉动节点同时亮起，一圈暗褐色脉冲沿根系向四周扩散至 20 格外，被扫过的寄生体体表浮现暗红光泽。",
       "why": "`applyRooterSupport(stage)` 的逐字翻译：半径 `16.0 + stage * 4.0`、等级 `Math.max(0, stage - 1)`、排除同类。**它是全族唯一「一个伤害都不造成、也不召唤任何东西」的专属招式**。"
+    },
+    {
+      "moveId": "subordinatecover1",
+      "zh": "从属共担·一阶",
+      "en": "Subordinate Cover I",
+      "cat": "N",
+      "type": "地面",
+      "cls": "变化",
+      "pow": 0,
+      "acc": true,
+      "pp": 10,
+      "range": "自身周边",
+      "effect": "**把自身本回合将受到的伤害转移给我方被加持过的单位**（对应 `StatusEffectEvents.linkToRooter` 建立的 `ROOTER_OWNERS` 从属关系）：由最多 3 只从属单位平摊。造成 0 点伤害。",
+      "trigger": "我方场上必须有已被自身加持过的单位。",
+      "visual": "根系末端的节点同时亮起并向后收束，伤害在触及柱体前先被一圈暗褐脉冲分散到四周的被加持单位身上。",
+      "why": "`linkToRooter` 是源码中唯一一处「建立从属关系」的实现，它把友军写进 `ROOTER_OWNERS` 映射。主招式负责加持，**这一招把从属关系变成实际的分担**。"
     }
   ],
   "common": [

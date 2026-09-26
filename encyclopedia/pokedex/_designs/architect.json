@@ -90,6 +90,22 @@
       "trigger": "无。",
       "visual": "六条作业肢同时向地面与垂直面延伸，迅速堆叠出暗红色的巢穴结构，结构表面持续脉动并向外释放孢子。",
       "why": "*\"flying colony architect\"* 与它 80 点生命（同层其余为 310~420）的翻译。**它是全族唯一以「建造场地」为唯一职能的 Preeminent**——它不打架，它盖房子。"
+    },
+    {
+      "moveId": "nestrepair",
+      "zh": "巢群修缮",
+      "en": "Nest Repair",
+      "cat": "O",
+      "type": "虫",
+      "cls": "变化",
+      "pow": 0,
+      "acc": true,
+      "pp": 10,
+      "range": "我方场地",
+      "effect": "**修复我方已建立的场地结构**：延长其持续时间 2 回合，并回复我方全体 12% 最大 HP。对应它是 `ArchitectEntity`（*flying colony architect*）。造成 0 点伤害。",
+      "trigger": "我方场上必须存在场地类效果。",
+      "visual": "六条作业肢分别伸向场地上已有的巢穴结构，沿裂缝注入新的生物质，结构表面的脉动由弱转强。",
+      "why": "它是 PREEMINENT 层唯一的构筑单位（80 血，同层其余为 310~420）。主招式负责建造，**这一招负责维修**——一个会盖房子也会补房子的东西。"
     }
   ],
   "common": [
@@ -120,6 +136,14 @@
     {
       "id": "markedprey",
       "why": "构筑前锁定需要覆盖的区域"
+    },
+    {
+      "id": "hiveoppression",
+      "why": "它建造的结构本身就是威压来源"
+    },
+    {
+      "id": "parasiticfield",
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（PREEMINENT）"
     }
   ],
   "normal": [

@@ -78,7 +78,26 @@
 
 **为什么只有它**：*"flying colony architect"* 与它 80 点生命（同层其余为 310~420）的翻译。**它是全族唯一以「建造场地」为唯一职能的 Preeminent**——它不打架，它盖房子。
 
-## SRP 通用技能（7 个）
+## 独家技能 2：巢群修缮 / Nest Repair
+
+| 字段 | 值 |
+|---|---|
+| 属性 | 虫 |
+| 分类 | 变化 |
+| 威力 | - |
+| 命中 | 必中 |
+| PP | 10 |
+| 范围 | 我方场地 |
+
+**效果**：**修复我方已建立的场地结构**：延长其持续时间 2 回合，并回复我方全体 12% 最大 HP。对应它是 `ArchitectEntity`（*flying colony architect*）。造成 0 点伤害。
+
+**触发条件**：我方场上必须存在场地类效果。
+
+**视觉表现**：六条作业肢分别伸向场地上已有的巢穴结构，沿裂缝注入新的生物质，结构表面的脉动由弱转强。
+
+**为什么只有它**：它是 PREEMINENT 层唯一的构筑单位（80 血，同层其余为 310~420）。主招式负责建造，**这一招负责维修**——一个会盖房子也会补房子的东西。
+
+## SRP 通用技能（9 个）
 
 | 技能 | 属性 | 类别 | 效果 | 为什么它可以学 |
 |---|---|---|---|---|
@@ -89,6 +108,8 @@
 | [感染脉冲](../skills/SRP-COMMON-SKILLS.md) | 毒 | 特殊 | 对场上所有其他宝可梦造成伤害；对已带【感染】的目标额外造成 1 层。… | 结构是范围感染源 |
 | [组织再生](../skills/SRP-COMMON-SKILLS.md) | 草 | 变化 | 3 回合内每回合结束回复 1/16 最大 HP；若期间未受到火属性伤害，回复量提升为 1/8。… | 修复是它的核心职能 |
 | [猎物标记](../skills/SRP-COMMON-SKILLS.md) | 一般 | 变化 | 标记目标 3 回合：本阵营对其造成的伤害 +15%，且其逃跑必定失败。… | 构筑前锁定需要覆盖的区域 |
+| [巢穴威压](../skills/SRP-COMMON-SKILLS.md) | 恶 | 变化 | 只要使用者在场，全体对手每回合有 25% 概率无法使用非伤害类招式；已有恐惧标记的对手概率提高到 50%。… | 它建造的结构本身就是威压来源 |
+| [寄生领域](../skills/SRP-COMMON-SKILLS.md) | 毒 | 变化 | 布下领域 5 回合：每回合结束，场上对手损失 1/16 最大 HP 并获得 1 层感染；使用者的回复量 +30%。… | ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（PREEMINENT） |
 
 ## 普通技能
 
@@ -147,8 +168,8 @@
 | Canon Check | **YES** — `csrp:architect` 注册存在（MobCategory `MONSTER`），tier 由 PREEMINENT 来源确认 |
 | Source ID Check | **YES** — `csrp:architect` |
 | Tier Check | **YES** — PREEMINENT |
-| Skill Check | **YES** — 巢群构筑 |
-| Common Skill Check | **YES** — 7 个，且全部通过 tier 许可校验 |
+| Skill Check | **YES** — 巢群构筑、巢群修缮 |
+| Common Skill Check | **YES** — 9 个，且全部通过 tier 许可校验 |
 | Lore Check | **NO 违规** — 见“宝可梦化改造”，原创机制均已标注为宝可梦化产物 |
 | Gameplay Check | 环境控制（场地构筑 + 不可清除 + 持续回复）、扩散（结构释放感染）——PREEMINENT 层的构筑单位 |
 | Similarity Check | 与其余 4 只 Preeminent 的区别：**唯一生命低于 300**，唯一以构筑场地为职能。缠祟负责拆，它负责盖——**同一层里的一对反义存在**。 |

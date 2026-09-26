@@ -149,6 +149,10 @@
     {
       "id": "growthdevour",
       "why": "高生命带来的长期成长"
+    },
+    {
+      "id": "hiveoppression",
+      "why": "8 套目标与 360 点生命带来的全场威压"
     }
   ],
   "normal": [

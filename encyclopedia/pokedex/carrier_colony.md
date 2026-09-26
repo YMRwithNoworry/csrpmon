@@ -79,6 +79,25 @@
 
 **为什么只有它**：`CarrierRecruitGoal` 的逐字翻译（`getTarget() == null` 才启动）。**它是全族唯一「必须不被注意才能发动」的辅助招式**——一个在大后方不断扩军的单位。
 
+## 独家技能 2：尾流运送 / Wake Ferry
+
+| 字段 | 值 |
+|---|---|
+| 属性 | 水 |
+| 分类 | 变化 |
+| 威力 | - |
+| 命中 | 必中 |
+| PP | 10 |
+| 范围 | 我方单体 |
+
+**效果**：**把我方一只宝可梦拉入水中**（若场地无水则改为使其免疫下一次地面类招式），并使其速度提升 1 阶段。对应 `CarrierWaterLeapGoal`。造成 0 点伤害。
+
+**触发条件**：无。
+
+**视觉表现**：尾部推进结构划出一道明显的尾流，同伴被拖入水线以下，随后从另一处跃出——整个过程与它自己的 `CarrierWaterLeapGoal` 完全一致。
+
+**为什么只有它**：聚落载虫是 PREEMINENT 层唯一的水域单位，拥有 `CarrierSwimmingGoal` 与 `CarrierWaterLeapGoal`。主招式用于招募，**这一招把「水域」本身变成给队友的位移工具**。
+
 ## SRP 通用技能（9 个）
 
 | 技能 | 属性 | 类别 | 效果 | 为什么它可以学 |
@@ -149,7 +168,7 @@
 | Canon Check | **YES** — `csrp:carrier_colony` 注册存在（MobCategory `MONSTER`），tier 由 PREEMINENT 来源确认 |
 | Source ID Check | **YES** — `csrp:carrier_colony` |
 | Tier Check | **YES** — PREEMINENT |
-| Skill Check | **YES** — 聚落招募 |
+| Skill Check | **YES** — 聚落招募、尾流运送 |
 | Common Skill Check | **YES** — 9 个，且全部通过 tier 许可校验 |
 | Lore Check | **NO 违规** — 见“宝可梦化改造”，原创机制均已标注为宝可梦化产物 |
 | Gameplay Check | 支援（常驻全队回复 + 招募扩军）、扩散（水域感染）、控制（水域限制）——PREEMINENT 层的水域集结节点 |

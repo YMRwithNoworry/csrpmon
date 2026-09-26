@@ -91,6 +91,22 @@
       "trigger": "**自身必须未被锁定**。",
       "visual": "背侧凹槽同时张开，向四周释放一圈暗青色脉冲，被扫过的同伴身上寄生组织转为稳定色，而它自己沉入水中只露出头顶的单眼。",
       "why": "`CarrierRecruitGoal` 的逐字翻译（`getTarget() == null` 才启动）。**它是全族唯一「必须不被注意才能发动」的辅助招式**——一个在大后方不断扩军的单位。"
+    },
+    {
+      "moveId": "wakeferry",
+      "zh": "尾流运送",
+      "en": "Wake Ferry",
+      "cat": "N",
+      "type": "水",
+      "cls": "变化",
+      "pow": 0,
+      "acc": true,
+      "pp": 10,
+      "range": "我方单体",
+      "effect": "**把我方一只宝可梦拉入水中**（若场地无水则改为使其免疫下一次地面类招式），并使其速度提升 1 阶段。对应 `CarrierWaterLeapGoal`。造成 0 点伤害。",
+      "trigger": "无。",
+      "visual": "尾部推进结构划出一道明显的尾流，同伴被拖入水线以下，随后从另一处跃出——整个过程与它自己的 `CarrierWaterLeapGoal` 完全一致。",
+      "why": "聚落载虫是 PREEMINENT 层唯一的水域单位，拥有 `CarrierSwimmingGoal` 与 `CarrierWaterLeapGoal`。主招式用于招募，**这一招把「水域」本身变成给队友的位移工具**。"
     }
   ],
   "common": [

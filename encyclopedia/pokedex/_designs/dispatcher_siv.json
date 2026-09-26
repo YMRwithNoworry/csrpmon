@@ -96,6 +96,22 @@
       "trigger": "**必须在场上尚无永久场地结构时使用**。",
       "visual": "底部奠基腔向下掘进并注入生物质，整片地面从柱体开始向外浮现永久性的暗红脉络——与前三阶的雾幕不同，**这一次的痕迹不会消失**。",
       "why": "`tryPlaceFirstColony()` 的完整翻译：条件为 `tickCount >= 1200`、`random.nextInt(10) == 0`、且 `SrpWorldData.colonies()` 为空。**它是全族唯一「建立永久结构」的招式**——前三阶铺的雾会散，它建的不会。"
+    },
+    {
+      "moveId": "storagerelease4",
+      "zh": "收纳释放·四阶",
+      "en": "Storage Release IV",
+      "cat": "N",
+      "type": "幽灵",
+      "cls": "变化",
+      "pow": 0,
+      "acc": true,
+      "pp": 5,
+      "range": "全场",
+      "effect": "**一次性释放全部已收纳的单位**（对应 `storeNearbyParasite()` 写入的 `storedParasiteIds`）：按其收纳数量，每只对场上对手造成 1/10 其最大 HP 的固定伤害。造成 0 点伤害。",
+      "trigger": "需要至少已收纳 1 只。",
+      "visual": "柱体中段的所有收容口同时反向张开，被收纳的个体以极快速度连续弹出并在场上炸开，形成密集的连续冲击。",
+      "why": "调度柱每 40 tick 执行 `storeNearbyParasite()`，把附近寄生体的实体 ID 存进 `storedParasiteIds`。主招式负责收纳与铺雾，**这一招把存下来的东西一次性兑现**。"
     }
   ],
   "common": [

@@ -80,6 +80,25 @@
 
 **为什么只有它**：`tryPlaceFirstColony()` 的完整翻译：条件为 `tickCount >= 1200`、`random.nextInt(10) == 0`、且 `SrpWorldData.colonies()` 为空。**它是全族唯一「建立永久结构」的招式**——前三阶铺的雾会散，它建的不会。
 
+## 独家技能 2：收纳释放·四阶 / Storage Release IV
+
+| 字段 | 值 |
+|---|---|
+| 属性 | 幽灵 |
+| 分类 | 变化 |
+| 威力 | - |
+| 命中 | 必中 |
+| PP | 5 |
+| 范围 | 全场 |
+
+**效果**：**一次性释放全部已收纳的单位**（对应 `storeNearbyParasite()` 写入的 `storedParasiteIds`）：按其收纳数量，每只对场上对手造成 1/10 其最大 HP 的固定伤害。造成 0 点伤害。
+
+**触发条件**：需要至少已收纳 1 只。
+
+**视觉表现**：柱体中段的所有收容口同时反向张开，被收纳的个体以极快速度连续弹出并在场上炸开，形成密集的连续冲击。
+
+**为什么只有它**：调度柱每 40 tick 执行 `storeNearbyParasite()`，把附近寄生体的实体 ID 存进 `storedParasiteIds`。主招式负责收纳与铺雾，**这一招把存下来的东西一次性兑现**。
+
 ## SRP 通用技能（10 个）
 
 | 技能 | 属性 | 类别 | 效果 | 为什么它可以学 |
@@ -152,7 +171,7 @@
 | Canon Check | **YES** — `csrp:dispatcher_siv` 注册存在（MobCategory `MONSTER`），tier 由 NEXUS 来源确认 |
 | Source ID Check | **YES** — `csrp:dispatcher_siv` |
 | Tier Check | **YES** — NEXUS |
-| Skill Check | **YES** — 殖民地奠基 |
+| Skill Check | **YES** — 殖民地奠基、收纳释放·四阶 |
 | Common Skill Check | **YES** — 10 个，且全部通过 tier 许可校验 |
 | Lore Check | **NO 违规** — 见“宝可梦化改造”，原创机制均已标注为宝可梦化产物 |
 | Gameplay Check | 环境控制（永久殖民地 + 18 格雾幕）、召唤（8 只装填 + 9 只上限）、扩散（全场感染）——NEXUS 调度柱体系的终点，也是全世界殖民地的起点 |

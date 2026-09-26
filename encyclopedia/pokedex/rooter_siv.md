@@ -80,6 +80,25 @@
 
 **为什么只有它**：`applyRooterSupport(stage)` 的逐字翻译：半径 `16.0 + stage * 4.0`、等级 `Math.max(0, stage - 1)`、排除同类。**它是全族唯一「一个伤害都不造成、也不召唤任何东西」的专属招式**。
 
+## 独家技能 2：从属共担·四阶 / Subordinate Cover IV
+
+| 字段 | 值 |
+|---|---|
+| 属性 | 地面 |
+| 分类 | 变化 |
+| 威力 | - |
+| 命中 | 必中 |
+| PP | 10 |
+| 范围 | 自身周边 |
+
+**效果**：**把自身本回合将受到的伤害转移给我方被加持过的单位**（对应 `StatusEffectEvents.linkToRooter` 建立的 `ROOTER_OWNERS` 从属关系）：由最多 3 只从属单位平摊。造成 0 点伤害。
+
+**触发条件**：我方场上必须有已被自身加持过的单位。
+
+**视觉表现**：根系末端的节点同时亮起并向后收束，伤害在触及柱体前先被一圈暗褐脉冲分散到四周的被加持单位身上。
+
+**为什么只有它**：`linkToRooter` 是源码中唯一一处「建立从属关系」的实现，它把友军写进 `ROOTER_OWNERS` 映射。主招式负责加持，**这一招把从属关系变成实际的分担**。
+
 ## SRP 通用技能（8 个）
 
 | 技能 | 属性 | 类别 | 效果 | 为什么它可以学 |
@@ -149,7 +168,7 @@
 | Canon Check | **YES** — `csrp:rooter_siv` 注册存在（MobCategory `MONSTER`），tier 由 NEXUS 来源确认 |
 | Source ID Check | **YES** — `csrp:rooter_siv` |
 | Tier Check | **YES** — NEXUS |
-| Skill Check | **YES** — 根系脉动·终阶 |
+| Skill Check | **YES** — 根系脉动·终阶、从属共担·四阶 |
 | Common Skill Check | **YES** — 8 个，且全部通过 tier 许可校验 |
 | Lore Check | **NO 违规** — 见“宝可梦化改造”，原创机制均已标注为宝可梦化产物 |
 | Gameplay Check | 支援（范围内全体加持 + 速度增益）、环境（寄生领域 + 感染）、扩散 —— NEXUS 根须柱体系的第 4 阶 |

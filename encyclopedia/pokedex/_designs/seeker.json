@@ -90,6 +90,22 @@
       "trigger": "无。",
       "visual": "狭长翼膜完全拉直，以恒定速度直线逼近目标，中途不做任何转向动作——因为它从出发那一刻就锁定了终点。",
       "why": "`FlightPursuitGoal(0.50D)` 的翻译。**它是全族唯一把\"追击\"当作唯一职能的招式**——没有范围、没有召唤、没有第二段，只有一直跟着你。"
+    },
+    {
+      "moveId": "indefatigable",
+      "zh": "不倦追索",
+      "en": "Indefatigable",
+      "cat": "K",
+      "type": "恶",
+      "cls": "变化",
+      "pow": 0,
+      "acc": true,
+      "pp": 10,
+      "range": "自身",
+      "effect": "**清除自身全部异常状态并回复 25% 最大 HP**，但本回合无法攻击。对应 `FlightPursuitGoal(0.50D)`——它没有「放弃」这个状态，也没有「减速」这个状态。",
+      "trigger": "无。",
+      "visual": "狭长翼膜短暂收拢又展开一次，体表暗红纹路由暗转亮——它不改变方向，只是把状态刷新了一遍然后继续。",
+      "why": "追索者的目标数只有 3 个（少于监视者的 5 个），全部与飞行追击相关。主招式是必中追击，**这一招表达它唯一的行为模式：不停、不换、不休息**。"
     }
   ],
   "common": [
@@ -120,6 +136,14 @@
     {
       "id": "motorlag",
       "why": "追击命中限制目标行动"
+    },
+    {
+      "id": "hiveoppression",
+      "why": "PREEMINENT 层单位的威压"
+    },
+    {
+      "id": "hivespread",
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（PREEMINENT）"
     }
   ],
   "normal": [

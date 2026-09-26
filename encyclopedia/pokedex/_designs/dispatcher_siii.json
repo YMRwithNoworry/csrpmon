@@ -90,6 +90,22 @@
       "trigger": "无。",
       "visual": "三层雾孔同时开合，雾团以柱体为中心向四周迅速铺开，九格范围内的地形在数秒内被完全遮蔽。",
       "why": "**与上一阶是同一个招式**：铺雾数量 3 → 3、半径 6 → 9。机制完全一致，只是覆盖更大。"
+    },
+    {
+      "moveId": "storagerelease3",
+      "zh": "收纳释放·三阶",
+      "en": "Storage Release III",
+      "cat": "N",
+      "type": "幽灵",
+      "cls": "变化",
+      "pow": 0,
+      "acc": true,
+      "pp": 5,
+      "range": "全场",
+      "effect": "**一次性释放全部已收纳的单位**（对应 `storeNearbyParasite()` 写入的 `storedParasiteIds`）：按其收纳数量，每只对场上对手造成 1/10 其最大 HP 的固定伤害。造成 0 点伤害。",
+      "trigger": "需要至少已收纳 1 只。",
+      "visual": "柱体中段的所有收容口同时反向张开，被收纳的个体以极快速度连续弹出并在场上炸开，形成密集的连续冲击。",
+      "why": "调度柱每 40 tick 执行 `storeNearbyParasite()`，把附近寄生体的实体 ID 存进 `storedParasiteIds`。主招式负责收纳与铺雾，**这一招把存下来的东西一次性兑现**。"
     }
   ],
   "common": [

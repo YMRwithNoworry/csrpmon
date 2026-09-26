@@ -91,6 +91,22 @@
       "trigger": "自身必须仍有装载。",
       "visual": "荚壳从顶端向下裂开一道暗红缝隙，生物质从内涌出并在地面聚合成一具躯体；随后荚壳整体塌软并干瘪。",
       "why": "`ATTACK_DAMAGE = 0.0` 与 *\"Legacy Ancient Drop Pod\"* 的翻译。**它是全族唯一「以自我销毁为代价完成职能」的招式**——一个容器打开之后就不再是容器了。"
+    },
+    {
+      "moveId": "podscatter",
+      "zh": "荚壳播散",
+      "en": "Pod Scatter",
+      "cat": "N",
+      "type": "虫",
+      "cls": "变化",
+      "pow": 0,
+      "acc": true,
+      "pp": 10,
+      "range": "自身周围 2 格",
+      "effect": "**立刻释放装载单位并同时污染周围地面**：此后 2 回合内，该范围内的对手每回合结束获得 1 层【感染】。**自身保留在场**（与主招式的自我销毁相反）。造成 0 点伤害。",
+      "trigger": "自身必须仍有装载。",
+      "visual": "荚壳沿纵向裂开一道窄缝，生物质从缝隙渗出并沿地面扩散成暗红脉络，荚壳本身保持完整并继续留在原地。",
+      "why": "空投仓的攻击力为 0.0，它是一件容器。主招式以自我销毁完成职能，**这一招选择不销毁——把容器留在场上持续污染地面**。"
     }
   ],
   "common": [
@@ -117,6 +133,22 @@
     {
       "id": "tissueregeneration",
       "why": "ANCIENT 空投容器的职能来源"
+    },
+    {
+      "id": "infectionpulse",
+      "why": "它是范围感染源"
+    },
+    {
+      "id": "dormancyregen",
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）"
+    },
+    {
+      "id": "hiveoppression",
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）"
+    },
+    {
+      "id": "feargaze",
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）"
     }
   ],
   "normal": [

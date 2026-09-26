@@ -90,6 +90,22 @@
       "trigger": "无。",
       "visual": "整根触手从地面横向扫出，沿途地表被犁出暗红沟痕，被扫过的目标脚下浮现环状根须。",
       "why": "*\"ground tendril\"* 与 damage 2.0 的翻译。**它几乎打不出伤害，它的作用是\"别让你上天\"**——好让本体的齐射命中。"
+    },
+    {
+      "moveId": "tendrildrag",
+      "zh": "触手拖拽",
+      "en": "Tendril Drag",
+      "cat": "C",
+      "type": "地面",
+      "cls": "物理",
+      "pow": 70,
+      "acc": 100,
+      "pp": 10,
+      "range": "单体",
+      "effect": "造成伤害并把目标**向自身方向拖拽**（使其本回合无法替换下场，且下一次受到的齐射类伤害提高 20%）。对应它是恐慑的地面部件。",
+      "trigger": "无。",
+      "visual": "触手卷住目标后整根向地下收缩，把对方拖向本体正下方，地表留下一道明显的拖痕。",
+      "why": "它是远古恐慑的 *ground tendril*（`EntityOroncoTen`），职责是把目标固定在本体的射程内。主招式禁止升空，**这一招直接把目标拖到本体脚下**。"
     }
   ],
   "common": [
@@ -120,6 +136,18 @@
     {
       "id": "corrosionmark",
       "why": "ANCIENT 地面部件的职能来源"
+    },
+    {
+      "id": "parasiticdrain",
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）"
+    },
+    {
+      "id": "growthdevour",
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）"
+    },
+    {
+      "id": "feargaze",
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）"
     }
   ],
   "normal": [
