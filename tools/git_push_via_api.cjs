@@ -11,7 +11,7 @@ async function api(p,o={}){const r=await fetch('https://api.github.com'+p,{...o,
   console.log('remote',baseSha.slice(0,8),'| files:',diff.length);
   const entries=[];
   for(const line of diff){ const [st,...rest]=line.split('\t'); const file=rest[rest.length-1];
-    if(st==='D'){entries.push({path:file,mode:'100644',type:'blob',sha:null});continue;}
+    if(st==='D'||!fs.existsSync(path.join(ROOT,file))){entries.push({path:file,mode:'100644',type:'blob',sha:null});continue;}
     const buf=fs.readFileSync(path.join(ROOT,file));
     const blob=await api('/repos/'+OWNER+'/'+REPO+'/git/blobs',{method:'POST',body:JSON.stringify({content:buf.toString('base64'),encoding:'base64'})});
     entries.push({path:file,mode:'100644',type:'blob',sha:blob.sha}); }

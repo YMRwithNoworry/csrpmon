@@ -1,243 +1,326 @@
 {
-  "note": "Only relations that the CSRP source itself proves. Anything unproven is recorded with kind \"unproven\" or \"unknown\" and is explicitly not asserted.",
+  "note": "Only relations the CSRP source proves. The evolution graph is parsed directly out of ParasiteTransformation.java, which is the mod's own evolve/devolve implementation - not inferred from naming alone.",
   "counts": {
-    "adapts-into": 12,
+    "evolves-into": 22,
+    "devolves-into": 6,
     "nexus-stage-up": 9,
-    "leaves-walking-head": 10,
-    "stage-up": 3,
-    "unknown": 1,
+    "evolves-into-random": 12,
+    "head-of": 1,
     "deploys": 1,
-    "spawns-part": 1,
-    "unproven": 1
+    "spawns-part": 1
   },
   "relations": [
     {
-      "from": "csrp:pri_arachnida",
-      "to": "csrp:ada_arachnida",
-      "kind": "adapts-into",
-      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+      "from": "csrp:buglin",
+      "to": "csrp:rupter",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
-      "from": "csrp:pri_bolster",
-      "to": "csrp:ada_bolster",
-      "kind": "adapts-into",
-      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+      "from": "csrp:rupter",
+      "to": "csrp:mangler",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
-      "from": "csrp:pri_burrower",
-      "to": "csrp:ada_burrower",
-      "kind": "adapts-into",
-      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+      "from": "csrp:sim_adventurer",
+      "to": "csrp:thrall",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
-      "from": "csrp:pri_devourer",
-      "to": "csrp:ada_devourer",
-      "kind": "adapts-into",
-      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+      "from": "csrp:host",
+      "to": "csrp:hostii",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
-      "from": "csrp:pri_longarms",
-      "to": "csrp:ada_longarms",
-      "kind": "adapts-into",
-      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+      "from": "csrp:crux_incomplete",
+      "to": "csrp:crux",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
-      "from": "csrp:pri_manducater",
-      "to": "csrp:ada_manducater",
-      "kind": "adapts-into",
-      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+      "from": "csrp:rupter",
+      "to": "csrp:buglin",
+      "kind": "devolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
-      "from": "csrp:pri_reeker",
-      "to": "csrp:ada_reeker",
-      "kind": "adapts-into",
-      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+      "from": "csrp:mangler",
+      "to": "csrp:rupter",
+      "kind": "devolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
-      "from": "csrp:pri_summoner",
-      "to": "csrp:ada_summoner",
-      "kind": "adapts-into",
-      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+      "from": "csrp:thrall",
+      "to": "csrp:sim_adventurer",
+      "kind": "devolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
-      "from": "csrp:pri_tozoon",
-      "to": "csrp:ada_tozoon",
-      "kind": "adapts-into",
-      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+      "from": "csrp:hostii",
+      "to": "csrp:host",
+      "kind": "devolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
-      "from": "csrp:pri_vermin",
-      "to": "csrp:ada_vermin",
-      "kind": "adapts-into",
-      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+      "from": "csrp:crux",
+      "to": "csrp:crux_incomplete",
+      "kind": "devolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
-      "from": "csrp:pri_viscera",
-      "to": "csrp:ada_viscera",
-      "kind": "adapts-into",
-      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
-    },
-    {
-      "from": "csrp:pri_yelloweye",
-      "to": "csrp:ada_yelloweye",
-      "kind": "adapts-into",
-      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+      "from": "csrp:ada_vermin",
+      "to": "csrp:movingflesh",
+      "kind": "devolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
       "from": "csrp:beckon_si",
       "to": "csrp:beckon_sii",
       "kind": "nexus-stage-up",
-      "evidence": "Tier enum NEXUS lists beckon_si..siv in order"
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
       "from": "csrp:beckon_sii",
       "to": "csrp:beckon_siii",
       "kind": "nexus-stage-up",
-      "evidence": "Tier enum NEXUS lists beckon_si..siv in order"
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
       "from": "csrp:beckon_siii",
       "to": "csrp:beckon_siv",
       "kind": "nexus-stage-up",
-      "evidence": "Tier enum NEXUS lists beckon_si..siv in order"
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
       "from": "csrp:dispatcher_si",
       "to": "csrp:dispatcher_sii",
       "kind": "nexus-stage-up",
-      "evidence": "Tier enum NEXUS lists dispatcher_si..siv in order"
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
       "from": "csrp:dispatcher_sii",
       "to": "csrp:dispatcher_siii",
       "kind": "nexus-stage-up",
-      "evidence": "Tier enum NEXUS lists dispatcher_si..siv in order"
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
       "from": "csrp:dispatcher_siii",
       "to": "csrp:dispatcher_siv",
       "kind": "nexus-stage-up",
-      "evidence": "Tier enum NEXUS lists dispatcher_si..siv in order"
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
       "from": "csrp:rooter_si",
       "to": "csrp:rooter_sii",
       "kind": "nexus-stage-up",
-      "evidence": "Tier enum NEXUS lists rooter_si..siv in order"
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
       "from": "csrp:rooter_sii",
       "to": "csrp:rooter_siii",
       "kind": "nexus-stage-up",
-      "evidence": "Tier enum NEXUS lists rooter_si..siv in order"
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
       "from": "csrp:rooter_siii",
       "to": "csrp:rooter_siv",
       "kind": "nexus-stage-up",
-      "evidence": "Tier enum NEXUS lists rooter_si..siv in order"
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source"
     },
     {
-      "from": "csrp:sim_adventurer",
-      "to": "csrp:sim_adventurerhead",
-      "kind": "leaves-walking-head",
-      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+      "from": "csrp:movingflesh",
+      "to": "csrp:pri_longarms",
+      "kind": "evolves-into-random",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - randomPrimitive() switch, 12 cases"
+    },
+    {
+      "from": "csrp:movingflesh",
+      "to": "csrp:pri_summoner",
+      "kind": "evolves-into-random",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - randomPrimitive() switch, 12 cases"
+    },
+    {
+      "from": "csrp:movingflesh",
+      "to": "csrp:pri_vermin",
+      "kind": "evolves-into-random",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - randomPrimitive() switch, 12 cases"
+    },
+    {
+      "from": "csrp:movingflesh",
+      "to": "csrp:pri_viscera",
+      "kind": "evolves-into-random",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - randomPrimitive() switch, 12 cases"
+    },
+    {
+      "from": "csrp:movingflesh",
+      "to": "csrp:pri_arachnida",
+      "kind": "evolves-into-random",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - randomPrimitive() switch, 12 cases"
+    },
+    {
+      "from": "csrp:movingflesh",
+      "to": "csrp:pri_bolster",
+      "kind": "evolves-into-random",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - randomPrimitive() switch, 12 cases"
+    },
+    {
+      "from": "csrp:movingflesh",
+      "to": "csrp:pri_burrower",
+      "kind": "evolves-into-random",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - randomPrimitive() switch, 12 cases"
+    },
+    {
+      "from": "csrp:movingflesh",
+      "to": "csrp:pri_devourer",
+      "kind": "evolves-into-random",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - randomPrimitive() switch, 12 cases"
+    },
+    {
+      "from": "csrp:movingflesh",
+      "to": "csrp:pri_manducater",
+      "kind": "evolves-into-random",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - randomPrimitive() switch, 12 cases"
+    },
+    {
+      "from": "csrp:movingflesh",
+      "to": "csrp:pri_reeker",
+      "kind": "evolves-into-random",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - randomPrimitive() switch, 12 cases"
+    },
+    {
+      "from": "csrp:movingflesh",
+      "to": "csrp:pri_tozoon",
+      "kind": "evolves-into-random",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - randomPrimitive() switch, 12 cases"
+    },
+    {
+      "from": "csrp:movingflesh",
+      "to": "csrp:pri_yelloweye",
+      "kind": "evolves-into-random",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - randomPrimitive() switch, 12 cases"
+    },
+    {
+      "from": "csrp:sim_bear",
+      "to": "csrp:fer_bear",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
     },
     {
       "from": "csrp:sim_cow",
-      "to": "csrp:sim_cowhead",
-      "kind": "leaves-walking-head",
-      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
-    },
-    {
-      "from": "csrp:sim_dragone",
-      "to": "csrp:sim_dragonehead",
-      "kind": "leaves-walking-head",
-      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+      "to": "csrp:fer_cow",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
     },
     {
       "from": "csrp:sim_enderman",
-      "to": "csrp:sim_endermanhead",
-      "kind": "leaves-walking-head",
-      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+      "to": "csrp:fer_enderman",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
     },
     {
       "from": "csrp:sim_horse",
-      "to": "csrp:sim_horsehead",
-      "kind": "leaves-walking-head",
-      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+      "to": "csrp:fer_horse",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
     },
     {
       "from": "csrp:sim_human",
-      "to": "csrp:sim_humanhead",
-      "kind": "leaves-walking-head",
-      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+      "to": "csrp:fer_human",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
     },
     {
       "from": "csrp:sim_pig",
-      "to": "csrp:sim_pighead",
-      "kind": "leaves-walking-head",
-      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+      "to": "csrp:fer_pig",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
     },
     {
       "from": "csrp:sim_sheep",
-      "to": "csrp:sim_sheephead",
-      "kind": "leaves-walking-head",
-      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+      "to": "csrp:fer_sheep",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
     },
     {
       "from": "csrp:sim_villager",
-      "to": "csrp:sim_villagerhead",
-      "kind": "leaves-walking-head",
-      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+      "to": "csrp:fer_villager",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
     },
     {
-      "from": "csrp:sim_wolf",
-      "to": "csrp:sim_wolfhead",
-      "kind": "leaves-walking-head",
-      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+      "from": "csrp:pri_arachnida",
+      "to": "csrp:ada_arachnida",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
     },
     {
-      "from": "csrp:host",
-      "to": "csrp:hostii",
-      "kind": "stage-up",
-      "evidence": "both registered; bestiary tiers CRUDE (host, hostii)"
+      "from": "csrp:pri_bolster",
+      "to": "csrp:ada_bolster",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
     },
     {
-      "from": "csrp:crux_incomplete",
-      "to": "csrp:crux",
-      "kind": "stage-up",
-      "evidence": "both registered; bestiary tiers CRUDE"
+      "from": "csrp:pri_longarms",
+      "to": "csrp:ada_longarms",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
     },
     {
-      "from": "csrp:incompleteform_small",
-      "to": "csrp:incompleteform_medium",
-      "kind": "stage-up",
-      "evidence": "both registered; Tier enum CRUDE groups the Incomplete Forms"
+      "from": "csrp:pri_manducater",
+      "to": "csrp:ada_manducater",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
     },
     {
-      "from": "csrp:hostii",
-      "to": "csrp:incompleteform_small",
-      "kind": "unknown",
-      "evidence": "CRUDE group contains host, hostii and the incomplete forms, but no explicit transition is recorded"
+      "from": "csrp:pri_reeker",
+      "to": "csrp:ada_reeker",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
+    },
+    {
+      "from": "csrp:pri_summoner",
+      "to": "csrp:ada_summoner",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
+    },
+    {
+      "from": "csrp:pri_vermin",
+      "to": "csrp:ada_vermin",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
+    },
+    {
+      "from": "csrp:pri_viscera",
+      "to": "csrp:ada_viscera",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
+    },
+    {
+      "from": "csrp:pri_yelloweye",
+      "to": "csrp:ada_yelloweye",
+      "kind": "evolves-into",
+      "evidence": "ParasiteTransformation.evolutionType() / devolutionType() in the CSRP source - the pri_/ada_ , sim_/fer_ name rules in evolutionType()"
+    },
+    {
+      "from": "csrp:sim_cowhead",
+      "to": "csrp:sim_cow",
+      "kind": "head-of",
+      "evidence": "both registered; bestiary tiers WALKING_HEAD / ASSIMILATED"
     },
     {
       "from": "csrp:anc_pod",
       "to": "csrp:anc_dreadnaut",
       "kind": "deploys",
-      "evidence": "both registered in Tier enum ANCIENT; anc_pod is the drop pod registered alongside the Dreadnaut"
+      "evidence": "anc_pod is the drop pod registered alongside the Dreadnaut (Tier enum ANCIENT)"
     },
     {
       "from": "csrp:anc_dreadnaut",
       "to": "csrp:anc_dreadnaut_ten",
       "kind": "spawns-part",
       "evidence": "anc_dreadnaut_ten is the Dreadnaut tentacle entity"
-    },
-    {
-      "from": "csrp:crux",
-      "to": "csrp:draconite",
-      "kind": "unproven",
-      "evidence": "both are DERIVED/CRUDE; no source records a transition, so this is NOT asserted"
     }
   ]
 }

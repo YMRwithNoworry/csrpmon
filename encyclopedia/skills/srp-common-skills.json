@@ -1574,6 +1574,7 @@
       "cat": "S. 特殊状态系",
       "source": "mob effect `vomit`",
       "tiers": [
+        "INBORN",
         "ASSIMILATED",
         "FERAL",
         "CRUDE",
@@ -1591,7 +1592,8 @@
       "cd": "2 回合",
       "vis": "口部喷出黑色半固态物质。",
       "denied": "NEXUS / ANCIENT / DERIVED。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "载虫的 spawnLingeringCloud() 就是吐出体内生物质形成毒云，与呕吐同源，因此放开 INBORN。"
     },
     {
       "id": "heightenedsenses",

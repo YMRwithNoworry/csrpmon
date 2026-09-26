@@ -26,3 +26,4 @@ libs/*.txt
 # OS
 Thumbs.db
 Desktop.ini
+.git-commit-msg.txt

@@ -31,9 +31,9 @@
     "conflicts": 1,
     "creaturesWithSrpProvenance": 11,
     "stages": {
-      "1": 95,
-      "2": 28,
-      "3": 3,
+      "1": 86,
+      "2": 27,
+      "3": 13,
       "4": 3
     }
   },
@@ -106,7 +106,7 @@
       "nameZh": "裂兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:mangler",
@@ -126,7 +126,7 @@
       ],
       "srpVersionNote": null,
       "srpDoc": "Original EntityNuuh, including its synchronized skin and combat-state animation routing.",
-      "stage": 1
+      "stage": 3
     },
     {
       "sourceId": "csrp:carrier_flying",
@@ -246,7 +246,7 @@
       "nameZh": "行走牛头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:sim_dragone",
@@ -306,7 +306,7 @@
       "nameZh": "行走末影人头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:sim_horse",
@@ -336,7 +336,7 @@
       "nameZh": "行走马头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:sim_human",
@@ -366,7 +366,7 @@
       "nameZh": "行走人类头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:sim_pig",
@@ -396,7 +396,7 @@
       "nameZh": "行走猪头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:sim_sheep",
@@ -426,7 +426,7 @@
       "nameZh": "行走羊头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:sim_squid",
@@ -471,7 +471,7 @@
       "nameZh": "行走村民头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:sim_wolf",
@@ -501,7 +501,7 @@
       "nameZh": "行走狼头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:hi_blaze",
@@ -561,7 +561,7 @@
       "nameZh": "狂化熊",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:fer_cow",
@@ -576,7 +576,7 @@
       "nameZh": "狂化牛",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:fer_enderman",
@@ -591,7 +591,7 @@
       "nameZh": "狂化末影人",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:fer_horse",
@@ -606,7 +606,7 @@
       "nameZh": "狂化马",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:fer_human",
@@ -621,7 +621,7 @@
       "nameZh": "狂化人类",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:fer_pig",
@@ -636,7 +636,7 @@
       "nameZh": "狂化猪",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:fer_sheep",
@@ -651,7 +651,7 @@
       "nameZh": "狂化羊",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:fer_villager",
@@ -666,7 +666,7 @@
       "nameZh": "狂化村民",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:fer_wolf",
@@ -786,7 +786,7 @@
       "nameZh": "中型未成形寄生体",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:incompleteform_small",
@@ -816,7 +816,7 @@
       "nameZh": "寄生奴仆",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:draconite",
@@ -966,7 +966,7 @@
       "nameZh": "原始蛛形兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:pri_bolster",
@@ -981,7 +981,7 @@
       "nameZh": "原始协增兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:pri_burrower",
@@ -996,7 +996,7 @@
       "nameZh": "原始掘地兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:pri_devourer",
@@ -1011,7 +1011,7 @@
       "nameZh": "原始吞噬兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:pri_longarms",
@@ -1026,7 +1026,7 @@
       "nameZh": "原始长臂兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:pri_manducater",
@@ -1041,7 +1041,7 @@
       "nameZh": "原始咀骨兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:pri_reeker",
@@ -1056,7 +1056,7 @@
       "nameZh": "原始毒腥兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:pri_summoner",
@@ -1071,7 +1071,7 @@
       "nameZh": "原始召唤兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:pri_tozoon",
@@ -1086,7 +1086,7 @@
       "nameZh": "原始潜地兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:pri_vermin",
@@ -1101,7 +1101,7 @@
       "nameZh": "原始孕虫兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:pri_viscera",
@@ -1121,7 +1121,7 @@
       ],
       "srpVersionNote": null,
       "srpDoc": "Original Primitive Viscera (EntityGim) behavior.",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:pri_yelloweye",
@@ -1136,7 +1136,7 @@
       "nameZh": "原始黄眸兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 2
     },
     {
       "sourceId": "csrp:ada_arachnida",
@@ -1151,7 +1151,7 @@
       "nameZh": "适应蛛形兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 3
     },
     {
       "sourceId": "csrp:ada_bolster",
@@ -1166,7 +1166,7 @@
       "nameZh": "适应协增兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 3
     },
     {
       "sourceId": "csrp:ada_burrower",
@@ -1181,7 +1181,7 @@
       "nameZh": "适应掘地兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:ada_devourer",
@@ -1196,7 +1196,7 @@
       "nameZh": "适应吞噬兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:ada_longarms",
@@ -1211,7 +1211,7 @@
       "nameZh": "适应长臂兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 3
     },
     {
       "sourceId": "csrp:ada_manducater",
@@ -1226,7 +1226,7 @@
       "nameZh": "适应咀骨兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 3
     },
     {
       "sourceId": "csrp:ada_reeker",
@@ -1241,7 +1241,7 @@
       "nameZh": "适应毒腥兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 3
     },
     {
       "sourceId": "csrp:ada_summoner",
@@ -1256,7 +1256,7 @@
       "nameZh": "适应召唤兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 3
     },
     {
       "sourceId": "csrp:ada_tozoon",
@@ -1271,7 +1271,7 @@
       "nameZh": "适应潜地兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:ada_viscera",
@@ -1286,7 +1286,7 @@
       "nameZh": "适应脏腑兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 3
     },
     {
       "sourceId": "csrp:ada_yelloweye",
@@ -1301,7 +1301,7 @@
       "nameZh": "适应黄眸兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 3
     },
     {
       "sourceId": "csrp:ada_vermin",
@@ -1316,7 +1316,7 @@
       "nameZh": "适应孕虫兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 3
     },
     {
       "sourceId": "csrp:dispatcherten",
@@ -1991,7 +1991,7 @@
       "nameZh": "行走冒险者头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:sim_dragonehead",
@@ -2006,7 +2006,7 @@
       "nameZh": "行走龙首",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 1
     },
     {
       "sourceId": "csrp:worker",

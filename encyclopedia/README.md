@@ -26,9 +26,9 @@ mod**, not by recalling it:
 | 1 | SRP Creature Canon Database | **done** - [canon/SRP-CREATURE-CANON.md](canon/SRP-CREATURE-CANON.md) |
 | 2 | Source ID / existence check | **done** - 129 creatures confirmed, 34 non-creatures excluded |
 | 3 | SRP Common Skill Database (40-70) | **done** - 66 skills, [skills/SRP-COMMON-SKILLS.md](skills/SRP-COMMON-SKILLS.md) |
-| 4 | Tier / stage / ecology permission matrix | **done** - `tiers` + `minStage` + `denied`, enforced by `tools/build_pokedex.cjs` |
-| 5 | Real relationships between creatures | **done** - [canon/relationships.json](canon/relationships.json), 38 relations, each with its evidence |
-| 6 | Per-creature Pokemon designs | **in progress - 6 / 129** ([pokedex/](pokedex/README.md)) |
+| 4 | Tier / stage / ecology permission matrix | **done** - tiers + minStage + denied, enforced by tools/build_pokedex.cjs |
+| 5 | Real relationships between creatures | **done** - [canon/relationships.json](canon/relationships.json), **52 relations parsed out of ParasiteTransformation.java**, the mod own evolve/devolve code |
+| 6 | Per-creature Pokemon designs | **in progress - 11 / 129** ([pokedex/](pokedex/README.md)); the whole INBORN tier is done |
 | 7 | Per-creature skill tables | covered by the generated entries: every design lists its signature move and 5-7 common skills with a reason each |
 | 8-10 | Canon / similarity / gameplay review, final encyclopedia | not started |
 
@@ -64,6 +64,26 @@ machine-checked:
 
 The generator has already caught real mistakes: an over-restrictive tier matrix that denied INBORN
 the marking skill its forward units need, and two designs reaching for skills above their stage.
+
+
+## The strongest find so far
+
+entity/ParasiteTransformation.java is the mod own evolve/devolve implementation, and it settles the
+growth graph outright instead of leaving it to naming conventions:
+
+```java
+if (type == BUGLIN)         return RUPTER;
+if (type == RUPTER)         return MANGLER;
+if (type == MOVINGFLESH)    return randomPrimitive(source);   // one of 12 pri_*
+if (type == SIM_ADVENTURER) return THRALL;
+if (type == HOST)           return HOSTII;
+if (type == CRUX_INCOMPLETE)return CRUX;
+// pri_X -> ada_X, sim_X -> fer_X (except sim_wolf and the *_head set)
+```
+
+That is why buglin -> rupter -> mangler, movingflesh -> a random primitive, assimilated -> feral and
+the whole nexus ladder are recorded as **proven** rather than assumed. Stage counts follow from it:
+86 base / 27 mid / 13 final / 3 nexus-stage-IV.
 
 ## Layout
 

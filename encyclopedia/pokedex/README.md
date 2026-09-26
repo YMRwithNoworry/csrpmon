@@ -3,14 +3,14 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 6 / 129**
+**Designed: 11 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
 | Tier | Designed | Total |
 |---|---|---|
-| INBORN | 6 | 10 |
-| CRUDE | 0 | 11 |
+| INBORN | 10 | 10 |
+| CRUDE | 1 | 11 |
 | PRIMITIVE | 0 | 12 |
 | ADAPTED | 0 | 12 |
 | ASSIMILATED | 0 | 13 |
@@ -34,12 +34,12 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | 1 | `csrp:buglin` | 虫灵 / Buglin | - | [designed](buglin.md) |
 | 1 | `csrp:gnat` | 狂疫虫 / Gnat | EntityAta | [designed](gnat.md) |
 | 1 | `csrp:lice` | 狂疫飞虫 / Lice | EntityViin | [designed](lice.md) |
-| 1 | `csrp:rupter` | 裂兽 / Rupter | - | [designed](rupter.md) |
-| 1 | `csrp:mangler` | 凶裂兽 / Mangler | EntityNuuh | [designed](mangler.md) |
-| 1 | `csrp:carrier_flying` | 飞行母体 / Flying Carrier | - | pending |
-| 1 | `csrp:carrier_heavy` | 重型母体 / Heavy Carrier | - | pending |
-| 1 | `csrp:carrier_light` | 轻型母体 / Light Carrier | - | pending |
-| 1 | `csrp:movingflesh` | 活体肉块 / Moving Flesh | - | pending |
+| 2 | `csrp:rupter` | 裂兽 / Rupter | - | [designed](rupter.md) |
+| 3 | `csrp:mangler` | 凶裂兽 / Mangler | EntityNuuh | [designed](mangler.md) |
+| 1 | `csrp:carrier_flying` | 飞行母体 / Flying Carrier | - | [designed](carrier_flying.md) |
+| 1 | `csrp:carrier_heavy` | 重型母体 / Heavy Carrier | - | [designed](carrier_heavy.md) |
+| 1 | `csrp:carrier_light` | 轻型母体 / Light Carrier | - | [designed](carrier_light.md) |
+| 1 | `csrp:movingflesh` | 活体肉块 / Moving Flesh | - | [designed](movingflesh.md) |
 | 1 | `csrp:worker` | 工兽 / Worker | EntityKol | [designed](worker.md) |
 
 ## CRUDE (11)
@@ -52,45 +52,45 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | 1 | `csrp:heed` | 警戒兽 / Heed | - | pending |
 | 1 | `csrp:host` | 缠骨柱 / Host | - | pending |
 | 2 | `csrp:hostii` | 缠骷柱 / Host II | - | pending |
-| 2 | `csrp:incompleteform_medium` | 中型未成形寄生体 / Medium Incomplete Form | - | pending |
+| 1 | `csrp:incompleteform_medium` | 中型未成形寄生体 / Medium Incomplete Form | - | pending |
 | 1 | `csrp:incompleteform_small` | 小型未成形寄生体 / Small Incomplete Form | - | pending |
-| 1 | `csrp:thrall` | 寄生奴仆 / Thrall | - | pending |
+| 2 | `csrp:thrall` | 寄生奴仆 / Thrall | - | pending |
 | 1 | `csrp:dredge` | 溺骨妖 / Dredge | - | pending |
-| 1 | `csrp:carrier_worm` | 蠕虫载体 / Worm Carrier | EntityQuac | pending |
+| 1 | `csrp:carrier_worm` | 蠕虫载体 / Worm Carrier | EntityQuac | [designed](carrier_worm.md) |
 
 ## PRIMITIVE (12)
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 1 | `csrp:pri_arachnida` | 原始蛛形兽 / Primitive Arachnida | - | pending |
-| 1 | `csrp:pri_bolster` | 原始协增兽 / Primitive Bolster | - | pending |
-| 1 | `csrp:pri_burrower` | 原始掘地兽 / Primitive Burrower | - | pending |
-| 1 | `csrp:pri_devourer` | 原始吞噬兽 / Primitive Devourer | - | pending |
-| 1 | `csrp:pri_longarms` | 原始长臂兽 / Primitive Longarms | - | pending |
-| 1 | `csrp:pri_manducater` | 原始咀骨兽 / Primitive Manducater | - | pending |
-| 1 | `csrp:pri_reeker` | 原始毒腥兽 / Primitive Reeker | - | pending |
-| 1 | `csrp:pri_summoner` | 原始召唤兽 / Primitive Summoner | - | pending |
-| 1 | `csrp:pri_tozoon` | 原始潜地兽 / Primitive Tozoon | - | pending |
-| 1 | `csrp:pri_vermin` | 原始孕虫兽 / Primitive Vermin | - | pending |
-| 1 | `csrp:pri_viscera` | 原始脏腑兽 / Primitive Viscera | EntityGim | pending |
-| 1 | `csrp:pri_yelloweye` | 原始黄眸兽 / Primitive Yelloweye | - | pending |
+| 2 | `csrp:pri_arachnida` | 原始蛛形兽 / Primitive Arachnida | - | pending |
+| 2 | `csrp:pri_bolster` | 原始协增兽 / Primitive Bolster | - | pending |
+| 2 | `csrp:pri_burrower` | 原始掘地兽 / Primitive Burrower | - | pending |
+| 2 | `csrp:pri_devourer` | 原始吞噬兽 / Primitive Devourer | - | pending |
+| 2 | `csrp:pri_longarms` | 原始长臂兽 / Primitive Longarms | - | pending |
+| 2 | `csrp:pri_manducater` | 原始咀骨兽 / Primitive Manducater | - | pending |
+| 2 | `csrp:pri_reeker` | 原始毒腥兽 / Primitive Reeker | - | pending |
+| 2 | `csrp:pri_summoner` | 原始召唤兽 / Primitive Summoner | - | pending |
+| 2 | `csrp:pri_tozoon` | 原始潜地兽 / Primitive Tozoon | - | pending |
+| 2 | `csrp:pri_vermin` | 原始孕虫兽 / Primitive Vermin | - | pending |
+| 2 | `csrp:pri_viscera` | 原始脏腑兽 / Primitive Viscera | EntityGim | pending |
+| 2 | `csrp:pri_yelloweye` | 原始黄眸兽 / Primitive Yelloweye | - | pending |
 
 ## ADAPTED (12)
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 2 | `csrp:ada_arachnida` | 适应蛛形兽 / Adapted Arachnida | - | pending |
-| 2 | `csrp:ada_bolster` | 适应协增兽 / Adapted Bolster | - | pending |
-| 2 | `csrp:ada_burrower` | 适应掘地兽 / Adapted Burrower | - | pending |
-| 2 | `csrp:ada_devourer` | 适应吞噬兽 / Adapted Devourer | - | pending |
-| 2 | `csrp:ada_longarms` | 适应长臂兽 / Adapted Longarms | - | pending |
-| 2 | `csrp:ada_manducater` | 适应咀骨兽 / Adapted Manducater | - | pending |
-| 2 | `csrp:ada_reeker` | 适应毒腥兽 / Adapted Reeker | - | pending |
-| 2 | `csrp:ada_summoner` | 适应召唤兽 / Adapted Summoner | - | pending |
-| 2 | `csrp:ada_tozoon` | 适应潜地兽 / Adapted Tozoon | - | pending |
-| 2 | `csrp:ada_viscera` | 适应脏腑兽 / Adapted Viscera | - | pending |
-| 2 | `csrp:ada_yelloweye` | 适应黄眸兽 / Adapted Yelloweye | - | pending |
-| 2 | `csrp:ada_vermin` | 适应孕虫兽 / Adapted Vermin | - | pending |
+| 3 | `csrp:ada_arachnida` | 适应蛛形兽 / Adapted Arachnida | - | pending |
+| 3 | `csrp:ada_bolster` | 适应协增兽 / Adapted Bolster | - | pending |
+| 1 | `csrp:ada_burrower` | 适应掘地兽 / Adapted Burrower | - | pending |
+| 1 | `csrp:ada_devourer` | 适应吞噬兽 / Adapted Devourer | - | pending |
+| 3 | `csrp:ada_longarms` | 适应长臂兽 / Adapted Longarms | - | pending |
+| 3 | `csrp:ada_manducater` | 适应咀骨兽 / Adapted Manducater | - | pending |
+| 3 | `csrp:ada_reeker` | 适应毒腥兽 / Adapted Reeker | - | pending |
+| 3 | `csrp:ada_summoner` | 适应召唤兽 / Adapted Summoner | - | pending |
+| 1 | `csrp:ada_tozoon` | 适应潜地兽 / Adapted Tozoon | - | pending |
+| 3 | `csrp:ada_viscera` | 适应脏腑兽 / Adapted Viscera | - | pending |
+| 3 | `csrp:ada_yelloweye` | 适应黄眸兽 / Adapted Yelloweye | - | pending |
+| 3 | `csrp:ada_vermin` | 适应孕虫兽 / Adapted Vermin | - | pending |
 
 ## ASSIMILATED (13)
 
@@ -114,16 +114,16 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 2 | `csrp:sim_cowhead` | 行走牛头颅 / Walking Cow Head | - | pending |
-| 2 | `csrp:sim_endermanhead` | 行走末影人头颅 / Walking Enderman Head | - | pending |
-| 2 | `csrp:sim_horsehead` | 行走马头颅 / Walking Horse Head | - | pending |
-| 2 | `csrp:sim_humanhead` | 行走人类头颅 / Walking Human Head | - | pending |
-| 2 | `csrp:sim_pighead` | 行走猪头颅 / Walking Pig Head | - | pending |
-| 2 | `csrp:sim_sheephead` | 行走羊头颅 / Walking Sheep Head | - | pending |
-| 2 | `csrp:sim_villagerhead` | 行走村民头颅 / Walking Villager Head | - | pending |
-| 2 | `csrp:sim_wolfhead` | 行走狼头颅 / Walking Wolf Head | - | pending |
-| 2 | `csrp:sim_adventurerhead` | 行走冒险者头颅 / Walking Adventurer Head | - | pending |
-| 2 | `csrp:sim_dragonehead` | 行走龙首 / Walking Ender Dragon Head | - | pending |
+| 1 | `csrp:sim_cowhead` | 行走牛头颅 / Walking Cow Head | - | pending |
+| 1 | `csrp:sim_endermanhead` | 行走末影人头颅 / Walking Enderman Head | - | pending |
+| 1 | `csrp:sim_horsehead` | 行走马头颅 / Walking Horse Head | - | pending |
+| 1 | `csrp:sim_humanhead` | 行走人类头颅 / Walking Human Head | - | pending |
+| 1 | `csrp:sim_pighead` | 行走猪头颅 / Walking Pig Head | - | pending |
+| 1 | `csrp:sim_sheephead` | 行走羊头颅 / Walking Sheep Head | - | pending |
+| 1 | `csrp:sim_villagerhead` | 行走村民头颅 / Walking Villager Head | - | pending |
+| 1 | `csrp:sim_wolfhead` | 行走狼头颅 / Walking Wolf Head | - | pending |
+| 1 | `csrp:sim_adventurerhead` | 行走冒险者头颅 / Walking Adventurer Head | - | pending |
+| 1 | `csrp:sim_dragonehead` | 行走龙首 / Walking Ender Dragon Head | - | pending |
 
 ## ASSIMARA (6)
 
@@ -148,14 +148,14 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 1 | `csrp:fer_bear` | 狂化熊 / Feral Bear | - | pending |
-| 1 | `csrp:fer_cow` | 狂化牛 / Feral Cow | - | pending |
-| 1 | `csrp:fer_enderman` | 狂化末影人 / Feral Enderman | - | pending |
-| 1 | `csrp:fer_horse` | 狂化马 / Feral Horse | - | pending |
-| 1 | `csrp:fer_human` | 狂化人类 / Feral Human | - | pending |
-| 1 | `csrp:fer_pig` | 狂化猪 / Feral Pig | - | pending |
-| 1 | `csrp:fer_sheep` | 狂化羊 / Feral Sheep | - | pending |
-| 1 | `csrp:fer_villager` | 狂化村民 / Feral Villager | - | pending |
+| 2 | `csrp:fer_bear` | 狂化熊 / Feral Bear | - | pending |
+| 2 | `csrp:fer_cow` | 狂化牛 / Feral Cow | - | pending |
+| 2 | `csrp:fer_enderman` | 狂化末影人 / Feral Enderman | - | pending |
+| 2 | `csrp:fer_horse` | 狂化马 / Feral Horse | - | pending |
+| 2 | `csrp:fer_human` | 狂化人类 / Feral Human | - | pending |
+| 2 | `csrp:fer_pig` | 狂化猪 / Feral Pig | - | pending |
+| 2 | `csrp:fer_sheep` | 狂化羊 / Feral Sheep | - | pending |
+| 2 | `csrp:fer_villager` | 狂化村民 / Feral Villager | - | pending |
 | 1 | `csrp:fer_wolf` | 狂化狼 / Feral Wolf | - | pending |
 
 ## NEXUS (13)
