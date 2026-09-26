@@ -1,0 +1,179 @@
+{
+  "id": "dispatcher_si",
+  "dex": 8121,
+  "zh": "调度柱·初阶",
+  "en": "Stage I Dispatcher",
+  "types": [
+    "虫",
+    "幽灵"
+  ],
+  "kind": "雾幕调度宝可梦",
+  "height": 2.2,
+  "weight": 140,
+  "stats": [
+    64,
+    36,
+    56,
+    74,
+    62,
+    14
+  ],
+  "statNote": "总和 306。SRP 中 health 33.0 / armor 7.0 / damage 3.0 / **bombCount 4** / **activeCap 3** / **summonCooldown 60** / maxBlockHardness 1.0 / **blockRange 3.0** / experience 16。它与召唤柱共用同一张阶段表——**但家族行为完全不同**。",
+  "core": "“召唤柱把东西放出来。**调度柱把东西收起来**——然后在你身后铺一层雾。”",
+  "visual": [
+    [
+      "头部",
+      "柱顶的膨大核心，表面有 4 个收容口",
+      "bombCount = 4"
+    ],
+    [
+      "眼睛",
+      "核心四周环列一圈暗红光点，朝向内侧",
+      "收纳而非放出"
+    ],
+    [
+      "躯干",
+      "柱状躯体植根地面，下段埋入土中",
+      "柱体形态"
+    ],
+    [
+      "收容口",
+      "4 个端口向内吸入，与召唤口的开合方向相反",
+      "`storeNearbyParasite()`"
+    ],
+    [
+      "雾孔",
+      "柱体中段有一圈细密的雾孔",
+      "`placeNestFog(stage)`"
+    ],
+    [
+      "颜色",
+      "暗红寄生组织 + 核心暗紫 + 雾孔灰白",
+      "SRP 模型配色"
+    ]
+  ],
+  "pose": "**完全静止**。核心缓慢旋转，收容口与雾孔按 40 tick 的固定间隔交替工作。",
+  "preserved": [
+    "**收纳职能**——`storeNearbyParasite()`：以 `FOLLOW_RANGE` 为范围搜索附近的寄生体，并把它们的实体 ID 存入 `storedParasiteIds`",
+    "**铺雾职能**——`placeNestFog(stage)`：`count = Math.min(3, 1 + stage)`，即一阶铺 2 块",
+    "**固定工作节奏**——`if (activeKind.family == Family.DISPATCHER && tickCount % 40 == 0)`",
+    "**雾的高度范围**——`DISPATCHER_FOG_MIN_Y_OFFSET = -2` 到 `MAX_Y_OFFSET = 4`"
+  ],
+  "pokemonized": [
+    "**它和召唤柱用的是同一张数值表**（同阶 health/armor/damage/bombCount/activeCap 完全同构）。**家族行为才是区分点**：召唤柱释放，调度柱收纳",
+    "**`storeNearbyParasite()` 会把实体 ID 写进 `storedParasiteIds`**——也就是说它**记得**附近有谁。我把它做成\"记录\"机制：它把见过的东西存起来，之后再放出来",
+    "**铺雾的块数是 `min(3, 1 + stage)`**——一阶只有 2 块，三阶起就封顶 3 块。这说明雾的**强度靠半径而不是数量**增长"
+  ],
+  "ability": {
+    "name": "收容记录（storeids）",
+    "effect": "自身每回合结束时，把对手场上一只宝可梦的**招式属性记录一次**（最多记录 3 条）。**记录过的属性在本次战斗中对该对手额外生效 15% 伤害**。对应 `storedParasiteIds` 与 `storeNearbyParasite()`。"
+  },
+  "hidden": {
+    "name": "雾幕（nestfog）",
+    "effect": "自身入场时铺设**雾幕**（持续 4 回合）：雾幕内对手的命中率下降 10%，且**场地类效果无法被清除**。对应 `placeNestFog(stage)` 的 `count = min(3, 1+stage)`。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "dispatcherfog",
+      "zh": "雾幕铺设",
+      "en": "Nest Fog",
+      "cat": "Q",
+      "type": "幽灵",
+      "cls": "变化",
+      "pow": 0,
+      "acc": true,
+      "pp": 10,
+      "range": "自身周围 3 格",
+      "effect": "在场上铺设 **2 处**雾幕（对应 `count = min(3, 1 + stage)`，一阶为 2）：雾幕内对手命中率下降 10%，且**我方场地效果在雾幕内无法被清除**。持续 3 回合。造成 0 点伤害。",
+      "trigger": "无。",
+      "visual": "柱体中段的雾孔同时开合，向四周喷出两团缓慢扩散的暗红色雾，雾体贴近地面并沿地形蔓延（对应高度偏移 -2 到 4）。",
+      "why": "`placeNestFog(stage)` 与 `DISPATCHER_FOG_MIN_Y_OFFSET/MAX_Y_OFFSET` 的翻译。**与召唤柱的对照最直接**：它不放出生物，它改变战场。"
+    }
+  ],
+  "common": [
+    {
+      "id": "parasiterelease",
+      "why": "它储存并释放已有的 SRP 生物"
+    },
+    {
+      "id": "hivespread",
+      "why": "它是巢穴的扩散节点"
+    },
+    {
+      "id": "nestestablishment",
+      "why": "雾幕是巢穴结构的一部分"
+    },
+    {
+      "id": "infestedground",
+      "why": "雾幕覆盖的地面被污染"
+    },
+    {
+      "id": "infectionpulse",
+      "why": "它是范围感染源"
+    },
+    {
+      "id": "parasiticfield",
+      "why": "雾幕本身就是一种领域"
+    },
+    {
+      "id": "markedprey",
+      "why": "收纳前指认目标"
+    },
+    {
+      "id": "hivemothercall",
+      "why": "调度柱同样具备召唤职能"
+    }
+  ],
+  "normal": [
+    "隐形岩",
+    "剧毒",
+    "白雾",
+    "守住",
+    "替身",
+    "接棒"
+  ],
+  "loop": [
+    [
+      "起手",
+      "雾幕铺设",
+      "先把战场遮蔽起来"
+    ],
+    [
+      "核心",
+      "隐形岩 / 寄生领域",
+      "在雾幕内叠加场地效果"
+    ],
+    [
+      "强化",
+      "收容记录（特性）",
+      "记录对手属性以提升后续伤害"
+    ],
+    [
+      "控制",
+      "剧毒 / 感染脉冲",
+      "持续压制"
+    ],
+    [
+      "收尾",
+      "接棒",
+      "把已布置的战场交给二阶"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "感染区的地表——与召唤柱占据同类位置，但职能相反",
+    "食物": "通过根部吸取养分",
+    "猎物": "无。它不狩猎",
+    "天敌": "任何东西。33 点生命、3 点攻击、0 移动",
+    "行为": "**完全静止**。收纳—铺雾—再收纳。每 40 tick 一次",
+    "群体": "周围通常有被它收纳后又放出的个体",
+    "巢穴": "**巢穴的遮蔽层**，九阶体系第一环",
+    "繁殖": "不繁殖，通过收纳与释放扩张",
+    "与其他 SRP 宝可梦关系": "**DISPATCHER 家族第一阶**；与 BECKON 家族共用数值表但行为完全不同（收纳 vs 召唤）"
+  },
+  "evolution": "来源：无（NEXUS 起点）\n  ↓  阶段提升\n当前：调度柱·初阶（`csrp:dispatcher_si`）\n  ↓\n调度柱·二阶（`csrp:dispatcher_sii`）→ 三阶 → 四阶\n\n证据：`Kind.DISPATCHER_SI(Family.DISPATCHER, 1, 33.0D, 7.0D, 3.0D, 4, 3, 60, 1.0F, 3.0D, 16)`\n与 `tickCount % 40 == 0` 分支中的 `storeNearbyParasite()` / `placeNestFog(stage)`。\n\n⚠ **阶段晋级机制**：源码中 Nexus 会在世界进化相位满足 `phase >= activeKind.stage + 2` 时**自行 `evolve()`**。",
+  "dex1": "它和召唤柱长得几乎一样。区别在于——它面前的东西会消失，而它背后会起雾。",
+  "dex2": "观察记录：每 40 tick 执行一次收纳与铺雾。\n收纳范围等于自身 FOLLOW_RANGE，收纳对象写入 `storedParasiteIds`。\n铺雾数量为 `min(3, 1 + stage)`，一阶为 2 块。\n ——结论：**它不生产生物，它生产地形**。",
+  "gameplay": "环境控制（雾幕 + 场地保护）、召唤（收纳后释放）、扩散（感染）——NEXUS 调度柱体系的第一阶",
+  "similarity": "与召唤柱·初阶**数值表同构**（同阶各项同量级），但家族行为相反：**召唤柱放出生物，调度柱收纳生物并铺雾**。与二阶的区别：雾的半径随阶数增长。"
+}

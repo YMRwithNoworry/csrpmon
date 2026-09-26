@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 110 / 129**
+**Designed: 114 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -18,7 +18,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | ASSIMARA | 6 | 6 |
 | HIJACKED | 3 | 3 |
 | FERAL | 9 | 9 |
-| NEXUS | 4 | 13 |
+| NEXUS | 8 | 13 |
 | DETERRENT | 5 | 5 |
 | PURE | 7 | 7 |
 | PREEMINENT | 8 | 8 |
@@ -166,10 +166,10 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | 2 | `csrp:beckon_sii` | II阶召唤柱 / Stage II Beckon | - | [designed](beckon_sii.md) |
 | 3 | `csrp:beckon_siii` | III阶召唤柱 / Stage III Beckon | - | [designed](beckon_siii.md) |
 | 4 | `csrp:beckon_siv` | IV阶召唤柱 / Stage IV Beckon | - | [designed](beckon_siv.md) |
-| 1 | `csrp:dispatcher_si` | I阶调度柱 / Stage I Dispatcher | - | pending |
-| 2 | `csrp:dispatcher_sii` | II阶调度柱 / Stage II Dispatcher | - | pending |
-| 3 | `csrp:dispatcher_siii` | III阶调度柱 / Stage III Dispatcher | - | pending |
-| 4 | `csrp:dispatcher_siv` | IV阶调度柱 / Stage IV Dispatcher | - | pending |
+| 1 | `csrp:dispatcher_si` | I阶调度柱 / Stage I Dispatcher | - | [designed](dispatcher_si.md) |
+| 2 | `csrp:dispatcher_sii` | II阶调度柱 / Stage II Dispatcher | - | [designed](dispatcher_sii.md) |
+| 3 | `csrp:dispatcher_siii` | III阶调度柱 / Stage III Dispatcher | - | [designed](dispatcher_siii.md) |
+| 4 | `csrp:dispatcher_siv` | IV阶调度柱 / Stage IV Dispatcher | - | [designed](dispatcher_siv.md) |
 | 1 | `csrp:rooter_si` | I阶支庇柱 / Stage I Rooter | - | pending |
 | 2 | `csrp:rooter_sii` | II阶支庇柱 / Stage II Rooter | - | pending |
 | 3 | `csrp:rooter_siii` | III阶支庇柱 / Stage III Rooter | - | pending |
