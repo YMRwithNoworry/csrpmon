@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 127 / 129**
+**Designed: 128 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -20,12 +20,11 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | FERAL | 9 | 9 |
 | NEXUS | 13 | 13 |
 | DETERRENT | 5 | 5 |
-| PURE | 7 | 7 |
+| PURE | 8 | 8 |
 | PREEMINENT | 8 | 8 |
 | DERIVED | 2 | 2 |
 | ANCIENT | 4 | 4 |
 | ABOMINATION | 2 | 2 |
-| UNTIERED | 0 | 2 |
 
 ## INBORN (10)
 
@@ -186,7 +185,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | 1 | `csrp:sentry` | 哨戒爪 / Sentry | - | [designed](sentry.md) |
 | 1 | `csrp:worm` | 侵袭蠕虫 / Worm | - | [designed](worm.md) |
 
-## PURE (7)
+## PURE (8)
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
@@ -197,6 +196,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | 1 | `csrp:overseer` | 监察兽 / Overseer | - | [designed](overseer.md) |
 | 1 | `csrp:vigilante` | 巡兽 / Vigilante | - | [designed](vigilante.md) |
 | 1 | `csrp:warden` | 看守兽 / Warden | - | [designed](warden.md) |
+| 1 | `csrp:marauder_tendril` | 掠夺者触手 / Marauder Tendril | - | [designed](marauder_tendril.md) |
 
 ## PREEMINENT (8)
 
@@ -233,11 +233,4 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 |---|---|---|---|---|
 | 1 | `csrp:abo_bodies` | 缀合多体 / Many Bodies | - | [designed](abo_bodies.md) |
 | 1 | `csrp:abo_head` | 巨型头颅 / Giant Head | - | [designed](abo_head.md) |
-
-## UNTIERED (2)
-
-| Stage | Source ID | Name | SRP class | Status |
-|---|---|---|---|---|
-| 1 | `csrp:sim_dragonhead` | 行走龙首 / Walking Ender Dragon Head | - | pending |
-| 1 | `csrp:marauder_tendril` | 掠夺者触手 / Marauder Tendril | - | pending |
 

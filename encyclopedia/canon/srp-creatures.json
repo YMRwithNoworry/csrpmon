@@ -301,10 +301,10 @@
       "sourceId": "csrp:sim_dragonhead",
       "id": "sim_dragonhead",
       "entityCategory": "MONSTER",
-      "isCreature": true,
+      "isCreature": false,
       "tierCode": null,
       "tierBestiary": null,
-      "tier": null,
+      "tier": "__ALIAS__",
       "tierConflict": false,
       "nameEn": "Walking Ender Dragon Head",
       "nameZh": "行走龙首",
@@ -312,7 +312,10 @@
       "status": "CONFIRMED",
       "stage": 1,
       "supportsAdaptation": false,
-      "entityClass": "AssimilatedDragonHeadEntity"
+      "entityClass": "AssimilatedDragonHeadEntity",
+      "verified": false,
+      "aliasOf": "csrp:sim_dragonehead",
+      "aliasEvidence": "bestiary/sim_dragonhead.json declares {\"id\": \"csrp:sim_dragonehead\", \"tier\": \"WALKING_HEAD\"} inside; registration constant is SIM_DRAGON_HEAD_COMPAT and both ids map to AssimilatedDragonHeadEntity"
     },
     {
       "sourceId": "csrp:sim_enderman",
@@ -2192,7 +2195,7 @@
       "isCreature": true,
       "tierCode": null,
       "tierBestiary": null,
-      "tier": null,
+      "tier": "PURE",
       "tierConflict": false,
       "nameEn": "Marauder Tendril",
       "nameZh": "掠夺者触手",
@@ -2200,7 +2203,9 @@
       "status": "CONFIRMED",
       "stage": 1,
       "supportsAdaptation": false,
-      "entityClass": "MarauderTendrilEntity"
+      "entityClass": "MarauderTendrilEntity",
+      "inheritedTier": true,
+      "tierEvidence": "no tier record of its own; it is the Marauder sub-entity (MarauderTendrilEntity, javadoc: Hitbox and detached-tendril implementation used by Marauder), and the Marauder is PURE"
     },
     {
       "sourceId": "csrp:movingflesh",

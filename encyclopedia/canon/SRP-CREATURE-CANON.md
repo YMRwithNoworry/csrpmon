@@ -33,12 +33,11 @@ Proven relations: **54** - {"evolves-into":23,"devolves-into":6,"nexus-stage-up"
 | FERAL | 9 |
 | NEXUS | 13 |
 | DETERRENT | 5 |
-| PURE | 7 |
+| PURE | 8 |
 | PREEMINENT | 8 |
 | DERIVED | 2 |
 | ANCIENT | 4 |
 | ABOMINATION | 2 |
-| UNTIERED | 2 |
 
 ### INBORN (10)
 
@@ -199,7 +198,7 @@ Proven relations: **54** - {"evolves-into":23,"devolves-into":6,"nexus-stage-up"
 | 1 | `csrp:sentry` | Sentry | 哨戒爪 | - | code+bestiary |  |
 | 1 | `csrp:worm` | Worm | 侵袭蠕虫 | - | code+bestiary |  |
 
-### PURE (7)
+### PURE (8)
 
 | Stage | Source ID | English | Chinese | SRP class | Tier source | Notes |
 |---|---|---|---|---|---|---|
@@ -210,6 +209,7 @@ Proven relations: **54** - {"evolves-into":23,"devolves-into":6,"nexus-stage-up"
 | 1 | `csrp:overseer` | Overseer | 监察兽 | - | code+bestiary |  |
 | 1 | `csrp:vigilante` | Vigilante | 巡兽 | - | code+bestiary |  |
 | 1 | `csrp:warden` | Warden | 看守兽 | - | code+bestiary |  |
+| 1 | `csrp:marauder_tendril` | Marauder Tendril | 掠夺者触手 | - |  | no bestiary entry |
 
 ### PREEMINENT (8)
 
@@ -246,13 +246,6 @@ Proven relations: **54** - {"evolves-into":23,"devolves-into":6,"nexus-stage-up"
 |---|---|---|---|---|---|---|
 | 1 | `csrp:abo_bodies` | Many Bodies | 缀合多体 | - | bestiary |  |
 | 1 | `csrp:abo_head` | Giant Head | 巨型头颅 | - | bestiary |  |
-
-### UNTIERED (2)
-
-| Stage | Source ID | English | Chinese | SRP class | Tier source | Notes |
-|---|---|---|---|---|---|---|
-| 1 | `csrp:sim_dragonhead` | Walking Ender Dragon Head | 行走龙首 | - |  | no bestiary entry |
-| 1 | `csrp:marauder_tendril` | Marauder Tendril | 掠夺者触手 | - |  | no bestiary entry |
 
 ## Proven growth relations
 
@@ -354,13 +347,6 @@ The other nine pri_/ada_ pairs do transform, and their edges are recorded as pro
 - Version B: `RelayScanReportFactory.Tier` says `NEXUS`
 - Adopted: `DETERRENT` - two independent sources agree, the code enum is the outlier.
 - No third behaviour is invented.
-
-### Untiered creatures
-
-Registered, real creatures, but neither tier source mentions them. Marked 【待核实】 and NOT designed.
-
-- `csrp:sim_dragonhead` Walking Ender Dragon Head - MONSTER
-- `csrp:marauder_tendril` Marauder Tendril - MONSTER
 
 ### Bestiary entries with no entity
 
