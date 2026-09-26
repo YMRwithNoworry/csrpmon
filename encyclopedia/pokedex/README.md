@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 86 / 129**
+**Designed: 91 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -19,7 +19,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | HIJACKED | 3 | 3 |
 | FERAL | 9 | 9 |
 | NEXUS | 0 | 13 |
-| DETERRENT | 0 | 5 |
+| DETERRENT | 5 | 5 |
 | PURE | 0 | 7 |
 | PREEMINENT | 0 | 8 |
 | DERIVED | 0 | 2 |
@@ -180,11 +180,11 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 1 | `csrp:dispatcherten` | 调度柱触须 / Dispatcher Tentacle | - | pending |
-| 1 | `csrp:kyphosis` | 曲击柱 / Kyphosis | - | pending |
-| 1 | `csrp:seizer` | 缠缚触手 / Seizer | - | pending |
-| 1 | `csrp:sentry` | 哨戒爪 / Sentry | - | pending |
-| 1 | `csrp:worm` | 侵袭蠕虫 / Worm | - | pending |
+| 1 | `csrp:dispatcherten` | 调度柱触须 / Dispatcher Tentacle | - | [designed](dispatcherten.md) |
+| 1 | `csrp:kyphosis` | 曲击柱 / Kyphosis | - | [designed](kyphosis.md) |
+| 1 | `csrp:seizer` | 缠缚触手 / Seizer | - | [designed](seizer.md) |
+| 1 | `csrp:sentry` | 哨戒爪 / Sentry | - | [designed](sentry.md) |
+| 1 | `csrp:worm` | 侵袭蠕虫 / Worm | - | [designed](worm.md) |
 
 ## PURE (7)
 
