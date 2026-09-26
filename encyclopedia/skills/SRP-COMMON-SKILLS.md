@@ -769,7 +769,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `parasiterelease`
 - **来源机制**: Carrier 体内储存并投放寄生体
-- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, PREEMINENT, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL, DETERRENT
+- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, PREEMINENT, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL, DETERRENT, PURE
 - **属性 / 类别**: 虫 / 变化
 - **威力 / 命中 / PP**: - / 必中 / 5
 - **效果**: 释放体内储存的寄生体：对目标造成固定 1/6 最大 HP 伤害并附加 2 层感染；每场战斗只能使用 2 次。
@@ -777,7 +777,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 每场 2 次
 - **视觉表现**: 背部裂开并喷出幼虫群。
 - **不能学习者**: NEXUS / ANCIENT / DETERRENT——它们的召唤是领域级，不走"释放"通道。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PURE。掠夺者（marauder）本身就在 PURE 层，而它是全部 6 只 ASSIMARA 掠夺化体的来源，源码中类注释为 Legacy EntityEsor port，其身份就是投放/改造。排除它不合理。
 
 ### 菌巢召回 / Hive Recall
 

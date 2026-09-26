@@ -1548,7 +1548,8 @@
         "ASSIMARA",
         "HIJACKED",
         "FERAL",
-        "DETERRENT"
+        "DETERRENT",
+        "PURE"
       ],
       "type": "虫",
       "cls": "变化",
@@ -1561,7 +1562,7 @@
       "vis": "背部裂开并喷出幼虫群。",
       "denied": "NEXUS / ANCIENT / DETERRENT——它们的召唤是领域级，不走\"释放\"通道。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PURE。掠夺者（marauder）本身就在 PURE 层，而它是全部 6 只 ASSIMARA 掠夺化体的来源，源码中类注释为 Legacy EntityEsor port，其身份就是投放/改造。排除它不合理。"
     },
     {
       "id": "hiverecall",

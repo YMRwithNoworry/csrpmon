@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 91 / 129**
+**Designed: 98 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -20,7 +20,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | FERAL | 9 | 9 |
 | NEXUS | 0 | 13 |
 | DETERRENT | 5 | 5 |
-| PURE | 0 | 7 |
+| PURE | 7 | 7 |
 | PREEMINENT | 0 | 8 |
 | DERIVED | 0 | 2 |
 | ANCIENT | 0 | 4 |
@@ -190,13 +190,13 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 1 | `csrp:grunt` | 步行兽 / Grunt | - | pending |
-| 1 | `csrp:bomber_light` | 轻型轰炸兽 / Light Bomber | - | pending |
-| 1 | `csrp:marauder` | 掠夺兽 / Marauder | EntityEsor | pending |
-| 1 | `csrp:monarch` | 统御兽  / Monarch | - | pending |
-| 1 | `csrp:overseer` | 监察兽 / Overseer | - | pending |
-| 1 | `csrp:vigilante` | 巡兽 / Vigilante | - | pending |
-| 1 | `csrp:warden` | 看守兽 / Warden | - | pending |
+| 1 | `csrp:grunt` | 步行兽 / Grunt | - | [designed](grunt.md) |
+| 1 | `csrp:bomber_light` | 轻型轰炸兽 / Light Bomber | - | [designed](bomber_light.md) |
+| 1 | `csrp:marauder` | 掠夺兽 / Marauder | EntityEsor | [designed](marauder.md) |
+| 1 | `csrp:monarch` | 统御兽  / Monarch | - | [designed](monarch.md) |
+| 1 | `csrp:overseer` | 监察兽 / Overseer | - | [designed](overseer.md) |
+| 1 | `csrp:vigilante` | 巡兽 / Vigilante | - | [designed](vigilante.md) |
+| 1 | `csrp:warden` | 看守兽 / Warden | - | [designed](warden.md) |
 
 ## PREEMINENT (8)
 
