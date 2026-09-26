@@ -51,7 +51,8 @@
       "stack": "感染 1~3 层：每层在回合结束时损失 1/16 最大 HP；3 层时目标无法被替换下场一回合。",
       "cd": "无",
       "vis": "口器接触处渗出黑色丝状物并短暂连向使用者。",
-      "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / NEXUS / ANCIENT / DERIVED 不学习——它们不靠接触传播。"
+      "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / NEXUS / ANCIENT / DERIVED 不学习——它们不靠接触传播。",
+      "minStage": 1
     },
     {
       "id": "infectingbite",
@@ -74,7 +75,8 @@
       "stack": "与寄生接触共用感染层数。",
       "cd": "无",
       "vis": "咬合瞬间从伤口喷出细小孢子。",
-      "denied": "NEXUS / ANCIENT / DERIVED。"
+      "denied": "NEXUS / ANCIENT / DERIVED。",
+      "minStage": 1
     },
     {
       "id": "hivespread",
@@ -99,7 +101,8 @@
       "stack": "传播不叠加，只取较高者。",
       "cd": "3 回合",
       "vis": "一圈可见的孢子波从使用者脚下扩散出去。",
-      "denied": "INBORN 低阶（buglin/gnat/lice）只能通过寄生接触传播，不学此招。"
+      "denied": "INBORN 低阶（buglin/gnat/lice）只能通过寄生接触传播，不学此招。",
+      "minStage": 1
     },
     {
       "id": "infectionpulse",
@@ -124,7 +127,8 @@
       "stack": "命中后 +1 层。",
       "cd": "2 回合",
       "vis": "以使用者为圆心的黑色脉冲环。",
-      "denied": "INBORN / ASSIMILATED / HIJACKED。"
+      "denied": "INBORN / ASSIMILATED / HIJACKED。",
+      "minStage": 1
     },
     {
       "id": "parasiticspores",
@@ -148,7 +152,8 @@
       "stack": "每回合 +1 层，上限 3。",
       "cd": "场地消失前不能再次使用",
       "vis": "地面浮现暗绿色孢子云。",
-      "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL（它们是宿主，不是播种者）。"
+      "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL（它们是宿主，不是播种者）。",
+      "minStage": 1
     },
     {
       "id": "hivemothercall",
@@ -170,7 +175,8 @@
       "stack": "+2 层。",
       "cd": "5 回合",
       "vis": "天空中出现向下收束的丝线。",
-      "denied": "非 Nexus/Preeminent/Ancient 一律不学——召唤权限由生态位决定。"
+      "denied": "非 Nexus/Preeminent/Ancient 一律不学——召唤权限由生态位决定。",
+      "minStage": 1
     },
     {
       "id": "virusinject",
@@ -196,7 +202,8 @@
       "stack": "可叠加，最多 3 次。",
       "cd": "3 回合",
       "vis": "注射部位出现黑色血管纹路。",
-      "denied": "INBORN / CRUDE / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / DETERRENT。"
+      "denied": "INBORN / CRUDE / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / DETERRENT。",
+      "minStage": 1
     },
     {
       "id": "infectionmark",
@@ -205,6 +212,7 @@
       "cat": "A. 感染系",
       "source": "Call Of The Hive 的标记面向",
       "tiers": [
+        "INBORN",
         "CRUDE",
         "PRIMITIVE",
         "ADAPTED",
@@ -222,7 +230,9 @@
       "stack": "重复使用只刷新回合数。",
       "cd": "无",
       "vis": "目标身上出现悬浮的红色巢群印记。",
-      "denied": "INBORN。"
+      "denied": "无——INBORN 是巢群的前哨，本来就负责替后续单位指认目标。",
+      "note": "v2 修正：原本禁止 INBORN 学习，但校验器发现虫崽兽的设计里用到了它。INBORN 作为巢群前哨指认目标是其生态职责，因此放开。",
+      "minStage": 1
     },
     {
       "id": "adaptivelearning",
@@ -246,7 +256,8 @@
       "stack": "单层记录，可被新属性覆盖。",
       "cd": "无",
       "vis": "使用者体表短暂浮现该属性颜色的纹路。",
-      "denied": "INBORN / CRUDE / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / NEXUS / DERIVED 不学——只有带 Adaptation 能力的种类才有。"
+      "denied": "INBORN / CRUDE / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / NEXUS / DERIVED 不学——只有带 Adaptation 能力的种类才有。",
+      "minStage": 1
     },
     {
       "id": "damageanalysis",
@@ -269,7 +280,8 @@
       "stack": "不叠加。",
       "cd": "2 回合",
       "vis": "使用者眼中的复眼结构高速对焦。",
-      "denied": "INBORN / NEXUS / ANCIENT / DERIVED。"
+      "denied": "INBORN / NEXUS / ANCIENT / DERIVED。",
+      "minStage": 1
     },
     {
       "id": "rapidadaptation",
@@ -291,7 +303,8 @@
       "stack": "最多 2 条记录（仅 Adapted 及以上）。",
       "cd": "3 回合",
       "vis": "体表纹路瞬间全部点亮。",
-      "denied": "PRIMITIVE 只能学适应学习，不能学快速适应——这是 Primitive→Adapted 的技能层级分界。"
+      "denied": "PRIMITIVE 只能学适应学习，不能学快速适应——这是 Primitive→Adapted 的技能层级分界。",
+      "minStage": 1
     },
     {
       "id": "resistancelog",
@@ -314,7 +327,8 @@
       "stack": "与适应学习叠加，最多减伤 30%。",
       "cd": "4 回合",
       "vis": "外壳析出对应属性的结晶层。",
-      "denied": "PRIMITIVE / NEXUS。"
+      "denied": "PRIMITIVE / NEXUS。",
+      "minStage": 1
     },
     {
       "id": "combatevolution",
@@ -337,7 +351,8 @@
       "stack": "消耗型，不叠加。",
       "cd": "5 回合",
       "vis": "全身寄生组织重新排列并膨胀。",
-      "denied": "INBORN / ASSIMILATED / HIJACKED / FERAL / NEXUS。"
+      "denied": "INBORN / ASSIMILATED / HIJACKED / FERAL / NEXUS。",
+      "minStage": 1
     },
     {
       "id": "adaptiverebuild",
@@ -359,7 +374,8 @@
       "stack": "不叠加。",
       "cd": "3 回合",
       "vis": "伤口被快速生长的寄生组织填满。",
-      "denied": "INBORN / CRUDE / PRIMITIVE。"
+      "denied": "INBORN / CRUDE / PRIMITIVE。",
+      "minStage": 1
     },
     {
       "id": "laceration",
@@ -385,7 +401,8 @@
       "stack": "流血层数 1~3，每层 +1/16。",
       "cd": "无",
       "vis": "伤口处持续滴落暗红色粒子。",
-      "denied": "无特殊限制——流血是 SRP 最基础的伤害机制之一。"
+      "denied": "无特殊限制——流血是 SRP 最基础的伤害机制之一。",
+      "minStage": 1
     },
     {
       "id": "deeplaceration",
@@ -394,6 +411,7 @@
       "cat": "C. 流血系",
       "source": "mob effect `bleed` 的高阶形态",
       "tiers": [
+        "INBORN",
         "PRIMITIVE",
         "ADAPTED",
         "PURE",
@@ -409,7 +427,9 @@
       "stack": "+2 层。",
       "cd": "2 回合",
       "vis": "三道深可见骨的爪痕。",
-      "denied": "INBORN 只能学裂创。"
+      "denied": "INBORN 只能学裂创。",
+      "minStage": 2,
+      "matrixNote": "深度撕裂比裂创更深，只有体型增大的第二形态以上才能造成。"
     },
     {
       "id": "bloodrush",
@@ -433,7 +453,8 @@
       "stack": "翻倍叠层。",
       "cd": "2 回合",
       "vis": "目标身上血雾变浓。",
-      "denied": "NEXUS / ANCIENT / DERIVED。"
+      "denied": "NEXUS / ANCIENT / DERIVED。",
+      "minStage": 1
     },
     {
       "id": "rendingpursuit",
@@ -457,7 +478,8 @@
       "stack": "不叠层，只吃层数加成。",
       "cd": "无",
       "vis": "残影扑击，落点留下血痕。",
-      "denied": "NEXUS / ANCIENT / DETERRENT。"
+      "denied": "NEXUS / ANCIENT / DETERRENT。",
+      "minStage": 1
     },
     {
       "id": "corrosivebite",
@@ -482,7 +504,8 @@
       "stack": "腐蚀叠至 3 层时目标防御额外 -1。",
       "cd": "无",
       "vis": "咬痕边缘冒酸雾。",
-      "denied": "ANCIENT / DERIVED 不学——它们改用装甲溶解。"
+      "denied": "ANCIENT / DERIVED 不学——它们改用装甲溶解。",
+      "minStage": 1
     },
     {
       "id": "acidspray",
@@ -506,7 +529,8 @@
       "stack": "特防下降可叠加至 -3。",
       "cd": "2 回合",
       "vis": "扇形酸雾喷出，地面留下腐蚀斑。",
-      "denied": "INBORN / ASSIMILATED / HIJACKED / FERAL / ANCIENT。"
+      "denied": "INBORN / ASSIMILATED / HIJACKED / FERAL / ANCIENT。",
+      "minStage": 1
     },
     {
       "id": "armordissolve",
@@ -530,7 +554,8 @@
       "stack": "大幅叠层。",
       "cd": "4 回合",
       "vis": "目标外壳出现蜂窝状溶解孔。",
-      "denied": "低阶一律不学。"
+      "denied": "低阶一律不学。",
+      "minStage": 1
     },
     {
       "id": "corrosionmark",
@@ -554,7 +579,8 @@
       "stack": "刷新回合数。",
       "cd": "无",
       "vis": "目标脚下出现环形腐蚀符。",
-      "denied": "与装甲溶解互斥，学会其一即不能学另一。"
+      "denied": "与装甲溶解互斥，学会其一即不能学另一。",
+      "minStage": 1
     },
     {
       "id": "humicburst",
@@ -579,7 +605,8 @@
       "stack": "消耗型。",
       "cd": "3 回合",
       "vis": "体内生物质鼓胀后炸开，溅出酸液。",
-      "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL。"
+      "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL。",
+      "minStage": 1
     },
     {
       "id": "lifeerosion",
@@ -604,7 +631,8 @@
       "stack": "侵蚀量累加，上限 25%。",
       "cd": "2 回合",
       "vis": "目标体表浮现病毒状黑色纹路并蔓延。",
-      "denied": "INBORN / CRUDE / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / DETERRENT / NEXUS。"
+      "denied": "INBORN / CRUDE / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / DETERRENT / NEXUS。",
+      "minStage": 1
     },
     {
       "id": "viralamp",
@@ -627,7 +655,8 @@
       "stack": "侵蚀量翻倍，上限 25%。",
       "cd": "4 回合",
       "vis": "使用者体表的病毒纹路亮起并向外扩散。",
-      "denied": "INBORN / PRIMITIVE。"
+      "denied": "INBORN / PRIMITIVE。",
+      "minStage": 1
     },
     {
       "id": "viraloutbreak",
@@ -650,7 +679,8 @@
       "stack": "消耗型。",
       "cd": "5 回合",
       "vis": "目标全身病毒纹路同时炸开。",
-      "denied": "低阶与 Nexus 族不学。"
+      "denied": "低阶与 Nexus 族不学。",
+      "minStage": 1
     },
     {
       "id": "feargaze",
@@ -676,7 +706,8 @@
       "stack": "最多 -2。",
       "cd": "无",
       "vis": "使用者眼部发光，视线处空气扭曲。",
-      "denied": "INBORN 不学——低阶没有产生恐惧的体型。"
+      "denied": "INBORN 不学——低阶没有产生恐惧的体型。",
+      "minStage": 1
     },
     {
       "id": "direhowl",
@@ -701,7 +732,8 @@
       "stack": "命中下降可叠加。",
       "cd": "3 回合",
       "vis": "声波以可见的同心圆扩散。",
-      "denied": "NEXUS / DETERRENT。"
+      "denied": "NEXUS / DETERRENT。",
+      "minStage": 1
     },
     {
       "id": "hunteraura",
@@ -726,7 +758,8 @@
       "stack": "不叠加。",
       "cd": "3 回合",
       "vis": "使用者周围浮现暗红色气场。",
-      "denied": "INBORN / NEXUS / ASSIMILATED。"
+      "denied": "INBORN / NEXUS / ASSIMILATED。",
+      "minStage": 1
     },
     {
       "id": "hiveoppression",
@@ -748,7 +781,8 @@
       "stack": "与恐惧凝视共存但不叠概率。",
       "cd": "4 回合",
       "vis": "场地边缘升起黑色立柱状虚影。",
-      "denied": "非 Nexus/Preeminent/Ancient 一律不学。"
+      "denied": "非 Nexus/Preeminent/Ancient 一律不学。",
+      "minStage": 1
     },
     {
       "id": "needlesting",
@@ -773,7 +807,8 @@
       "stack": "针刺 1~5 层，每层在回合结束时造成 1/32 最大 HP 伤害。",
       "cd": "无",
       "vis": "细小针状物嵌入目标体表并持续闪烁。",
-      "denied": "NEXUS / ANCIENT / DERIVED（它们用爆发而非累积）。"
+      "denied": "NEXUS / ANCIENT / DERIVED（它们用爆发而非累积）。",
+      "minStage": 1
     },
     {
       "id": "venomneedleburst",
@@ -782,6 +817,7 @@
       "cat": "G. 针刺系",
       "source": "needler 的爆发结算",
       "tiers": [
+        "INBORN",
         "PRIMITIVE",
         "ADAPTED",
         "PURE",
@@ -797,7 +833,9 @@
       "stack": "可一次叠满 5 层。",
       "cd": "无",
       "vis": "密集针雨从口器射出。",
-      "denied": "INBORN 只能学针刺。"
+      "denied": "INBORN 只能学针刺。",
+      "minStage": 2,
+      "matrixNote": "针刺是多段攻击形态：基础针刺属于全族，爆发形态从第二形态（裂噬兽）起才具备。"
     },
     {
       "id": "piercingspore",
@@ -821,7 +859,8 @@
       "stack": "跨机制联动。",
       "cd": "2 回合",
       "vis": "孢子命中后长出短针。",
-      "denied": "ASSIMILATED / HIJACKED / FERAL。"
+      "denied": "ASSIMILATED / HIJACKED / FERAL。",
+      "minStage": 1
     },
     {
       "id": "terminalneedle",
@@ -845,7 +884,8 @@
       "stack": "消耗型，阈值触发。",
       "cd": "4 回合",
       "vis": "目标体内所有针同时向外炸出。",
-      "denied": "低阶与 Nexus 族不学。"
+      "denied": "低阶与 Nexus 族不学。",
+      "minStage": 1
     },
     {
       "id": "hungerfield",
@@ -871,7 +911,8 @@
       "stack": "不叠加。",
       "cd": "场地消失前不能再次使用",
       "vis": "场地色调变暗，食物类粒子消失。",
-      "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED。"
+      "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED。",
+      "minStage": 1
     },
     {
       "id": "devourinstinct",
@@ -896,7 +937,8 @@
       "stack": "不叠加。",
       "cd": "无",
       "vis": "命中处生物质被吸入使用者体内。",
-      "denied": "NEXUS / DETERRENT / DERIVED。"
+      "denied": "NEXUS / DETERRENT / DERIVED。",
+      "minStage": 1
     },
     {
       "id": "parasiticdrain",
@@ -921,7 +963,8 @@
       "stack": "消耗目标感染层。",
       "cd": "无",
       "vis": "黑色丝线从目标连到使用者身上。",
-      "denied": "NEXUS / ANCIENT。"
+      "denied": "NEXUS / ANCIENT。",
+      "minStage": 1
     },
     {
       "id": "motorlag",
@@ -946,7 +989,8 @@
       "stack": "速度下降可叠加。",
       "cd": "无",
       "vis": "目标四肢被半透明丝线缠住。",
-      "denied": "INBORN 不学。"
+      "denied": "INBORN 不学。",
+      "minStage": 1
     },
     {
       "id": "limbnumbness",
@@ -970,7 +1014,8 @@
       "stack": "麻痹不可叠，减速可叠。",
       "cd": "2 回合",
       "vis": "目标肢体抽搐并僵直。",
-      "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL。"
+      "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL。",
+      "minStage": 1
     },
     {
       "id": "nerveblock",
@@ -994,7 +1039,8 @@
       "stack": "可叠加不同招式。",
       "cd": "3 回合",
       "vis": "目标体表神经状纹路熄灭。",
-      "denied": "INBORN / CRUDE / PRIMITIVE / NEXUS。"
+      "denied": "INBORN / CRUDE / PRIMITIVE / NEXUS。",
+      "minStage": 1
     },
     {
       "id": "growthdevour",
@@ -1018,7 +1064,8 @@
       "stack": "不叠加。",
       "cd": "无",
       "vis": "目标解体为黑色生物质被吸入。",
-      "denied": "INBORN 只能通过寄生吸收获取资源，不能掠夺成长。"
+      "denied": "INBORN 只能通过寄生吸收获取资源，不能掠夺成长。",
+      "minStage": 1
     },
     {
       "id": "killingevolution",
@@ -1042,7 +1089,8 @@
       "stack": "累积 3 层。",
       "cd": "5 回合",
       "vis": "使用者体型明显膨胀，体表纹路转为猩红。",
-      "denied": "INBORN / CRUDE / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / NEXUS。"
+      "denied": "INBORN / CRUDE / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / NEXUS。",
+      "minStage": 1
     },
     {
       "id": "frenzy",
@@ -1068,7 +1116,8 @@
       "stack": "可与暴怒感染叠加。",
       "cd": "3 回合",
       "vis": "体表渗出红色雾气，动作变快。",
-      "denied": "NEXUS / DETERRENT / ANCIENT（它们不靠自残换输出）。"
+      "denied": "NEXUS / DETERRENT / ANCIENT（它们不靠自残换输出）。",
+      "minStage": 1
     },
     {
       "id": "berserkinfection",
@@ -1093,7 +1142,8 @@
       "stack": "不叠加，只刷新。",
       "cd": "3 回合",
       "vis": "目标眼睛变红并出现抖动。",
-      "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / NEXUS。"
+      "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / NEXUS。",
+      "minStage": 1
     },
     {
       "id": "laststandrage",
@@ -1117,7 +1167,8 @@
       "stack": "不叠加。",
       "cd": "4 回合",
       "vis": "全身纹路转为深红，体表不断崩落碎片。",
-      "denied": "NEXUS / DETERRENT / INBORN。"
+      "denied": "NEXUS / DETERRENT / INBORN。",
+      "minStage": 1
     },
     {
       "id": "parasiticmimicry",
@@ -1140,7 +1191,8 @@
       "stack": "不叠加。",
       "cd": "3 回合",
       "vis": "体表颜色与周围环境同步。",
-      "denied": "INBORN / CRUDE / PRIMITIVE / NEXUS / DERIVED——只有带 Adaptation 的谱系才会演化出拟态。"
+      "denied": "INBORN / CRUDE / PRIMITIVE / NEXUS / DERIVED——只有带 Adaptation 的谱系才会演化出拟态。",
+      "minStage": 1
     },
     {
       "id": "auraconceal",
@@ -1163,7 +1215,8 @@
       "stack": "不叠加。",
       "cd": "2 回合",
       "vis": "使用者轮廓短暂透明。",
-      "denied": "INBORN / FERAL / NEXUS。"
+      "denied": "INBORN / FERAL / NEXUS。",
+      "minStage": 1
     },
     {
       "id": "infectionorb",
@@ -1188,7 +1241,8 @@
       "stack": "+1 层。",
       "cd": "2 回合",
       "vis": "黑色球体拖着尾迹飞向目标。",
-      "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / ANCIENT。"
+      "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / ANCIENT。",
+      "minStage": 1
     },
     {
       "id": "parasiticfield",
@@ -1213,7 +1267,8 @@
       "stack": "每回合 +1 层感染（上限 3）。",
       "cd": "场地消失前不能再次使用",
       "vis": "地面浮现缓慢旋转的黑色符文环。",
-      "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / DETERRENT。"
+      "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / DETERRENT。",
+      "minStage": 1
     },
     {
       "id": "neuralsuppressionorb",
@@ -1237,7 +1292,8 @@
       "stack": "可叠加。",
       "cd": "3 回合",
       "vis": "紫色球体命中后炸成网状纹路。",
-      "denied": "INBORN / CRUDE / FERAL。"
+      "denied": "INBORN / CRUDE / FERAL。",
+      "minStage": 1
     },
     {
       "id": "callreinforcement",
@@ -1262,7 +1318,8 @@
       "stack": "场上同时只能存在 1 个召唤物。",
       "cd": "4 回合",
       "vis": "地面裂开并爬出寄生体。",
-      "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / DETERRENT / DERIVED。"
+      "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / DETERRENT / DERIVED。",
+      "minStage": 1
     },
     {
       "id": "parasiterelease",
@@ -1286,7 +1343,8 @@
       "stack": "+2 层。",
       "cd": "每场 2 次",
       "vis": "背部裂开并喷出幼虫群。",
-      "denied": "NEXUS / ANCIENT / DETERRENT——它们的召唤是领域级，不走\"释放\"通道。"
+      "denied": "NEXUS / ANCIENT / DETERRENT——它们的召唤是领域级，不走\"释放\"通道。",
+      "minStage": 1
     },
     {
       "id": "hiverecall",
@@ -1307,7 +1365,8 @@
       "stack": "不叠加。",
       "cd": "每场 3 次",
       "vis": "丝线把寄生体拉回巢体。",
-      "denied": "只有 Nexus 与 Ancient 拥有召回权限。"
+      "denied": "只有 Nexus 与 Ancient 拥有召回权限。",
+      "minStage": 1
     },
     {
       "id": "tissueregeneration",
@@ -1332,7 +1391,8 @@
       "stack": "不叠加，只刷新。",
       "cd": "2 回合",
       "vis": "伤口被快速生长的白色组织覆盖。",
-      "denied": "ANCIENT / DERIVED 不学——它们用重构而非再生。"
+      "denied": "ANCIENT / DERIVED 不学——它们用重构而非再生。",
+      "minStage": 1
     },
     {
       "id": "dormancyregen",
@@ -1356,7 +1416,8 @@
       "stack": "不叠加。",
       "cd": "3 回合",
       "vis": "使用者蜷缩成球状并被生物质包裹。",
-      "denied": "PURE / ANCIENT / DERIVED——纯战斗单位不进入休眠。"
+      "denied": "PURE / ANCIENT / DERIVED——纯战斗单位不进入休眠。",
+      "minStage": 1
     },
     {
       "id": "parasiticblink",
@@ -1381,7 +1442,8 @@
       "stack": "不叠加。",
       "cd": "2 回合",
       "vis": "紫色粒子中原地消失并出现在出手位置。",
-      "denied": "**严格限制**：只有原型具备 Enderman 传送行为的实体可学；INBORN / CRUDE / PURE / ANCIENT 等一律不学。"
+      "denied": "**严格限制**：只有原型具备 Enderman 传送行为的实体可学；INBORN / CRUDE / PURE / ANCIENT 等一律不学。",
+      "minStage": 1
     },
     {
       "id": "hunterteleport",
@@ -1403,7 +1465,8 @@
       "stack": "不叠加。",
       "cd": "2 回合",
       "vis": "使用者瞬间出现在目标身后并挥击。",
-      "denied": "不具备传送原型的实体一律不学。"
+      "denied": "不具备传送原型的实体一律不学。",
+      "minStage": 1
     },
     {
       "id": "infestedground",
@@ -1412,6 +1475,7 @@
       "cat": "Q. 场地系",
       "source": "Infested Blocks",
       "tiers": [
+        "INBORN",
         "CRUDE",
         "PRIMITIVE",
         "ADAPTED",
@@ -1428,7 +1492,9 @@
       "stack": "场地唯一。",
       "cd": "场地消失前不能再次使用",
       "vis": "地面长出黑色菌毯与肉质组织。",
-      "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / DETERRENT / ANCIENT。"
+      "denied": "ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / DETERRENT / ANCIENT。",
+      "minStage": 1,
+      "matrixNote": "证据：WorkerEntity 的 BuildColonyGoal 就是产生感染地面的行为，工虫必须能学。"
     },
     {
       "id": "nestestablishment",
@@ -1450,7 +1516,8 @@
       "stack": "与感染场地可共存。",
       "cd": "4 回合",
       "vis": "使用者脚下升起菌巢结构。",
-      "denied": "只有 Nexus / Preeminent / Ancient 能建立巢穴；其他 tier 不学。"
+      "denied": "只有 Nexus / Preeminent / Ancient 能建立巢穴；其他 tier 不学。",
+      "minStage": 1
     },
     {
       "id": "waterambush",
@@ -1474,7 +1541,8 @@
       "stack": "不叠加。",
       "cd": "2 回合",
       "vis": "水面炸开并窜出寄生体。",
-      "denied": "**不得全族通用**：不具备水域行为的实体（NEXUS / ANCIENT / DETERRENT / HIJACKED）不学。"
+      "denied": "**不得全族通用**：不具备水域行为的实体（NEXUS / ANCIENT / DETERRENT / HIJACKED）不学。",
+      "minStage": 1
     },
     {
       "id": "drowningpursuit",
@@ -1496,7 +1564,8 @@
       "stack": "不叠加。",
       "cd": "3 回合",
       "vis": "水面下持续追猎的暗影。",
-      "denied": "非水域谱系一律不学。"
+      "denied": "非水域谱系一律不学。",
+      "minStage": 1
     },
     {
       "id": "vomit",
@@ -1521,7 +1590,8 @@
       "stack": "消耗自身感染层。",
       "cd": "2 回合",
       "vis": "口部喷出黑色半固态物质。",
-      "denied": "NEXUS / ANCIENT / DERIVED。"
+      "denied": "NEXUS / ANCIENT / DERIVED。",
+      "minStage": 1
     },
     {
       "id": "heightenedsenses",
@@ -1547,7 +1617,8 @@
       "stack": "不叠加。",
       "cd": "3 回合",
       "vis": "使用者头部震颤，眼睛出现复眼反光。",
-      "denied": "NEXUS / ANCIENT——它们的感知是领域级而非个体级。"
+      "denied": "NEXUS / ANCIENT——它们的感知是领域级而非个体级。",
+      "minStage": 1
     },
     {
       "id": "markedprey",
@@ -1572,7 +1643,8 @@
       "stack": "刷新回合数。",
       "cd": "无",
       "vis": "目标头顶出现暗红色标记。",
-      "denied": "NEXUS / DETERRENT。"
+      "denied": "NEXUS / DETERRENT。",
+      "minStage": 1
     },
     {
       "id": "parasiticsmoke",
@@ -1596,7 +1668,8 @@
       "stack": "每回合 +1 层感染。",
       "cd": "3 回合",
       "vis": "黑灰色烟柱在场上持续翻滚。",
-      "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL。"
+      "denied": "INBORN / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL。",
+      "minStage": 1
     },
     {
       "id": "thornshadeguard",
@@ -1620,7 +1693,9 @@
       "stack": "不叠加，反伤可与自身特性叠加。",
       "cd": "3 回合",
       "vis": "体表长出深色荆棘。",
-      "denied": "INBORN / CRUDE / NEXUS / DERIVED。"
+      "denied": "INBORN / CRUDE / NEXUS / DERIVED。",
+      "minStage": 1
     }
-  ]
+  ],
+  "permissionModel": "每个技能有三重约束：tiers（哪些 Tier 可学）、minStage（最低形态阶段：1 基础/2 中间/3 最终/4 巢穴 IV）、denied（明确排除者）。stage 由 relationships.json 中已被证明的成长链推导。"
 }

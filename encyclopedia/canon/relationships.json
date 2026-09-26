@@ -1,0 +1,243 @@
+{
+  "note": "Only relations that the CSRP source itself proves. Anything unproven is recorded with kind \"unproven\" or \"unknown\" and is explicitly not asserted.",
+  "counts": {
+    "adapts-into": 12,
+    "nexus-stage-up": 9,
+    "leaves-walking-head": 10,
+    "stage-up": 3,
+    "unknown": 1,
+    "deploys": 1,
+    "spawns-part": 1,
+    "unproven": 1
+  },
+  "relations": [
+    {
+      "from": "csrp:pri_arachnida",
+      "to": "csrp:ada_arachnida",
+      "kind": "adapts-into",
+      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+    },
+    {
+      "from": "csrp:pri_bolster",
+      "to": "csrp:ada_bolster",
+      "kind": "adapts-into",
+      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+    },
+    {
+      "from": "csrp:pri_burrower",
+      "to": "csrp:ada_burrower",
+      "kind": "adapts-into",
+      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+    },
+    {
+      "from": "csrp:pri_devourer",
+      "to": "csrp:ada_devourer",
+      "kind": "adapts-into",
+      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+    },
+    {
+      "from": "csrp:pri_longarms",
+      "to": "csrp:ada_longarms",
+      "kind": "adapts-into",
+      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+    },
+    {
+      "from": "csrp:pri_manducater",
+      "to": "csrp:ada_manducater",
+      "kind": "adapts-into",
+      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+    },
+    {
+      "from": "csrp:pri_reeker",
+      "to": "csrp:ada_reeker",
+      "kind": "adapts-into",
+      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+    },
+    {
+      "from": "csrp:pri_summoner",
+      "to": "csrp:ada_summoner",
+      "kind": "adapts-into",
+      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+    },
+    {
+      "from": "csrp:pri_tozoon",
+      "to": "csrp:ada_tozoon",
+      "kind": "adapts-into",
+      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+    },
+    {
+      "from": "csrp:pri_vermin",
+      "to": "csrp:ada_vermin",
+      "kind": "adapts-into",
+      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+    },
+    {
+      "from": "csrp:pri_viscera",
+      "to": "csrp:ada_viscera",
+      "kind": "adapts-into",
+      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+    },
+    {
+      "from": "csrp:pri_yelloweye",
+      "to": "csrp:ada_yelloweye",
+      "kind": "adapts-into",
+      "evidence": "id convention pri_/ada_ + both present in RelayScanReportFactory Tier enum (PRIMITIVE/ADAPTED)"
+    },
+    {
+      "from": "csrp:beckon_si",
+      "to": "csrp:beckon_sii",
+      "kind": "nexus-stage-up",
+      "evidence": "Tier enum NEXUS lists beckon_si..siv in order"
+    },
+    {
+      "from": "csrp:beckon_sii",
+      "to": "csrp:beckon_siii",
+      "kind": "nexus-stage-up",
+      "evidence": "Tier enum NEXUS lists beckon_si..siv in order"
+    },
+    {
+      "from": "csrp:beckon_siii",
+      "to": "csrp:beckon_siv",
+      "kind": "nexus-stage-up",
+      "evidence": "Tier enum NEXUS lists beckon_si..siv in order"
+    },
+    {
+      "from": "csrp:dispatcher_si",
+      "to": "csrp:dispatcher_sii",
+      "kind": "nexus-stage-up",
+      "evidence": "Tier enum NEXUS lists dispatcher_si..siv in order"
+    },
+    {
+      "from": "csrp:dispatcher_sii",
+      "to": "csrp:dispatcher_siii",
+      "kind": "nexus-stage-up",
+      "evidence": "Tier enum NEXUS lists dispatcher_si..siv in order"
+    },
+    {
+      "from": "csrp:dispatcher_siii",
+      "to": "csrp:dispatcher_siv",
+      "kind": "nexus-stage-up",
+      "evidence": "Tier enum NEXUS lists dispatcher_si..siv in order"
+    },
+    {
+      "from": "csrp:rooter_si",
+      "to": "csrp:rooter_sii",
+      "kind": "nexus-stage-up",
+      "evidence": "Tier enum NEXUS lists rooter_si..siv in order"
+    },
+    {
+      "from": "csrp:rooter_sii",
+      "to": "csrp:rooter_siii",
+      "kind": "nexus-stage-up",
+      "evidence": "Tier enum NEXUS lists rooter_si..siv in order"
+    },
+    {
+      "from": "csrp:rooter_siii",
+      "to": "csrp:rooter_siv",
+      "kind": "nexus-stage-up",
+      "evidence": "Tier enum NEXUS lists rooter_si..siv in order"
+    },
+    {
+      "from": "csrp:sim_adventurer",
+      "to": "csrp:sim_adventurerhead",
+      "kind": "leaves-walking-head",
+      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+    },
+    {
+      "from": "csrp:sim_cow",
+      "to": "csrp:sim_cowhead",
+      "kind": "leaves-walking-head",
+      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+    },
+    {
+      "from": "csrp:sim_dragone",
+      "to": "csrp:sim_dragonehead",
+      "kind": "leaves-walking-head",
+      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+    },
+    {
+      "from": "csrp:sim_enderman",
+      "to": "csrp:sim_endermanhead",
+      "kind": "leaves-walking-head",
+      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+    },
+    {
+      "from": "csrp:sim_horse",
+      "to": "csrp:sim_horsehead",
+      "kind": "leaves-walking-head",
+      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+    },
+    {
+      "from": "csrp:sim_human",
+      "to": "csrp:sim_humanhead",
+      "kind": "leaves-walking-head",
+      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+    },
+    {
+      "from": "csrp:sim_pig",
+      "to": "csrp:sim_pighead",
+      "kind": "leaves-walking-head",
+      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+    },
+    {
+      "from": "csrp:sim_sheep",
+      "to": "csrp:sim_sheephead",
+      "kind": "leaves-walking-head",
+      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+    },
+    {
+      "from": "csrp:sim_villager",
+      "to": "csrp:sim_villagerhead",
+      "kind": "leaves-walking-head",
+      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+    },
+    {
+      "from": "csrp:sim_wolf",
+      "to": "csrp:sim_wolfhead",
+      "kind": "leaves-walking-head",
+      "evidence": "both registered; bestiary tiers ASSIMILATED / WALKING_HEAD"
+    },
+    {
+      "from": "csrp:host",
+      "to": "csrp:hostii",
+      "kind": "stage-up",
+      "evidence": "both registered; bestiary tiers CRUDE (host, hostii)"
+    },
+    {
+      "from": "csrp:crux_incomplete",
+      "to": "csrp:crux",
+      "kind": "stage-up",
+      "evidence": "both registered; bestiary tiers CRUDE"
+    },
+    {
+      "from": "csrp:incompleteform_small",
+      "to": "csrp:incompleteform_medium",
+      "kind": "stage-up",
+      "evidence": "both registered; Tier enum CRUDE groups the Incomplete Forms"
+    },
+    {
+      "from": "csrp:hostii",
+      "to": "csrp:incompleteform_small",
+      "kind": "unknown",
+      "evidence": "CRUDE group contains host, hostii and the incomplete forms, but no explicit transition is recorded"
+    },
+    {
+      "from": "csrp:anc_pod",
+      "to": "csrp:anc_dreadnaut",
+      "kind": "deploys",
+      "evidence": "both registered in Tier enum ANCIENT; anc_pod is the drop pod registered alongside the Dreadnaut"
+    },
+    {
+      "from": "csrp:anc_dreadnaut",
+      "to": "csrp:anc_dreadnaut_ten",
+      "kind": "spawns-part",
+      "evidence": "anc_dreadnaut_ten is the Dreadnaut tentacle entity"
+    },
+    {
+      "from": "csrp:crux",
+      "to": "csrp:draconite",
+      "kind": "unproven",
+      "evidence": "both are DERIVED/CRUDE; no source records a transition, so this is NOT asserted"
+    }
+  ]
+}

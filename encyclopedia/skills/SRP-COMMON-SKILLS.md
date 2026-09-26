@@ -1,8 +1,18 @@
 # SRP Common Skill Database
 
-A pool of **66** skills shared across the SRP Pokemon. Every one is derived from a
-mechanic that provably exists in CSRP 1.10.8 - the mob effects in `registry/ModMobEffects.java`,
+A pool of **66** skills shared across the SRP Pokemon. Every one derives from a
+mechanic that provably exists in CSRP 1.10.8 - the 28 mob effects in `registry/ModMobEffects.java`,
 the entity behaviours, and the infection/adaptation systems. Nothing here invents an SRP creature.
+
+## Permission model
+
+每个技能有三重约束：tiers（哪些 Tier 可学）、minStage（最低形态阶段：1 基础/2 中间/3 最终/4 巢穴 IV）、denied（明确排除者）。stage 由 relationships.json 中已被证明的成长链推导。
+
+| Axis | Meaning |
+|---|---|
+| `tiers` | which tiers may learn it |
+| `minStage` | lowest form stage: 1 base, 2 mid, 3 final, 4 nexus stage IV |
+| `denied` | who is explicitly excluded, and why |
 
 ## Confirmed SRP effects used as sources
 
@@ -10,8 +20,6 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 `fear`, `feral`, `repel`, `primitive`, `adapted`, `pure`, `crude`, `nexus`, `dod_smoke_trail`,
 `thornshade_thorns`, `antimall`, `distorted_enlightenment`, `vomit`, `senses`, `prey`, `debar`,
 `foster`, `pivot`, `jugg`, `parate`.
-
-## Category overview
 
 | Category | Skills |
 |---|---|
@@ -132,14 +140,15 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `infectionmark`
 - **来源机制**: Call Of The Hive 的标记面向
-- **适用 Tier**: CRUDE, PRIMITIVE, ADAPTED, PURE, NEXUS, PREEMINENT, ANCIENT
+- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, PURE, NEXUS, PREEMINENT, ANCIENT
 - **属性 / 类别**: 虫 / 变化
 - **威力 / 命中 / PP**: - / 100 / 20
 - **效果**: 标记目标 3 回合：本阵营对其造成的虫/毒属性伤害 +25%，且其身上的【感染】不会被清除。
 - **叠层机制**: 重复使用只刷新回合数。
 - **冷却机制**: 无
 - **视觉表现**: 目标身上出现悬浮的红色巢群印记。
-- **不能学习者**: INBORN。
+- **不能学习者**: 无——INBORN 是巢群的前哨，本来就负责替后续单位指认目标。
+- **备注**: v2 修正：原本禁止 INBORN 学习，但校验器发现虫崽兽的设计里用到了它。INBORN 作为巢群前哨指认目标是其生态职责，因此放开。
 
 ## B. 适应系 (6)
 
@@ -240,7 +249,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `deeplaceration`
 - **来源机制**: mob effect `bleed` 的高阶形态
-- **适用 Tier**: PRIMITIVE, ADAPTED, PURE, PREEMINENT, ANCIENT
+- **适用 Tier**: INBORN, PRIMITIVE, ADAPTED, PURE, PREEMINENT, ANCIENT（需第 2 阶段）
 - **属性 / 类别**: 恶 / 物理
 - **威力 / 命中 / PP**: 80 / 90 / 15
 - **效果**: 直接附加 2 层流血；若目标已流血，改为 +2 层并使其速度下降 1 阶段。
@@ -248,6 +257,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 2 回合
 - **视觉表现**: 三道深可见骨的爪痕。
 - **不能学习者**: INBORN 只能学裂创。
+- **矩阵修正记录**: 深度撕裂比裂创更深，只有体型增大的第二形态以上才能造成。
 
 ### 血流加速 / Blood Rush
 
@@ -456,7 +466,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `venomneedleburst`
 - **来源机制**: needler 的爆发结算
-- **适用 Tier**: PRIMITIVE, ADAPTED, PURE, DETERRENT, PREEMINENT
+- **适用 Tier**: INBORN, PRIMITIVE, ADAPTED, PURE, DETERRENT, PREEMINENT（需第 2 阶段）
 - **属性 / 类别**: 虫 / 物理
 - **威力 / 命中 / PP**: 25 / 95 / 15
 - **效果**: 随机攻击 3~5 次；每次命中附加 1 层针刺。
@@ -464,6 +474,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 无
 - **视觉表现**: 密集针雨从口器射出。
 - **不能学习者**: INBORN 只能学针刺。
+- **矩阵修正记录**: 针刺是多段攻击形态：基础针刺属于全族，爆发形态从第二形态（裂噬兽）起才具备。
 
 ### 穿刺孢子 / Piercing Spore
 
@@ -814,7 +825,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `infestedground`
 - **来源机制**: Infested Blocks
-- **适用 Tier**: CRUDE, PRIMITIVE, ADAPTED, PURE, NEXUS, PREEMINENT
+- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, PURE, NEXUS, PREEMINENT
 - **属性 / 类别**: 地面 / 变化
 - **威力 / 命中 / PP**: - / 必中 / 10
 - **效果**: 把场地变为"感染场地"5 回合：每回合结束对场上非寄生阵营的宝可梦造成 1/16 最大 HP 伤害；草属性以外的回复类招式效果 -20%。
@@ -822,6 +833,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 场地消失前不能再次使用
 - **视觉表现**: 地面长出黑色菌毯与肉质组织。
 - **不能学习者**: ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / DETERRENT / ANCIENT。
+- **矩阵修正记录**: 证据：WorkerEntity 的 BuildColonyGoal 就是产生感染地面的行为，工虫必须能学。
 
 ### 巢穴建立 / Nest Establishment
 

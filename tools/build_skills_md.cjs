@@ -1,0 +1,55 @@
+const fs=require('fs'),path=require('path');
+const ROOT=process.argv[2];
+const sdb=JSON.parse(fs.readFileSync(path.join(ROOT,'encyclopedia/skills/srp-common-skills.json'),'utf8'));
+const byCat={}; for(const s of sdb.skills) (byCat[s.cat]=byCat[s.cat]||[]).push(s);
+const L=[];
+L.push('# SRP Common Skill Database');
+L.push('');
+L.push('A pool of **'+sdb.skills.length+'** skills shared across the SRP Pokemon. Every one derives from a');
+L.push('mechanic that provably exists in CSRP 1.10.8 - the 28 mob effects in `registry/ModMobEffects.java`,');
+L.push('the entity behaviours, and the infection/adaptation systems. Nothing here invents an SRP creature.');
+L.push('');
+L.push('## Permission model');
+L.push('');
+L.push(sdb.permissionModel);
+L.push('');
+L.push('| Axis | Meaning |');
+L.push('|---|---|');
+L.push('| `tiers` | which tiers may learn it |');
+L.push('| `minStage` | lowest form stage: 1 base, 2 mid, 3 final, 4 nexus stage IV |');
+L.push('| `denied` | who is explicitly excluded, and why |');
+L.push('');
+L.push('## Confirmed SRP effects used as sources');
+L.push('');
+L.push('`coth` (Call Of The Hive), `bleed`, `viral`, `corrosion`, `corrosive`, `rage`, `needler`, `link`,');
+L.push('`fear`, `feral`, `repel`, `primitive`, `adapted`, `pure`, `crude`, `nexus`, `dod_smoke_trail`,');
+L.push('`thornshade_thorns`, `antimall`, `distorted_enlightenment`, `vomit`, `senses`, `prey`, `debar`,');
+L.push('`foster`, `pivot`, `jugg`, `parate`.');
+L.push('');
+L.push('| Category | Skills |');
+L.push('|---|---|');
+for(const [k,v] of Object.entries(byCat)) L.push('| '+k+' | '+v.length+' |');
+L.push('');
+for(const [cat,list] of Object.entries(byCat)){
+  L.push('## '+cat+' ('+list.length+')');
+  L.push('');
+  for(const s of list){
+    L.push('### '+s.zh+' / '+s.en);
+    L.push('');
+    L.push('- **ID**: `'+s.id+'`');
+    L.push('- **来源机制**: '+s.source);
+    L.push('- **适用 Tier**: '+s.tiers.join(', ')+(s.minStage>1?'（需第 '+s.minStage+' 阶段）':''));
+    L.push('- **属性 / 类别**: '+s.type+' / '+s.cls);
+    L.push('- **威力 / 命中 / PP**: '+(s.pow===0?'-':s.pow)+' / '+(s.acc===true?'必中':s.acc)+' / '+s.pp);
+    L.push('- **效果**: '+s.effect);
+    L.push('- **叠层机制**: '+s.stack);
+    L.push('- **冷却机制**: '+s.cd);
+    L.push('- **视觉表现**: '+s.vis);
+    L.push('- **不能学习者**: '+s.denied);
+    if(s.matrixNote) L.push('- **矩阵修正记录**: '+s.matrixNote);
+    if(s.note) L.push('- **备注**: '+s.note);
+    L.push('');
+  }
+}
+fs.writeFileSync(path.join(ROOT,'encyclopedia/skills/SRP-COMMON-SKILLS.md'), L.join('\n')+'\n');
+console.log('skills md regenerated:',L.length,'lines');

@@ -26,10 +26,10 @@ mod**, not by recalling it:
 | 1 | SRP Creature Canon Database | **done** - [canon/SRP-CREATURE-CANON.md](canon/SRP-CREATURE-CANON.md) |
 | 2 | Source ID / existence check | **done** - 129 creatures confirmed, 34 non-creatures excluded |
 | 3 | SRP Common Skill Database (40-70) | **done** - 66 skills, [skills/SRP-COMMON-SKILLS.md](skills/SRP-COMMON-SKILLS.md) |
-| 4 | Tier / ecology permission matrix | **done** - encoded per skill in the `tiers` field |
-| 5 | Real relationships between creatures | partial - pri->ada pairs and nexus stages are extracted from the data; the rest is next |
-| 6 | Per-creature Pokemon designs | not started |
-| 7 | Per-creature skill tables | not started |
+| 4 | Tier / stage / ecology permission matrix | **done** - `tiers` + `minStage` + `denied`, enforced by `tools/build_pokedex.cjs` |
+| 5 | Real relationships between creatures | **done** - [canon/relationships.json](canon/relationships.json), 38 relations, each with its evidence |
+| 6 | Per-creature Pokemon designs | **in progress - 6 / 129** ([pokedex/](pokedex/README.md)) |
+| 7 | Per-creature skill tables | covered by the generated entries: every design lists its signature move and 5-7 common skills with a reason each |
 | 8-10 | Canon / similarity / gameplay review, final encyclopedia | not started |
 
 ## What the canon pass actually found
@@ -50,6 +50,20 @@ mod**, not by recalling it:
   Spotted, Heightened Senses, Prey, Concussive Smoke Trail (`dod_smoke_trail`), Braining is a CSRP
   effect as well. These are **not present in CSRP** and are therefore not used as SRP sources:
   Conta, Overheating, Frostbite, Indeaf, Positive/Negative.
+
+## How a design is produced
+
+STEP 6 runs through a generator rather than by hand, so every entry has the same shape and is
+machine-checked:
+
+1. author `encyclopedia/pokedex/_designs/<id>.json` with the creature-specific content,
+2. `node tools/build_pokedex.cjs .` renders `pokedex/<id>.md` and refuses to write if anything fails:
+   the creature must exist in the canon database with a proven tier, signature move ids must be unique
+   across the whole pokedex, and every common skill must be permitted for that creature by tier **and**
+   by form stage.
+
+The generator has already caught real mistakes: an over-restrictive tier matrix that denied INBORN
+the marking skill its forward units need, and two designs reaching for skills above their stage.
 
 ## Layout
 
