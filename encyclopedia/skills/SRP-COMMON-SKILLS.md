@@ -769,7 +769,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `parasiterelease`
 - **来源机制**: Carrier 体内储存并投放寄生体
-- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, PREEMINENT, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL, DETERRENT, PURE
+- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, PREEMINENT, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, FERAL, DETERRENT, PURE, NEXUS
 - **属性 / 类别**: 虫 / 变化
 - **威力 / 命中 / PP**: - / 必中 / 5
 - **效果**: 释放体内储存的寄生体：对目标造成固定 1/6 最大 HP 伤害并附加 2 层感染；每场战斗只能使用 2 次。
@@ -777,7 +777,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 每场 2 次
 - **视觉表现**: 背部裂开并喷出幼虫群。
 - **不能学习者**: NEXUS / ANCIENT / DETERRENT——它们的召唤是领域级，不走"释放"通道。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PURE。掠夺者（marauder）本身就在 PURE 层，而它是全部 6 只 ASSIMARA 掠夺化体的来源，源码中类注释为 Legacy EntityEsor port，其身份就是投放/改造。排除它不合理。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PURE。掠夺者（marauder）本身就在 PURE 层，而它是全部 6 只 ASSIMARA 掠夺化体的来源，源码中类注释为 Legacy EntityEsor port，其身份就是投放/改造。排除它不合理。 矩阵修正：加入 NEXUS。Nexus 层的召唤柱（beckon_si 等）本身就是储存与释放寄生体的设施（源码字段 storedParasiteIds），召唤前必须指认目标。
 
 ### 菌巢召回 / Hive Recall
 
@@ -945,7 +945,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `markedprey`
 - **来源机制**: mob effect `prey`
-- **适用 Tier**: INBORN, FERAL, CRUDE, PRIMITIVE, ADAPTED, PURE, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, DETERRENT, PREEMINENT
+- **适用 Tier**: INBORN, FERAL, CRUDE, PRIMITIVE, ADAPTED, PURE, ASSIMILATED, WALKING_HEAD, ASSIMARA, HIJACKED, DETERRENT, PREEMINENT, NEXUS
 - **属性 / 类别**: 一般 / 变化
 - **威力 / 命中 / PP**: - / 100 / 20
 - **效果**: 标记目标 3 回合：本阵营对其造成的伤害 +15%，且其逃跑必定失败。
@@ -953,7 +953,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 无
 - **视觉表现**: 目标头顶出现暗红色标记。
 - **不能学习者**: NEXUS / DETERRENT。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED / WALKING_HEAD / ASSIMARA / HIJACKED / FERAL。这五个 tier 都是被感染的宿主，本来就具备寄生体的基础工具（感染、接触、撕裂），不可能比 INBORN 更少。 矩阵修正：加入 DETERRENT。阻遏体（DeterrentParasiteEntity）的 movementSpeed 全部为 0.0，它们无法移动、无法追击，其全部作用依赖感染扩散与场地污染——这些正是基础工具集的内容。 矩阵修正：加入 PREEMINENT。该层生物（PreeminentParasiteEntity）的 health 为 310~420、damage 为 33~110，是最强的寄生体层级，不可能缺少基础工具集。 矩阵修正：加入 NEXUS。Nexus 层的召唤柱（beckon_si 等）本身就是储存与释放寄生体的设施（源码字段 storedParasiteIds），召唤前必须指认目标。
 
 ### 烟幕轨迹 / Parasitic Smoke Trail
 

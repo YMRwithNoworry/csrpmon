@@ -1,0 +1,180 @@
+{
+  "id": "beckon_si",
+  "dex": 8117,
+  "zh": "召唤柱·初阶",
+  "en": "Stage I Beckon",
+  "types": [
+    "虫",
+    "超能"
+  ],
+  "kind": "召唤巢柱宝可梦",
+  "height": 2.2,
+  "weight": 120,
+  "stats": [
+    58,
+    30,
+    52,
+    72,
+    60,
+    12
+  ],
+  "statNote": "总和 304。SRP 中 health 25.0 / armor 4.0 / damage 2.5 / **bombCount 4** / **activeCap 4** / **summonCooldown 50** / maxBlockHardness 1.0 / **blockRange 3.0** / experience 16。**它是 NEXUS 13 只里最弱的一环**——而这一层最强的是它的同族。",
+  "core": "“它不是来打你的。**它是来开始一件事的**——而那件事一旦开始，就不会停在第一阶段。”",
+  "visual": [
+    [
+      "头部",
+      "柱顶的膨大核心，表面有 4 个召唤口",
+      "bombCount = 4"
+    ],
+    [
+      "眼睛",
+      "核心四周环列一圈暗红光点，数量对应召唤口",
+      "bombCount 的可视化"
+    ],
+    [
+      "躯干",
+      "**柱状躯体植根于地面**，下段埋入土中",
+      "柱体形态"
+    ],
+    [
+      "召唤口",
+      "4 个端口可依次张开并释放寄生体",
+      "activeCap = 4"
+    ],
+    [
+      "地表纹",
+      "周围地面浮现直径 3 格的暗红纹路",
+      "blockRange = 3.0"
+    ],
+    [
+      "颜色",
+      "暗红寄生组织 + 核心暗紫",
+      "SRP 模型配色"
+    ]
+  ],
+  "pose": "**完全静止**。柱体不移动，只有顶端核心缓慢旋转，召唤口按固定间隔开合。",
+  "preserved": [
+    "**召唤职能**——`bombCount = 4` / `activeCap = 4` / `summonCooldown = 50`",
+    "**场域范围**——`blockRange = 3.0`",
+    "**source 注释**——*\"Summoning pillars cast every 2–3 seconds in the original game. Use a four-times faster cadence while retaining stage progression.\"*",
+    "**储存待召个体**——源码字段 `storedParasiteIds`",
+    "**九阶体系的起点**——`Family.BECKON, stage = 1`"
+  ],
+  "pokemonized": [
+    "**它不是战斗单位，是设施。** 25 点生命与 2.5 点攻击说明源码根本没打算让它打架——它的全部价值在 `bombCount` / `activeCap` / `summonCooldown` 三个参数上",
+    "**`storedParasiteIds` 是一个很关键的字段**：它**先把要召唤的个体存起来**，之后再释放。我把它做成了\"预先装填\"机制",
+    "按你的规则十，Stage I 应该只有**基础召唤、感染、小范围污染**。这三个正好对应它的 4 个召唤口、25 点生命与 3 格 `blockRange`"
+  ],
+  "ability": {
+    "name": "初阶装填（storedids）",
+    "effect": "自身出场时**预先装填 4 只召唤单位**（对应 `bombCount = 4`）。**每次召唤消耗 1 只，装填不可在本场战斗中补充**。对应源码字段 `storedParasiteIds`。"
+  },
+  "hidden": {
+    "name": "固定柱体（immobilepillar）",
+    "effect": "自身**完全无法被替换下场，也免疫一切强制位移**；但自身也无法主动替换。对应柱体形态与 `Family.BECKON` 的设施定位。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "beckoncall1",
+      "zh": "初级召唤",
+      "en": "Beckon Call I",
+      "cat": "N",
+      "type": "超能",
+      "cls": "变化",
+      "pow": 0,
+      "acc": true,
+      "pp": 10,
+      "range": "自身周围 3 格",
+      "effect": "从装填中释放 **1 只寄生体**（只能在白名单内的层级中选择）。**最多同时存在 4 只**（对应 `activeCap = 4`）。使用后需间隔 1 回合（对应 `summonCooldown = 50`）。造成 0 点伤害。",
+      "trigger": "需要装填数 > 0，且当前召唤数 < 4。",
+      "visual": "柱顶 4 个召唤口中的 1 个张开，暗红生物质从端口涌出并在地面聚合成一具躯体，地表 3 格纹路同时亮起。",
+      "why": "`bombCount = 4` / `activeCap = 4` / `summonCooldown = 50` / `blockRange = 3.0` 四项参数的翻译。**它是全族唯一以「装填—释放」为机制的召唤招式**。"
+    }
+  ],
+  "common": [
+    {
+      "id": "parasiterelease",
+      "why": "它储存并释放已有的 SRP 生物"
+    },
+    {
+      "id": "hivespread",
+      "why": "它是巢穴的扩散节点"
+    },
+    {
+      "id": "infestedground",
+      "why": "blockRange 3.0 的地表纹路"
+    },
+    {
+      "id": "infectionpulse",
+      "why": "它是范围感染源"
+    },
+    {
+      "id": "infectionorb",
+      "why": "召唤口释放的个体携带感染"
+    },
+    {
+      "id": "markedprey",
+      "why": "召唤前指认目标"
+    },
+    {
+      "id": "parasiticspores",
+      "why": "端口同时释放孢子"
+    },
+    {
+      "id": "nestestablishment",
+      "why": "它植根的位置就是巢穴的起点"
+    }
+  ],
+  "normal": [
+    "隐形岩",
+    "剧毒",
+    "光墙",
+    "守住",
+    "替身",
+    "接棒"
+  ],
+  "loop": [
+    [
+      "起手",
+      "初级召唤",
+      "先把第一只寄生体放出去"
+    ],
+    [
+      "核心",
+      "隐形岩 / 剧毒",
+      "用场地压制争取召唤时间"
+    ],
+    [
+      "强化",
+      "巢群扩张（特性）",
+      "把召唤速度拉起来"
+    ],
+    [
+      "控制",
+      "感染脉冲 / 寄生孢子",
+      "持续铺感染"
+    ],
+    [
+      "收尾",
+      "接棒",
+      "把已建立的场面交给下一阶"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "感染区的地表——它植根在哪，哪就是巢穴的起点",
+    "食物": "通过根部从地面吸取养分",
+    "猎物": "无。**它不狩猎**",
+    "天敌": "任何东西。25 点生命、2.5 点攻击、0 移动",
+    "行为": "**完全静止**。召唤—等待—再召唤",
+    "群体": "通常单独扎根，周围有被召唤出的个体活动",
+    "巢穴": "**巢穴的起点**，九阶体系的第一环",
+    "繁殖": "不繁殖。它通过召唤而非繁殖扩张",
+    "与其他 SRP 宝可梦关系": "**BECKON 家族的第一阶**；后续为 `beckon_sii` → `beckon_siii` → `beckon_siv`，各项参数逐阶提升"
+  },
+  "evolution": "来源：无（NEXUS 起点）\n  ↓  阶段提升\n当前：召唤柱·初阶（`csrp:beckon_si`）\n  ↓\n召唤柱·二阶（`csrp:beckon_sii`）→ 三阶 → 四阶\n\n证据：`Kind.BECKON_SI(Family.BECKON, 1, 25.0D, 4.0D, 2.5D, 4, 4, 50, 1.0F, 3.0D, 16)`。\n**四阶的全部参数由源码枚举逐项给出**，构成一条完整的成长曲线。",
+  "dex1": "它像一根柱子插在地里，顶上有个会转的东西。它不追你、不咬你，只是每隔一会儿就放出点什么。",
+  "dex2": "观察记录：生命 25.0、攻击 2.5、移动 0。\n装填 4 只，同场上限 4 只，召唤冷却 50。\n ——结论：**它的威胁等于它放出来的东西**。先拆柱子。",
+  "gameplay": "召唤（4 只装填 + 4 只上限）、环境（场地压制）、扩散（感染）——NEXUS 召唤柱体系的第一阶",
+  "similarity": "与同族后三阶的区别是**全部参数同步提升**：装填 4→5→6→8、上限 4→6→8→12、冷却 50→45→40→40、范围 3→3→3→18。它是这条曲线的起点。"
+}
