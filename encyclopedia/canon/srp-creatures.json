@@ -35,6 +35,12 @@
       "2": 27,
       "3": 13,
       "4": 3
+    },
+    "adaptationSupport": {
+      "yes": 67,
+      "no": 62,
+      "tagged": 129,
+      "unknown": 0
     }
   },
   "creatures": [
@@ -51,7 +57,9 @@
       "nameZh": "虫灵",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "BuglinEntity"
     },
     {
       "sourceId": "csrp:gnat",
@@ -71,7 +79,9 @@
       ],
       "srpVersionNote": "SRP 1.10.7",
       "srpDoc": "SRP 1.10.7 EntityAta: the short-lived ground vermin dropped by primitive Vermin.",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "GnatEntity"
     },
     {
       "sourceId": "csrp:lice",
@@ -91,7 +101,9 @@
       ],
       "srpVersionNote": "SRP 1.10.7",
       "srpDoc": "SRP 1.10.7 EntityViin: the short-lived flying vermin dropped by adapted Vermin.",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "LiceEntity"
     },
     {
       "sourceId": "csrp:rupter",
@@ -106,7 +118,9 @@
       "nameZh": "裂兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": false,
+      "entityClass": "RupterEntity"
     },
     {
       "sourceId": "csrp:mangler",
@@ -126,7 +140,9 @@
       ],
       "srpVersionNote": null,
       "srpDoc": "Original EntityNuuh, including its synchronized skin and combat-state animation routing.",
-      "stage": 3
+      "stage": 3,
+      "supportsAdaptation": true,
+      "entityClass": "ManglerEntity"
     },
     {
       "sourceId": "csrp:carrier_flying",
@@ -141,7 +157,9 @@
       "nameZh": "飞行母体",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "CarrierFlyingEntity"
     },
     {
       "sourceId": "csrp:carrier_heavy",
@@ -156,7 +174,9 @@
       "nameZh": "重型母体",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "CarrierHeavyEntity"
     },
     {
       "sourceId": "csrp:carrier_light",
@@ -171,7 +191,9 @@
       "nameZh": "轻型母体",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "CarrierLightEntity"
     },
     {
       "sourceId": "csrp:sim_adventurer",
@@ -186,7 +208,9 @@
       "nameZh": "被同化的冒险者",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "SimAdventurerEntity"
     },
     {
       "sourceId": "csrp:sim_bear",
@@ -201,7 +225,9 @@
       "nameZh": "被同化的熊",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedParasiteEntity"
     },
     {
       "sourceId": "csrp:sim_bigspider",
@@ -216,7 +242,9 @@
       "nameZh": "被同化的大蜘蛛",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedVariantEntity"
     },
     {
       "sourceId": "csrp:sim_cow",
@@ -231,7 +259,9 @@
       "nameZh": "被同化的牛",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedParasiteEntity"
     },
     {
       "sourceId": "csrp:sim_cowhead",
@@ -246,7 +276,9 @@
       "nameZh": "行走牛头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedHeadEntity"
     },
     {
       "sourceId": "csrp:sim_dragone",
@@ -261,7 +293,9 @@
       "nameZh": "被同化的末影龙",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedDragonEntity"
     },
     {
       "sourceId": "csrp:sim_dragonhead",
@@ -276,7 +310,9 @@
       "nameZh": "行走龙首",
       "documentedInBestiary": false,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedDragonHeadEntity"
     },
     {
       "sourceId": "csrp:sim_enderman",
@@ -291,7 +327,9 @@
       "nameZh": "被同化的末影人",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedEndermanEntity"
     },
     {
       "sourceId": "csrp:sim_endermanhead",
@@ -306,7 +344,9 @@
       "nameZh": "行走末影人头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedHeadEntity"
     },
     {
       "sourceId": "csrp:sim_horse",
@@ -321,7 +361,9 @@
       "nameZh": "被同化的马",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedVariantEntity"
     },
     {
       "sourceId": "csrp:sim_horsehead",
@@ -336,7 +378,9 @@
       "nameZh": "行走马头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedHeadEntity"
     },
     {
       "sourceId": "csrp:sim_human",
@@ -351,7 +395,9 @@
       "nameZh": "被同化的人类",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "SimHumanEntity"
     },
     {
       "sourceId": "csrp:sim_humanhead",
@@ -366,7 +412,9 @@
       "nameZh": "行走人类头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedHeadEntity"
     },
     {
       "sourceId": "csrp:sim_pig",
@@ -381,7 +429,9 @@
       "nameZh": "被同化的猪",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedParasiteEntity"
     },
     {
       "sourceId": "csrp:sim_pighead",
@@ -396,7 +446,9 @@
       "nameZh": "行走猪头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedHeadEntity"
     },
     {
       "sourceId": "csrp:sim_sheep",
@@ -411,7 +463,9 @@
       "nameZh": "被同化的羊",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedParasiteEntity"
     },
     {
       "sourceId": "csrp:sim_sheephead",
@@ -426,7 +480,9 @@
       "nameZh": "行走羊头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedHeadEntity"
     },
     {
       "sourceId": "csrp:sim_squid",
@@ -441,7 +497,9 @@
       "nameZh": "被同化的鱿鱼",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedParasiteEntity"
     },
     {
       "sourceId": "csrp:sim_villager",
@@ -456,7 +514,9 @@
       "nameZh": "被同化的村民",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedVariantEntity"
     },
     {
       "sourceId": "csrp:sim_villagerhead",
@@ -471,7 +531,9 @@
       "nameZh": "行走村民头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedHeadEntity"
     },
     {
       "sourceId": "csrp:sim_wolf",
@@ -486,7 +548,9 @@
       "nameZh": "被同化的狼",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedParasiteEntity"
     },
     {
       "sourceId": "csrp:sim_wolfhead",
@@ -501,7 +565,9 @@
       "nameZh": "行走狼头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedHeadEntity"
     },
     {
       "sourceId": "csrp:hi_blaze",
@@ -516,7 +582,9 @@
       "nameZh": "被操纵的烈焰人",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "HiBlazeEntity"
     },
     {
       "sourceId": "csrp:hi_golem",
@@ -531,7 +599,9 @@
       "nameZh": "被操纵的铁傀儡",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "HiGolemEntity"
     },
     {
       "sourceId": "csrp:hi_skeleton",
@@ -546,7 +616,9 @@
       "nameZh": "被操纵的骷髅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "HiSkeletonEntity"
     },
     {
       "sourceId": "csrp:fer_bear",
@@ -561,7 +633,9 @@
       "nameZh": "狂化熊",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": false,
+      "entityClass": "FeralParasiteEntity"
     },
     {
       "sourceId": "csrp:fer_cow",
@@ -576,7 +650,9 @@
       "nameZh": "狂化牛",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": false,
+      "entityClass": "FeralParasiteEntity"
     },
     {
       "sourceId": "csrp:fer_enderman",
@@ -591,7 +667,9 @@
       "nameZh": "狂化末影人",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": false,
+      "entityClass": "FeralEndermanEntity"
     },
     {
       "sourceId": "csrp:fer_horse",
@@ -606,7 +684,9 @@
       "nameZh": "狂化马",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": false,
+      "entityClass": "FeralParasiteEntity"
     },
     {
       "sourceId": "csrp:fer_human",
@@ -621,7 +701,9 @@
       "nameZh": "狂化人类",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": false,
+      "entityClass": "FeralParasiteEntity"
     },
     {
       "sourceId": "csrp:fer_pig",
@@ -636,7 +718,9 @@
       "nameZh": "狂化猪",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": false,
+      "entityClass": "FeralParasiteEntity"
     },
     {
       "sourceId": "csrp:fer_sheep",
@@ -651,7 +735,9 @@
       "nameZh": "狂化羊",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": false,
+      "entityClass": "FeralParasiteEntity"
     },
     {
       "sourceId": "csrp:fer_villager",
@@ -666,7 +752,9 @@
       "nameZh": "狂化村民",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": false,
+      "entityClass": "FeralParasiteEntity"
     },
     {
       "sourceId": "csrp:fer_wolf",
@@ -681,7 +769,9 @@
       "nameZh": "狂化狼",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "FeralParasiteEntity"
     },
     {
       "sourceId": "csrp:crux",
@@ -696,7 +786,9 @@
       "nameZh": "烬余兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": false,
+      "entityClass": "CruxEntity"
     },
     {
       "sourceId": "csrp:crux_incomplete",
@@ -711,7 +803,9 @@
       "nameZh": "未成形烬余兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "IncompleteCruxEntity"
     },
     {
       "sourceId": "csrp:airscrew",
@@ -726,7 +820,9 @@
       "nameZh": "悬牵体",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AirscrewEntity"
     },
     {
       "sourceId": "csrp:heed",
@@ -741,7 +837,9 @@
       "nameZh": "警戒兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "HeedEntity"
     },
     {
       "sourceId": "csrp:host",
@@ -756,7 +854,9 @@
       "nameZh": "缠骨柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "HostEntity"
     },
     {
       "sourceId": "csrp:hostii",
@@ -771,7 +871,9 @@
       "nameZh": "缠骷柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "HostIIEntity"
     },
     {
       "sourceId": "csrp:incompleteform_medium",
@@ -786,7 +888,9 @@
       "nameZh": "中型未成形寄生体",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "IncompleteFormMediumEntity"
     },
     {
       "sourceId": "csrp:incompleteform_small",
@@ -801,7 +905,9 @@
       "nameZh": "小型未成形寄生体",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "IncompleteFormSmallEntity"
     },
     {
       "sourceId": "csrp:thrall",
@@ -816,7 +922,9 @@
       "nameZh": "寄生奴仆",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "ThrallEntity"
     },
     {
       "sourceId": "csrp:draconite",
@@ -831,7 +939,9 @@
       "nameZh": "§9邪狱龙",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "DraconiteEntity"
     },
     {
       "sourceId": "csrp:kirin",
@@ -846,7 +956,9 @@
       "nameZh": "§9踏虚体",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "KirinEntity"
     },
     {
       "sourceId": "csrp:dredge",
@@ -861,7 +973,9 @@
       "nameZh": "溺骨妖",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "DredgeEntity"
     },
     {
       "sourceId": "csrp:mar_bear",
@@ -876,7 +990,9 @@
       "nameZh": "诡化熊",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "MarauderizedBearEntity"
     },
     {
       "sourceId": "csrp:mar_cow",
@@ -891,7 +1007,9 @@
       "nameZh": "诡化牛",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "MarauderizedCowEntity"
     },
     {
       "sourceId": "csrp:mar_enderman",
@@ -906,7 +1024,9 @@
       "nameZh": "诡化末影人",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "MarauderizedEndermanEntity"
     },
     {
       "sourceId": "csrp:mar_human",
@@ -921,7 +1041,9 @@
       "nameZh": "诡化人类",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "MarauderizedHumanEntity"
     },
     {
       "sourceId": "csrp:mar_sheep",
@@ -936,7 +1058,9 @@
       "nameZh": "诡化羊",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "MarauderizedSheepEntity"
     },
     {
       "sourceId": "csrp:mar_villager",
@@ -951,7 +1075,9 @@
       "nameZh": "诡化村民",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "MarauderizedVillagerEntity"
     },
     {
       "sourceId": "csrp:pri_arachnida",
@@ -966,7 +1092,9 @@
       "nameZh": "原始蛛形兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "PrimitiveVariantEntity"
     },
     {
       "sourceId": "csrp:pri_bolster",
@@ -981,7 +1109,9 @@
       "nameZh": "原始协增兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "PrimitiveVariantEntity"
     },
     {
       "sourceId": "csrp:pri_burrower",
@@ -996,7 +1126,9 @@
       "nameZh": "原始掘地兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "PrimitiveVariantEntity"
     },
     {
       "sourceId": "csrp:pri_devourer",
@@ -1011,7 +1143,9 @@
       "nameZh": "原始吞噬兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "PrimitiveVariantEntity"
     },
     {
       "sourceId": "csrp:pri_longarms",
@@ -1026,7 +1160,9 @@
       "nameZh": "原始长臂兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "LongarmsEntity"
     },
     {
       "sourceId": "csrp:pri_manducater",
@@ -1041,7 +1177,9 @@
       "nameZh": "原始咀骨兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "PrimitiveVariantEntity"
     },
     {
       "sourceId": "csrp:pri_reeker",
@@ -1056,7 +1194,9 @@
       "nameZh": "原始毒腥兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "PrimitiveVariantEntity"
     },
     {
       "sourceId": "csrp:pri_summoner",
@@ -1071,7 +1211,9 @@
       "nameZh": "原始召唤兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "SummonerEntity"
     },
     {
       "sourceId": "csrp:pri_tozoon",
@@ -1086,7 +1228,9 @@
       "nameZh": "原始潜地兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "PrimitiveVariantEntity"
     },
     {
       "sourceId": "csrp:pri_vermin",
@@ -1101,7 +1245,9 @@
       "nameZh": "原始孕虫兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "VerminEntity"
     },
     {
       "sourceId": "csrp:pri_viscera",
@@ -1121,7 +1267,9 @@
       ],
       "srpVersionNote": null,
       "srpDoc": "Original Primitive Viscera (EntityGim) behavior.",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "VisceraEntity"
     },
     {
       "sourceId": "csrp:pri_yelloweye",
@@ -1136,7 +1284,9 @@
       "nameZh": "原始黄眸兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "PrimitiveVariantEntity"
     },
     {
       "sourceId": "csrp:ada_arachnida",
@@ -1151,7 +1301,9 @@
       "nameZh": "适应蛛形兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 3
+      "stage": 3,
+      "supportsAdaptation": true,
+      "entityClass": "AdaptedVariantEntity"
     },
     {
       "sourceId": "csrp:ada_bolster",
@@ -1166,7 +1318,9 @@
       "nameZh": "适应协增兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 3
+      "stage": 3,
+      "supportsAdaptation": true,
+      "entityClass": "AdaptedVariantEntity"
     },
     {
       "sourceId": "csrp:ada_burrower",
@@ -1181,7 +1335,9 @@
       "nameZh": "适应掘地兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "AdaptedVariantEntity"
     },
     {
       "sourceId": "csrp:ada_devourer",
@@ -1196,7 +1352,9 @@
       "nameZh": "适应吞噬兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "AdaptedVariantEntity"
     },
     {
       "sourceId": "csrp:ada_longarms",
@@ -1211,7 +1369,9 @@
       "nameZh": "适应长臂兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 3
+      "stage": 3,
+      "supportsAdaptation": true,
+      "entityClass": "AdaptedVariantEntity"
     },
     {
       "sourceId": "csrp:ada_manducater",
@@ -1226,7 +1386,9 @@
       "nameZh": "适应咀骨兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 3
+      "stage": 3,
+      "supportsAdaptation": true,
+      "entityClass": "AdaptedVariantEntity"
     },
     {
       "sourceId": "csrp:ada_reeker",
@@ -1241,7 +1403,9 @@
       "nameZh": "适应毒腥兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 3
+      "stage": 3,
+      "supportsAdaptation": true,
+      "entityClass": "AdaptedVariantEntity"
     },
     {
       "sourceId": "csrp:ada_summoner",
@@ -1256,7 +1420,9 @@
       "nameZh": "适应召唤兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 3
+      "stage": 3,
+      "supportsAdaptation": true,
+      "entityClass": "AdaptedVariantEntity"
     },
     {
       "sourceId": "csrp:ada_tozoon",
@@ -1271,7 +1437,9 @@
       "nameZh": "适应潜地兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "AdaptedVariantEntity"
     },
     {
       "sourceId": "csrp:ada_viscera",
@@ -1286,7 +1454,9 @@
       "nameZh": "适应脏腑兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 3
+      "stage": 3,
+      "supportsAdaptation": true,
+      "entityClass": "AdaptedVariantEntity"
     },
     {
       "sourceId": "csrp:ada_yelloweye",
@@ -1301,7 +1471,9 @@
       "nameZh": "适应黄眸兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 3
+      "stage": 3,
+      "supportsAdaptation": true,
+      "entityClass": "AdaptedVariantEntity"
     },
     {
       "sourceId": "csrp:ada_vermin",
@@ -1316,7 +1488,9 @@
       "nameZh": "适应孕虫兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 3
+      "stage": 3,
+      "supportsAdaptation": true,
+      "entityClass": "AdaptedVariantEntity"
     },
     {
       "sourceId": "csrp:dispatcherten",
@@ -1331,7 +1505,9 @@
       "nameZh": "调度柱触须",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "DeterrentParasiteEntity"
     },
     {
       "sourceId": "csrp:kyphosis",
@@ -1346,7 +1522,9 @@
       "nameZh": "曲击柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "DeterrentParasiteEntity"
     },
     {
       "sourceId": "csrp:seizer",
@@ -1361,7 +1539,9 @@
       "nameZh": "缠缚触手",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "DeterrentParasiteEntity"
     },
     {
       "sourceId": "csrp:sentry",
@@ -1376,7 +1556,9 @@
       "nameZh": "哨戒爪",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "DeterrentParasiteEntity"
     },
     {
       "sourceId": "csrp:worm",
@@ -1391,7 +1573,9 @@
       "nameZh": "侵袭蠕虫",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "DeterrentParasiteEntity"
     },
     {
       "sourceId": "csrp:grunt",
@@ -1406,7 +1590,9 @@
       "nameZh": "步行兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "PureParasiteEntity"
     },
     {
       "sourceId": "csrp:bomber_light",
@@ -1421,7 +1607,9 @@
       "nameZh": "轻型轰炸兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "PureParasiteEntity"
     },
     {
       "sourceId": "csrp:marauder",
@@ -1441,7 +1629,9 @@
       ],
       "srpVersionNote": null,
       "srpDoc": "* Legacy EntityEsor port with damageable tendrils, wall climbing, support * tendrils, charged smash behavior, and the original model-function states.",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "MarauderEntity"
     },
     {
       "sourceId": "csrp:monarch",
@@ -1456,7 +1646,9 @@
       "nameZh": "统御兽 ",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "PureParasiteEntity"
     },
     {
       "sourceId": "csrp:overseer",
@@ -1471,7 +1663,9 @@
       "nameZh": "监察兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "PureParasiteEntity"
     },
     {
       "sourceId": "csrp:vigilante",
@@ -1486,7 +1680,9 @@
       "nameZh": "巡兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "PureParasiteEntity"
     },
     {
       "sourceId": "csrp:warden",
@@ -1501,7 +1697,9 @@
       "nameZh": "看守兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "PureParasiteEntity"
     },
     {
       "sourceId": "csrp:bogle",
@@ -1516,7 +1714,9 @@
       "nameZh": "怖怪体",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "PreeminentParasiteEntity"
     },
     {
       "sourceId": "csrp:carrier_colony",
@@ -1531,7 +1731,9 @@
       "nameZh": "聚生载体",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "PreeminentParasiteEntity"
     },
     {
       "sourceId": "csrp:haunter",
@@ -1546,7 +1748,9 @@
       "nameZh": "逐猎兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "PreeminentParasiteEntity"
     },
     {
       "sourceId": "csrp:bomber_heavy",
@@ -1561,7 +1765,9 @@
       "nameZh": "重型轰炸兽",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "PreeminentParasiteEntity"
     },
     {
       "sourceId": "csrp:wraith",
@@ -1576,7 +1782,9 @@
       "nameZh": "幽鬼体",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "PreeminentParasiteEntity"
     },
     {
       "sourceId": "csrp:succor",
@@ -1596,7 +1804,9 @@
       ],
       "srpVersionNote": "SRP 1.10.7",
       "srpDoc": "Modern equivalent of SRP 1.10.7's independently registered EntityFlam.",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "FlamEntity"
     },
     {
       "sourceId": "csrp:anc_dreadnaut",
@@ -1611,7 +1821,9 @@
       "nameZh": "远古惧魔",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "AncientParasiteEntity"
     },
     {
       "sourceId": "csrp:anc_overlord",
@@ -1626,7 +1838,9 @@
       "nameZh": "远古君魔",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "AncientParasiteEntity"
     },
     {
       "sourceId": "csrp:beckon_si",
@@ -1641,7 +1855,9 @@
       "nameZh": "I阶召唤柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "NexusParasiteEntity"
     },
     {
       "sourceId": "csrp:beckon_sii",
@@ -1656,7 +1872,9 @@
       "nameZh": "II阶召唤柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "NexusParasiteEntity"
     },
     {
       "sourceId": "csrp:beckon_siii",
@@ -1671,7 +1889,9 @@
       "nameZh": "III阶召唤柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 3
+      "stage": 3,
+      "supportsAdaptation": true,
+      "entityClass": "NexusParasiteEntity"
     },
     {
       "sourceId": "csrp:beckon_siv",
@@ -1686,7 +1906,9 @@
       "nameZh": "IV阶召唤柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 4
+      "stage": 4,
+      "supportsAdaptation": true,
+      "entityClass": "NexusParasiteEntity"
     },
     {
       "sourceId": "csrp:dispatcher_si",
@@ -1701,7 +1923,9 @@
       "nameZh": "I阶调度柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "NexusParasiteEntity"
     },
     {
       "sourceId": "csrp:dispatcher_sii",
@@ -1716,7 +1940,9 @@
       "nameZh": "II阶调度柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "NexusParasiteEntity"
     },
     {
       "sourceId": "csrp:dispatcher_siii",
@@ -1731,7 +1957,9 @@
       "nameZh": "III阶调度柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 3
+      "stage": 3,
+      "supportsAdaptation": true,
+      "entityClass": "NexusParasiteEntity"
     },
     {
       "sourceId": "csrp:dispatcher_siv",
@@ -1746,7 +1974,9 @@
       "nameZh": "IV阶调度柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 4
+      "stage": 4,
+      "supportsAdaptation": true,
+      "entityClass": "NexusParasiteEntity"
     },
     {
       "sourceId": "csrp:rooter_si",
@@ -1761,7 +1991,9 @@
       "nameZh": "I阶支庇柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "NexusParasiteEntity"
     },
     {
       "sourceId": "csrp:rooter_sii",
@@ -1776,7 +2008,9 @@
       "nameZh": "II阶支庇柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 2
+      "stage": 2,
+      "supportsAdaptation": true,
+      "entityClass": "NexusParasiteEntity"
     },
     {
       "sourceId": "csrp:rooter_siii",
@@ -1791,7 +2025,9 @@
       "nameZh": "III阶支庇柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 3
+      "stage": 3,
+      "supportsAdaptation": true,
+      "entityClass": "NexusParasiteEntity"
     },
     {
       "sourceId": "csrp:rooter_siv",
@@ -1806,7 +2042,9 @@
       "nameZh": "IV阶支庇柱",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 4
+      "stage": 4,
+      "supportsAdaptation": true,
+      "entityClass": "NexusParasiteEntity"
     },
     {
       "sourceId": "csrp:rooterball",
@@ -1821,7 +2059,9 @@
       "nameZh": "支庇柱囊块",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "NexusParasiteEntity"
     },
     {
       "sourceId": "csrp:abo_bodies",
@@ -1836,7 +2076,9 @@
       "nameZh": "缀合多体",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AbominationEntity"
     },
     {
       "sourceId": "csrp:abo_head",
@@ -1851,7 +2093,9 @@
       "nameZh": "巨型头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AbominationEntity"
     },
     {
       "sourceId": "csrp:anc_dreadnaut_ten",
@@ -1871,7 +2115,9 @@
       ],
       "srpVersionNote": null,
       "srpDoc": "Legacy Ancient Dreadnaut ground tendril (EntityOroncoTen).",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "DreadnautTentacleEntity"
     },
     {
       "sourceId": "csrp:anc_pod",
@@ -1891,7 +2137,9 @@
       ],
       "srpVersionNote": null,
       "srpDoc": "Legacy Ancient Drop Pod (EntityDropPod).",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AncientPodEntity"
     },
     {
       "sourceId": "csrp:architect",
@@ -1911,7 +2159,9 @@
       ],
       "srpVersionNote": null,
       "srpDoc": "Legacy flying colony architect (EntityTenn).",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "ArchitectEntity"
     },
     {
       "sourceId": "csrp:carrier_worm",
@@ -1931,7 +2181,9 @@
       ],
       "srpVersionNote": null,
       "srpDoc": "Legacy Worm Carrier (EntityQuac), including its four linked body segments.",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "CarrierWormEntity"
     },
     {
       "sourceId": "csrp:marauder_tendril",
@@ -1946,7 +2198,9 @@
       "nameZh": "掠夺者触手",
       "documentedInBestiary": false,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "MarauderTendrilEntity"
     },
     {
       "sourceId": "csrp:movingflesh",
@@ -1961,7 +2215,9 @@
       "nameZh": "活体肉块",
       "documentedInBestiary": false,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "MovingFleshEntity"
     },
     {
       "sourceId": "csrp:seeker",
@@ -1976,7 +2232,9 @@
       "nameZh": "追迹兽",
       "documentedInBestiary": false,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": true,
+      "entityClass": "PureParasiteEntity"
     },
     {
       "sourceId": "csrp:sim_adventurerhead",
@@ -1991,7 +2249,9 @@
       "nameZh": "行走冒险者头颅",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "SimAdventurerHeadEntity"
     },
     {
       "sourceId": "csrp:sim_dragonehead",
@@ -2006,7 +2266,9 @@
       "nameZh": "行走龙首",
       "documentedInBestiary": true,
       "status": "CONFIRMED",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "AssimilatedDragonHeadEntity"
     },
     {
       "sourceId": "csrp:worker",
@@ -2026,7 +2288,9 @@
       ],
       "srpVersionNote": null,
       "srpDoc": "Legacy colony worker (EntityKol), including its 13/26-block construction grid.",
-      "stage": 1
+      "stage": 1,
+      "supportsAdaptation": false,
+      "entityClass": "WorkerEntity"
     }
   ],
   "nonCreatures": [

@@ -28,6 +28,7 @@ for(const file of fs.readdirSync(DDIR).filter(f=>f.endsWith('.json')).sort()){
     if(!sk){ problems.push(file+': unknown common skill '+cs.id); continue; }
     if(!sk.tiers.includes(c.tier)) problems.push(file+': '+cs.id+' is not permitted for tier '+c.tier);
     if(c.stage < (sk.minStage||1)) problems.push(file+': '+cs.id+' needs stage '+sk.minStage+' but '+c.id+' is stage '+c.stage);
+    if(sk.speciesGate && !c.supportsAdaptation) problems.push(file+': '+cs.id+' requires adaptation, but '+c.id+' has supportsDamageAdaptation() == false in the source');
   }
   if((d.common||[]).length<5) problems.push(file+': needs at least 5 common skills, has '+(d.common||[]).length);
   if((d.signature||[]).length<1) problems.push(file+': needs at least 1 signature move');

@@ -3,14 +3,14 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 11 / 129**
+**Designed: 18 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
 | Tier | Designed | Total |
 |---|---|---|
 | INBORN | 10 | 10 |
-| CRUDE | 1 | 11 |
+| CRUDE | 8 | 11 |
 | PRIMITIVE | 0 | 12 |
 | ADAPTED | 0 | 12 |
 | ASSIMILATED | 0 | 13 |
@@ -46,16 +46,16 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 2 | `csrp:crux` | 烬余兽 / Crux | - | pending |
-| 1 | `csrp:crux_incomplete` | 未成形烬余兽 / Incomplete Crux | - | pending |
-| 1 | `csrp:airscrew` | 悬牵体 / Airscrew | - | pending |
-| 1 | `csrp:heed` | 警戒兽 / Heed | - | pending |
-| 1 | `csrp:host` | 缠骨柱 / Host | - | pending |
+| 2 | `csrp:crux` | 烬余兽 / Crux | - | [designed](crux.md) |
+| 1 | `csrp:crux_incomplete` | 未成形烬余兽 / Incomplete Crux | - | [designed](crux_incomplete.md) |
+| 1 | `csrp:airscrew` | 悬牵体 / Airscrew | - | [designed](airscrew.md) |
+| 1 | `csrp:heed` | 警戒兽 / Heed | - | [designed](heed.md) |
+| 1 | `csrp:host` | 缠骨柱 / Host | - | [designed](host.md) |
 | 2 | `csrp:hostii` | 缠骷柱 / Host II | - | pending |
 | 1 | `csrp:incompleteform_medium` | 中型未成形寄生体 / Medium Incomplete Form | - | pending |
 | 1 | `csrp:incompleteform_small` | 小型未成形寄生体 / Small Incomplete Form | - | pending |
-| 2 | `csrp:thrall` | 寄生奴仆 / Thrall | - | pending |
-| 1 | `csrp:dredge` | 溺骨妖 / Dredge | - | pending |
+| 2 | `csrp:thrall` | 寄生奴仆 / Thrall | - | [designed](thrall.md) |
+| 1 | `csrp:dredge` | 溺骨妖 / Dredge | - | [designed](dredge.md) |
 | 1 | `csrp:carrier_worm` | 蠕虫载体 / Worm Carrier | EntityQuac | [designed](carrier_worm.md) |
 
 ## PRIMITIVE (12)

@@ -241,6 +241,8 @@
       "cat": "B. 适应系",
       "source": "Adaptation system（Primitive→Adapted 的针对性进化）",
       "tiers": [
+        "CRUDE",
+        "INBORN",
         "PRIMITIVE",
         "ADAPTED",
         "PURE",
@@ -257,7 +259,8 @@
       "cd": "无",
       "vis": "使用者体表短暂浮现该属性颜色的纹路。",
       "denied": "INBORN / CRUDE / ASSIMILATED / WALKING_HEAD / HIJACKED / FERAL / NEXUS / DERIVED 不学——只有带 Adaptation 能力的种类才有。",
-      "minStage": 1
+      "minStage": 1,
+      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。"
     },
     {
       "id": "damageanalysis",
@@ -266,6 +269,8 @@
       "cat": "B. 适应系",
       "source": "Adaptation system",
       "tiers": [
+        "CRUDE",
+        "INBORN",
         "PRIMITIVE",
         "ADAPTED",
         "PURE",
@@ -281,7 +286,8 @@
       "cd": "2 回合",
       "vis": "使用者眼中的复眼结构高速对焦。",
       "denied": "INBORN / NEXUS / ANCIENT / DERIVED。",
-      "minStage": 1
+      "minStage": 1,
+      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。"
     },
     {
       "id": "rapidadaptation",
@@ -290,6 +296,8 @@
       "cat": "B. 适应系",
       "source": "Adaptation system 的加速版本（Adapted 相较 Primitive 的强化）",
       "tiers": [
+        "CRUDE",
+        "INBORN",
         "ADAPTED",
         "PREEMINENT",
         "ANCIENT"
@@ -304,7 +312,8 @@
       "cd": "3 回合",
       "vis": "体表纹路瞬间全部点亮。",
       "denied": "PRIMITIVE 只能学适应学习，不能学快速适应——这是 Primitive→Adapted 的技能层级分界。",
-      "minStage": 1
+      "minStage": 1,
+      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。"
     },
     {
       "id": "resistancelog",
@@ -313,6 +322,8 @@
       "cat": "B. 适应系",
       "source": "Adaptation system",
       "tiers": [
+        "CRUDE",
+        "INBORN",
         "ADAPTED",
         "PURE",
         "PREEMINENT",
@@ -328,7 +339,8 @@
       "cd": "4 回合",
       "vis": "外壳析出对应属性的结晶层。",
       "denied": "PRIMITIVE / NEXUS。",
-      "minStage": 1
+      "minStage": 1,
+      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。"
     },
     {
       "id": "combatevolution",
@@ -337,6 +349,8 @@
       "cat": "B. 适应系",
       "source": "Adaptation system 的战场即时进化",
       "tiers": [
+        "CRUDE",
+        "INBORN",
         "ADAPTED",
         "PREEMINENT",
         "ANCIENT",
@@ -352,7 +366,8 @@
       "cd": "5 回合",
       "vis": "全身寄生组织重新排列并膨胀。",
       "denied": "INBORN / ASSIMILATED / HIJACKED / FERAL / NEXUS。",
-      "minStage": 1
+      "minStage": 1,
+      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。"
     },
     {
       "id": "adaptiverebuild",
@@ -361,6 +376,8 @@
       "cat": "B. 适应系",
       "source": "Adaptation system 的修复面向",
       "tiers": [
+        "CRUDE",
+        "INBORN",
         "ADAPTED",
         "PREEMINENT",
         "ANCIENT"
@@ -375,7 +392,8 @@
       "cd": "3 回合",
       "vis": "伤口被快速生长的寄生组织填满。",
       "denied": "INBORN / CRUDE / PRIMITIVE。",
-      "minStage": 1
+      "minStage": 1,
+      "speciesGate": "只有 supportsAdaptation == true 的生物可以学习（依据：实体类是否覆盖 supportsDamageAdaptation() 并返回 true）。校验器强制此规则。"
     },
     {
       "id": "laceration",
@@ -464,9 +482,10 @@
       "source": "SRP 追猎行为 + bleed",
       "tiers": [
         "INBORN",
-        "FERAL",
+        "CRUDE",
         "PRIMITIVE",
         "ADAPTED",
+        "FERAL",
         "PURE"
       ],
       "type": "恶",
@@ -479,7 +498,8 @@
       "cd": "无",
       "vis": "残影扑击，落点留下血痕。",
       "denied": "NEXUS / ANCIENT / DETERRENT。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：原本只列 INBORN 与更高阶，漏了夹在中间的 CRUDE。CRUDE 处于 INBORN 之上，不可能反而失去这个基础追击招式。"
     },
     {
       "id": "corrosivebite",
@@ -1699,5 +1719,5 @@
       "minStage": 1
     }
   ],
-  "permissionModel": "每个技能有三重约束：tiers（哪些 Tier 可学）、minStage（最低形态阶段：1 基础/2 中间/3 最终/4 巢穴 IV）、denied（明确排除者）。stage 由 relationships.json 中已被证明的成长链推导。"
+  "permissionModel": "每个技能有三重约束：tiers（哪些 Tier 可学）、minStage（最低形态阶段：1 基础/2 中间/3 最终/4 巢穴 IV）、denied（明确排除者）。stage 由 relationships.json 中已被证明的成长链推导。 另外，B. 适应系的全部技能受 speciesGate 约束：只有源码中 supportsDamageAdaptation() 返回 true 的生物可学——这是 Species Restriction 的机器化实现。"
 }

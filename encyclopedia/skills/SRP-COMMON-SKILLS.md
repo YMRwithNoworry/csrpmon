@@ -6,7 +6,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 ## Permission model
 
-每个技能有三重约束：tiers（哪些 Tier 可学）、minStage（最低形态阶段：1 基础/2 中间/3 最终/4 巢穴 IV）、denied（明确排除者）。stage 由 relationships.json 中已被证明的成长链推导。
+每个技能有三重约束：tiers（哪些 Tier 可学）、minStage（最低形态阶段：1 基础/2 中间/3 最终/4 巢穴 IV）、denied（明确排除者）。stage 由 relationships.json 中已被证明的成长链推导。 另外，B. 适应系的全部技能受 speciesGate 约束：只有源码中 supportsDamageAdaptation() 返回 true 的生物可学——这是 Species Restriction 的机器化实现。
 
 | Axis | Meaning |
 |---|---|
@@ -156,7 +156,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `adaptivelearning`
 - **来源机制**: Adaptation system（Primitive→Adapted 的针对性进化）
-- **适用 Tier**: PRIMITIVE, ADAPTED, PURE, PREEMINENT, ANCIENT
+- **适用 Tier**: CRUDE, INBORN, PRIMITIVE, ADAPTED, PURE, PREEMINENT, ANCIENT
 - **属性 / 类别**: 超能 / 变化
 - **威力 / 命中 / PP**: - / 必中 / 20
 - **效果**: 记录本场战斗中最后一次受到攻击的属性。之后受到同属性攻击时伤害减少 20%。只保留最新记录的属性。
@@ -169,7 +169,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `damageanalysis`
 - **来源机制**: Adaptation system
-- **适用 Tier**: PRIMITIVE, ADAPTED, PURE, PREEMINENT
+- **适用 Tier**: CRUDE, INBORN, PRIMITIVE, ADAPTED, PURE, PREEMINENT
 - **属性 / 类别**: 超能 / 变化
 - **威力 / 命中 / PP**: - / 必中 / 15
 - **效果**: 查看对手的招式表与最高威力招式，并使自己在下一回合受到的第一次攻击伤害减少 30%。
@@ -182,7 +182,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `rapidadaptation`
 - **来源机制**: Adaptation system 的加速版本（Adapted 相较 Primitive 的强化）
-- **适用 Tier**: ADAPTED, PREEMINENT, ANCIENT
+- **适用 Tier**: CRUDE, INBORN, ADAPTED, PREEMINENT, ANCIENT
 - **属性 / 类别**: 超能 / 变化
 - **威力 / 命中 / PP**: - / 必中 / 10
 - **效果**: 立即获得"适应学习"的一次记录，且本回合受到的伤害减少 25%。Adapted 系使用时可同时保留两条记录。
@@ -195,7 +195,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `resistancelog`
 - **来源机制**: Adaptation system
-- **适用 Tier**: ADAPTED, PURE, PREEMINENT, ANCIENT
+- **适用 Tier**: CRUDE, INBORN, ADAPTED, PURE, PREEMINENT, ANCIENT
 - **属性 / 类别**: 钢 / 变化
 - **威力 / 命中 / PP**: - / 必中 / 10
 - **效果**: 把已记录的属性和自身防御绑定：只要记录存在，自身防御 +1 阶段，且受到该属性的伤害再减少 10%。
@@ -208,7 +208,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `combatevolution`
 - **来源机制**: Adaptation system 的战场即时进化
-- **适用 Tier**: ADAPTED, PREEMINENT, ANCIENT, DERIVED
+- **适用 Tier**: CRUDE, INBORN, ADAPTED, PREEMINENT, ANCIENT, DERIVED
 - **属性 / 类别**: 超能 / 变化
 - **威力 / 命中 / PP**: - / 必中 / 5
 - **效果**: 消耗已记录的所有适应条目，每消耗一条提升攻击与特攻各 1 阶段。无记录时该招式失败。
@@ -221,7 +221,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `adaptiverebuild`
 - **来源机制**: Adaptation system 的修复面向
-- **适用 Tier**: ADAPTED, PREEMINENT, ANCIENT
+- **适用 Tier**: CRUDE, INBORN, ADAPTED, PREEMINENT, ANCIENT
 - **属性 / 类别**: 超能 / 变化
 - **威力 / 命中 / PP**: - / 必中 / 10
 - **效果**: 恢复最大 HP 的 25%，并清除自身所有能力下降。若已记录适应属性，改为恢复 35%。
@@ -276,7 +276,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `rendingpursuit`
 - **来源机制**: SRP 追猎行为 + bleed
-- **适用 Tier**: INBORN, FERAL, PRIMITIVE, ADAPTED, PURE
+- **适用 Tier**: INBORN, CRUDE, PRIMITIVE, ADAPTED, FERAL, PURE
 - **属性 / 类别**: 恶 / 物理
 - **威力 / 命中 / PP**: 50 / 100 / 20
 - **效果**: 先制 +1。若目标身上有流血层数，威力提升为 50×(1+层数×0.5)；目标替换下场时该招式在入场者身上立即再结算一次流血伤害。
@@ -284,6 +284,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 无
 - **视觉表现**: 残影扑击，落点留下血痕。
 - **不能学习者**: NEXUS / ANCIENT / DETERRENT。
+- **矩阵修正记录**: 矩阵修正：原本只列 INBORN 与更高阶，漏了夹在中间的 CRUDE。CRUDE 处于 INBORN 之上，不可能反而失去这个基础追击招式。
 
 ## D. 腐蚀系 (5)
 
@@ -882,7 +883,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `vomit`
 - **来源机制**: mob effect `vomit`
-- **适用 Tier**: ASSIMILATED, FERAL, CRUDE, PRIMITIVE, ADAPTED, PREEMINENT
+- **适用 Tier**: INBORN, ASSIMILATED, FERAL, CRUDE, PRIMITIVE, ADAPTED, PREEMINENT
 - **属性 / 类别**: 毒 / 特殊
 - **威力 / 命中 / PP**: 60 / 100 / 10
 - **效果**: 吐出体内生物质：造成伤害并使目标中毒；若使用者身上有感染层数，每层使威力 +15 并消耗该层。
@@ -890,6 +891,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 2 回合
 - **视觉表现**: 口部喷出黑色半固态物质。
 - **不能学习者**: NEXUS / ANCIENT / DERIVED。
+- **矩阵修正记录**: 载虫的 spawnLingeringCloud() 就是吐出体内生物质形成毒云，与呕吐同源，因此放开 INBORN。
 
 ### 感官强化 / Heightened Senses
 
