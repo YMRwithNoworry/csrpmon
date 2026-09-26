@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 48 / 129**
+**Designed: 51 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -13,7 +13,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | CRUDE | 11 | 11 |
 | PRIMITIVE | 12 | 12 |
 | ADAPTED | 12 | 12 |
-| ASSIMILATED | 3 | 13 |
+| ASSIMILATED | 6 | 13 |
 | WALKING_HEAD | 0 | 10 |
 | ASSIMARA | 0 | 6 |
 | HIJACKED | 0 | 3 |
@@ -96,11 +96,11 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 1 | `csrp:sim_adventurer` | 被同化的冒险者 / Assimilated Adventurer | - | pending |
+| 1 | `csrp:sim_adventurer` | 被同化的冒险者 / Assimilated Adventurer | - | [designed](sim_adventurer.md) |
 | 1 | `csrp:sim_bear` | 被同化的熊 / Assimilated Bear | - | pending |
 | 1 | `csrp:sim_bigspider` | 被同化的大蜘蛛 / Assimilated Big Spider | - | pending |
 | 1 | `csrp:sim_cow` | 被同化的牛 / Assimilated Cow | - | [designed](sim_cow.md) |
-| 1 | `csrp:sim_dragone` | 被同化的末影龙 / Assimilated Ender Dragon | - | pending |
+| 1 | `csrp:sim_dragone` | 被同化的末影龙 / Assimilated Ender Dragon | - | [designed](sim_dragone.md) |
 | 1 | `csrp:sim_enderman` | 被同化的末影人 / Assimilated Enderman | - | [designed](sim_enderman.md) |
 | 1 | `csrp:sim_horse` | 被同化的马 / Assimilated Horse | - | pending |
 | 1 | `csrp:sim_human` | 被同化的人类 / Assimilated Human | - | pending |
@@ -108,7 +108,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | 1 | `csrp:sim_sheep` | 被同化的羊 / Assimilated Sheep | - | pending |
 | 1 | `csrp:sim_squid` | 被同化的鱿鱼 / Assimilated Squid | - | [designed](sim_squid.md) |
 | 1 | `csrp:sim_villager` | 被同化的村民 / Assimilated Villager | - | pending |
-| 1 | `csrp:sim_wolf` | 被同化的狼 / Assimilated Wolf | - | pending |
+| 1 | `csrp:sim_wolf` | 被同化的狼 / Assimilated Wolf | - | [designed](sim_wolf.md) |
 
 ## WALKING_HEAD (10)
 
