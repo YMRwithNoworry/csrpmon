@@ -60,6 +60,16 @@ for(const kind of Object.keys(rels.counts)){
   L.push('');
 }
 L.push('## Conflicts and open questions');
+L.push('### Primitive/Adapted pairs the code refuses to link');
+L.push('');
+L.push('Three pairs look like growth pairs by naming but are **explicitly excluded** by');
+L.push('`ParasiteTransformation.evolutionType()`: pri_burrower, pri_devourer and pri_tozoon all');
+L.push('return null instead of an adapted form, and `devolutionType()` excludes their adapted');
+L.push('counterparts just as explicitly. Both entities exist and are designed, but the relationship');
+L.push('between them is **not asserted** - see conflict-burrower-devourer-tozoon.md.');
+L.push('');
+L.push('The other nine pri_/ada_ pairs do transform, and their edges are recorded as proven.');
+L.push('');
 L.push('');
 for(const x of c.filter(y=>y.tierConflict)){
   L.push('### '+x.sourceId+' ('+(x.nameEn||'unnamed')+')');

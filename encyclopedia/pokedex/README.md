@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 29 / 129**
+**Designed: 33 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -11,8 +11,8 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 |---|---|---|
 | INBORN | 10 | 10 |
 | CRUDE | 11 | 11 |
-| PRIMITIVE | 4 | 12 |
-| ADAPTED | 4 | 12 |
+| PRIMITIVE | 6 | 12 |
+| ADAPTED | 6 | 12 |
 | ASSIMILATED | 0 | 13 |
 | WALKING_HEAD | 0 | 10 |
 | ASSIMARA | 0 | 6 |
@@ -62,10 +62,10 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 2 | `csrp:pri_arachnida` | 原始蛛形兽 / Primitive Arachnida | - | pending |
+| 2 | `csrp:pri_arachnida` | 原始蛛形兽 / Primitive Arachnida | - | [designed](pri_arachnida.md) |
 | 2 | `csrp:pri_bolster` | 原始协增兽 / Primitive Bolster | - | pending |
 | 2 | `csrp:pri_burrower` | 原始掘地兽 / Primitive Burrower | - | pending |
-| 2 | `csrp:pri_devourer` | 原始吞噬兽 / Primitive Devourer | - | pending |
+| 2 | `csrp:pri_devourer` | 原始吞噬兽 / Primitive Devourer | - | [designed](pri_devourer.md) |
 | 2 | `csrp:pri_longarms` | 原始长臂兽 / Primitive Longarms | - | [designed](pri_longarms.md) |
 | 2 | `csrp:pri_manducater` | 原始咀骨兽 / Primitive Manducater | - | [designed](pri_manducater.md) |
 | 2 | `csrp:pri_reeker` | 原始毒腥兽 / Primitive Reeker | - | [designed](pri_reeker.md) |
@@ -79,10 +79,10 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 3 | `csrp:ada_arachnida` | 适应蛛形兽 / Adapted Arachnida | - | pending |
+| 3 | `csrp:ada_arachnida` | 适应蛛形兽 / Adapted Arachnida | - | [designed](ada_arachnida.md) |
 | 3 | `csrp:ada_bolster` | 适应协增兽 / Adapted Bolster | - | pending |
 | 1 | `csrp:ada_burrower` | 适应掘地兽 / Adapted Burrower | - | pending |
-| 1 | `csrp:ada_devourer` | 适应吞噬兽 / Adapted Devourer | - | pending |
+| 1 | `csrp:ada_devourer` | 适应吞噬兽 / Adapted Devourer | - | [designed](ada_devourer.md) |
 | 3 | `csrp:ada_longarms` | 适应长臂兽 / Adapted Longarms | - | [designed](ada_longarms.md) |
 | 3 | `csrp:ada_manducater` | 适应咀骨兽 / Adapted Manducater | - | [designed](ada_manducater.md) |
 | 3 | `csrp:ada_reeker` | 适应毒腥兽 / Adapted Reeker | - | [designed](ada_reeker.md) |

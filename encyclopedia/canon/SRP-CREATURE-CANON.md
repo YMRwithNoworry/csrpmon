@@ -336,6 +336,16 @@ Parsed out of `ParasiteTransformation.java`, which is the mod's own evolve/devol
 - `csrp:incompleteform_small` -> `csrp:incompleteform_medium`
 
 ## Conflicts and open questions
+### Primitive/Adapted pairs the code refuses to link
+
+Three pairs look like growth pairs by naming but are **explicitly excluded** by
+`ParasiteTransformation.evolutionType()`: pri_burrower, pri_devourer and pri_tozoon all
+return null instead of an adapted form, and `devolutionType()` excludes their adapted
+counterparts just as explicitly. Both entities exist and are designed, but the relationship
+between them is **not asserted** - see conflict-burrower-devourer-tozoon.md.
+
+The other nine pri_/ada_ pairs do transform, and their edges are recorded as proven.
+
 
 ### csrp:dispatcherten (Dispatcher Tentacle)
 
