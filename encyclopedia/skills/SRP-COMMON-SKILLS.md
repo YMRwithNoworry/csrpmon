@@ -828,7 +828,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `parasiticblink`
 - **来源机制**: Assimilated / Feral Enderman 的传送行为
-- **适用 Tier**: ASSIMILATED, WALKING_HEAD, FERAL, PRIMITIVE, ADAPTED, NEXUS
+- **适用 Tier**: ASSIMARA, ASSIMILATED, WALKING_HEAD, FERAL, PRIMITIVE, ADAPTED, NEXUS
 - **属性 / 类别**: 超能 / 变化
 - **威力 / 命中 / PP**: - / 必中 / 15
 - **效果**: 先制 +2，与队伍中任意一只宝可梦交换位置（不消耗回合的替换），并清除自身被标记状态。
@@ -836,12 +836,13 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 2 回合
 - **视觉表现**: 紫色粒子中原地消失并出现在出手位置。
 - **不能学习者**: **严格限制**：只有原型具备 Enderman 传送行为的实体可学；INBORN / CRUDE / PURE / ANCIENT 等一律不学。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMARA。掠夺化末影人（mar_enderman）的 TELEPORT_COOLDOWN_TICKS = 20 是它唯一的移动手段（基础速度仅 0.1496），排除传送系技能等于取消它的存在。
 
 ### 猎杀传送 / Hunter Teleport
 
 - **ID**: `hunterteleport`
 - **来源机制**: Feral Enderman 的传送到目标背后
-- **适用 Tier**: ASSIMILATED, FERAL, ADAPTED, PREEMINENT
+- **适用 Tier**: ASSIMARA, ASSIMILATED, FERAL, ADAPTED, PREEMINENT
 - **属性 / 类别**: 超能 / 物理
 - **威力 / 命中 / PP**: 75 / 100 / 10
 - **效果**: 先制 +1；若目标带有猎物标记，本招必定命中且威力 +30%。
@@ -849,7 +850,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 2 回合
 - **视觉表现**: 使用者瞬间出现在目标身后并挥击。
 - **不能学习者**: 不具备传送原型的实体一律不学。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED。同化末影人（sim_enderman）本身就是以传送为核心的宿主，类注释写明它 teleports itself and idle parasite allies；排除它反而不合理。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED。同化末影人（sim_enderman）本身就是以传送为核心的宿主，类注释写明它 teleports itself and idle parasite allies；排除它反而不合理。 矩阵修正：加入 ASSIMARA。掠夺化末影人（mar_enderman）的 TELEPORT_COOLDOWN_TICKS = 20 是它唯一的移动手段（基础速度仅 0.1496），排除传送系技能等于取消它的存在。
 
 ## Q. 场地系 (2)
 

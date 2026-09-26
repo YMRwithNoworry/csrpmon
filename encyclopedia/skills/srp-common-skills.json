@@ -1629,6 +1629,7 @@
       "cat": "P. 空间系",
       "source": "Assimilated / Feral Enderman 的传送行为",
       "tiers": [
+        "ASSIMARA",
         "ASSIMILATED",
         "WALKING_HEAD",
         "FERAL",
@@ -1646,7 +1647,8 @@
       "cd": "2 回合",
       "vis": "紫色粒子中原地消失并出现在出手位置。",
       "denied": "**严格限制**：只有原型具备 Enderman 传送行为的实体可学；INBORN / CRUDE / PURE / ANCIENT 等一律不学。",
-      "minStage": 1
+      "minStage": 1,
+      "matrixNote": "矩阵修正：加入 ASSIMARA。掠夺化末影人（mar_enderman）的 TELEPORT_COOLDOWN_TICKS = 20 是它唯一的移动手段（基础速度仅 0.1496），排除传送系技能等于取消它的存在。"
     },
     {
       "id": "hunterteleport",
@@ -1655,6 +1657,7 @@
       "cat": "P. 空间系",
       "source": "Feral Enderman 的传送到目标背后",
       "tiers": [
+        "ASSIMARA",
         "ASSIMILATED",
         "FERAL",
         "ADAPTED",
@@ -1671,7 +1674,7 @@
       "vis": "使用者瞬间出现在目标身后并挥击。",
       "denied": "不具备传送原型的实体一律不学。",
       "minStage": 1,
-      "matrixNote": "矩阵修正：加入 ASSIMILATED。同化末影人（sim_enderman）本身就是以传送为核心的宿主，类注释写明它 teleports itself and idle parasite allies；排除它反而不合理。"
+      "matrixNote": "矩阵修正：加入 ASSIMILATED。同化末影人（sim_enderman）本身就是以传送为核心的宿主，类注释写明它 teleports itself and idle parasite allies；排除它反而不合理。 矩阵修正：加入 ASSIMARA。掠夺化末影人（mar_enderman）的 TELEPORT_COOLDOWN_TICKS = 20 是它唯一的移动手段（基础速度仅 0.1496），排除传送系技能等于取消它的存在。"
     },
     {
       "id": "infestedground",

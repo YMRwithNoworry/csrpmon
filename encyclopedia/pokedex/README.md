@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 80 / 129**
+**Designed: 86 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -15,7 +15,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | ADAPTED | 12 | 12 |
 | ASSIMILATED | 13 | 13 |
 | WALKING_HEAD | 10 | 10 |
-| ASSIMARA | 0 | 6 |
+| ASSIMARA | 6 | 6 |
 | HIJACKED | 3 | 3 |
 | FERAL | 9 | 9 |
 | NEXUS | 0 | 13 |
@@ -129,12 +129,12 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 1 | `csrp:mar_bear` | 诡化熊 / Marauderized Bear | - | pending |
-| 1 | `csrp:mar_cow` | 诡化牛 / Marauderized Cow | - | pending |
-| 1 | `csrp:mar_enderman` | 诡化末影人 / Marauderized Enderman | - | pending |
-| 1 | `csrp:mar_human` | 诡化人类 / Marauderized Human | - | pending |
-| 1 | `csrp:mar_sheep` | 诡化羊 / Marauderized Sheep | - | pending |
-| 1 | `csrp:mar_villager` | 诡化村民 / Marauderized Villager | - | pending |
+| 1 | `csrp:mar_bear` | 诡化熊 / Marauderized Bear | - | [designed](mar_bear.md) |
+| 1 | `csrp:mar_cow` | 诡化牛 / Marauderized Cow | - | [designed](mar_cow.md) |
+| 1 | `csrp:mar_enderman` | 诡化末影人 / Marauderized Enderman | - | [designed](mar_enderman.md) |
+| 1 | `csrp:mar_human` | 诡化人类 / Marauderized Human | - | [designed](mar_human.md) |
+| 1 | `csrp:mar_sheep` | 诡化羊 / Marauderized Sheep | - | [designed](mar_sheep.md) |
+| 1 | `csrp:mar_villager` | 诡化村民 / Marauderized Villager | - | [designed](mar_villager.md) |
 
 ## HIJACKED (3)
 

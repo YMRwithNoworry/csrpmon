@@ -1,0 +1,178 @@
+{
+  "id": "mar_bear",
+  "dex": 8091,
+  "zh": "掠夺化熊",
+  "en": "Marauderized Bear",
+  "types": [
+    "虫",
+    "格斗"
+  ],
+  "kind": "拖拽炮击掠夺宝可梦",
+  "height": 1.6,
+  "weight": 196,
+  "stats": [
+    84,
+    92,
+    60,
+    66,
+    50,
+    40
+  ],
+  "statNote": "总和 392。SRP 中 health 38.0 / armor 8.0 / damage 15.0 / knockbackResistance 0.8 / speed 0.25 / **followRange 64**。它的核心是三个写死的齐射常量：**VOLLEY_SHOTS = 7**、**VOLLEY_INTERVAL_TICKS = 20**、**VOLLEY_COOLDOWN_TICKS = 300**。",
+  "core": "“它不冲过来。**它先用七发把你钉住，再把你拖过去。**”",
+  "visual": [
+    [
+      "头部",
+      "熊头保留，额部被寄生组织撑开并露出一组发射腔",
+      "7 连齐射"
+    ],
+    [
+      "眼睛",
+      "两处暗红光点，开火时同步闪烁",
+      "VOLLEY_INTERVAL_TICKS = 20"
+    ],
+    [
+      "背部",
+      "背侧有七组可依次开合的骨刺发射腔",
+      "VOLLEY_SHOTS = 7"
+    ],
+    [
+      "前掌",
+      "巨大的熊掌保留，用于拖拽",
+      "推拽攻击"
+    ],
+    [
+      "躯干",
+      "体型未明显膨胀，但肩部异常加厚",
+      "armor 8.0"
+    ],
+    [
+      "颜色",
+      "深红寄生组织 + 残留的棕熊毛",
+      "SRP 模型配色"
+    ]
+  ],
+  "pose": "四足站立、前掌抓地；齐射时背侧发射腔按固定间隔依次张开，最后一发后立刻向前扑。",
+  "preserved": [
+    "**7 连齐射**——VOLLEY_SHOTS = 7、VOLLEY_INTERVAL_TICKS = 20",
+    "**300 tick 长冷却**——VOLLEY_COOLDOWN_TICKS = 300，说明这是它的开团手段而不是常规输出",
+    "**拖拽控制**——TetheredMarauderizedEntity 类注释：Shared capture state for the legacy Marauderized bear and enderman pull attacks",
+    "**最远的感知范围**——followRange 64",
+    "**15% 流血几率**——MarauderizedParasiteEntity 的共享常量 BLEED_CHANCE = 0.15F，所有掠夺化体的攻击都有概率造成流血",
+    "**攻击动画时长 12 tick**——ATTACK_ANIMATION_TICKS = 12，与其他层级的攻击节奏不同",
+    "**来源**——掠夺化体是掠夺者（Marauder，PURE 层级）把生物改造后的产物"
+  ],
+  "pokemonized": [
+    "**「先齐射再拖拽」是源码里的两段式设计**：TetheredMarauderizedEntity 的注释明确把 bear 与 enderman 放在一起讲 pull attacks。我把它完整保留为「远程压制 → 拉近距离」的连段",
+    "**300 tick 的冷却很长**，说明齐射是开团技能而不是常规输出。我据此把它做成「每场只能用有限次数的高压开局」",
+    "它是掠夺化体里 followRange 最远的之一（64），所以它的定位是**先发现你、先钉住你**"
+  ],
+  "ability": {
+    "name": "拖拽索（`tetherpull`）",
+    "effect": "自身使用齐射类招式后，若目标仍在我方场上，下一回合的接触类招式**必定命中且先制 +1**（对应拉近后的近身扑击）。"
+  },
+  "hidden": {
+    "name": "七连装填（`sevenround`）",
+    "effect": "自身使用齐射类招式时**连续攻击 7 次**（每次威力较低）；使用后该招式进入 3 回合冷却。对应 VOLLEY_SHOTS = 7 与 VOLLEY_COOLDOWN_TICKS = 300。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "sevenvolley",
+      "zh": "七连骨刺",
+      "en": "Seven-Round Volley",
+      "cat": "M",
+      "type": "虫",
+      "cls": "特殊",
+      "pow": 22,
+      "acc": 95,
+      "pp": 5,
+      "range": "单体，全场",
+      "effect": "**连续攻击 7 次**（每次威力 22，合计约 154）。使用后本招式**进入 3 回合冷却**。**使用后下一回合自身的接触类招式先制 +1**（拖拽）。",
+      "trigger": "无。",
+      "visual": "背侧七组发射腔按 20 tick 的固定间隔依次张开，连续射出七枚骨刺球，节奏稳定得几乎像机械。",
+      "why": "VOLLEY_SHOTS = 7、VOLLEY_INTERVAL_TICKS = 20、VOLLEY_COOLDOWN_TICKS = 300 三个常量的完整翻译。**它是全族唯一「多段齐射 + 长冷却 + 后续拖拽」三合一的招式**。"
+    }
+  ],
+  "common": [
+    {
+      "id": "parasiticcontact",
+      "why": "掠夺化体的接触注染"
+    },
+    {
+      "id": "laceration",
+      "why": "BLEED_CHANCE = 0.15F 的流血效果"
+    },
+    {
+      "id": "rendingpursuit",
+      "why": "拖拽后的近身追击"
+    },
+    {
+      "id": "markedprey",
+      "why": "齐射前必须锁定目标"
+    },
+    {
+      "id": "infectionorb",
+      "why": "骨刺球属于球体类投射物"
+    },
+    {
+      "id": "motorlag",
+      "why": "七连齐射的连续冲击"
+    },
+    {
+      "id": "corrosionmark",
+      "why": "骨刺球持续磨损护甲"
+    }
+  ],
+  "normal": [
+    "飞叶快刀",
+    "劈开",
+    "咬碎",
+    "剑舞",
+    "守住",
+    "蛮力"
+  ],
+  "loop": [
+    [
+      "起手",
+      "七连骨刺",
+      "用 7 段齐射完成高压开局"
+    ],
+    [
+      "核心",
+      "劈开 / 咬碎",
+      "在拖拽命中后近身输出"
+    ],
+    [
+      "强化",
+      "剑舞 / 七连装填（特性）",
+      "把齐射与近战的衔接拉开"
+    ],
+    [
+      "控制",
+      "动作迟滞 / 腐蚀标记",
+      "削弱目标行动"
+    ],
+    [
+      "收尾",
+      "蛮力",
+      "在目标被拉到身边后收场"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "感染区各处——掠夺者改造出的产物，没有固定领地",
+    "食物": "被拖过来的猎物",
+    "猎物": "远距离目标（followRange 64）",
+    "天敌": "能在齐射冷却期内贴近它的单位",
+    "行为": "远距离齐射—拖拽—近身结束。**不打持久战**",
+    "群体": "通常单独出现",
+    "巢穴": "掠夺者的**改造产物**，不隶属于巢穴",
+    "繁殖": "不繁殖，由掠夺者改造生物而成",
+    "与其他 SRP 宝可梦关系": "与掠夺化末影人共享 TetheredMarauderizedEntity 的拖拽机制（源码注释把两者并列）"
+  },
+  "evolution": "来源：被掠夺者改造的熊\n  ↓\n当前：掠夺化熊（csrp:mar_bear）\n  ↓\n【无直接宝可梦进化】\n\n证据：MarauderizedBearEntity 的 createMarauderizedAttributes(38.0D, 8.0D, 15.0D, 0.8D, 0.25D, 64.0D)\n与三个齐射常量；父类 TetheredMarauderizedEntity 的拖拽注释。",
+  "dex1": "它不靠近你，它先打你七次——然后你发现自己已经站在它面前了。",
+  "dex2": "观察记录：齐射 7 发，间隔 20 tick，全部射完后有 300 tick 冷却。\n齐射结束后样本立刻前扑，命中率显著高于平时。\n ——结论：**七发不是伤害，是绳子**。",
+  "gameplay": "输出（7 段齐射）、控制（拖拽 + 先制）、扩散（感染）——ASSIMARA 层的远程开团型",
+  "similarity": "与掠夺化末影人的区别：末影人靠**传送**直接贴脸，熊靠**齐射 + 拖拽**把你拉过来。同样是 pull attacks，一个用空间，一个用骨刺。"
+}
