@@ -28,7 +28,7 @@ mod**, not by recalling it:
 | 3 | SRP Common Skill Database (40-70) | **done** - 66 skills, [skills/SRP-COMMON-SKILLS.md](skills/SRP-COMMON-SKILLS.md) |
 | 4 | Tier / stage / ecology permission matrix | **done** - tiers + minStage + denied, enforced by tools/build_pokedex.cjs |
 | 5 | Real relationships between creatures | **done** - [canon/relationships.json](canon/relationships.json), **52 relations parsed out of ParasiteTransformation.java**, the mod own evolve/devolve code |
-| 6 | Per-creature Pokemon designs | **in progress - 51 / 129** ([pokedex/](pokedex/README.md)); the whole INBORN tier is done |
+| 6 | Per-creature Pokemon designs | **in progress - 58 / 129** ([pokedex/](pokedex/README.md)); the whole INBORN tier is done |
 | 7 | Per-creature skill tables | covered by the generated entries: every design lists its signature move and 5-7 common skills with a reason each |
 | 8-10 | Canon / similarity / gameplay review, final encyclopedia | not started |
 
