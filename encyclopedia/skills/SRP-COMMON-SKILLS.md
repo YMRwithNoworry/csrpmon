@@ -91,7 +91,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 
 - **ID**: `infectionpulse`
 - **来源机制**: Call Of The Hive 的范围脉冲
-- **适用 Tier**: ASSIMILATED, PRIMITIVE, ADAPTED, PURE, PREEMINENT, NEXUS, ANCIENT
+- **适用 Tier**: WALKING_HEAD, ASSIMILATED, PRIMITIVE, ADAPTED, PURE, PREEMINENT, NEXUS, ANCIENT
 - **属性 / 类别**: 毒 / 特殊
 - **威力 / 命中 / PP**: 70 / 100 / 15
 - **效果**: 对场上所有其他宝可梦造成伤害；对已带【感染】的目标额外造成 1 层。
@@ -99,7 +99,7 @@ the entity behaviours, and the infection/adaptation systems. Nothing here invent
 - **冷却机制**: 2 回合
 - **视觉表现**: 以使用者为圆心的黑色脉冲环。
 - **不能学习者**: INBORN / ASSIMILATED / HIJACKED。
-- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED。同化末影龙（sim_dragone）本身就是范围感染源（260 血量 + 龙息铺感染），排除它不合理。
+- **矩阵修正记录**: 矩阵修正：加入 ASSIMILATED。同化末影龙（sim_dragone）本身就是范围感染源（260 血量 + 龙息铺感染），排除它不合理。 矩阵修正：加入 WALKING_HEAD。同化末影龙头（sim_dragonehead）保留完整龙息且生命 78.0，本身就是范围感染源。
 
 ### 寄生孢子 / Parasitic Spores
 

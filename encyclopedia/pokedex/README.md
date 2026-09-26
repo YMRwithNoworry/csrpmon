@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 64 / 129**
+**Designed: 65 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -14,7 +14,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | PRIMITIVE | 12 | 12 |
 | ADAPTED | 12 | 12 |
 | ASSIMILATED | 13 | 13 |
-| WALKING_HEAD | 6 | 10 |
+| WALKING_HEAD | 7 | 10 |
 | ASSIMARA | 0 | 6 |
 | HIJACKED | 0 | 3 |
 | FERAL | 0 | 9 |
@@ -123,7 +123,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | 1 | `csrp:sim_villagerhead` | 行走村民头颅 / Walking Villager Head | - | pending |
 | 1 | `csrp:sim_wolfhead` | 行走狼头颅 / Walking Wolf Head | - | [designed](sim_wolfhead.md) |
 | 1 | `csrp:sim_adventurerhead` | 行走冒险者头颅 / Walking Adventurer Head | - | [designed](sim_adventurerhead.md) |
-| 1 | `csrp:sim_dragonehead` | 行走龙首 / Walking Ender Dragon Head | - | pending |
+| 1 | `csrp:sim_dragonehead` | 行走龙首 / Walking Ender Dragon Head | - | [designed](sim_dragonehead.md) |
 
 ## ASSIMARA (6)
 
