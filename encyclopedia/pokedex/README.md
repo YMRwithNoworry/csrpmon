@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 37 / 129**
+**Designed: 40 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -11,8 +11,8 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 |---|---|---|
 | INBORN | 10 | 10 |
 | CRUDE | 11 | 11 |
-| PRIMITIVE | 8 | 12 |
-| ADAPTED | 8 | 12 |
+| PRIMITIVE | 10 | 12 |
+| ADAPTED | 9 | 12 |
 | ASSIMILATED | 0 | 13 |
 | WALKING_HEAD | 0 | 10 |
 | ASSIMARA | 0 | 6 |
@@ -64,13 +64,13 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 |---|---|---|---|---|
 | 2 | `csrp:pri_arachnida` | 原始蛛形兽 / Primitive Arachnida | - | [designed](pri_arachnida.md) |
 | 2 | `csrp:pri_bolster` | 原始协增兽 / Primitive Bolster | - | [designed](pri_bolster.md) |
-| 2 | `csrp:pri_burrower` | 原始掘地兽 / Primitive Burrower | - | pending |
+| 2 | `csrp:pri_burrower` | 原始掘地兽 / Primitive Burrower | - | [designed](pri_burrower.md) |
 | 2 | `csrp:pri_devourer` | 原始吞噬兽 / Primitive Devourer | - | [designed](pri_devourer.md) |
 | 2 | `csrp:pri_longarms` | 原始长臂兽 / Primitive Longarms | - | [designed](pri_longarms.md) |
 | 2 | `csrp:pri_manducater` | 原始咀骨兽 / Primitive Manducater | - | [designed](pri_manducater.md) |
 | 2 | `csrp:pri_reeker` | 原始毒腥兽 / Primitive Reeker | - | [designed](pri_reeker.md) |
 | 2 | `csrp:pri_summoner` | 原始召唤兽 / Primitive Summoner | - | [designed](pri_summoner.md) |
-| 2 | `csrp:pri_tozoon` | 原始潜地兽 / Primitive Tozoon | - | pending |
+| 2 | `csrp:pri_tozoon` | 原始潜地兽 / Primitive Tozoon | - | [designed](pri_tozoon.md) |
 | 2 | `csrp:pri_vermin` | 原始孕虫兽 / Primitive Vermin | - | pending |
 | 2 | `csrp:pri_viscera` | 原始脏腑兽 / Primitive Viscera | EntityGim | pending |
 | 2 | `csrp:pri_yelloweye` | 原始黄眸兽 / Primitive Yelloweye | - | [designed](pri_yelloweye.md) |
@@ -81,7 +81,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 |---|---|---|---|---|
 | 3 | `csrp:ada_arachnida` | 适应蛛形兽 / Adapted Arachnida | - | [designed](ada_arachnida.md) |
 | 3 | `csrp:ada_bolster` | 适应协增兽 / Adapted Bolster | - | [designed](ada_bolster.md) |
-| 1 | `csrp:ada_burrower` | 适应掘地兽 / Adapted Burrower | - | pending |
+| 1 | `csrp:ada_burrower` | 适应掘地兽 / Adapted Burrower | - | [designed](ada_burrower.md) |
 | 1 | `csrp:ada_devourer` | 适应吞噬兽 / Adapted Devourer | - | [designed](ada_devourer.md) |
 | 3 | `csrp:ada_longarms` | 适应长臂兽 / Adapted Longarms | - | [designed](ada_longarms.md) |
 | 3 | `csrp:ada_manducater` | 适应咀骨兽 / Adapted Manducater | - | [designed](ada_manducater.md) |
