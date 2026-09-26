@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 33 / 129**
+**Designed: 35 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -11,8 +11,8 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 |---|---|---|
 | INBORN | 10 | 10 |
 | CRUDE | 11 | 11 |
-| PRIMITIVE | 6 | 12 |
-| ADAPTED | 6 | 12 |
+| PRIMITIVE | 7 | 12 |
+| ADAPTED | 7 | 12 |
 | ASSIMILATED | 0 | 13 |
 | WALKING_HEAD | 0 | 10 |
 | ASSIMARA | 0 | 6 |
@@ -73,7 +73,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | 2 | `csrp:pri_tozoon` | 原始潜地兽 / Primitive Tozoon | - | pending |
 | 2 | `csrp:pri_vermin` | 原始孕虫兽 / Primitive Vermin | - | pending |
 | 2 | `csrp:pri_viscera` | 原始脏腑兽 / Primitive Viscera | EntityGim | pending |
-| 2 | `csrp:pri_yelloweye` | 原始黄眸兽 / Primitive Yelloweye | - | pending |
+| 2 | `csrp:pri_yelloweye` | 原始黄眸兽 / Primitive Yelloweye | - | [designed](pri_yelloweye.md) |
 
 ## ADAPTED (12)
 
@@ -89,7 +89,7 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | 3 | `csrp:ada_summoner` | 适应召唤兽 / Adapted Summoner | - | [designed](ada_summoner.md) |
 | 1 | `csrp:ada_tozoon` | 适应潜地兽 / Adapted Tozoon | - | pending |
 | 3 | `csrp:ada_viscera` | 适应脏腑兽 / Adapted Viscera | - | pending |
-| 3 | `csrp:ada_yelloweye` | 适应黄眸兽 / Adapted Yelloweye | - | pending |
+| 3 | `csrp:ada_yelloweye` | 适应黄眸兽 / Adapted Yelloweye | - | [designed](ada_yelloweye.md) |
 | 3 | `csrp:ada_vermin` | 适应孕虫兽 / Adapted Vermin | - | pending |
 
 ## ASSIMILATED (13)
