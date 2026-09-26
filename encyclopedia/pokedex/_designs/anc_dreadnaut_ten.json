@@ -1,0 +1,176 @@
+{
+  "id": "anc_dreadnaut_ten",
+  "dex": 8132,
+  "zh": "远古恐慑触手",
+  "en": "Ancient Dreadnaut Tendril",
+  "types": [
+    "虫",
+    "地面"
+  ],
+  "kind": "地脉触手宝可梦",
+  "height": 1.6,
+  "weight": 180,
+  "stats": [
+    68,
+    44,
+    72,
+    24,
+    50,
+    20
+  ],
+  "statNote": "总和 278。SRP 中 health 50.0 / armor **3.75** / damage 2.0。类注释原文：*\"Legacy Ancient Dreadnaut ground tendril (EntityOroncoTen)\"*。**它是远古恐慑的独立地面部件**，而不是它的形态之一。",
+  "core": "“本体在天上。**它从地里伸出来**——它们是同一只东西的两端。”",
+  "visual": [
+    [
+      "头部",
+      "没有头部——顶端是一组向四周张开的倒钩",
+      "地面触手形态"
+    ],
+    [
+      "眼睛",
+      "沿触手全长分布的点状感光组织",
+      "无集中视觉"
+    ],
+    [
+      "躯干",
+      "**从地面垂直伸出的粗壮触手**，下段埋入土中",
+      "地面固定"
+    ],
+    [
+      "表面",
+      "表面覆有环状硬化纹，逐节收窄",
+      "armor 3.75"
+    ],
+    [
+      "尖端",
+      "末端是可开合的抓握结构",
+      "damage 2.0"
+    ],
+    [
+      "颜色",
+      "暗红寄生组织 + 深褐环状硬化纹",
+      "SRP 模型配色"
+    ]
+  ],
+  "pose": "从地面垂直伸出、缓慢摆动；攻击时整根向下抽打或横向扫击。",
+  "preserved": [
+    "**独立实体**——类注释明确：*\"Legacy Ancient Dreadnaut ground tendril (EntityOroncoTen)\"*",
+    "**极低护甲**——armor **3.75**，是 ANCIENT 层最低",
+    "**低攻击力**——damage 2.0",
+    "**地面定位**——与滞空的本体形成明确分工",
+    "**实现类为 Primitive**——源码中它 `extends PrimitiveParasiteEntity`，而非 `AncientParasiteEntity`"
+  ],
+  "pokemonized": [
+    "**它的类注释明确写出了它的身份**：它不是\"小恐慑\"，而是恐慑**伸到地面的那一根触手**。所以我把它设计成**独立的地面部件**而非本体的弱势版本",
+    "**它 `extends PrimitiveParasiteEntity`**，而不是 ANCIENT 的 `AncientParasiteEntity`——**实现层级低于它的 tier**。这一点我如实记录",
+    "**armor 只有 3.75、damage 只有 2.0**：它几乎不能造成伤害，作用是**把目标留在地面**，好让本体的齐射打中"
+  ],
+  "ability": {
+    "name": "地脉锚定（groundanchor）",
+    "effect": "自身在场时，**对手无法使用浮空或飞行类招式逃离**（对应它从地面伸出、把目标留在地面）。自身免疫强制位移。"
+  },
+  "hidden": {
+    "name": "本体联动（dreadlink）",
+    "effect": "**我方远古恐慑（`anc_dreadnaut`）在场时**，其齐射段数 +1。对应它是本体地面部件的身份。"
+  },
+  "hiddenNote": null,
+  "signature": [
+    {
+      "moveId": "tendrilsweep",
+      "zh": "地脉横扫",
+      "en": "Tendril Sweep",
+      "cat": "A",
+      "type": "地面",
+      "cls": "物理",
+      "pow": 65,
+      "acc": 100,
+      "pp": 15,
+      "range": "自身周围 1 格",
+      "effect": "对接触范围内所有对手造成伤害。**命中后使目标本回合无法使用浮空或飞行类招式**（对应它把目标锚在地面）。",
+      "trigger": "无。",
+      "visual": "整根触手从地面横向扫出，沿途地表被犁出暗红沟痕，被扫过的目标脚下浮现环状根须。",
+      "why": "*\"ground tendril\"* 与 damage 2.0 的翻译。**它几乎打不出伤害，它的作用是\"别让你上天\"**——好让本体的齐射命中。"
+    }
+  ],
+  "common": [
+    {
+      "id": "parasiticcontact",
+      "why": "ANCIENT 地面部件的职能来源"
+    },
+    {
+      "id": "laceration",
+      "why": "ANCIENT 地面部件的职能来源"
+    },
+    {
+      "id": "infestedground",
+      "why": "ANCIENT 地面部件的职能来源"
+    },
+    {
+      "id": "motorlag",
+      "why": "ANCIENT 地面部件的职能来源"
+    },
+    {
+      "id": "markedprey",
+      "why": "ANCIENT 地面部件的职能来源"
+    },
+    {
+      "id": "hivespread",
+      "why": "ANCIENT 地面部件的职能来源"
+    },
+    {
+      "id": "corrosionmark",
+      "why": "ANCIENT 地面部件的职能来源"
+    }
+  ],
+  "normal": [
+    "缠绕",
+    "绑紧",
+    "扎根",
+    "剧毒",
+    "守住",
+    "分担痛楚"
+  ],
+  "loop": [
+    [
+      "起手",
+      "地脉锚定（特性）",
+      "先把目标留在地面"
+    ],
+    [
+      "核心",
+      "地脉横扫",
+      "横扫并禁止目标升空"
+    ],
+    [
+      "强化",
+      "本体联动（特性）",
+      "配合恐慑提升其齐射段数"
+    ],
+    [
+      "控制",
+      "动作迟滞 / 缠绕",
+      "锁死目标行动"
+    ],
+    [
+      "收尾",
+      "剧毒",
+      "在目标无法脱离时持续消耗"
+    ]
+  ],
+  "ecology": {
+    "生活环境": "远古恐慑下方的地面——它是本体的地面延伸",
+    "食物": "通过相连的根须从本体获取",
+    "猎物": "无。它负责留人，不负责击杀",
+    "天敌": "任何东西。armor 3.75 让它极易被清除",
+    "行为": "从地面伸出并摆动。**从不离开本体所在的区域**",
+    "群体": "通常数根同时出现，环绕在本体下方",
+    "巢穴": "属于 ANCIENT 个体的一部分，不隶属巢穴体系",
+    "繁殖": "不繁殖，由本体延伸产生",
+    "与其他 SRP 宝可梦关系": "**是 `csrp:anc_dreadnaut` 的地面部件**；源码中它与本体是**两个独立注册的实体**"
+  },
+  "evolution": "来源：远古恐慑（`csrp:anc_dreadnaut`）的延伸部件\n  ↓\n当前：远古恐慑触手（`csrp:anc_dreadnaut_ten`）\n  ↓\n【无直接宝可梦进化】\n\n证据：类注释 *\"Legacy Ancient Dreadnaut ground tendril (EntityOroncoTen)\"* 与属性\n`MAX_HEALTH = 50.0D` / `ARMOR = 3.75D` / `ATTACK_DAMAGE = 2.0D`。\n⚠ **实现类为 `PrimitiveParasiteEntity`**，与本体使用的 `AncientParasiteEntity` 不同。",
+  "dex1": "它从地里钻出来。你抬头找那只大的时候，脚已经被缠住了。",
+  "dex2": "观察记录：护甲 3.75、攻击力 2.0，均为 ANCIENT 层最低。\n命中后目标的浮空手段被封锁。\n ——结论：**它不负责打你。它负责让你没法躲**。",
+  "gameplay": "控制（禁止升空 + 缠绕）、扩散（感染）、支援（提升本体齐射）——ANCIENT 层的地面部件",
+  "similarity": "与本体**不是强弱关系而是分工关系**：本体在空中齐射与空投，它在地面留人。**源码把它们注册为两个独立实体**。"
+}

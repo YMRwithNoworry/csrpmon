@@ -3,7 +3,7 @@
 Every entry below is a **real** CSRP entity from the canon database. A creature is only designed
 once its existence and tier are proven; anything unproven stays 【待核实】.
 
-**Designed: 121 / 129**
+**Designed: 127 / 129**
 
 `Stage` is derived from the proven growth chains: 1 = base form, 2 = mid, 3 = final, 4 = nexus stage IV.
 
@@ -22,9 +22,9 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 | DETERRENT | 5 | 5 |
 | PURE | 7 | 7 |
 | PREEMINENT | 8 | 8 |
-| DERIVED | 0 | 2 |
-| ANCIENT | 2 | 4 |
-| ABOMINATION | 0 | 2 |
+| DERIVED | 2 | 2 |
+| ANCIENT | 4 | 4 |
+| ABOMINATION | 2 | 2 |
 | UNTIERED | 0 | 2 |
 
 ## INBORN (10)
@@ -215,8 +215,8 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 1 | `csrp:draconite` | §9邪狱龙 / Draconite | - | pending |
-| 1 | `csrp:kirin` | §9踏虚体 / Kirin | - | pending |
+| 1 | `csrp:draconite` | §9邪狱龙 / Draconite | - | [designed](draconite.md) |
+| 1 | `csrp:kirin` | §9踏虚体 / Kirin | - | [designed](kirin.md) |
 
 ## ANCIENT (4)
 
@@ -224,15 +224,15 @@ once its existence and tier are proven; anything unproven stays 【待核实】.
 |---|---|---|---|---|
 | 1 | `csrp:anc_dreadnaut` | 远古惧魔 / Ancient Dreadnaut | - | [designed](anc_dreadnaut.md) |
 | 1 | `csrp:anc_overlord` | 远古君魔 / Ancient Overlord | - | [designed](anc_overlord.md) |
-| 1 | `csrp:anc_dreadnaut_ten` | 远古惧魔触须 / Ancient Dreadnaut Tendril | EntityOroncoTen | pending |
-| 1 | `csrp:anc_pod` | 空投吊舱 / Ancient Drop Pod | EntityDropPod | pending |
+| 1 | `csrp:anc_dreadnaut_ten` | 远古惧魔触须 / Ancient Dreadnaut Tendril | EntityOroncoTen | [designed](anc_dreadnaut_ten.md) |
+| 1 | `csrp:anc_pod` | 空投吊舱 / Ancient Drop Pod | EntityDropPod | [designed](anc_pod.md) |
 
 ## ABOMINATION (2)
 
 | Stage | Source ID | Name | SRP class | Status |
 |---|---|---|---|---|
-| 1 | `csrp:abo_bodies` | 缀合多体 / Many Bodies | - | pending |
-| 1 | `csrp:abo_head` | 巨型头颅 / Giant Head | - | pending |
+| 1 | `csrp:abo_bodies` | 缀合多体 / Many Bodies | - | [designed](abo_bodies.md) |
+| 1 | `csrp:abo_head` | 巨型头颅 / Giant Head | - | [designed](abo_head.md) |
 
 ## UNTIERED (2)
 
