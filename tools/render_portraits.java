@@ -68,6 +68,7 @@ public class render_portraits {
     }
 
     static class Face {
+        boolean head;
         double[][] p = new double[4][3];    // world-space corners
         double[][] uv = new double[4][2];   // texture pixel coords of the corners
         double[] n = new double[3];         // world-space outward normal
@@ -134,7 +135,7 @@ public class render_portraits {
                 TEXW = img.getWidth(); TEXH = img.getHeight();
                 OOB = 0; SAMPLED = 0; TRANSPARENT = 0; LUM = 0;
                 List<Face> faces = new ArrayList<>();
-                for (Node r : roots) collect(r, IDENT, new double[]{0, 0, 0}, faces, st);
+                for (Node r : roots) collect(r, IDENT, new double[]{0, 0, 0}, faces, st, false);
 
                 if (faces.isEmpty()) {
                     problems.add(species + ": model has no visible faces");
@@ -295,7 +296,8 @@ public class render_portraits {
     }
 
     /** Recursively walks the Tabula tree, accumulating the affine transform. */
-    static void collect(Node n, double[] Ap, double[] tp, List<Face> out, Stats st) {
+    static void collect(Node n, double[] Ap, double[] tp, List<Face> out, Stats st, boolean inHead) {
+        boolean head = inHead || isHeadName(n.name);
         st.nodes++;
         // R = Rx(rx) * Ry(ry) * Rz(rz)   (vanilla: rotationZYX -> Z applied first)
         double cx = Math.cos(Math.toRadians(n.rx)), sx = Math.sin(Math.toRadians(n.rx));
@@ -315,13 +317,13 @@ public class render_portraits {
 
         if (!n.hidden && n.opacity > 0 && n.w > 0 && n.h > 0 && n.d > 0) {
             st.drawn++;
-            emitBox(n, A, t, out, st);
+            emitBox(n, A, t, out, st, head);
         }
-        for (Node c : n.children) collect(c, A, t, out, st);
+        for (Node c : n.children) collect(c, A, t, out, st, head);
     }
 
     /** Minecraft box-UV face table, taken from vanilla ModelPart.Cube (see report). */
-    static void emitBox(Node n, double[] A, double[] t, List<Face> out, Stats st) {
+    static void emitBox(Node n, double[] A, double[] t, List<Face> out, Stats st, boolean head) {
         double x0 = n.ox, y0 = n.oy, z0 = n.oz;
         double x1 = x0 + n.w, y1 = y0 + n.h, z1 = z0 + n.d;
         double u = n.u, v = n.v;
@@ -352,6 +354,7 @@ public class render_portraits {
             double[][] luv = (double[][]) f[2];
             double[] ln = (double[]) f[3];
             Face face = new Face();
+            face.head = head;
             for (int i = 0; i < 4; i++) {
                 double[] w = apply(A, lc[i][0], lc[i][1], lc[i][2]);
                 face.p[i][0] = w[0] + t[0];
@@ -393,13 +396,15 @@ public class render_portraits {
         int W = OUT * SS;
         // view-space + projected corners for every face
         int nf = faces.size();
+        boolean anyHead = false;
+        for (Face f : faces) if (f.head) anyHead = true;
         double[][][] sv = new double[nf][4][2];     // screen (supersampled) x/y
         double[][] dz = new double[nf][4];          // view depth per corner
         double[] min = {1e9, 1e9}, max = {-1e9, -1e9};
         for (int i = 0; i < nf; i++) {
             Face f = faces.get(i);
             for (int k = 0; k < 4; k++) {
-                double[] vp = view(f.p[k][0], f.p[k][1], f.p[k][2]);
+                double[] vp = view(-f.p[k][0], -f.p[k][1], f.p[k][2]);
                 sv[i][k][0] = vp[0];
                 sv[i][k][1] = -vp[1];
                 dz[i][k] = vp[2];
@@ -455,7 +460,63 @@ public class render_portraits {
                 out.setRGB(x, y, (a << 24) | (clamp(r) << 16) | (clamp(g) << 8) | clamp(b));
             }
         }
+        // Zoom to the face: framing the head reads far better than fitting the whole body.
+        // Creatures with no head bone fall back to their upper body.
+        java.util.List<Face> headFaces = new java.util.ArrayList<>();
+        for (Face f : faces) if (f.head) headFaces.add(f);
+        boolean hasHead = !headFaces.isEmpty();
+        int[] focus = null;
+        if (hasHead) {
+            int hn = headFaces.size();
+            double[][][] hsv = new double[hn][4][2];
+            double[][] hdz = new double[hn][4];
+            for (int i = 0; i < hn; i++) {
+                Face hf = headFaces.get(i);
+                for (int k = 0; k < 4; k++) {
+                    double[] vp = view(-hf.p[k][0], -hf.p[k][1], hf.p[k][2]);
+                    hsv[i][k][0] = vp[0];
+                    hsv[i][k][1] = -vp[1];
+                    hdz[i][k] = vp[2];
+                }
+            }
+            int[] hpx = new int[W * W];
+            float[] hpa = new float[W * W];
+            float[] hpz = new float[W * W];
+            focus = raster(headFaces, hsv, hdz, tex, W, cx, cy, scale2, hpx, hpa, hpz);
+        }
+        if (focus == null && bb != null) {
+            focus = new int[]{bb[0], bb[1], bb[2], bb[1] + Math.max(1, (bb[3] - bb[1]) * 55 / 100)};
+        }
+        if (focus != null) {
+            double fs = Math.max(focus[2] - focus[0], focus[3] - focus[1]) / (double) SS;
+            double topH = (focus[3] - focus[1]) / (double) SS;
+            double side = hasHead ? Math.min(OUT, Math.max(fs * 2.0, OUT * 0.36))
+                                  : Math.min(OUT, Math.max(topH * 1.35, OUT * 0.74));
+            int sz = (int) Math.round(side);
+            double fcx = (focus[0] + focus[2]) / 2.0 / SS;
+            double fcy = (focus[1] + focus[3]) / 2.0 / SS;
+            int x0 = (int) Math.round(fcx - sz / 2.0);
+            int y0 = (int) Math.round(fcy - sz / 2.0);
+            x0 = Math.max(0, Math.min(OUT - sz, x0));
+            y0 = Math.max(0, Math.min(OUT - sz, y0));
+            if (sz > 16 && sz < OUT) {
+                BufferedImage zoomed = new BufferedImage(OUT, OUT, BufferedImage.TYPE_INT_ARGB);
+                java.awt.Graphics2D g2 = zoomed.createGraphics();
+                g2.setRenderingHint(java.awt.RenderingHints.KEY_INTERPOLATION,
+                        java.awt.RenderingHints.VALUE_INTERPOLATION_BILINEAR);
+                g2.drawImage(out.getSubimage(x0, y0, sz, sz), 0, 0, OUT, OUT, null);
+                g2.dispose();
+                return zoomed;
+            }
+        }
         return out;
+    }
+
+    /** Bones that read as a creature head, so the portrait can zoom to the face. */
+    static boolean isHeadName(String name) {
+        String n = name.toLowerCase();
+        return n.startsWith("head") || n.startsWith("skull") || n.startsWith("face")
+                || n.equals("bodyj") || n.equals("bodyt");
     }
 
     static int clamp(int v) { return v < 0 ? 0 : v > 255 ? 255 : v; }
@@ -490,7 +551,7 @@ public class render_portraits {
                 sp[k][1] = (sv[oi][k][1] - cy) * scale + W / 2.0;
             }
             // back-face culling in view space: the camera looks along +z
-            double nz = view(f.n[0], f.n[1], f.n[2])[2];
+            double nz = view(-f.n[0], -f.n[1], f.n[2])[2];
             if (nz > -1e-6) continue;
 
             double ex = sp[1][0] - sp[0][0], ey = sp[1][1] - sp[0][1];
