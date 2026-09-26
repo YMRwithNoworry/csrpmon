@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:architect",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/architect.png",
+        "profile": "csrpmon:textures/pokemon/architect.png"
+      }
+    }
+  ]
+}

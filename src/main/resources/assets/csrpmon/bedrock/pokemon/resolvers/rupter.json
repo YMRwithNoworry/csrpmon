@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:rupter",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/rupter.png",
+        "profile": "csrpmon:textures/pokemon/rupter.png"
+      }
+    }
+  ]
+}

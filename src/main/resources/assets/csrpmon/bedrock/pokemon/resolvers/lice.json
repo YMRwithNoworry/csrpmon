@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:lice",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/lice.png",
+        "profile": "csrpmon:textures/pokemon/lice.png"
+      }
+    }
+  ]
+}

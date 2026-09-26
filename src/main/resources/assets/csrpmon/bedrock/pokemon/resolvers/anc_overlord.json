@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:anc_overlord",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/anc_overlord.png",
+        "profile": "csrpmon:textures/pokemon/anc_overlord.png"
+      }
+    }
+  ]
+}

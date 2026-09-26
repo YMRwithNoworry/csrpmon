@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:marauder",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/marauder.png",
+        "profile": "csrpmon:textures/pokemon/marauder.png"
+      }
+    }
+  ]
+}

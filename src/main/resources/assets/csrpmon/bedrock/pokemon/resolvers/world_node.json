@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:world_node",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/world_node.png",
+        "profile": "csrpmon:textures/pokemon/world_node.png"
+      }
+    }
+  ]
+}

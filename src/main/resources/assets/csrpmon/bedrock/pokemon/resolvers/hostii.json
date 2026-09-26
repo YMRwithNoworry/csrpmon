@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:hostii",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/hostii.png",
+        "profile": "csrpmon:textures/pokemon/hostii.png"
+      }
+    }
+  ]
+}

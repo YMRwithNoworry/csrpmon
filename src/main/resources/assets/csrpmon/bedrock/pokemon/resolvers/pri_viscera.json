@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:pri_viscera",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/pri_viscera.png",
+        "profile": "csrpmon:textures/pokemon/pri_viscera.png"
+      }
+    }
+  ]
+}

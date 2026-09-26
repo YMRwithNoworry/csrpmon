@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:beckon_queen",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/beckon_queen.png",
+        "profile": "csrpmon:textures/pokemon/beckon_queen.png"
+      }
+    }
+  ]
+}

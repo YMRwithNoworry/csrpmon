@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:gnat",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/gnat.png",
+        "profile": "csrpmon:textures/pokemon/gnat.png"
+      }
+    }
+  ]
+}

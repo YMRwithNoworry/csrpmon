@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:draconite",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/draconite.png",
+        "profile": "csrpmon:textures/pokemon/draconite.png"
+      }
+    }
+  ]
+}

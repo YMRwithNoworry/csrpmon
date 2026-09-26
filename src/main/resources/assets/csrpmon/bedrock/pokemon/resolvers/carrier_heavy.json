@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:carrier_heavy",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/carrier_heavy.png",
+        "profile": "csrpmon:textures/pokemon/carrier_heavy.png"
+      }
+    }
+  ]
+}

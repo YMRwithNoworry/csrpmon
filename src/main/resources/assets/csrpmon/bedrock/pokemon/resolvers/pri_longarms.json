@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:pri_longarms",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/pri_longarms.png",
+        "profile": "csrpmon:textures/pokemon/pri_longarms.png"
+      }
+    }
+  ]
+}

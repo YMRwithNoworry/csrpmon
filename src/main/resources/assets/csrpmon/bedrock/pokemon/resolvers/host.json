@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:host",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/host.png",
+        "profile": "csrpmon:textures/pokemon/host.png"
+      }
+    }
+  ]
+}
