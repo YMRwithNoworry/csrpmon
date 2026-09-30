@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -31,7 +32,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -201,16 +202,46 @@ public final class WildEncounterManager {
         return player.getItemInHand(hand).getItem() instanceof PokeBallItem;
     }
 
-    /** The CSRP creature under the player's crosshair, or {@code null}. */
+    /**
+     * The CSRP creature under the player's crosshair, or {@code null}.
+     *
+     * <p>This cannot use {@link Entity#pick}: that method is a block raycast and can only ever
+     * return a {@code BlockHitResult}, never an {@code EntityHitResult}, so testing its result for
+     * an entity would silently match nothing. Instead the search box is swept along the view
+     * vector and each candidate's own bounding box is clipped against the ray, keeping the nearest
+     * hit. Blocks still occlude, so a creature cannot be reached through a wall.</p>
+     */
     private static Mob lookedAtCreature(ServerPlayer player) {
-        HitResult hit = player.pick(LOOK_DISTANCE, 1.0F, false);
-        if (hit instanceof EntityHitResult entityHit
-                && entityHit.getEntity() instanceof Mob mob
-                && mob instanceof Parasite
-                && mob.isAlive()) {
-            return mob;
+        Vec3 eye = player.getEyePosition(1.0F);
+        Vec3 look = player.getViewVector(1.0F);
+        Vec3 end = eye.add(look.scale(LOOK_DISTANCE));
+
+        HitResult blockHit = player.pick(LOOK_DISTANCE, 1.0F, false);
+        double blockLimit = blockHit.getType() == HitResult.Type.MISS
+                ? LOOK_DISTANCE * LOOK_DISTANCE
+                : eye.distanceToSqr(blockHit.getLocation());
+
+        AABB search = player.getBoundingBox().expandTowards(look.scale(LOOK_DISTANCE)).inflate(1.0D);
+        Mob best = null;
+        double bestDistance = Double.MAX_VALUE;
+        for (Entity candidate : player.level().getEntities(player, search,
+                entity -> entity instanceof Parasite && entity.isAlive())) {
+            if (!(candidate instanceof Mob mob)) {
+                continue;
+            }
+            // A little slack so aiming does not have to be pixel perfect.
+            AABB box = mob.getBoundingBox().inflate(0.3D);
+            Optional<Vec3> hit = box.contains(eye) ? Optional.of(eye) : box.clip(eye, end);
+            if (hit.isEmpty()) {
+                continue;
+            }
+            double distance = eye.distanceToSqr(hit.get());
+            if (distance <= blockLimit && distance < bestDistance) {
+                bestDistance = distance;
+                best = mob;
+            }
         }
-        return null;
+        return best;
     }
 
     /**
