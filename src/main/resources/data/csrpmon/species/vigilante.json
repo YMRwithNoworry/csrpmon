@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:armoredadvance",
     "4:metalclaw",
@@ -92,9 +91,7 @@
     "11:motorlag",
     "13:plateanchor",
     "17:laceration",
-    "18:hivebite",
     "23:corrosionmark",
-    "28:rendingclaws",
     "29:feargaze",
     "35:markedprey",
     "38:flashcannon",

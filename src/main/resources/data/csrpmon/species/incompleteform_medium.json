@@ -83,9 +83,8 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
-    "1:incompleteadhesion2",
+    "1:incompleteadhesionmature",
     "4:poisonsting",
     "5:parasiticcontact",
     "10:leechlife",

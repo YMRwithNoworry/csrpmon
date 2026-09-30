@@ -86,10 +86,21 @@
     "1:absorb",
     "1:growth",
     "1:poisonsting",
-    "1:nestsummon",
+    "1:beckoncalliv",
+    "5:parasiterelease",
+    "11:hiverecall",
+    "13:temporarycollapseiv",
+    "17:nestestablishment",
     "20:megadrain",
+    "23:hivemothercall",
     "28:sludgebomb",
+    "29:hiveoppression",
+    "35:parasiticfield",
     "36:gigadrain",
-    "44:toxic"
+    "41:infectionpulse",
+    "44:toxic",
+    "47:infestedground",
+    "53:hivespread",
+    "59:markedprey"
   ]
 }

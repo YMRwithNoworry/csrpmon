@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:monarchreach",
     "4:confusion",
@@ -92,13 +91,11 @@
     "11:parasiterelease",
     "13:dominionorder",
     "17:infectionpulse",
-    "18:hivebite",
     "23:laceration",
-    "28:rendingclaws",
     "29:feargaze",
     "35:markedprey",
     "38:psychic",
-    "41:hunteraura",
+    "41:huntersaura",
     "47:motorlag",
     "50:lunge",
     "62:hyperbeam"

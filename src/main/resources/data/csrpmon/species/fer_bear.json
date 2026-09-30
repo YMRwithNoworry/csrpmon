@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:solitarymaul",
     "4:karatechop",
@@ -91,9 +90,7 @@
     "10:leechlife",
     "11:parasiticcontact",
     "17:laceration",
-    "18:hivebite",
     "23:growthdevour",
-    "28:rendingclaws",
     "29:laststandrage",
     "35:feargaze",
     "38:closecombat",

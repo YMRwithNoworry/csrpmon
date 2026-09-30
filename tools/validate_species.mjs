@@ -154,7 +154,25 @@ for (const file of files) {
   }
   const bst = statKeys.reduce((sum, k) => sum + (json.baseStats?.[k] ?? 0), 0);
   // 720 is the highest base stat total any real Pokemon has; anything above would be off-chart.
-  if (bst < 200 || bst > 720) where(`base stat total ${bst} is outside the sane range`);
+  // The lower bound is softer. A handful of CSRP creatures are deliberately weaker than any real
+  // Pokemon because SRP itself gives them almost no health and damage; each carries a bstNote in
+  // its design file citing the source numbers. They are named here so the exception stays visible
+  // rather than the bound being loosened for everything.
+  const slugify = (value) => String(value).toLowerCase().replace(/[^a-z0-9]+/g, '');
+  const WEAK_BY_DESIGN = new Map([
+    ['incompleteformsmall', 'IncompleteFormSmallEntity: 9.0 health / 8.0 damage'],
+    ['assimilatedpig', 'Kind.PIG: 9.0 health / 3.5 damage / 0.1 armor, the weakest assimilated unit'],
+    ['assimilatedpighead', 'Kind.PIG: 2.7 health / 1.05 damage, the lowest attack in the mod'],
+    ['assimilatedsheephead', 'Kind.SHEEP: 3.9 health / 1.8 damage'],
+    ['assimilatedcowhead', 'Kind.COW: 5.4 health / 2.1 damage'],
+    ['assimilatedhorsehead', 'Kind.HORSE: 7.2 health / 2.25 damage'],
+    ['assimilatedhumanhead', 'Kind.HUMAN: 4.5 health / 2.7 damage'],
+    ['assimilatedwolfhead', 'Kind.WOLF: 3.0 health / 3.15 damage'],
+  ]);
+  const weakOk = json.name !== undefined && WEAK_BY_DESIGN.has(slugify(json.name));
+  if (bst > 720 || (bst < 200 && !weakOk)) {
+    where(`base stat total ${bst} is outside the sane range` + (bst < 200 && !weakOk ? ' and is not weak-by-design' : ''));
+  }
 
   for (const ability of json.abilities ?? []) {
     const plain = ability.startsWith('h:') ? ability.slice(2) : ability;

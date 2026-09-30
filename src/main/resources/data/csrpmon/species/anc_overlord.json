@@ -88,7 +88,6 @@
   },
   "moves": [
     "1:bite",
-    "1:dragonbreath",
     "1:crunch",
     "1:overlordhoming",
     "5:parasiterelease",
@@ -97,7 +96,7 @@
     "17:hiveoppression",
     "23:parasiticfield",
     "29:infectionpulse",
-    "35:hunteraura",
+    "35:huntersaura",
     "41:hivespread",
     "47:nestestablishment",
     "53:markedprey",

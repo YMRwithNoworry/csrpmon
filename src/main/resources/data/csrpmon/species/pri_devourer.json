@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:gravityslam",
     "4:mudslap",
@@ -91,7 +90,6 @@
     "10:leechlife",
     "11:deeplaceration",
     "17:devourinstinct",
-    "18:hivebite",
     "23:parasiticcontact",
     "28:xscissor",
     "29:adaptivelearning",

@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:gazelock",
     "4:confusion",
@@ -92,13 +91,12 @@
     "11:markedprey",
     "13:nadeshot",
     "17:infectionorb",
-    "18:hivebite",
     "23:adaptivelearning",
     "28:xscissor",
     "29:feargaze",
     "35:motorlag",
     "38:psychic",
-    "41:parasiticsmoke",
+    "41:parasiticsmoketrail",
     "50:lunge",
     "62:hyperbeam"
   ],

@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:webvolley",
     "4:poisonsting",
@@ -91,7 +90,6 @@
     "10:leechlife",
     "11:motorlag",
     "17:markedprey",
-    "18:hivebite",
     "23:parasiticcontact",
     "28:xscissor",
     "29:corrosivebite",

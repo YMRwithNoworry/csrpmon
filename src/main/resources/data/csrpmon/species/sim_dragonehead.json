@@ -83,10 +83,8 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:detachedbreath",
-    "4:dragonbreath",
     "5:parasiticcontact",
     "10:leechlife",
     "11:infectingbite",

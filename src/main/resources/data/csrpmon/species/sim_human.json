@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:barehandedmaul",
     "4:karatechop",
@@ -91,7 +90,6 @@
     "10:leechlife",
     "11:laceration",
     "17:motorlag",
-    "18:hivebite",
     "23:markedprey",
     "28:xscissor",
     "29:feargaze",

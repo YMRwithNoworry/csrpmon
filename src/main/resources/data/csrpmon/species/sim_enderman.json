@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:groupwarp",
     "4:confusion",
@@ -92,7 +91,6 @@
     "11:hunterteleport",
     "13:selfwarp",
     "17:parasiticcontact",
-    "18:hivebite",
     "23:feargaze",
     "28:xscissor",
     "29:markedprey",

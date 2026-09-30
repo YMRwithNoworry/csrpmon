@@ -89,6 +89,7 @@
     "1:scratch",
     "1:leer",
     "1:bugbite",
+    "1:devourevolution",
     "5:devourinstinct",
     "11:frenzy",
     "15:furyswipes",
@@ -98,8 +99,7 @@
     "25:crunch",
     "29:rendingpursuit",
     "31:xscissor",
-    "37:nightslash",
-    "45:devourevolution"
+    "37:nightslash"
   ],
   "secondaryType": "dark"
 }

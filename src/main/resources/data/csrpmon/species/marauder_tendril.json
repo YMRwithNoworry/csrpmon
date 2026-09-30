@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:detachtendril",
     "4:bite",
@@ -92,9 +91,7 @@
     "11:laceration",
     "13:detachedassist",
     "17:motorlag",
-    "18:hivebite",
     "23:markedprey",
-    "28:rendingclaws",
     "29:frenzy",
     "35:laststandrage",
     "38:darkpulse",

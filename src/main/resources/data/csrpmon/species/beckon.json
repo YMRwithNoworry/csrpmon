@@ -86,11 +86,20 @@
     "1:absorb",
     "1:growth",
     "1:poisonsting",
-    "1:nestsummon",
+    "1:beckoncalli",
+    "5:parasiterelease",
+    "11:hivespread",
+    "13:temporarycollapsei",
+    "17:infestedground",
     "20:megadrain",
+    "23:infectionpulse",
     "28:sludgebomb",
+    "29:infectionorb",
+    "35:markedprey",
     "36:gigadrain",
-    "44:toxic"
+    "41:parasiticspores",
+    "44:toxic",
+    "47:nestestablishment"
   ],
   "evolutions": [
     {

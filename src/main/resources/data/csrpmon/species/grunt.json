@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:hookscramble",
     "4:karatechop",
@@ -92,9 +91,7 @@
     "11:laceration",
     "13:ceilingdrop",
     "17:rendingpursuit",
-    "18:hivebite",
     "23:markedprey",
-    "28:rendingclaws",
     "29:motorlag",
     "35:feargaze",
     "38:closecombat",

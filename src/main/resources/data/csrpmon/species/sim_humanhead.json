@@ -83,9 +83,8 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
-    "1:severedjaw",
+    "1:severedjawbite",
     "5:parasiticcontact",
     "10:leechlife",
     "11:infectingbite",

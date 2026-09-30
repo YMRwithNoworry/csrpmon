@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:feralwarp",
     "4:confusion",
@@ -91,9 +90,7 @@
     "10:leechlife",
     "11:parasiticblink",
     "17:frenzy",
-    "18:hivebite",
     "23:laceration",
-    "28:rendingclaws",
     "29:growthdevour",
     "35:feargaze",
     "38:psychic",

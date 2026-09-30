@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:corrosivevomit",
     "4:poisonsting",
@@ -91,9 +90,7 @@
     "10:leechlife",
     "11:corrosionmark",
     "17:parasiticcontact",
-    "18:hivebite",
     "23:laceration",
-    "28:rendingclaws",
     "29:motorlag",
     "35:markedprey",
     "38:sludgewave",

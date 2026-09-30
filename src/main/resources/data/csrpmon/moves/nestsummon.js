@@ -2,7 +2,7 @@
   accuracy: true,
   basePower: 0,
   category: "Status",
-  name: "Nest Summon",
+  name: "nestsummon",
   pp: 10,
   priority: 0,
   flags: { snatch: 1, metronome: 1 },

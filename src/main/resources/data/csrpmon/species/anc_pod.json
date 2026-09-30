@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:podhatch",
     "4:metalclaw",
@@ -92,18 +91,14 @@
     "11:infestedground",
     "13:podscatter",
     "17:hivespread",
-    "18:hivebite",
     "23:nestestablishment",
-    "28:rendingclaws",
     "29:parasiticfield",
     "35:tissueregeneration",
     "38:flashcannon",
     "41:infectionpulse",
-    "47:dormancyregen",
-    "50:nestsummon",
+    "47:dormancyregeneration",
     "53:hiveoppression",
-    "59:feargaze",
-    "62:devourevolution"
+    "59:feargaze"
   ],
   "evolutions": [],
   "secondaryType": "steel"

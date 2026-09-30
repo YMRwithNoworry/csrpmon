@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:tentacleambush",
     "4:bodyslam",
@@ -91,7 +90,6 @@
     "10:leechlife",
     "11:drowningpursuit",
     "17:parasiticcontact",
-    "18:hivebite",
     "23:devourinstinct",
     "28:xscissor",
     "29:laceration",

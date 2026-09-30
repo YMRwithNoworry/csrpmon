@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:farsightlock",
     "4:confusion",
@@ -91,7 +90,6 @@
     "10:leechlife",
     "11:heightenedsenses",
     "17:infestedground",
-    "18:hivebite",
     "23:hivespread",
     "28:xscissor",
     "29:infectionmark",

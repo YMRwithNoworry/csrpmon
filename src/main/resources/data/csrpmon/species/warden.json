@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:wardengrasp",
     "4:mudslap",
@@ -92,9 +91,7 @@
     "11:laceration",
     "13:guardlock",
     "17:motorlag",
-    "18:hivebite",
     "23:markedprey",
-    "28:rendingclaws",
     "29:infestedground",
     "35:feargaze",
     "38:dig",

@@ -83,7 +83,6 @@
   },
   "moves": [
     "1:tackle",
-    "1:parasiticbite",
     "1:bugbite",
     "1:tetherwarp",
     "4:confusion",
@@ -91,9 +90,7 @@
     "10:leechlife",
     "11:parasiticblink",
     "17:parasiticcontact",
-    "18:hivebite",
     "23:laceration",
-    "28:rendingclaws",
     "29:corrosionmark",
     "35:feargaze",
     "38:psychic",
