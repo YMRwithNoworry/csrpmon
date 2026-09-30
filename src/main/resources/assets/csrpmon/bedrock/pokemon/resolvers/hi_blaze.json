@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:hi_blaze",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/hi_blaze.png",
+        "profile": "csrpmon:textures/pokemon/hi_blaze.png"
+      }
+    }
+  ]
+}

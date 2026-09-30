@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:wraith",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/wraith.png",
+        "profile": "csrpmon:textures/pokemon/wraith.png"
+      }
+    }
+  ]
+}

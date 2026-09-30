@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:sim_bigspider",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/sim_bigspider.png",
+        "profile": "csrpmon:textures/pokemon/sim_bigspider.png"
+      }
+    }
+  ]
+}

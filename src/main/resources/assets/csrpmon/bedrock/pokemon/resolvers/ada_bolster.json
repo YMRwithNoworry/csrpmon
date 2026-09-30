@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:ada_bolster",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/ada_bolster.png",
+        "profile": "csrpmon:textures/pokemon/ada_bolster.png"
+      }
+    }
+  ]
+}

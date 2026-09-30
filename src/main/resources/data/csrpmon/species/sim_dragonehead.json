@@ -1,0 +1,98 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8128,
+  "name": "Assimilated Dragon Head",
+  "pokedex": [
+    "csrpmon.species.sim_dragonehead.desc"
+  ],
+  "labels": [
+    "csrp",
+    "walking_head"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 12,
+  "weight": 960,
+  "primaryType": "bug",
+  "abilities": [
+    "colonyinfection",
+    "h:hiveswarm"
+  ],
+  "eggGroups": [
+    "bug"
+  ],
+  "baseStats": {
+    "hp": 108,
+    "attack": 64,
+    "defence": 60,
+    "special_attack": 88,
+    "special_defence": 54,
+    "speed": 40
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 1
+  },
+  "baseExperienceYield": 70,
+  "experienceGroup": "medium_fast",
+  "catchRate": 190,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 0.7,
+    "height": 0.7,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 4,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 1,
+    "entries": [
+      {
+        "item": "minecraft:rotten_flesh",
+        "percentage": 50
+      }
+    ]
+  },
+  "moves": [
+    "1:tackle",
+    "1:parasiticbite",
+    "1:bugbite",
+    "4:dragonbreath",
+    "10:leechlife",
+    "18:dragonclaw",
+    "28:xscissor",
+    "38:dragonpulse",
+    "50:lunge",
+    "62:hyperbeam"
+  ],
+  "evolutions": [],
+  "secondaryType": "dragon"
+}

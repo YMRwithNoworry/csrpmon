@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:worm",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/worm.png",
+        "profile": "csrpmon:textures/pokemon/worm.png"
+      }
+    }
+  ]
+}

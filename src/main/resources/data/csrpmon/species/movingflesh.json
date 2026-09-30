@@ -1,0 +1,98 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 8125,
+  "name": "Moving Flesh",
+  "pokedex": [
+    "csrpmon.species.movingflesh.desc"
+  ],
+  "labels": [
+    "csrp",
+    "inborn"
+  ],
+  "aspects": [],
+  "maleRatio": 0.5,
+  "height": 5,
+  "weight": 70,
+  "primaryType": "bug",
+  "abilities": [
+    "primitivewildness",
+    "h:parasiticinstinct"
+  ],
+  "eggGroups": [
+    "bug"
+  ],
+  "baseStats": {
+    "hp": 70,
+    "attack": 50,
+    "defence": 62,
+    "special_attack": 58,
+    "special_defence": 60,
+    "speed": 30
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 0,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 1
+  },
+  "baseExperienceYield": 55,
+  "experienceGroup": "medium_fast",
+  "catchRate": 225,
+  "eggCycles": 20,
+  "baseFriendship": 50,
+  "baseScale": 1,
+  "hitbox": {
+    "width": 0.7,
+    "height": 0.7,
+    "fixed": false
+  },
+  "behaviour": {
+    "moving": {
+      "walk": {
+        "walkSpeed": 0.2
+      },
+      "swim": {
+        "avoidsWater": true
+      },
+      "canLook": true
+    },
+    "resting": {
+      "canSleep": true,
+      "light": "0-4",
+      "times": [
+        "any"
+      ],
+      "drowsyChance": 0.0333,
+      "rouseChance": 0.0042
+    },
+    "herd": {
+      "maxSize": 4,
+      "toleratedLeaders": []
+    }
+  },
+  "drops": {
+    "amount": 1,
+    "entries": [
+      {
+        "item": "minecraft:rotten_flesh",
+        "percentage": 50
+      }
+    ]
+  },
+  "moves": [
+    "1:tackle",
+    "1:parasiticbite",
+    "1:bugbite",
+    "4:tackle",
+    "10:leechlife",
+    "18:scratch",
+    "28:xscissor",
+    "38:quickattack",
+    "50:lunge",
+    "62:hyperbeam"
+  ],
+  "evolutions": [],
+  "secondaryType": "normal"
+}

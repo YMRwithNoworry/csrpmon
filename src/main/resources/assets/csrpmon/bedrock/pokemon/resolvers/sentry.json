@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:sentry",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/sentry.png",
+        "profile": "csrpmon:textures/pokemon/sentry.png"
+      }
+    }
+  ]
+}

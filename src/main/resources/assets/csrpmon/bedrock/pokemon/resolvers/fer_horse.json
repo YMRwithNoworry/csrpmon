@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:fer_horse",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/fer_horse.png",
+        "profile": "csrpmon:textures/pokemon/fer_horse.png"
+      }
+    }
+  ]
+}

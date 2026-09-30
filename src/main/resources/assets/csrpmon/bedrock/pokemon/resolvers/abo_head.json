@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:abo_head",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/abo_head.png",
+        "profile": "csrpmon:textures/pokemon/abo_head.png"
+      }
+    }
+  ]
+}

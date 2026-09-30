@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:sim_cow",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/sim_cow.png",
+        "profile": "csrpmon:textures/pokemon/sim_cow.png"
+      }
+    }
+  ]
+}

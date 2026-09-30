@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:rooter_siii",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/rooter_siii.png",
+        "profile": "csrpmon:textures/pokemon/rooter_siii.png"
+      }
+    }
+  ]
+}

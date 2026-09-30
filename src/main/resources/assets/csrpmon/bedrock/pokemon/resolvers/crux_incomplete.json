@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:crux_incomplete",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/crux_incomplete.png",
+        "profile": "csrpmon:textures/pokemon/crux_incomplete.png"
+      }
+    }
+  ]
+}

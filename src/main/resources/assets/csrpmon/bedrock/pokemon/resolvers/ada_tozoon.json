@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:ada_tozoon",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/ada_tozoon.png",
+        "profile": "csrpmon:textures/pokemon/ada_tozoon.png"
+      }
+    }
+  ]
+}

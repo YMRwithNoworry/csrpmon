@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:haunter",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/haunter.png",
+        "profile": "csrpmon:textures/pokemon/haunter.png"
+      }
+    }
+  ]
+}

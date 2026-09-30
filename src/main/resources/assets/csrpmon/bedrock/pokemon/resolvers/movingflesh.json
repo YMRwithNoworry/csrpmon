@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:movingflesh",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/movingflesh.png",
+        "profile": "csrpmon:textures/pokemon/movingflesh.png"
+      }
+    }
+  ]
+}

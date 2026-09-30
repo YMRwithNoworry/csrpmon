@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:ada_burrower",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/ada_burrower.png",
+        "profile": "csrpmon:textures/pokemon/ada_burrower.png"
+      }
+    }
+  ]
+}

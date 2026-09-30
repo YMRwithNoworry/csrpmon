@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:hi_skeleton",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/hi_skeleton.png",
+        "profile": "csrpmon:textures/pokemon/hi_skeleton.png"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:sim_squid",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/sim_squid.png",
+        "profile": "csrpmon:textures/pokemon/sim_squid.png"
+      }
+    }
+  ]
+}

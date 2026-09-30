@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:marauder_tendril",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/marauder_tendril.png",
+        "profile": "csrpmon:textures/pokemon/marauder_tendril.png"
+      }
+    }
+  ]
+}

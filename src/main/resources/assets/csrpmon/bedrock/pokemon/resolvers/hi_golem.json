@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:hi_golem",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/hi_golem.png",
+        "profile": "csrpmon:textures/pokemon/hi_golem.png"
+      }
+    }
+  ]
+}

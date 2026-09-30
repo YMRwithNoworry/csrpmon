@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:sim_pig",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/sim_pig.png",
+        "profile": "csrpmon:textures/pokemon/sim_pig.png"
+      }
+    }
+  ]
+}

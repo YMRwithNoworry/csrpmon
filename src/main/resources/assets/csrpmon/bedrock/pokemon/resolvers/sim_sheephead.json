@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:sim_sheephead",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/sim_sheephead.png",
+        "profile": "csrpmon:textures/pokemon/sim_sheephead.png"
+      }
+    }
+  ]
+}

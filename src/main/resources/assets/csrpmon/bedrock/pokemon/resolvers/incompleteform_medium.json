@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:incompleteform_medium",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/incompleteform_medium.png",
+        "profile": "csrpmon:textures/pokemon/incompleteform_medium.png"
+      }
+    }
+  ]
+}

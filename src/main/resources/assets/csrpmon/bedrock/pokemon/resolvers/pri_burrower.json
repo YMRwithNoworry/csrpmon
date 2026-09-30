@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:pri_burrower",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/pri_burrower.png",
+        "profile": "csrpmon:textures/pokemon/pri_burrower.png"
+      }
+    }
+  ]
+}

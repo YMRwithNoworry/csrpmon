@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:ada_summoner",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/ada_summoner.png",
+        "profile": "csrpmon:textures/pokemon/ada_summoner.png"
+      }
+    }
+  ]
+}

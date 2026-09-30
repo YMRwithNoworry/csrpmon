@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:dispatcher_sii",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/dispatcher_sii.png",
+        "profile": "csrpmon:textures/pokemon/dispatcher_sii.png"
+      }
+    }
+  ]
+}

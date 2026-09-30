@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:mar_bear",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/mar_bear.png",
+        "profile": "csrpmon:textures/pokemon/mar_bear.png"
+      }
+    }
+  ]
+}

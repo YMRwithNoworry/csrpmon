@@ -1,0 +1,13 @@
+{
+  "order": 0,
+  "species": "csrpmon:ada_arachnida",
+  "variations": [
+    {
+      "aspects": [],
+      "sprites": {
+        "portrait": "csrpmon:textures/pokemon/ada_arachnida.png",
+        "profile": "csrpmon:textures/pokemon/ada_arachnida.png"
+      }
+    }
+  ]
+}
