@@ -66,6 +66,12 @@ public final class ParasitePacifier {
     public static void stripProactiveTargeting(Mob mob) {
         strip(mob.targetSelector);
         strip(mob.goalSelector);
+        if (!CsrpmonConfig.RETALIATE_WHEN_ATTACKED.get()) {
+            // A creature can join the level already locked onto something. Drop it, or the
+            // pacifier would only stop new targets while the old one keeps being chased.
+            mob.setTarget(null);
+            mob.setLastHurtByMob(null);
+        }
     }
 
     private static void strip(GoalSelector selector) {

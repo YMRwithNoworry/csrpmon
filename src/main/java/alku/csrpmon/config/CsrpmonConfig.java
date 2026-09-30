@@ -25,8 +25,9 @@ public final class CsrpmonConfig {
 
         builder.comment(
                 "Peaceful behaviour.",
-                "CSRP creatures stop hunting on their own. With retaliation enabled they still",
-                "fight back against whatever hit them first, which keeps them from being free loot.")
+                "CSRP creatures do not attack other living things at all. They keep walking and let",
+                "you start a Cobblemon battle instead. Retaliation can be switched back on if you",
+                "want them to defend themselves.")
                 .push("behaviour");
         PACIFY_CREATURES = builder
                 .comment("Remove the proactive targeting goals from every CSRP creature and refuse",
@@ -34,8 +35,9 @@ public final class CsrpmonConfig {
                 .define("pacifyCreatures", true);
         RETALIATE_WHEN_ATTACKED = builder
                 .comment("Allow a CSRP creature to target the entity that just damaged it.",
-                        "Set to false for completely non-violent creatures.")
-                .define("retaliateWhenAttacked", true);
+                        "Off by default: a CSRP creature never attacks another living thing.",
+                        "Turn it on if you would rather they fight back.")
+                .define("retaliateWhenAttacked", false);
         builder.pop();
 
         builder.comment("Turn-based battles through Cobblemon.")
