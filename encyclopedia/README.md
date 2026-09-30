@@ -92,6 +92,11 @@ encyclopedia/
   canon/
     srp-creatures.json          machine-readable canon (129 creatures)
     SRP-CREATURE-CANON.md       the same, readable, with evidence and conflicts
+    relationships.json          creature-to-creature relations from the mod own code
+    conflict-*.md               資料衝突 records, each with版本 A / 版本 B / 採用 / 理由
+    conflict-namespace-srparasites-vs-csrp.md
+                                why entries cite csrp:xxxx rather than the srparasites:xxxx
+                                written in the brief - CSRP maps one to the other itself
   skills/
     srp-common-skills.json      machine-readable skill pool (66 skills)
     SRP-COMMON-SKILLS.md        the same, readable, with tier permissions
