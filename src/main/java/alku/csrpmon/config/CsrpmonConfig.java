@@ -15,6 +15,7 @@ public final class CsrpmonConfig {
     public static final ModConfigSpec.BooleanValue RETALIATE_WHEN_ATTACKED;
     public static final ModConfigSpec.BooleanValue ENCOUNTERS_ENABLED;
     public static final ModConfigSpec.BooleanValue REQUIRE_POKE_BALL;
+    public static final ModConfigSpec.BooleanValue POKE_BALL_CAPTURE;
     public static final ModConfigSpec.BooleanValue SNEAK_ALSO_STARTS_BATTLE;
     public static final ModConfigSpec.BooleanValue RESTORE_CREATURE_AFTER_FLEE;
     public static final ModConfigSpec.IntValue LEVEL_BONUS_PER_EVOLUTION_PHASE;
@@ -48,6 +49,12 @@ public final class CsrpmonConfig {
         REQUIRE_POKE_BALL = builder
                 .comment("A battle only starts when the player holds a Cobblemon Poke Ball.")
                 .define("requirePokeBall", true);
+        POKE_BALL_CAPTURE = builder
+                .comment("Throwing a Poke Ball at a CSRP creature turns it into a wild Pokemon in",
+                        "place, so Cobblemon runs its own capture on the ball instead of starting a",
+                        "battle. Leave this on if you want to catch creatures by throwing balls;",
+                        "turn it off to always open a battle first.")
+                .define("pokeBallCapture", true);
         SNEAK_ALSO_STARTS_BATTLE = builder
                 .comment("Sneaking and interacting also starts a battle, so the feature can be",
                         "discovered without carrying a Poke Ball.")
