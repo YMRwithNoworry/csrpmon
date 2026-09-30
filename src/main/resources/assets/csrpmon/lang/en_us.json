@@ -285,5 +285,7 @@
   "csrpmon.species.sim_adventurerhead.name": "Assimilated Adventurer Head",
   "csrpmon.species.sim_adventurerhead.desc": "它看上去和普通的人类头没什么两样。差别在你靠近三格以内的时候——那时候你会开始觉得不舒服。",
   "csrpmon.species.sim_dragonehead.name": "Assimilated Dragon Head",
-  "csrpmon.species.sim_dragonehead.desc": "它的身体已经倒了，但头还在喷火。78 点生命值——比大多数东西的整个身体都多。"
+  "csrpmon.species.sim_dragonehead.desc": "它的身体已经倒了，但头还在喷火。78 点生命值——比大多数东西的整个身体都多。",
+  "key.csrpmon.battle": "Battle a CSRP creature",
+  "key.categories.csrpmon": "CSRPmon"
 }

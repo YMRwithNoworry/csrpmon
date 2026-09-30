@@ -229,6 +229,37 @@ public final class WildEncounterManager {
                 entry.csrpPath(), entry.speciesId());
     }
 
+    /**
+     * Entry point for the addon's battle key.
+     *
+     * <p>Cobblemon's own key does nothing when the crosshair is on a CSRP creature, because its
+     * handler only has branches for players and for Cobblemon's own {@code PokemonEntity}. So the
+     * aim is re-traced here on the server - never trusting the client for which creature is being
+     * targeted - and the battle is opened directly.</p>
+     */
+    public static void startBattleLookingAt(ServerPlayer player) {
+        if (!CsrpmonConfig.ENCOUNTERS_ENABLED.get() || player.isSpectator()) {
+            return;
+        }
+        Mob creature = lookedAtCreature(player);
+        if (creature == null) {
+            return;
+        }
+        ResourceLocation typeId = BuiltInRegistries.ENTITY_TYPE.getKey(creature.getType());
+        if (!ParasiteSpeciesMap.CSRP_NAMESPACE.equals(typeId.getNamespace())) {
+            return;
+        }
+        ParasiteSpecies entry = ParasiteSpeciesMap.byCsrpPath(typeId.getPath());
+        if (entry == null) {
+            return;
+        }
+        if (BattleRegistry.getBattleByParticipatingPlayer(player) != null) {
+            player.displayClientMessage(Component.translatable("csrpmon.message.already_in_battle"), true);
+            return;
+        }
+        startEncounter(player, creature, entry, typeId);
+    }
+
     /** Wild levels follow the creature's tier and the world's CSRP evolution phase. */
     private static int rollLevel(ServerLevel level, ParasiteSpecies entry) {
         int span = Math.max(0, entry.maxLevel() - entry.minLevel());
