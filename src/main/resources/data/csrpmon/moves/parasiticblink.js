@@ -3,11 +3,11 @@
   basePower: 0,
   category: "Status",
   name: "Parasitic Blink",
-  pp: 15,
-  priority: 0,
-  flags: {"metronome":1},
+  pp: 20,
+  priority: 2,
+  flags: {snatch:1,metronome:1},
   secondary: null,
   target: "self",
   type: "Psychic",
-  contestType: "Clever"
+  contestType: "Clever",
 }

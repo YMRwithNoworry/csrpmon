@@ -1,14 +1,36 @@
 {
-  accuracy: true,
+  accuracy: 100,
   basePower: 0,
   category: "Status",
   name: "Mass Fusion",
   pp: 10,
   priority: 0,
-  flags: {"metronome":1},
+  heal: [1, 2],
+  flags: {snatch:1,metronome:1},
+  boosts: {def: 1},
+  volatileStatus: "massfusion",
+  condition: {
+    name: "massfusion",
+    noCopy: true,
+    onStart(target) {
+      this.effectState.layers = Math.min(3, (this.effectState.layers || 0) + 1);
+      this.add("-start", target, "Infection", "[layers] " + this.effectState.layers);
+    },
+    onRestart(target) {
+      this.effectState.layers = Math.min(3, (this.effectState.layers || 0) + 1);
+      this.add("-start", target, "Infection", "[up]");
+    },
+    onResidualOrder: 8,
+    onResidual(pokemon) {
+      const layers = this.effectState.layers || 1;
+      this.damage(pokemon.maxhp * layers / 16, pokemon, this.effectState.source);
+    },
+    onTrapPokemon(pokemon) {
+      if ((this.effectState.layers || 1) >= 3) pokemon.tryTrap();
+    },
+  },
   secondary: null,
   target: "self",
   type: "Bug",
-  contestType: "Tough",
-  boosts: {"atk":1,"def":1}
+  contestType: "Clever",
 }

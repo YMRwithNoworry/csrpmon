@@ -5,9 +5,9 @@
   name: "Plate Anchor",
   pp: 10,
   priority: 0,
-  flags: {"metronome":1},
+  flags: {snatch:1,metronome:1},
   secondary: null,
   target: "self",
   type: "Steel",
-  contestType: "Tough"
+  contestType: "Clever",
 }

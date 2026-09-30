@@ -4,10 +4,21 @@
   category: "Physical",
   name: "Tether Warp",
   pp: 10,
-  priority: 0,
-  flags: {"protect":1,"mirror":1,"metronome":1,"contact":1},
+  priority: 1,
+  flags: {contact:1,protect:1,mirror:1,metronome:1},
+  volatileStatus: "tetherwarp",
+  condition: {
+    name: "tetherwarp",
+    noCopy: true,
+    onResidualOrder: 8,
+    onResidual(pokemon) {
+    },
+    onTrapPokemon(pokemon) {
+      pokemon.tryTrap();
+    },
+  },
   secondary: null,
-  target: "allAdjacentFoes",
+  target: "normal",
   type: "Psychic",
-  contestType: "Clever"
+  contestType: "Clever",
 }

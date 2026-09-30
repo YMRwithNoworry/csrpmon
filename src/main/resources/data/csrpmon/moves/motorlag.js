@@ -1,13 +1,13 @@
 {
-  accuracy: 100,
+  accuracy: true,
   basePower: 0,
   category: "Status",
   name: "Motor Lag",
   pp: 20,
   priority: 0,
-  flags: {"metronome":1},
+  flags: {snatch:1,metronome:1},
   secondary: null,
   target: "self",
   type: "Ground",
-  contestType: "Tough"
+  contestType: "Clever",
 }

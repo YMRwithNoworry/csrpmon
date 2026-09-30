@@ -1,0 +1,3940 @@
+{
+ "parasiticcontact": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 40,
+  "type": "虫",
+  "eff": "接触并把巢群信号注入目标。命中后目标获得 1 层【感染】。若使用者连续两回合对同一目标使用，层数再 +1（同一招式的连击计数从 SRP 的持续接触时间转化而来）。",
+  "zh": "寄生接触",
+  "en": "Parasitic Contact",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "infectingbite": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 65,
+  "type": "虫",
+  "eff": "造成伤害后有 50% 概率附加 1 层【感染】。目标已中毒时改为附加 2 层。",
+  "zh": "感染撕咬",
+  "en": "Infecting Bite",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 50,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "hivespread": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "把使用者身上的【感染】层数原样复制给对手全队（双打时复制给两个对手），层数上限 2。",
+  "zh": "群巢传播",
+  "en": "Hive Spread",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 2,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "infectionpulse": {
+  "kind": "common",
+  "cls": "特殊",
+  "pow": 70,
+  "type": "毒",
+  "eff": "对场上所有其他宝可梦造成伤害；对已带【感染】的目标额外造成 1 层。",
+  "zh": "感染脉冲",
+  "en": "Infection Pulse",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "parasiticspores": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "草",
+  "eff": "布下孢子场地，持续 4 回合。每回合结束时场上所有非使用者阵营的宝可梦获得 1 层【感染】。",
+  "zh": "寄生孢子",
+  "en": "Parasitic Spores",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "hivemothercall": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "呼叫巢群：所有场上对手获得 2 层【感染】，且使用者的召唤类招式冷却立即减少 2 回合。",
+  "zh": "巢母呼唤",
+  "en": "Hive Mother Call",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "virusinject": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "毒",
+  "eff": "目标最大 HP 的 1/8 被\"侵蚀\"（本场战斗内视为损失，不影响战后恢复），并立即失去等量当前 HP 的 1/2。",
+  "zh": "病毒注入",
+  "en": "Virus Inject",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "infectionmark": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "标记目标 3 回合：本阵营对其造成的虫/毒属性伤害 +25%，且其身上的【感染】不会被清除。",
+  "zh": "感染标记",
+  "en": "Infection Mark",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "adaptivelearning": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "记录本场战斗中最后一次受到攻击的属性。之后受到同属性攻击时伤害减少 20%。只保留最新记录的属性。",
+  "zh": "适应学习",
+  "en": "Adaptive Learning",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "adapt": true
+  }
+ },
+ "damageanalysis": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "查看对手的招式表与最高威力招式，并使自己在下一回合受到的第一次攻击伤害减少 30%。",
+  "zh": "损伤分析",
+  "en": "Damage Analysis",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "rapidadaptation": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "立即获得\"适应学习\"的一次记录，且本回合受到的伤害减少 25%。Adapted 系使用时可同时保留两条记录。",
+  "zh": "快速适应",
+  "en": "Rapid Adaptation",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "adapt": true
+  }
+ },
+ "resistancelog": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "钢",
+  "eff": "把已记录的属性和自身防御绑定：只要记录存在，自身防御 +1 阶段，且受到该属性的伤害再减少 10%。",
+  "zh": "抗性记录",
+  "en": "Resistance Record",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "adapt": true
+  }
+ },
+ "combatevolution": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "消耗已记录的所有适应条目，每消耗一条提升攻击与特攻各 1 阶段。无记录时该招式失败。",
+  "zh": "战斗进化",
+  "en": "Combat Evolution",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "adapt": true
+  }
+ },
+ "adaptiverebuild": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "恢复最大 HP 的 25%，并清除自身所有能力下降。若已记录适应属性，改为恢复 35%。",
+  "zh": "适应重构",
+  "en": "Adaptive Rebuild",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "adapt": true,
+   "conditional": true
+  }
+ },
+ "laceration": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 55,
+  "type": "一般",
+  "eff": "命中后使目标流血 3 回合。流血期间目标每回合结束损失 1/16 最大 HP；**目标在本回合使用过切换或加速类招式时，该回合流血伤害翻倍**。",
+  "zh": "裂创",
+  "en": "Laceration",
+  "mech": {
+   "dotDen": 16,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "deeplaceration": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 80,
+  "type": "恶",
+  "eff": "直接附加 2 层流血；若目标已流血，改为 +2 层并使其速度下降 1 阶段。",
+  "zh": "深度撕裂",
+  "en": "Deep Laceration",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "bloodrush": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "把目标已流血的层数翻倍（上限 3），并使目标速度提升 1 阶段——层数越高，其移动带来的额外流血伤害越重。",
+  "zh": "血流加速",
+  "en": "Blood Rush",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "rendingpursuit": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 50,
+  "type": "恶",
+  "eff": "先制 +1。若目标身上有流血层数，威力提升为 50×(1+层数×0.5)；目标替换下场时该招式在入场者身上立即再结算一次流血伤害。",
+  "zh": "撕裂追击",
+  "en": "Rending Pursuit",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 1,
+   "conditional": true
+  }
+ },
+ "corrosivebite": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 60,
+  "type": "毒",
+  "eff": "命中后使目标防御下降 1 阶段，并附加【腐蚀】2 回合。",
+  "zh": "腐蚀撕咬",
+  "en": "Corrosive Bite",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "acidspray": {
+  "kind": "common",
+  "cls": "特殊",
+  "pow": 50,
+  "type": "毒",
+  "eff": "对全体对手造成伤害并各降 1 阶段特防。",
+  "zh": "酸蚀喷射",
+  "en": "Acid Spray",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "armordissolve": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "毒",
+  "eff": "目标防御与特防各下降 2 阶段；若目标为钢属性，改为各下降 3 阶段并无法在本场战斗内恢复防御。",
+  "zh": "装甲溶解",
+  "en": "Armour Dissolve",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "corrosionmark": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "毒",
+  "eff": "标记目标 3 回合：其受到的钢/岩属性抗性视作不存在（弱点照常计算），且每回合结束防御 -1 阶段（最多 -3）。",
+  "zh": "腐蚀标记",
+  "en": "Corrosion Mark",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "adapt": true
+  }
+ },
+ "humicburst": {
+  "kind": "common",
+  "cls": "特殊",
+  "pow": 90,
+  "type": "毒",
+  "eff": "造成伤害；若目标带有【腐蚀】层数，每层使威力 +20，并立即消耗全部腐蚀层数。",
+  "zh": "腐殖爆裂",
+  "en": "Humic Burst",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "lifeerosion": {
+  "kind": "common",
+  "cls": "特殊",
+  "pow": 60,
+  "type": "幽灵",
+  "eff": "造成伤害，并把伤害的 30% 转化为\"侵蚀量\"：目标本场战斗最大 HP 上限按侵蚀量下降（最多下降 25%）。",
+  "zh": "生命侵蚀",
+  "en": "Life Erosion",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "viralamp": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "幽灵",
+  "eff": "自身每损失 25% 最大 HP，特攻 +1 阶段；同时把已有的\"侵蚀量\"翻倍。",
+  "zh": "病毒增幅",
+  "en": "Viral Amplification",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "viraloutbreak": {
+  "kind": "common",
+  "cls": "特殊",
+  "pow": 110,
+  "type": "幽灵",
+  "eff": "把目标身上全部\"侵蚀量\"一次性引爆，造成威力 110 + 侵蚀量百分比×4 的伤害，然后清除侵蚀量。",
+  "zh": "病毒爆发",
+  "en": "Viral Outbreak",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "feargaze": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "目标命中率下降 1 阶段；若目标 HP 已低于 50%，改为下降 2 阶段。",
+  "zh": "恐惧凝视",
+  "en": "Fear Gaze",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "direhowl": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "全体对手命中下降 1 阶段，并有 30% 概率畏缩。",
+  "zh": "灾厄低鸣",
+  "en": "Dire Howl",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "hunteraura": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "3 回合内自身对 HP 低于 50% 的目标伤害 +30%，且目标无法逃跑或替换。",
+  "zh": "猎杀气息",
+  "en": "Hunter's Aura",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "hiveoppression": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "只要使用者在场，全体对手每回合有 25% 概率无法使用非伤害类招式；已有恐惧标记的对手概率提高到 50%。",
+  "zh": "巢穴威压",
+  "en": "Hive Oppression",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "needlesting": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 35,
+  "type": "虫",
+  "eff": "命中后附加 1 层【针刺】。",
+  "zh": "针刺",
+  "en": "Needle Sting",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "venomneedleburst": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 25,
+  "type": "虫",
+  "eff": "随机攻击 3~5 次；每次命中附加 1 层针刺。",
+  "zh": "毒针爆发",
+  "en": "Venom Needle Burst",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "piercingspore": {
+  "kind": "common",
+  "cls": "特殊",
+  "pow": 45,
+  "type": "草",
+  "eff": "命中后附加 2 层针刺；若目标已有感染层数，每层感染额外 +1 层针刺。",
+  "zh": "穿刺孢子",
+  "en": "Piercing Spore",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "terminalneedle": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 30,
+  "type": "虫",
+  "eff": "只有当目标针刺层数 ≥3 时才能使用：消耗全部层数，造成 30×(消耗层数×2) 的伤害并使其麻痹。",
+  "zh": "终末针",
+  "en": "Terminal Needle",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "hungerfield": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "布下领域 4 回合：场上对手使用回复类招式、道具或特性的效果减半。",
+  "zh": "饥饿领域",
+  "en": "Hunger Field",
+  "mech": {
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "devourinstinct": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 70,
+  "type": "恶",
+  "eff": "造成伤害后回复伤害的 40%；若该次攻击击倒目标，额外回复 25%。",
+  "zh": "吞噬本能",
+  "en": "Devour Instinct",
+  "mech": {
+   "heal": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "parasiticdrain": {
+  "kind": "common",
+  "cls": "特殊",
+  "pow": 55,
+  "type": "虫",
+  "eff": "造成伤害并回复其 50%；若目标处于【感染】状态，改为回复 75% 并使其感染层数 -1。",
+  "zh": "寄生吸收",
+  "en": "Parasitic Drain",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "motorlag": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "目标速度下降 1 阶段，且其下回合使用的先制招式失效（先制度视为 0）。",
+  "zh": "动作迟滞",
+  "en": "Motor Lag",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "limbnumbness": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "电",
+  "eff": "使目标麻痹；若目标已麻痹，改为使其速度下降 2 阶段并无法使用接触类招式 2 回合。",
+  "zh": "肢体麻痹",
+  "en": "Limb Numbness",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "nerveblock": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "封锁目标最后使用过的招式 3 回合；若目标因此无法行动过，改为封锁两个招式。",
+  "zh": "神经阻断",
+  "en": "Nerve Block",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "growthdevour": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 65,
+  "type": "恶",
+  "eff": "造成伤害；若本次攻击击倒目标，使用者获得 1 阶段随机能力提升，并回复 25% 最大 HP。",
+  "zh": "成长吞噬",
+  "en": "Growth Devour",
+  "mech": {
+   "boostSelf": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "killingevolution": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "本场战斗中每击倒过一只宝可梦，就永久提升攻击与特攻各 1 阶段（最多 3 次）。使用后本场不再能替换下场。",
+  "zh": "杀戮进化",
+  "en": "Killing Evolution",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "frenzy": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "攻击提升 2 阶段、防御下降 1 阶段；仅在自身 HP 低于 50% 时可用。",
+  "zh": "狂怒",
+  "en": "Frenzy",
+  "mech": {
+   "boostSelf": true,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "berserkinfection": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "使目标进入暴怒：其攻击提升 2 阶段但每回合结束损失 1/8 最大 HP，持续 3 回合。",
+  "zh": "暴怒感染",
+  "en": "Berserk Infection",
+  "mech": {
+   "dotDen": 8,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "laststandrage": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "仅在 HP 低于 25% 时可用：攻击、特攻、速度各提升 2 阶段，但本回合结束后自身损失 1/4 最大 HP。",
+  "zh": "末路狂化",
+  "en": "Last Stand Rage",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "parasiticmimicry": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "一般",
+  "eff": "2 回合内自身受到的第一次攻击必定落空；被命中后拟态解除。若使用者为 Adapted 且已记录适应属性，落空后获得该属性抗性 1 回合。",
+  "zh": "寄生拟态",
+  "en": "Parasitic Mimicry",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "adapt": true,
+   "conditional": true
+  }
+ },
+ "auraconceal": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "幽灵",
+  "eff": "清除自身被标记类状态（感染标记、腐蚀标记、猎物标记），并在 2 回合内不会被新的标记类招式选中。",
+  "zh": "气息隐藏",
+  "en": "Aura Conceal",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "infectionorb": {
+  "kind": "common",
+  "cls": "特殊",
+  "pow": 70,
+  "type": "毒",
+  "eff": "无视命中判定（必中）造成伤害，并附加 1 层感染。",
+  "zh": "感染之球",
+  "en": "Infection Orb",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "parasiticfield": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "毒",
+  "eff": "布下领域 5 回合：每回合结束，场上对手损失 1/16 最大 HP 并获得 1 层感染；使用者的回复量 +30%。",
+  "zh": "寄生领域",
+  "en": "Parasitic Field",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "dotDen": 16,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "neuralsuppressionorb": {
+  "kind": "common",
+  "cls": "特殊",
+  "pow": 80,
+  "type": "超能",
+  "eff": "造成伤害并使目标特防下降 1 阶段；若目标带有任何 SRP 状态（感染/流血/腐蚀/针刺），改为下降 2 阶段并封锁其回复 2 回合。",
+  "zh": "神经压制球",
+  "en": "Neural Suppression Orb",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "dropTarget": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "callreinforcement": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "召唤一只同阵营支援单位入场（双打占据空位；单打则在下回合结束时对对手造成一次固定 1/8 最大 HP 的冲撞）。召唤来源必须是本数据库 CONFIRMED 且 tier 不高于使用者的实体。",
+  "zh": "召援",
+  "en": "Call Reinforcement",
+  "mech": {
+   "dotDen": 8,
+   "multihit": 0,
+   "priority": 0,
+   "summon": true,
+   "conditional": true
+  }
+ },
+ "parasiterelease": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "释放体内储存的寄生体：对目标造成固定 1/6 最大 HP 伤害并附加 2 层感染；每场战斗只能使用 2 次。",
+  "zh": "寄生释放",
+  "en": "Parasite Release",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "hiverecall": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "把场上所有召唤物收回，每个收回的召唤物为使用者回复 20% 最大 HP，并使其领域类招式冷却减少 1 回合。",
+  "zh": "菌巢召回",
+  "en": "Hive Recall",
+  "mech": {
+   "heal": true,
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "tissueregeneration": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "草",
+  "eff": "3 回合内每回合结束回复 1/16 最大 HP；若期间未受到火属性伤害，回复量提升为 1/8。",
+  "zh": "组织再生",
+  "en": "Tissue Regeneration",
+  "mech": {
+   "dotDen": 16,
+   "boostSelf": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "dormancyregen": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "草",
+  "eff": "本回合不行动并进入休眠：回复 40% 最大 HP 并清除全部异常状态，但本回合受到的伤害 +50%。",
+  "zh": "休眠再生",
+  "en": "Dormancy Regeneration",
+  "mech": {
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "parasiticblink": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "先制 +2，与队伍中任意一只宝可梦交换位置（不消耗回合的替换），并清除自身被标记状态。",
+  "zh": "寄生闪现",
+  "en": "Parasitic Blink",
+  "mech": {
+   "multihit": 0,
+   "priority": 2
+  }
+ },
+ "hunterteleport": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 75,
+  "type": "超能",
+  "eff": "先制 +1；若目标带有猎物标记，本招必定命中且威力 +30%。",
+  "zh": "猎杀传送",
+  "en": "Hunter Teleport",
+  "mech": {
+   "multihit": 0,
+   "priority": 1,
+   "conditional": true
+  }
+ },
+ "infestedground": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "把场地变为\"感染场地\"5 回合：每回合结束对场上非寄生阵营的宝可梦造成 1/16 最大 HP 伤害；草属性以外的回复类招式效果 -20%。",
+  "zh": "感染地面",
+  "en": "Infested Ground",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "dotDen": 16,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "nestestablishment": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "草",
+  "eff": "在场上建立巢穴 4 回合：使用者每回合结束回复 1/8 最大 HP，且召唤类招式冷却每回合 -1。",
+  "zh": "巢穴建立",
+  "en": "Nest Establishment",
+  "mech": {
+   "dotDen": 8,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "waterambush": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 70,
+  "type": "水",
+  "eff": "先制 +1；仅在\"水边/水下\"场地条件下可用（雨天、水域场地或水系场地）。命中后目标速度下降 1 阶段。",
+  "zh": "水域伏击",
+  "en": "Water Ambush",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 1
+  }
+ },
+ "drowningpursuit": {
+  "kind": "common",
+  "cls": "物理",
+  "pow": 60,
+  "type": "水",
+  "eff": "连续 3 回合锁定目标，每回合自动造成威力 60 的伤害；目标替换下场则中断。",
+  "zh": "溺杀追猎",
+  "en": "Drowning Pursuit",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "vomit": {
+  "kind": "common",
+  "cls": "特殊",
+  "pow": 60,
+  "type": "毒",
+  "eff": "吐出体内生物质：造成伤害并使目标中毒；若使用者身上有感染层数，每层使威力 +15 并消耗该层。",
+  "zh": "呕吐",
+  "en": "Vomit",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "heightenedsenses": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "一般",
+  "eff": "3 回合内命中率提升 1 阶段，且可以看穿对手的替身与闪避类变化（幻觉、拟态、气息隐藏）。",
+  "zh": "感官强化",
+  "en": "Heightened Senses",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "markedprey": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "一般",
+  "eff": "标记目标 3 回合：本阵营对其造成的伤害 +15%，且其逃跑必定失败。",
+  "zh": "猎物标记",
+  "en": "Marked Prey",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "parasiticsmoke": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "毒",
+  "eff": "在自身位置留下烟幕 3 回合：烟幕中的对手命中率下降 1 阶段，且每回合结束获得 1 层感染。",
+  "zh": "烟幕轨迹",
+  "en": "Parasitic Smoke Trail",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "thornshadeguard": {
+  "kind": "common",
+  "cls": "变化",
+  "pow": 0,
+  "type": "草",
+  "eff": "3 回合内自身受到接触类招式攻击时，攻击者受到其最大 HP 1/8 的反伤并被附加 1 层针刺。",
+  "zh": "荆棘护体",
+  "en": "Thornshade Guard",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "recoil": true
+  }
+ },
+ "multibodiesbite": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 40,
+  "type": "恶",
+  "eff": "**连续攻击 3 次**（每次威力 40，命中 85%）。**每次未命中的攻击会使下一次命中率提高 10%**（多个头依次尝试）。",
+  "zh": "多体啮咬",
+  "en": "Many Bodies Bite",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 3,
+   "priority": 0
+  }
+ },
+ "giantheadcrush": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 105,
+  "type": "超能",
+  "eff": "造成伤害并**无视对手的闪避率变化**（巨颚方向明确）。**若目标本回合已行动过，威力提高 30%**。",
+  "zh": "巨头碾压",
+  "en": "Giant Head Crush",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "sixfoldvolley": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 30,
+  "type": "虫",
+  "eff": "蓄力 1 回合（本回合不造成伤害但受伤减 30%），之后**连续 3 个回合每回合自动造成 2 次攻击**（共 6 次，对应 6 发）。每次命中使目标速度下降 1 阶段（最多 -3），全部命中后目标无法被替换下场 1 回合。",
+  "zh": "六重牵丝",
+  "en": "Sixfold Volley",
+  "mech": {
+   "trap": true,
+   "trapTurns": 1,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "charge": true
+  }
+ },
+ "webpull2": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "把目标拉近并使其在 3 回合内无法被替换下场（原初形态为 2 回合）；速度下降 2 阶段。若目标已处于移动受阻状态，改为使其本回合无法使用先制招式。",
+  "zh": "牵丝拉拽·适应",
+  "en": "Web Pull (Adapted)",
+  "mech": {
+   "trap": true,
+   "trapTurns": 3,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "bolsterbarrage": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 35,
+  "type": "钢",
+  "eff": "连续攻击 2~4 次。**每次命中后我方全体获得 1 阶段特防提升（每次战斗最多累计 +3）**。若自身皮肤为病毒皮，每次命中额外使目标获得 1 层【感染】。",
+  "zh": "援护齐射",
+  "en": "Bolster Barrage",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "adaptivereinforce": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "自身**每受到一种不同属性的招式伤害，防御提升 1 阶段（最多 +3）**，且该属性对自身的伤害永久降低 10%。对应适应形态把耐受结果固化下来的机制。",
+  "zh": "适应加固",
+  "en": "Adaptive Reinforce",
+  "mech": {
+   "boostSelf": true,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "adapt": true
+  }
+ },
+ "burrowflurry2": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 34,
+  "type": "地面",
+  "eff": "第一回合潜入地下（受伤减 60%），第二回合破土并连续攻击 **5~6 次**。**每次命中后自身防御提升 1 阶段（最多 +4）**。目标处于浮空/飞行状态时本招式失败。",
+  "zh": "掘地连打·适应",
+  "en": "Burrow Flurry (Adapted)",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "deepdrill": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 95,
+  "type": "地面",
+  "eff": "**潜入地下后从目标正下方发动攻击**：本回合不可被选中，下回合造成伤害且**无视目标的防御提升**（从下方打，护甲挡不住）。",
+  "zh": "深层潜掘",
+  "en": "Deep Drill",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "gravityslam2": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 110,
+  "type": "地面",
+  "eff": "对飞行/浮空目标必中且威力提高 50%；**在水属性场地或雨天时对任何目标均必中且威力提高 35%**。命中后使目标速度下降 2 阶段并封锁先制招式 1 回合。",
+  "zh": "坠击·适应",
+  "en": "Gravity Slam (Adapted)",
+  "mech": {
+   "boostSelf": true,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "massswallow": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 110,
+  "type": "虫",
+  "eff": "造成伤害。**若本次攻击击倒目标，自身回复 40% 最大 HP 并永久获得 1 层攻击提升**（对应吞噬成长）。若未击倒，自身防御下降 1 阶段。",
+  "zh": "整吞",
+  "en": "Mass Swallow",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "dropTarget": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "groundshock2": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 105,
+  "type": "地面",
+  "eff": "对场上所有对手造成伤害。**距离窗口从 ≥2 格放宽为 ≥1 格**，高度窗口从 -2~+4 放宽为 -3~+6。命中后使目标速度下降 1 阶段。",
+  "zh": "落地震波·适应",
+  "en": "Groundshock (Adapted)",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "extendedcleave": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 95,
+  "type": "格斗",
+  "eff": "可在 4 格内命中目标，不因目标贴身而失效；若目标与本回合开始时距离 ≥3 格，威力提高 20%。",
+  "zh": "延伸横扫",
+  "en": "Extended Cleave",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "cothbite2": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 85,
+  "type": "虫",
+  "eff": "造成伤害后**必定**使目标获得 2 层【感染】；若目标已带【感染】，改为 3 层并使其本回合无法被替换。使用后自身进入隐匿（下回合对手单体招式命中率 -30%）。",
+  "zh": "巢令噬咬·适应",
+  "en": "Hive-Command Bite (Adapted)",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "trap": true,
+   "trapTurns": 1,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "cloakedambush": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 95,
+  "type": "恶",
+  "eff": "只有在自身处于隐匿状态时可用：必定命中且必定要害。使用后隐匿解除。",
+  "zh": "匿袭",
+  "en": "Cloaked Ambush",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "reekerspray2": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 95,
+  "type": "毒",
+  "eff": "对场上所有对手造成伤害并使其中毒，**命中率不再是问题（必中）**。按皮肤追加效果：病毒 → 病毒侵蚀；狂战 → 流血；厚重 → 威力 +25%；脆弱 → 自身速度 +2 阶段。使用后自身速度提升 1 阶段（冲锋余势）。",
+  "zh": "腐嗅喷散·适应",
+  "en": "Reeker Spray (Adapted)",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "reekcharge": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 80,
+  "type": "虫",
+  "eff": "先制 +1。命中后使目标中毒；若目标已中毒，威力提高 40%。使用后自身喷散腔需要 1 回合闭合（下回合不能使用腐嗅喷散·适应）。",
+  "zh": "腐嗅冲锋",
+  "en": "Reeker Charge",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 1,
+   "adapt": true,
+   "conditional": true
+  }
+ },
+ "biomassspawn2": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "吐出一枚生物质囊：其后 2 回合每回合结束造成 1/10 最大 HP 伤害；第 3 回合孵化并追加威力 80 的一击、附加 3 层【感染】。**场上同时最多存在 3 枚囊体**，且每枚囊体存在时自身受到的伤害减少 10%。",
+  "zh": "生体孵化·适应",
+  "en": "Biomass Spawn (Adapted)",
+  "mech": {
+   "infect": true,
+   "layers": 3,
+   "chance": 100,
+   "cap": 3,
+   "dotDen": 10,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "yieldstrike": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 70,
+  "type": "虫",
+  "eff": "造成伤害；若自身场上存在生物质囊，每存在一枚威力提高 20 并在命中后使其中一枚立即孵化。",
+  "zh": "产程拍击",
+  "en": "Yield Strike",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "ringshock2": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 95,
+  "type": "地面",
+  "eff": "对周围所有对手造成伤害并使其中毒。**仅在地面状态可用**（掘地回合不可用）。命中后自身防御提升 1 阶段（最多 +3）。**判定范围从 3 格扩大到 4 格**（对应体型与甲环的扩张）。",
+  "zh": "环体震荡·适应",
+  "en": "Ring Shock (Adapted)",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "ringcollapse": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 75,
+  "type": "地面",
+  "eff": "对周围所有对手造成伤害并使**目标速度下降 2 阶段、命中率下降 1 阶段**（环震造成的失衡）。**可以在地面状态下连续使用**，与主招式的掘地互斥互补。",
+  "zh": "环体塌缩",
+  "en": "Ring Collapse",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "payloaddrop2": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 65,
+  "type": "虫",
+  "eff": "无视距离，**蓄力一回合后投下 2 枚载荷**（原初形态为 1 枚）。每枚对目标周围造成 30% 溅射伤害。蓄力回合结束时对手可见预警。",
+  "zh": "载荷投下·适应",
+  "en": "Payload Drop (Adapted)",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "charge": true,
+   "area": true
+  }
+ },
+ "payloadscatter": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 55,
+  "type": "虫",
+  "eff": "对场上**所有对手**造成伤害并各附加 1 层【感染】。**只有自身处于浮空状态时可用**。与主招式的单点双弹形成覆盖与集中的对比。",
+  "zh": "载荷散射",
+  "en": "Payload Scatter",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "sideleapstrike": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 80,
+  "type": "格斗",
+  "eff": "先制 +1。**若目标本回合尚未对自身造成伤害，威力提高 35%**。命中后自身闪避率提升 1 阶段（最多 +2）。",
+  "zh": "侧跃斩",
+  "en": "Side Leap Strike",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 1,
+   "conditional": true
+  }
+ },
+ "wallscurry": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 70,
+  "type": "格斗",
+  "eff": "**若自身与目标贴附在同一垂直结构上，先制 +2 且本回合无法被选中**。命中后自身闪避率提升 1 阶段。",
+  "zh": "附壁疾走",
+  "en": "Wall Scurry",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 2,
+   "conditional": true
+  }
+ },
+ "gazelock2": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "锁定目标 5 回合：期间自身对其所有招式必中，每回合结束层数 +1（**最多 5 层**，原初形态为 3 层）。每层使下一发炮击威力 +30%。目标替换下场仍会解除，但**解除时保留一半层数**（原初形态清零）。",
+  "zh": "凝视锁定·适应",
+  "en": "Gaze Lock (Adapted)",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "trinadeshot": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 55,
+  "type": "虫",
+  "eff": "无视距离，连续抛射 3 枚榴弹（对应三管发射腔）。每枚独立结算命中；若目标已被自身锁定，每枚威力按锁定层数提高（每层 +30%）。",
+  "zh": "三连榴弹",
+  "en": "Triple Nade Shot",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "tethershot": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "发射牵引弹：命中后目标被拴住 3 回合，期间无法被替换下场，且每回合结束被拉向使用者（速度下降 1 阶段，最多 -2）。若未命中，本招式浪费且使用者本回合无法行动。",
+  "zh": "牵引弹",
+  "en": "Tether Shot",
+  "mech": {
+   "trap": true,
+   "trapTurns": 1,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "dreadvolley": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 55,
+  "type": "虫",
+  "eff": "对场上**所有对手连续攻击 3 次**（每次威力 55）。**每破坏自身 1 个部位，段数减少 1 段**。对应 `DreadVolleyGoal`。",
+  "zh": "恐慑齐射",
+  "en": "Dread Volley",
+  "mech": {
+   "multihit": 3,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "dreadpod": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "飞行",
+  "eff": "从腹部投下 **1 具空投仓**（对应 `DreadPodGoal`），下回合从白名单中释放 **1 只寄生体**。**对应独立实体 `csrp:anc_pod`**。造成 0 点伤害。",
+  "zh": "恐慑空投",
+  "en": "Dread Pod",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "tendrilsweep": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 65,
+  "type": "地面",
+  "eff": "对接触范围内所有对手造成伤害。**命中后使目标本回合无法使用浮空或飞行类招式**（对应它把目标锚在地面）。",
+  "zh": "地脉横扫",
+  "en": "Tendril Sweep",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "tendrildrag": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 70,
+  "type": "地面",
+  "eff": "造成伤害并把目标**向自身方向拖拽**（使其本回合无法替换下场，且下一次受到的齐射类伤害提高 20%）。对应它是恐慑的地面部件。",
+  "zh": "触手拖拽",
+  "en": "Tendril Drag",
+  "mech": {
+   "trap": true,
+   "trapTurns": 1,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "overlordhoming": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 95,
+  "type": "超能",
+  "eff": "**必定命中**（追踪弹，对应 `OverlordHomingGoal`）。命中后使目标**本回合无法替换下场**。对应它是追猎型灾害。",
+  "zh": "争霸追猎弹",
+  "en": "Overlord Homing",
+  "mech": {
+   "trap": true,
+   "trapTurns": 1,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "overlordpress": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 135,
+  "type": "虫",
+  "eff": "对接触范围内所有对手造成伤害。**若目标本回合已被追猎弹命中，威力提高 30%**。对应 `OverlordMeleeGoal`。",
+  "zh": "争霸压顶",
+  "en": "Overlord Press",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "area": true,
+   "conditional": true
+  }
+ },
+ "podhatch": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "荚壳纵向裂开并**释放装载的 1 只寄生体**（来自白名单）。**使用后自身立即被击倒**（容器打开后即失效）。造成 0 点伤害。",
+  "zh": "荚壳开启",
+  "en": "Pod Hatch",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "podscatter": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "**立刻释放装载单位并同时污染周围地面**：此后 2 回合内，该范围内的对手每回合结束获得 1 层【感染】。**自身保留在场**（与主招式的自我销毁相反）。造成 0 点伤害。",
+  "zh": "荚壳播散",
+  "en": "Pod Scatter",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "summon": true,
+   "area": true
+  }
+ },
+ "colonyconstruct": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "在场上建立**巢穴结构**（持续 4 回合）：期间我方 PREEMINENT / PURE 层级宝可梦每回合回复 8% 最大 HP，且对手每回合结束获得 1 层【感染】。造成 0 点伤害。",
+  "zh": "巢群构筑",
+  "en": "Colony Construction",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "nestrepair": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "**修复我方已建立的场地结构**：延长其持续时间 2 回合，并回复我方全体 12% 最大 HP。对应它是 `ArchitectEntity`（*flying colony architect*）。造成 0 点伤害。",
+  "zh": "巢群修缮",
+  "en": "Nest Repair",
+  "mech": {
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "beckoncall1": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "从装填中释放 **1 只寄生体**（只能在白名单内的层级中选择）。**最多同时存在 4 只**（对应 `activeCap = 4`）。使用后需间隔 1 回合（对应 `summonCooldown = 50`）。造成 0 点伤害。",
+  "zh": "初级召唤",
+  "en": "Beckon Call I",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "temporarycollapse1": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "**主动塌缩自身**：立即移除自身在场上的全部召唤物，并按其数量对我方全体施加等量的攻击提升（每只 +1 阶段，最多 +3）。**自身被击倒**。对应 `TEMPORARY_BECKON_LIFETIME = 300` 的临时召唤柱机制。",
+  "zh": "临时塌缩·一阶",
+  "en": "Temporary Collapse I",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "recoil": true,
+   "summon": true
+  }
+ },
+ "beckoncall2": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "从装填中释放 **1 只寄生体**。**最多同时存在 6 只**（初阶为 4）。使用后需间隔 1 回合（`summonCooldown = 45`，较初阶的 50 更快）。造成 0 点伤害。",
+  "zh": "二级召唤",
+  "en": "Beckon Call II",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "temporarycollapse2": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "**主动塌缩自身**：立即移除自身在场上的全部召唤物，并按其数量对我方全体施加等量的攻击提升（每只 +1 阶段，最多 +3）。**自身被击倒**。对应 `TEMPORARY_BECKON_LIFETIME = 300` 的临时召唤柱机制。",
+  "zh": "临时塌缩·二阶",
+  "en": "Temporary Collapse II",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "recoil": true,
+   "summon": true
+  }
+ },
+ "beckoncall3": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "从装填中释放 **1 只寄生体**。**最多同时存在 8 只**（二阶为 6）。使用后需间隔 1 回合（`summonCooldown = 40`）。造成 0 点伤害。",
+  "zh": "三级召唤",
+  "en": "Beckon Call III",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "temporarycollapse3": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "**主动塌缩自身**：立即移除自身在场上的全部召唤物，并按其数量对我方全体施加等量的攻击提升（每只 +1 阶段，最多 +3）。**自身被击倒**。对应 `TEMPORARY_BECKON_LIFETIME = 300` 的临时召唤柱机制。",
+  "zh": "临时塌缩·三阶",
+  "en": "Temporary Collapse III",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "recoil": true,
+   "summon": true
+  }
+ },
+ "beckoncall4": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "从装填中释放 **1 只寄生体**，**作用范围为整个场地**（对应 `blockRange = 18.0`，前三阶仅 3 格）。**最多同时存在 12 只**。**同时清除对手全部场地类效果**（对应 `maxBlockHardness = 5.0`）。造成 0 点伤害。",
+  "zh": "终阶召唤",
+  "en": "Beckon Call IV",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "temporarycollapse4": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "**主动塌缩自身**：立即移除自身在场上的全部召唤物，并按其数量对我方全体施加等量的攻击提升（每只 +1 阶段，最多 +3）。**自身被击倒**。对应 `TEMPORARY_BECKON_LIFETIME = 300` 的临时召唤柱机制。",
+  "zh": "临时塌缩·四阶",
+  "en": "Temporary Collapse IV",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "recoil": true,
+   "summon": true
+  }
+ },
+ "lenciaball": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 60,
+  "type": "超能",
+  "eff": "**连续攻击 3 次**（每次威力 60，对应 `LegacyProjectileAttackGoal(60, 30, 3)` 的 3 发）。**连续使用本招式时，每回合威力提高 15%（最多 +45%）**。",
+  "zh": "定式弹幕",
+  "en": "Lencia Barrage",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 3,
+   "priority": 0
+  }
+ },
+ "lenciarain": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 40,
+  "type": "虫",
+  "eff": "对场上**所有对手**造成伤害并各附加 1 层【感染】。**连续使用时每次威力提高 10%（最多 +30%）**。",
+  "zh": "定式弹雨",
+  "en": "Lencia Rain",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "heavybombing": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 120,
+  "type": "飞行",
+  "eff": "**只有自身处于浮空状态时可用**。对场上**所有对手**造成伤害并各附加 2 层【感染】。**使用后自身击退抗性在本回合内降为 0**。",
+  "zh": "重装轰炸",
+  "en": "Heavy Bombing Run",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "adapt": true,
+   "area": true
+  }
+ },
+ "siegepayload": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 150,
+  "type": "飞行",
+  "eff": "**只有浮空状态可用**，需蓄力一回合。命中后使目标**防御下降 3 阶段**并清除其场地类效果（对应 `blockRange = 5.0D`）。**使用后自身击退抗性在本回合降为 0**。",
+  "zh": "攻坚载荷",
+  "en": "Siege Payload",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "charge": true,
+   "adapt": true
+  }
+ },
+ "lightbombing": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 90,
+  "type": "飞行",
+  "eff": "**只有自身处于浮空状态时可用**。无视距离造成伤害并使目标获得 1 层【感染】。**使用后自身击退抗性在本回合内降为 0**（投弹动作让它在空中失去平衡）。",
+  "zh": "轻量轰炸",
+  "en": "Light Bombing Run",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "adapt": true
+  }
+ },
+ "clusterpayload": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 35,
+  "type": "飞行",
+  "eff": "**连续 3 回合，每回合投下 1 枚载荷**，每枚对全体对手造成伤害（合计约 105）。投弹期间自身击退抗性持续为 0。",
+  "zh": "集束载荷",
+  "en": "Cluster Payload",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "adapt": true
+  }
+ },
+ "parasiticbite": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 60,
+  "type": "虫",
+  "eff": "造成伤害后回复造成伤害的 1/3。",
+  "zh": "寄生啃咬",
+  "en": "Parasitic Bite",
+  "mech": {
+   "drain": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "colonyrecruit": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "**只有自身当前不是对手攻击目标时可用**。为我方全体回复 20% 最大 HP 并各清除 1 层【感染】；同时使自己在本回合内**不会被选为攻击目标**（对应\"无目标时才招募\"）。造成 0 点伤害。",
+  "zh": "聚落招募",
+  "en": "Colony Recruit",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "wakeferry": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "水",
+  "eff": "**把我方一只宝可梦拉入水中**（若场地无水则改为使其免疫下一次地面类招式），并使其速度提升 1 阶段。对应 `CarrierWaterLeapGoal`。造成 0 点伤害。",
+  "zh": "尾流运送",
+  "en": "Wake Ferry",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "aerialdrop": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 85,
+  "type": "飞行",
+  "eff": "先制 +1。命中后对目标附加 2 层【感染】并使目标速度下降 1 阶段。若使用者在本回合开始时位于空中（未受到接触类招式），威力额外 +25%。",
+  "zh": "空投",
+  "en": "Aerial Drop",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 1,
+   "conditional": true
+  }
+ },
+ "saturationbarrage": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "对场上所有对手造成其最大 HP 1/5 的固定伤害并各附加 3 层【感染】；之后 4 回合内每回合结束追加 1/10 最大 HP 的伤害。使用后自身速度下降 1 阶段。",
+  "zh": "饱和投放",
+  "en": "Saturation Barrage",
+  "mech": {
+   "infect": true,
+   "layers": 3,
+   "chance": 100,
+   "cap": 3,
+   "dotDen": 5,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "payloadrelease": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "展开载荷：立刻对目标造成其最大 HP 1/6 的固定伤害并附加 2 层感染。之后 3 回合内，每回合结束对目标追加 1 次 1/12 最大 HP 的伤害（代表载荷爬出后的持续啃食）。",
+  "zh": "载荷释放",
+  "en": "Payload Release",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "dotDen": 6,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "segmentcharge": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 40,
+  "type": "地面",
+  "eff": "连续攻击 4 次（对应四节身体），每次命中后自身防御提升 1 阶段（最多 +3）。若目标处于【感染】状态，最后一击威力翻倍。",
+  "zh": "分节突进",
+  "en": "Segmented Charge",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 4,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "groupsweep": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 75,
+  "type": "岩石",
+  "eff": "对场上所有对手造成伤害；对**本回合已经行动过**的目标额外造成 25% 伤害。使用后自身速度下降 1 阶段。",
+  "zh": "群体横扫",
+  "en": "Group Sweep",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "boulderhurl": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 85,
+  "type": "岩石",
+  "eff": "远程攻击。若场地上存在岩石类场地效果（隐形岩、岩崩残留等），威力提高 40% 且必中；若不存在，命中后仅造成伤害。",
+  "zh": "岩块投掷",
+  "en": "Boulder Hurl",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "prematureburst": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 90,
+  "type": "岩石",
+  "eff": "对场上所有对手造成伤害，并对自己造成最大 HP 1/4 的反伤。若使用者尚未满 4 回合，威力减半；若已满 4 回合，改为威力 ×1.5 且不再反伤。",
+  "zh": "未熟崩解",
+  "en": "Premature Burst",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "recoil": true,
+   "area": true,
+   "conditional": true
+  }
+ },
+ "relaypulse": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "**指定我方一只 DETERRENT 层级宝可梦**，使其立刻回复 25% 最大 HP 并在本回合内招式威力提高 40%。**自身不获得任何效果**。造成 0 点伤害。",
+  "zh": "调度脉冲",
+  "en": "Relay Pulse",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "dispatcherfog": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "幽灵",
+  "eff": "在场上铺设 **2 处**雾幕（对应 `count = min(3, 1 + stage)`，一阶为 2）：雾幕内对手命中率下降 10%，且**我方场地效果在雾幕内无法被清除**。持续 3 回合。造成 0 点伤害。",
+  "zh": "雾幕铺设",
+  "en": "Nest Fog",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "storagerelease1": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "幽灵",
+  "eff": "**一次性释放全部已收纳的单位**（对应 `storeNearbyParasite()` 写入的 `storedParasiteIds`）：按其收纳数量，每只对场上对手造成 1/10 其最大 HP 的固定伤害。造成 0 点伤害。",
+  "zh": "收纳释放·一阶",
+  "en": "Storage Release I",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "dispatcherfog2": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "幽灵",
+  "eff": "在场上铺设 **3 处**雾幕（`count = min(3, 1 + stage)`）：雾幕内对手命中率下降 15%，我方场地类效果无法被清除。**作用半径为 6 格**（对应 `blockRange`）。造成 0 点伤害。",
+  "zh": "雾幕铺设·二阶",
+  "en": "Nest Fog II",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "storagerelease2": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "幽灵",
+  "eff": "**一次性释放全部已收纳的单位**（对应 `storeNearbyParasite()` 写入的 `storedParasiteIds`）：按其收纳数量，每只对场上对手造成 1/10 其最大 HP 的固定伤害。造成 0 点伤害。",
+  "zh": "收纳释放·二阶",
+  "en": "Storage Release II",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "dispatcherfog3": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "幽灵",
+  "eff": "在场上铺设 **3 处**雾幕（`count = min(3, 1 + stage)`）：雾幕内对手命中率下降 20%，我方场地类效果无法被清除。**作用半径为 9 格**（对应 `blockRange`）。造成 0 点伤害。",
+  "zh": "雾幕铺设·三阶",
+  "en": "Nest Fog III",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "storagerelease3": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "幽灵",
+  "eff": "**一次性释放全部已收纳的单位**（对应 `storeNearbyParasite()` 写入的 `storedParasiteIds`）：按其收纳数量，每只对场上对手造成 1/10 其最大 HP 的固定伤害。造成 0 点伤害。",
+  "zh": "收纳释放·三阶",
+  "en": "Storage Release III",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "colonyfounding": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "幽灵",
+  "eff": "在场上建立**永久殖民地**：此后**双方的场地类效果都无法被替换或清除**，我方全体每回合回复 8% 最大 HP，对手每回合结束获得 1 层【感染】。**每场战斗只能使用一次**（对应 `!colonies().isEmpty()` 时不再触发）。造成 0 点伤害。",
+  "zh": "殖民地奠基",
+  "en": "Colony Founding",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "trap": true,
+   "trapTurns": 1,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "storagerelease4": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "幽灵",
+  "eff": "**一次性释放全部已收纳的单位**（对应 `storeNearbyParasite()` 写入的 `storedParasiteIds`）：按其收纳数量，每只对场上对手造成 1/10 其最大 HP 的固定伤害。造成 0 点伤害。",
+  "zh": "收纳释放·四阶",
+  "en": "Storage Release IV",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "derivedbreath": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 180,
+  "type": "龙",
+  "eff": "对场上**所有对手**造成极高伤害并使各获得 3 层【感染】。**持续 2 回合**（对应 `FIRE_BREATH_DURATION_TICKS = 40`，本图鉴以回合折算）。对应 `STATUS_FLAME = 10`。",
+  "zh": "衍化龙息",
+  "en": "Derived Breath",
+  "mech": {
+   "infect": true,
+   "layers": 3,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "flighttransition": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "龙",
+  "eff": "在**地面形态**与**飞行形态**之间切换（对应 `STATUS_FLIGHT_TRANSITION = 3`）：地面形态防御提升 1 阶段；飞行形态速度提升 2 阶段且免疫地面类招式。造成 0 点伤害。",
+  "zh": "翔态转换",
+  "en": "Flight Transition",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "tetherdrag": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "拴住目标 3 回合：期间目标**无法被替换下场**，且每回合结束被拖向使用者（速度下降 1 阶段，最多 -2）。使用者在这 3 回合内不会因对手换人而失去目标。",
+  "zh": "黏索拖曳",
+  "en": "Tether Drag",
+  "mech": {
+   "trap": true,
+   "trapTurns": 1,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "liquidleap": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 70,
+  "type": "水",
+  "eff": "先制 +1，连续攻击 2 次。只有在雨天或水属性场地存在时可使用；使用后自身速度提升 1 阶段（对应连续 8 次的跳跃节奏）。",
+  "zh": "液体跃击",
+  "en": "Liquid Leap",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 2,
+   "priority": 1
+  }
+ },
+ "solitarymaul": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 110,
+  "type": "格斗",
+  "eff": "造成伤害。**若我方场上不存在其他 FERAL 层级宝可梦，威力提高 30% 且自身受到的反伤减半**（独行时不必顾虑同伴）。若本次攻击击倒目标，回复 30% 最大 HP。",
+  "zh": "孤熊重砸",
+  "en": "Solitary Maul",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0,
+   "recoil": true,
+   "conditional": true
+  }
+ },
+ "herdcharge": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 85,
+  "type": "格斗",
+  "eff": "先制 +1。**我方场上每存在另一只 FERAL 层级宝可梦，威力提高 20%（最多 +60%）**。使用后自身防御下降 1 阶段（群冲不回头）。",
+  "zh": "群冲践踏",
+  "en": "Herd Charge",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 1
+  }
+ },
+ "feralwarp": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 95,
+  "type": "超能",
+  "eff": "先制 +1，**无视距离**（对应 followRange 64）。命中后使目标获得 2 层【感染】；若本次攻击击倒目标，回复 30% 最大 HP。**不带动任何同伴**。",
+  "zh": "狂野跃迁",
+  "en": "Feral Warp",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "heal": true,
+   "multihit": 0,
+   "priority": 1,
+   "conditional": true
+  }
+ },
+ "armorbreakgallop": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 100,
+  "type": "格斗",
+  "eff": "先制 +1。**若自身与目标距离 ≥3 格，威力提高 35% 且目标防御下降 2 阶段**（冲刺的动能直接作用在护甲上）。命中后自身受到 1/8 最大 HP 的反伤。",
+  "zh": "破甲疾驰",
+  "en": "Armor-Breaking Gallop",
+  "mech": {
+   "boostSelf": true,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 1,
+   "recoil": true,
+   "conditional": true
+  }
+ },
+ "feralflurry": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 35,
+  "type": "格斗",
+  "eff": "**连续攻击 3 次**，每次威力 35（合计约 105）。每命中一次使目标防御下降 1 阶段（最多 -3）。**无任何追加条件或威力加成**——它靠段数而不是靠条件。",
+  "zh": "狂徒连击",
+  "en": "Feral Flurry",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 3,
+   "priority": 0
+  }
+ },
+ "rootingram": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 80,
+  "type": "格斗",
+  "eff": "先制 +1。**本次攻击无视对手的闪避类变化**（它不看路，也就不会被假动作骗到）。命中后自身受到 1/10 最大 HP 的反伤（低头冲撞的代价）。",
+  "zh": "埋头蛮冲",
+  "en": "Rooting Ram",
+  "mech": {
+   "multihit": 0,
+   "priority": 1,
+   "recoil": true
+  }
+ },
+ "flocksqueeze": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 50,
+  "type": "一般",
+  "eff": "造成伤害（威力刻意偏低，对应 damage 12.0）。**若我方场上存在其他 FERAL 层级宝可梦，使目标速度下降 2 阶段且 2 回合内无法被替换下场**。",
+  "zh": "羊群挤压",
+  "en": "Flock Squeeze",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "trap": true,
+   "trapTurns": 2,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "immovablemaul": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 105,
+  "type": "格斗",
+  "eff": "造成伤害。**自身本回合受到的伤害每累计满 25% 最大 HP，本招式威力提高 15%（最多 +45%）**。使用后自身速度不变（它本来就不靠速度）。",
+  "zh": "夯地重砸",
+  "en": "Immovable Maul",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "feralhunt": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 85,
+  "type": "恶",
+  "eff": "先制 +1。**每命中一次，自身速度提升 1 阶段（最多 +3）**；若本次攻击击倒目标，回复 30% 最大 HP。",
+  "zh": "狂猎撕咬",
+  "en": "Feral Hunt Bite",
+  "mech": {
+   "boostSelf": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 1,
+   "conditional": true
+  }
+ },
+ "viralneedle": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 70,
+  "type": "毒",
+  "eff": "先制 +1。命中后使目标获得【病毒侵蚀】：本场战斗最大 HP 上限下降 1/8（可叠加 2 次）。使用后自身速度下降 1 阶段——这一针消耗了它大部分体力。",
+  "zh": "病毒刺针",
+  "en": "Viral Needle",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 1
+  }
+ },
+ "hookscramble": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 75,
+  "type": "格斗",
+  "eff": "先制 +1。**若目标处于浮空状态或场地存在障碍效果，威力提高 30%**（它直接爬过去）。命中后自身速度提升 1 阶段。",
+  "zh": "钩足翻越",
+  "en": "Hook Scramble",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 1,
+   "conditional": true
+  }
+ },
+ "ceilingdrop": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 80,
+  "type": "格斗",
+  "eff": "**若自身前一回合位于垂直面，先制 +1 且威力提高 35%**（从上方落下）。命中后目标命中率下降 1 阶段。",
+  "zh": "顶面伏击",
+  "en": "Ceiling Drop",
+  "mech": {
+   "boostSelf": true,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 1,
+   "conditional": true
+  }
+ },
+ "obliteratingmaul": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 170,
+  "type": "幽灵",
+  "eff": "对接触范围内**所有**对手造成极高伤害（对应 damage 110.0，全图鉴最高）。**只在近战形态可用**。对应 `HaunterMeleeAoeGoal`——它是范围近战，不是单体。",
+  "zh": "处决重锤",
+  "en": "Obliterating Maul",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "homingburst": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 85,
+  "type": "幽灵",
+  "eff": "**必定命中**（追踪弹，对应 `HaunterHomingBurstGoal`）。**只在远程形态可用**。命中后自身立即切换为近战形态。",
+  "zh": "追踪爆发",
+  "en": "Homing Burst",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "scentmark": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "标记场上所有对手 4 回合：本阵营对其造成的伤害 +20%，且它们无法通过替换清除自身异常状态。使用后本场战斗内此招式冷却 3 回合。",
+  "zh": "气味标记",
+  "en": "Scent Mark",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "headlampsignal": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "我方全体回复 20% 最大 HP，并清除一项能力下降。使用后自身防御下降 1 阶段——**顶端神经节在释放信号时会完全暴露**。",
+  "zh": "颅灯信号",
+  "en": "Cranial Signal",
+  "mech": {
+   "dropTarget": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0,
+   "summon": true
+  }
+ },
+ "spineballvolley": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 45,
+  "type": "虫",
+  "eff": "**连续攻击 3 次**（每次威力 45）。**只有自身处于浮空状态时可用**。每命中一次使目标获得 1 层【感染】。",
+  "zh": "骨刺球齐射",
+  "en": "Spineball Volley",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 3,
+   "priority": 0
+  }
+ },
+ "windupsmash": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 120,
+  "type": "钢",
+  "eff": "**必须蓄力一回合**（本回合不造成伤害，但对手可见明确前兆）。下一回合造成伤害，并使目标**本回合与下回合无法替换下场**（close-range control）。",
+  "zh": "上弦重压",
+  "en": "Wind-Up Smash",
+  "mech": {
+   "trap": true,
+   "trapTurns": 1,
+   "multihit": 0,
+   "priority": 0,
+   "charge": true
+  }
+ },
+ "bonespineshot": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 70,
+  "type": "虫",
+  "eff": "无视距离造成伤害并附加 1 层【感染】（对应 followRange 48）。**若上一回合也对同一目标使用过本招式，威力提高 20%**。",
+  "zh": "骨刺点射",
+  "en": "Bone Spine Shot",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "burrowambush": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 80,
+  "type": "地面",
+  "eff": "第一回合潜入地下（本回合不造成伤害且受到的伤害减少 50%），第二回合破土攻击。破土时若目标本回合尚未行动，威力提高 30% 且必定命中。",
+  "zh": "潜地伏击",
+  "en": "Burrow Ambush",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "chargedupheaval": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 60,
+  "type": "地面",
+  "eff": "蓄力招式：第一回合潜入地下并蓄力（不造成伤害，受伤减 40%），第二回合破土。破土时威力为 60 ×（1 + 蓄力层数×0.5）；每多停留一回合蓄力层数 +1（最多 3 层），但停留期间每回合损失 1/16 最大 HP。",
+  "zh": "蓄力翻覆",
+  "en": "Charged Upheaval",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "dotDen": 5,
+   "multihit": 0,
+   "priority": 0,
+   "charge": true
+  }
+ },
+ "incompleteadhesion2": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 30,
+  "type": "虫",
+  "eff": "附着到目标身上 4 回合：期间每回合结束造成 1/8 目标最大 HP 的伤害，目标同时中毒且**无法通过招式或道具回复 HP**；自身受到伤害减半。目标替换下场则中断，中断时造成已结算总伤害 60% 的额外伤害。",
+  "zh": "未成形黏附·中",
+  "en": "Incomplete Adhesion (Mature)",
+  "mech": {
+   "dotDen": 8,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "incompleteadhesion": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 20,
+  "type": "虫",
+  "eff": "附着到目标身上 3 回合：期间每回合结束造成 1/16 目标最大 HP 的伤害，且自身受到的伤害减半。目标替换下场则附着中断，但中断时对其造成一次相当于已结算总伤害 50% 的额外伤害。",
+  "zh": "未成形黏附",
+  "en": "Incomplete Adhesion",
+  "mech": {
+   "dotDen": 16,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "kirinjudgement": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 140,
+  "type": "妖精",
+  "eff": "**无视距离**（followRange 80）造成伤害。**若目标距离自身 3 格以上，威力提高 25%**；若已贴身，改为使目标特防下降 2 阶段。",
+  "zh": "麒麟裁断",
+  "en": "Kirin Judgement",
+  "mech": {
+   "boostSelf": true,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "kirinstep": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 120,
+  "type": "地面",
+  "eff": "对周围所有对手造成伤害并使地面类场地效果**对自身不再生效**（它把地面踩平）。副作用：自身速度下降 1 阶段。",
+  "zh": "神兽踏地",
+  "en": "Kirin Step",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "hunchdown": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 105,
+  "type": "恶",
+  "eff": "对接触范围内所有对手造成伤害并使其中毒。**只有在前一回合未受到伤害时可用**（它需要不受干扰地完成前倾动作）。",
+  "zh": "隆起下压",
+  "en": "Hunch Press",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "dropanchor": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "3 回合内自身防御与特防各提升 1 阶段，且不会被强制替换下场或击退；期间每回合结束回复 1/16 最大 HP。",
+  "zh": "投放锚定",
+  "en": "Drop Anchor",
+  "mech": {
+   "dotDen": 16,
+   "boostSelf": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "devourevolution": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 75,
+  "type": "恶",
+  "eff": "造成伤害；若本次攻击击倒目标，自身随机一项能力提升 1 阶段（与特性【适应性突变】叠加，即一次击杀最多获得 2 阶段）。",
+  "zh": "吞噬进化",
+  "en": "Devour Evolution",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "adapt": true,
+   "conditional": true
+  }
+ },
+ "marauderize": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "**将场上的一只对手暂时改造成掠夺化形态**：该目标在 3 回合内攻击提升 2 阶段但**每回合结束损失 1/8 最大 HP**，且无法替换下场。**每场战斗只能使用 2 次**。**每损失一根触手，可用次数减少 1 次**。",
+  "zh": "掠夺改造",
+  "en": "Marauderize",
+  "mech": {
+   "dotDen": 8,
+   "trap": true,
+   "trapTurns": 1,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "tendrilsever": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "**主动断掉自己一根触手**（对应 `TENDRIL_HEALTH_FRACTION`）：本回合受到的伤害减少 50%，且**立刻刷新一次改造类招式的可用次数**。造成 0 点伤害。",
+  "zh": "断触转换",
+  "en": "Tendril Sever",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "detachtendril": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 85,
+  "type": "恶",
+  "eff": "**只能从连体态发动**。造成伤害后自身**转入脱离态**：攻击与速度各提升 2 阶段，但每回合结束损失 1/4 最大 HP。",
+  "zh": "触手离体",
+  "en": "Detach Tendril",
+  "mech": {
+   "dotDen": 4,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "detachedassist": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "**把自身剩余的存活时间转移给一只我方掠夺化体**：自身立刻被击倒，目标回复 25% 最大 HP 并获得 1 层攻击提升。造成 0 点伤害。",
+  "zh": "离体协战",
+  "en": "Detached Assist",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "sevenvolley": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 22,
+  "type": "虫",
+  "eff": "**连续攻击 7 次**（每次威力 22，合计约 154）。使用后本招式**进入 3 回合冷却**。**使用后下一回合自身的接触类招式先制 +1**（拖拽）。",
+  "zh": "七连骨刺",
+  "en": "Seven-Round Volley",
+  "mech": {
+   "multihit": 7,
+   "priority": 1
+  }
+ },
+ "corrosivevomit": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 95,
+  "type": "毒",
+  "eff": "造成伤害并使目标**中毒**；若目标已被感染，改为**腐蚀其防御 2 阶段**。**使用后需间隔 2 回合才能再次使用**（对应 VOMIT_COOLDOWN_TICKS = 200）。",
+  "zh": "腐蚀呕吐",
+  "en": "Corrosive Vomit",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "tetherwarp": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 100,
+  "type": "超能",
+  "eff": "先制 +1，**无视距离**（followRange 64）。命中后目标**本回合无法替换下场**，且自身速度提升 1 阶段。**冷却仅 1 回合**（对应 TELEPORT_COOLDOWN_TICKS = 20）。",
+  "zh": "曳引跃迁",
+  "en": "Tether Warp",
+  "mech": {
+   "trap": true,
+   "trapTurns": 1,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 1
+  }
+ },
+ "mountclaw": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 70,
+  "type": "格斗",
+  "eff": "造成伤害并**攀附到目标身上**：此后每回合结束对目标造成 1/16 最大 HP 固定伤害，目标无法替换下场，直到自身被击倒。**攀附期间自身受到的伤害减少 20%**。",
+  "zh": "攀附钩击",
+  "en": "Mount Claw",
+  "mech": {
+   "dotDen": 16,
+   "trap": true,
+   "trapTurns": 1,
+   "multihit": 0,
+   "priority": 0,
+   "recoil": true
+  }
+ },
+ "heavyflockshot": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 110,
+  "type": "虫",
+  "eff": "无视距离造成伤害并附加 2 层【感染】。**使用后需间隔 2 回合才能再次使用**（对应 `SHOT_COOLDOWN_TICKS = 100` 与村民的 40 形成对比）。",
+  "zh": "重羊骨刺",
+  "en": "Heavy Flock Shot",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "rapidhandover": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 40,
+  "type": "虫",
+  "eff": "**连续攻击 3 次**（每次威力 40，合计 120）。每命中一次使目标获得 1 层【感染】。**使用后仅需间隔 1 回合**（对应 `SHOT_COOLDOWN_TICKS = 40`，是羊的 2.5 倍频率）。",
+  "zh": "交递连射",
+  "en": "Rapid Handover",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 3,
+   "priority": 0
+  }
+ },
+ "monarchreach": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 95,
+  "type": "超能",
+  "eff": "**可以攻击到非邻接的目标**（触及 2 格）。命中后使目标**本回合无法使用先制招式**，且自身防御提升 1 阶段。",
+  "zh": "君威长击",
+  "en": "Monarch Reach",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "dominionorder": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "指定我方一只 PURE 层级宝可梦，使其**本回合立刻行动一次**（不消耗其行动），且该次行动威力提高 25%。造成 0 点伤害。",
+  "zh": "支配号令",
+  "en": "Dominion Order",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "massfusion": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "累积 1 层【融合】（上限 2 层）。每层使自身攻击与防御各提升 1 阶段；达到 2 层时（对应 `REQUIRED_MERGES = 2`）额外回复 30% 最大 HP 并使体型永久增大。被击倒时融合层数清空。",
+  "zh": "质体融合",
+  "en": "Mass Fusion",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 2,
+   "boostSelf": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "overseermark": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "对场上**所有对手**施加【猎物标记】（对应它全向感光头部没有盲区）。被标记的目标**受到的感染伤害提高 25%**。造成 0 点伤害。",
+  "zh": "监视标记",
+  "en": "Overseer Mark",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "aerialrecon": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "**揭示对手全部招式与道具信息**（本次战斗内持续有效），并使我方全体下一回合**先制招式先制度 +1**。造成 0 点伤害。",
+  "zh": "空中侦察",
+  "en": "Aerial Recon",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "webpull": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "把目标拉近并使其无法在 2 回合内被替换下场；同时目标速度下降 1 阶段。若目标已处于移动受阻状态，改为下降 2 阶段。",
+  "zh": "牵丝拉拽",
+  "en": "Web Pull",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "bolsterpulse": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "我方全体回复 25% 最大 HP 并清除一项能力下降。**病毒皮时**：追加使对手全体获得 1 层【感染】；**厚重皮时**：追加使我方全体防御 +1 阶段。",
+  "zh": "援护脉冲",
+  "en": "Bolster Pulse",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "dropTarget": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "burrowflurry": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 30,
+  "type": "地面",
+  "eff": "第一回合潜入地下（不造成伤害，受伤减 50%），第二回合破土并连续攻击 **4~5 次**。目标处于浮空/飞行状态时本招式失败。",
+  "zh": "掘地连打",
+  "en": "Burrow Flurry",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "gravityslam": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 95,
+  "type": "地面",
+  "eff": "对飞行属性或浮空目标**必中**且威力提高 50%；命中后使目标速度下降 2 阶段并在本回合无法使用先制招式。对地面目标按 95 结算且无追加效果。",
+  "zh": "坠击",
+  "en": "Gravity Slam",
+  "mech": {
+   "boostSelf": true,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "groundshock": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 90,
+  "type": "地面",
+  "eff": "对场上所有对手造成伤害。**只能在自身与目标水平距离 ≥2 格、且垂直高度差在 -2 到 +4 之间时使用**；距离过近或高低差过大时招式失败。",
+  "zh": "落地震波",
+  "en": "Groundshock",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "scaryorb": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 70,
+  "type": "毒",
+  "eff": "必中。命中后使目标获得 1 层【感染】并降低 1 阶段特防。",
+  "zh": "灾厄球",
+  "en": "Scary Orb",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "cothbite": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 75,
+  "type": "虫",
+  "eff": "造成伤害后有 40% 概率使目标获得 2 层【感染】；若目标已带【感染】，改为直接造成 3 层并使其无法在本回合被替换。",
+  "zh": "巢令噬咬",
+  "en": "Hive-Command Bite",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 40,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "reekerspray": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 80,
+  "type": "毒",
+  "eff": "对场上所有对手造成伤害并使其中毒。**根据当前皮肤追加不同效果**：病毒皮肤 → 额外附加【病毒侵蚀】；狂战皮肤 → 额外附加流血；厚重皮肤 → 威力提高 20%；脆弱皮肤 → 自身速度提升 1 阶段。",
+  "zh": "腐嗅喷散",
+  "en": "Reeker Spray",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "biomassspawn": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "虫",
+  "eff": "吐出一枚生物质囊：在其后 2 回合内每回合结束对目标造成 1/12 最大 HP 伤害；第 3 回合囊体孵化，对目标追加一次等同于裂噬兽一击的伤害（威力 65）并附加 2 层【感染】。场上同时最多存在 2 枚囊体。",
+  "zh": "生体孵化",
+  "en": "Biomass Spawn",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "dotDen": 12,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "ringshock": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 70,
+  "type": "地面",
+  "eff": "对周围所有对手造成伤害并使其中毒。**仅在地面状态可用**；潜入地下的回合不能使用。命中后自身防御提升 1 阶段（最多 +3）。",
+  "zh": "环体震荡",
+  "en": "Ring Shock",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "payloaddrop": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 95,
+  "type": "虫",
+  "eff": "无视距离，对目标投下一枚载荷。**必须先蓄力一回合**（本回合不造成伤害）；蓄力回合结束时对手可看到预警。命中后对目标周围造成 25% 的溅射伤害。",
+  "zh": "载荷投下",
+  "en": "Payload Drop",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "charge": true,
+   "area": true
+  }
+ },
+ "sprintpounce": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 85,
+  "type": "格斗",
+  "eff": "**若自身与目标距离 ≥3 格，本招式先制 +2 且威力提高 25%**；若已在近身距离，按 85 结算且无加成。命中后自身速度提升 1 阶段。",
+  "zh": "八格突袭",
+  "en": "Eight-Block Pounce",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 2,
+   "conditional": true
+  }
+ },
+ "gazelock": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "锁定目标 4 回合：期间自身对其**所有招式必中**，且每回合结束标记层数 +1（最多 3 层）。每层使自身对其下一发炮击威力 +25%。**目标替换下场则锁定立即解除，层数清零。**",
+  "zh": "凝视锁定",
+  "en": "Gaze Lock",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "nadeshot": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 85,
+  "type": "虫",
+  "eff": "**无视距离**（只要目标在场即可命中）。命中率 90，但若目标已被自身锁定则改为必中且威力提高（每层锁定 +25%）。",
+  "zh": "榴弹抛射",
+  "en": "Nade Shot",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "inertcyst": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "**不做任何事**。自身进入\"惰性\"状态：本回合内免疫一切伤害与效果，但也**无法行动**。**造成 0 点伤害，不施加任何状态，不改变场地**。",
+  "zh": "惰性孢囊",
+  "en": "Inert Cyst",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "dormantcyst": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "**把自身完全转化为地形**：此后本场战斗中自身不再被视为宝可梦（无法被选中、无法被替换），但也不再行动。对应源码 `if (activeKind.isRooterBall()) { return; }`——它执行的唯一逻辑就是什么都不执行。造成 0 点伤害。",
+  "zh": "休眠孢囊",
+  "en": "Dormant Cyst",
+  "mech": {
+   "trap": true,
+   "trapTurns": 1,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "rooterpulse1": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "为范围内**所有寄生系友方**施加 PIVOT 与 PARATE 各 1 级（本阶半径 **20 格**，等级 **0**），持续 3 回合。**同类不享受**。造成 0 点伤害。",
+  "zh": "根系脉动·初阶",
+  "en": "Rooter Pulse I",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "subordinatecover1": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "**把自身本回合将受到的伤害转移给我方被加持过的单位**（对应 `StatusEffectEvents.linkToRooter` 建立的 `ROOTER_OWNERS` 从属关系）：由最多 3 只从属单位平摊。造成 0 点伤害。",
+  "zh": "从属共担·一阶",
+  "en": "Subordinate Cover I",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "rooterpulse2": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "为范围内**所有寄生系友方**施加 PIVOT 与 PARATE 各 1 级（本阶半径 **24 格**，等级 **1**），持续 3 回合。**同类不享受**。造成 0 点伤害。",
+  "zh": "根系脉动·二阶",
+  "en": "Rooter Pulse II",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "subordinatecover2": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "**把自身本回合将受到的伤害转移给我方被加持过的单位**（对应 `StatusEffectEvents.linkToRooter` 建立的 `ROOTER_OWNERS` 从属关系）：由最多 3 只从属单位平摊。造成 0 点伤害。",
+  "zh": "从属共担·二阶",
+  "en": "Subordinate Cover II",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "rooterpulse3": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "为范围内**所有寄生系友方**施加 PIVOT 与 PARATE 各 1 级（本阶半径 **28 格**，等级 **2**），持续 3 回合。**同类不享受**。造成 0 点伤害。",
+  "zh": "根系脉动·三阶",
+  "en": "Rooter Pulse III",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "subordinatecover3": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "**把自身本回合将受到的伤害转移给我方被加持过的单位**（对应 `StatusEffectEvents.linkToRooter` 建立的 `ROOTER_OWNERS` 从属关系）：由最多 3 只从属单位平摊。造成 0 点伤害。",
+  "zh": "从属共担·三阶",
+  "en": "Subordinate Cover III",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "rooterpulse4": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "为范围内**所有寄生系友方**施加 PIVOT 与 PARATE 各 1 级（本阶半径 **32 格**，等级 **3**），持续 3 回合。**同类不享受**。造成 0 点伤害。",
+  "zh": "根系脉动·终阶",
+  "en": "Rooter Pulse IV",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "subordinatecover4": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "**把自身本回合将受到的伤害转移给我方被加持过的单位**（对应 `StatusEffectEvents.linkToRooter` 建立的 `ROOTER_OWNERS` 从属关系）：由最多 3 只从属单位平摊。造成 0 点伤害。",
+  "zh": "从属共担·四阶",
+  "en": "Subordinate Cover IV",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "hivebite": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 25,
+  "type": "虫",
+  "eff": "连续攻击 2~3 次；目标处于**任何**异常状态时，每次攻击威力提高 50%。",
+  "zh": "蜂巢撕咬",
+  "en": "Hive Bite",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "endlesspursuit": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 80,
+  "type": "恶",
+  "eff": "**必定命中且无视距离**（对应 `followRange 32` 与\"永不失去目标\"）。**若目标本回合尝试过替换或提升闪避，威力提高 50%**。",
+  "zh": "无尽追索",
+  "en": "Endless Pursuit",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "indefatigable": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "恶",
+  "eff": "**清除自身全部异常状态并回复 25% 最大 HP**，但本回合无法攻击。对应 `FlightPursuitGoal(0.50D)`——它没有「放弃」这个状态，也没有「减速」这个状态。",
+  "zh": "不倦追索",
+  "en": "Indefatigable",
+  "mech": {
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "seizergrip": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 85,
+  "type": "格斗",
+  "eff": "**只能对与自身相邻的目标使用**。命中后目标**无法替换下场、无法使用先制招式，且每回合结束损失 1/12 最大 HP**，持续至自身被击倒。",
+  "zh": "六腕擒握",
+  "en": "Six-Arm Seize",
+  "mech": {
+   "dotDen": 12,
+   "trap": true,
+   "trapTurns": 1,
+   "multihit": 0,
+   "priority": 0,
+   "recoil": true
+  }
+ },
+ "farsightlock": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "**无视距离**（followRange 32）对目标施加【猎物标记】，持续 3 回合。**被标记的目标无论替换到哪只宝可梦身上，标记都会转移**（哨卫一直在看着）。造成 0 点伤害。",
+  "zh": "远眺锁定",
+  "en": "Farsight Lock",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "hivewave": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 70,
+  "type": "虫",
+  "eff": "对场上所有对手造成伤害并各附加 2 层【感染】。**若自身累计击倒数已达到 2 次，本招式改为附加 3 层**（对应接近 10 次熔解阈值）。",
+  "zh": "巢群波动",
+  "en": "Hive Wave",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "area": true,
+   "conditional": true
+  }
+ },
+ "headcothcloud": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 55,
+  "type": "虫",
+  "eff": "对场上所有对手造成伤害并各附加 2 层【感染】。**使用后自身进入跳跃状态**（下一回合先制 +1）。",
+  "zh": "颅群云",
+  "en": "Cranial Hive Cloud",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 1,
+   "area": true
+  }
+ },
+ "doublemaul": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 105,
+  "type": "格斗",
+  "eff": "造成伤害。**若自身当前 HP 高于 75%，本招式威力提高 25%**（体力充沛时砸得更重）；若低于 25%，改为自身受到 1/8 最大 HP 的反伤。",
+  "zh": "双掌重砸",
+  "en": "Double Maul",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "recoil": true,
+   "conditional": true
+  }
+ },
+ "webvolley": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 45,
+  "type": "虫",
+  "eff": "**蓄力一回合**（本回合不造成伤害，但对手可见蓄力前兆），之后连续 3 个回合每回合各射出 1 枚蛛网球（共 3 枚，对应 3 shots）。每次命中使目标速度下降 1 阶段；累计命中 3 次后目标在 1 回合内无法被替换下场。",
+  "zh": "蛛网齐射",
+  "en": "Web Volley",
+  "mech": {
+   "trap": true,
+   "trapTurns": 1,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "charge": true
+  }
+ },
+ "cowcharge": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 80,
+  "type": "一般",
+  "eff": "先制 +1。命中后使目标获得 1 层【感染】，并使自身受到的反伤减半（冲锋的惯性抵消了反冲）。",
+  "zh": "低头冲撞",
+  "en": "Headlong Charge",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 1,
+   "recoil": true
+  }
+ },
+ "headram": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 60,
+  "type": "一般",
+  "eff": "造成伤害并附加 1 层【感染】。**若自身已触发断体重建（在场满 3 回合），威力提高 40%**。",
+  "zh": "断首顶撞",
+  "en": "Severed Ram",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "dragonbreath": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 100,
+  "type": "龙",
+  "eff": "无视距离造成伤害并使目标获得 2 层【感染】。**只有头部部位耐久不为 0 时可用**；头部被破坏后此招式不可用。冷却 2 回合（对应 `RANGED_COOLDOWN = 40`）。",
+  "zh": "感染龙息",
+  "en": "Infected Dragon Breath",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "wingstorm": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 95,
+  "type": "飞行",
+  "eff": "对场上所有对手造成伤害。**只有翅膀部位耐久不为 0 时可用**；翅膀被破坏后此招式不可用。使用后自身翅膀部位耐久减少 10%（对应它用翅膀攻击是有代价的）。",
+  "zh": "裂翼风暴",
+  "en": "Wing Storm",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "recoil": true,
+   "area": true
+  }
+ },
+ "detachedbreath": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 100,
+  "type": "龙",
+  "eff": "无视距离造成伤害并使目标获得 2 层【感染】。**即使自身 HP 低于 25% 也不会降低威力**（对应\"斩首后仍保留火球\"——它的输出不依赖躯体状态）。",
+  "zh": "断首龙息",
+  "en": "Detached Breath",
+  "mech": {
+   "infect": true,
+   "layers": 2,
+   "chance": 100,
+   "cap": 3,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "groupwarp": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "**把自身与我方全体一同重新部署到对手周围**：本回合我方全体受到的伤害减少 30%，且下一回合我方全体的先制招式先制度 +1。使用后 3 回合内不能再次使用。",
+  "zh": "群体跃迁",
+  "en": "Group Warp",
+  "mech": {
+   "multihit": 0,
+   "priority": 0,
+   "area": true
+  }
+ },
+ "selfwarp": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "超能",
+  "eff": "先制 +2，清除自身所有被标记状态并提升 1 阶段闪避（最多 +2）。冷却仅 1 回合。",
+  "zh": "自身闪现",
+  "en": "Self Warp",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 2
+  }
+ },
+ "cranialblink": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 75,
+  "type": "超能",
+  "eff": "先制 +1。**无视距离**（对应 followRange 32 的感知范围）。命中后使目标获得 1 层【感染】并清除自身被标记状态。",
+  "zh": "颅影跃迁",
+  "en": "Cranial Blink",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 1
+  }
+ },
+ "gallopcharge": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 95,
+  "type": "格斗",
+  "eff": "先制 +1。**若自身与目标距离 ≥3 格，威力提高 30% 且必定命中**（冲刺距离越长撞得越重）。命中后自身速度提升 1 阶段。",
+  "zh": "疾驰冲撞",
+  "en": "Gallop Charge",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 1,
+   "conditional": true
+  }
+ },
+ "skulldrop": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 75,
+  "type": "格斗",
+  "eff": "造成伤害并附加 1 层【感染】。**自身 HP 高于 60% 时威力提高 25%**（颅骨完好时砸得更重）；低于 30% 时威力减半。",
+  "zh": "颅顶砸击",
+  "en": "Skull Drop",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "barehandedmaul": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 90,
+  "type": "格斗",
+  "eff": "造成伤害。**自身未携带任何道具时威力提高 25%**；命中后使目标防御下降 1 阶段（徒手抓握破坏护甲结构）。",
+  "zh": "徒手重击",
+  "en": "Barehanded Maul",
+  "mech": {
+   "boostSelf": true,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "severedjaw": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 65,
+  "type": "一般",
+  "eff": "造成伤害并附加 1 层【感染】。**无任何追加条件或额外效果**——它是头颅层最\"干净\"的一招。",
+  "zh": "断颚咬合",
+  "en": "Severed Jaw Bite",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "swarmtrample": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 60,
+  "type": "一般",
+  "eff": "先制 +1。**我方场上每存在另一只 ASSIMILATED 层级宝可梦，威力提高 20%**（最多 +60%）。使用后自身防御下降 1 阶段（本来就几乎没有护甲）。",
+  "zh": "群拥践踏",
+  "en": "Swarm Trample",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 1
+  }
+ },
+ "snoutroot": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 30,
+  "type": "一般",
+  "eff": "造成伤害（威力刻意很低，对应 damage 1.05）。**若目标已带有【感染】，改为使其感染层数 +2**。",
+  "zh": "鼻端拱击",
+  "en": "Snout Root",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "woolguard": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 75,
+  "type": "一般",
+  "eff": "造成伤害。**若本回合自身尚未受到伤害，威力提高 25% 且自身防御提升 1 阶段**（毛层完好时更能顶）。使用后毛层状态重置（下回合恢复为未受损状态）。",
+  "zh": "毛层顶撞",
+  "en": "Wool Guard Ram",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "hornhook": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 65,
+  "type": "一般",
+  "eff": "造成伤害并附加 1 层【感染】。**若目标本回合已行动过，威力提高 30%**（侧向钩扫打的是\"反应慢拍\"的目标）。",
+  "zh": "卷角钩扫",
+  "en": "Horn Hook",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "tentacleambush": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 85,
+  "type": "水",
+  "eff": "**必须先处于水属性场地或雨天**才可使用。先制 +1，命中后使目标速度下降 2 阶段并在 2 回合内无法被替换下场（触腕缠住）。",
+  "zh": "腕足伏击",
+  "en": "Tentacle Ambush",
+  "mech": {
+   "trap": true,
+   "trapTurns": 2,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 1
+  }
+ },
+ "payloadhandover": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "一般",
+  "eff": "把自己当前所有能力提升层数**全部转移给我方另一只宝可梦**（自身归零，目标获得等量层数，上限 +3）。同时目标回复 25% 最大 HP。",
+  "zh": "物资转交",
+  "en": "Payload Handover",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "offeringbite": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 70,
+  "type": "一般",
+  "eff": "造成伤害。**若目标已带有【感染】，使其层数 +2 并立即结算一次感染伤害**（把\"交付\"变成实际的感染爆发）。",
+  "zh": "递交咬合",
+  "en": "Offering Bite",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "shrinkrush": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 80,
+  "type": "恶",
+  "eff": "先制 +1。**自身每损失 1 阶段防御，本招式威力提高 10%**（最多 +30%）。命中后自身防御再下降 1 阶段。",
+  "zh": "缩解突袭",
+  "en": "Shrink Rush",
+  "mech": {
+   "boostSelf": true,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 1
+  }
+ },
+ "severedbite": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 70,
+  "type": "恶",
+  "eff": "造成伤害并附加 1 层【感染】。**若自身 HP 低于 50%，威力提高 40%**（与活着的狼一致：越伤越狠）。若自身已触发断体重建，追加使目标速度下降 1 阶段。",
+  "zh": "断首撕咬",
+  "en": "Severed Bite",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "boostSelf": true,
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "succorwave": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "妖精",
+  "eff": "我方全体回复 25% 最大 HP，并清除所有【感染】层数。**自身不回复**（它把资源全给了别人）。造成 0 点伤害。",
+  "zh": "援护波动",
+  "en": "Succor Wave",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "sucklinglink": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "妖精",
+  "eff": "**与一只我方宝可梦建立链接**（3 回合）：期间该宝可梦每回合回复 6% 最大 HP，而**自身受到的伤害提高 30%**（它把防护也一并承担了）。造成 0 点伤害。",
+  "zh": "援护链接",
+  "en": "Suckling Link",
+  "mech": {
+   "boostSelf": true,
+   "heal": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "memorystrike": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 70,
+  "type": "恶",
+  "eff": "若目标在本场战斗中击倒过我方任意一只宝可梦，本招式威力提升为 105 并必定命中；否则按 70 结算。",
+  "zh": "记忆突袭",
+  "en": "Memory Strike",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "armoredadvance": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 100,
+  "type": "钢",
+  "eff": "造成伤害。**自身本回合每受到过一次攻击，威力提高 20%（最多 +60%）**——它把被打当成前进的动力。使用后自身速度不变（它本来就不会变快）。",
+  "zh": "装甲推进",
+  "en": "Armored Advance",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "plateanchor": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "钢",
+  "eff": "**完全固定自身位置**：此后 3 回合内自身**无法被任何方式移动**（包括自身招式），但受到的伤害减少 35% 且不会被强制换场。造成 0 点伤害。",
+  "zh": "落锚固守",
+  "en": "Plate Anchor",
+  "mech": {
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "wardengrasp": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 95,
+  "type": "地面",
+  "eff": "造成伤害并使目标**本回合与下回合无法替换下场**。**若自身从攀附状态发动本招式，威力提高 25%**（从上方压制）。",
+  "zh": "典狱擒抱",
+  "en": "Warden Grasp",
+  "mech": {
+   "trap": true,
+   "trapTurns": 1,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "guardlock": {
+  "kind": "signature",
+  "cls": "物理",
+  "pow": 60,
+  "type": "地面",
+  "eff": "造成伤害并使目标**无法使用替换类招式与道具，持续 3 回合**（对应 `knockbackResistance = 1.0` 的看守定位）。命中后自身防御提升 1 阶段。",
+  "zh": "看守封锁",
+  "en": "Guard Lock",
+  "mech": {
+   "dotDen": 0,
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "hivebulwark": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "在场上筑起巢壁 4 回合：期间我方所有宝可梦受到的第一次攻击伤害减少 30%；若使用者本回合未受到伤害，减伤提升到 45%。巢壁存在时，场地类招式不能被对手覆盖。",
+  "zh": "巢壁构筑",
+  "en": "Hive Bulwark",
+  "mech": {
+   "boostSelf": true,
+   "multihit": 0,
+   "priority": 0,
+   "conditional": true
+  }
+ },
+ "burrowanchor": {
+  "kind": "signature",
+  "cls": "变化",
+  "pow": 0,
+  "type": "地面",
+  "eff": "在场地一侧展开寄生根须：此后**双方在该场地内均无法使用替换类效果**（3 回合）。同时对手全体各获得 1 层【感染】。**造成 0 点伤害**。",
+  "zh": "植根封锁",
+  "en": "Burrow Anchor",
+  "mech": {
+   "infect": true,
+   "layers": 1,
+   "chance": 100,
+   "cap": 3,
+   "multihit": 0,
+   "priority": 0
+  }
+ },
+ "elviaalternate": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 75,
+  "type": "幽灵",
+  "eff": "**连续攻击 3 次**，但三次的形态不同：**第 1 发为普通弹**（威力 75）、**第 2 发为雷弹**（威力 60，命中后目标速度下降 1 阶段）、**第 3 发为普通弹**。对应 `ELVIA_BALL → ELVIA_NADE → ELVIA_BALL` 的交替。",
+  "zh": "幽魂交替投掷",
+  "en": "Elvia Alternating Throw",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 3,
+   "priority": 0
+  }
+ },
+ "elviaoverload": {
+  "kind": "signature",
+  "cls": "特殊",
+  "pow": 120,
+  "type": "幽灵",
+  "eff": "**把两种弹体合并成一次投射**：造成高额伤害并使目标速度下降 2 阶段。**使用后本招式进入 2 回合冷却**（需要重新装填两种弹体）。",
+  "zh": "幽魂过载",
+  "en": "Elvia Overload",
+  "mech": {
+   "dropTarget": true,
+   "multihit": 0,
+   "priority": 0
+  }
+ }
+}

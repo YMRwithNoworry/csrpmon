@@ -3,11 +3,11 @@
   basePower: 0,
   category: "Status",
   name: "Inert Cyst",
-  pp: 20,
+  pp: 10,
   priority: 0,
-  flags: {"metronome":1},
+  flags: {snatch:1,metronome:1},
   secondary: null,
   target: "self",
   type: "Ground",
-  contestType: "Tough"
+  contestType: "Clever",
 }

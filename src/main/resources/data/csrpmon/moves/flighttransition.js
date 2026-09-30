@@ -5,10 +5,10 @@
   name: "Flight Transition",
   pp: 10,
   priority: 0,
-  flags: {"metronome":1},
+  flags: {snatch:1,metronome:1},
+  boosts: {spe: 1},
   secondary: null,
   target: "self",
   type: "Dragon",
-  contestType: "Cool",
-  boosts: {"def":1,"spe":1}
+  contestType: "Clever",
 }

@@ -3,12 +3,21 @@
   basePower: 0,
   category: "Status",
   name: "Nest Establishment",
-  pp: 5,
+  pp: 20,
   priority: 0,
-  flags: {"metronome":1},
+  heal: [1, 2],
+  flags: {snatch:1,metronome:1},
+  volatileStatus: "nestestablishment",
+  condition: {
+    name: "nestestablishment",
+    noCopy: true,
+    onResidualOrder: 8,
+    onResidual(pokemon) {
+      this.damage(pokemon.maxhp / 8, pokemon, this.effectState.source);
+    },
+  },
   secondary: null,
   target: "self",
   type: "Grass",
   contestType: "Clever",
-  heal: [1,2]
 }

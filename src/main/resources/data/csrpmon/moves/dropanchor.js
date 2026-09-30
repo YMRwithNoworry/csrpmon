@@ -5,10 +5,20 @@
   name: "Drop Anchor",
   pp: 10,
   priority: 0,
-  flags: {"metronome":1},
+  heal: [1, 2],
+  flags: {snatch:1,metronome:1},
+  boosts: {spd: 1},
+  volatileStatus: "dropanchor",
+  condition: {
+    name: "dropanchor",
+    noCopy: true,
+    onResidualOrder: 8,
+    onResidual(pokemon) {
+      this.damage(pokemon.maxhp / 16, pokemon, this.effectState.source);
+    },
+  },
   secondary: null,
   target: "self",
   type: "Bug",
-  contestType: "Tough",
-  boosts: {"def":1,"spd":1}
+  contestType: "Clever",
 }

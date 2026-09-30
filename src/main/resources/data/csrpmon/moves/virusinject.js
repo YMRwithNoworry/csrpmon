@@ -1,13 +1,13 @@
 {
-  accuracy: 95,
+  accuracy: true,
   basePower: 0,
   category: "Status",
   name: "Virus Inject",
-  pp: 10,
+  pp: 20,
   priority: 0,
-  flags: {"metronome":1},
+  flags: {snatch:1,metronome:1},
   secondary: null,
   target: "self",
   type: "Poison",
-  contestType: "Cute"
+  contestType: "Clever",
 }

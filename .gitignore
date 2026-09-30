@@ -27,3 +27,4 @@ libs/*.txt
 Thumbs.db
 Desktop.ini
 .git-commit-msg.txt
+tools/sdtest/

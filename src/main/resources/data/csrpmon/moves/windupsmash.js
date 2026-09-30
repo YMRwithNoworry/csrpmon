@@ -1,13 +1,24 @@
 {
-  accuracy: 95,
+  accuracy: 100,
   basePower: 120,
   category: "Physical",
   name: "Wind-Up Smash",
   pp: 10,
   priority: 0,
-  flags: {"protect":1,"mirror":1,"metronome":1,"contact":1},
+  flags: {contact:1,protect:1,mirror:1,metronome:1},
+  volatileStatus: "windupsmash",
+  condition: {
+    name: "windupsmash",
+    noCopy: true,
+    onResidualOrder: 8,
+    onResidual(pokemon) {
+    },
+    onTrapPokemon(pokemon) {
+      pokemon.tryTrap();
+    },
+  },
   secondary: null,
   target: "normal",
   type: "Steel",
-  contestType: "Tough"
+  contestType: "Clever",
 }

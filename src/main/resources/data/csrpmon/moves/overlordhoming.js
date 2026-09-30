@@ -1,13 +1,24 @@
 {
-  accuracy: true,
+  accuracy: 100,
   basePower: 95,
   category: "Special",
   name: "Overlord Homing",
   pp: 10,
   priority: 0,
-  flags: {"protect":1,"mirror":1,"metronome":1},
+  flags: {protect:1,mirror:1,metronome:1},
+  volatileStatus: "overlordhoming",
+  condition: {
+    name: "overlordhoming",
+    noCopy: true,
+    onResidualOrder: 8,
+    onResidual(pokemon) {
+    },
+    onTrapPokemon(pokemon) {
+      pokemon.tryTrap();
+    },
+  },
   secondary: null,
-  target: "allAdjacentFoes",
+  target: "normal",
   type: "Psychic",
-  contestType: "Clever"
+  contestType: "Clever",
 }

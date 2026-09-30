@@ -5,10 +5,10 @@
   name: "Hive Bulwark",
   pp: 10,
   priority: 0,
-  flags: {"metronome":1,"snatch":1},
+  flags: {snatch:1,metronome:1},
+  boosts: {atk: 1},
   secondary: null,
-  target: "allySide",
+  target: "self",
   type: "Ground",
-  contestType: "Tough",
-  boosts: {"atk":1}
+  contestType: "Clever",
 }

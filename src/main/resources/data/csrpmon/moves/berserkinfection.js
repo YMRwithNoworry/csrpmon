@@ -1,14 +1,23 @@
 {
-  accuracy: 100,
+  accuracy: true,
   basePower: 0,
   category: "Status",
   name: "Berserk Infection",
-  pp: 10,
+  pp: 20,
   priority: 0,
-  flags: {"metronome":1},
+  flags: {snatch:1,metronome:1},
+  boosts: {atk: 1},
+  volatileStatus: "berserkinfection",
+  condition: {
+    name: "berserkinfection",
+    noCopy: true,
+    onResidualOrder: 8,
+    onResidual(pokemon) {
+      this.damage(pokemon.maxhp / 8, pokemon, this.effectState.source);
+    },
+  },
   secondary: null,
   target: "self",
   type: "Dark",
-  contestType: "Tough",
-  boosts: {"atk":1}
+  contestType: "Clever",
 }

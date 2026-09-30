@@ -3,11 +3,22 @@
   basePower: 0,
   category: "Status",
   name: "Dormant Cyst",
-  pp: 20,
+  pp: 10,
   priority: 0,
-  flags: {"metronome":1},
+  flags: {snatch:1,metronome:1},
+  volatileStatus: "dormantcyst",
+  condition: {
+    name: "dormantcyst",
+    noCopy: true,
+    onResidualOrder: 8,
+    onResidual(pokemon) {
+    },
+    onTrapPokemon(pokemon) {
+      pokemon.tryTrap();
+    },
+  },
   secondary: null,
   target: "self",
   type: "Ground",
-  contestType: "Tough"
+  contestType: "Clever",
 }

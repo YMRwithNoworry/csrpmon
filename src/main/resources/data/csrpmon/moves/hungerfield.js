@@ -3,12 +3,12 @@
   basePower: 0,
   category: "Status",
   name: "Hunger Field",
-  pp: 10,
+  pp: 20,
   priority: 0,
-  flags: {"metronome":1},
+  heal: [1, 2],
+  flags: {snatch:1,metronome:1},
   secondary: null,
   target: "self",
   type: "Dark",
-  contestType: "Tough",
-  heal: [1,2]
+  contestType: "Clever",
 }
