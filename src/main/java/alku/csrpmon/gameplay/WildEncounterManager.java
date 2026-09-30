@@ -287,7 +287,7 @@ public final class WildEncounterManager {
         restored.moveTo(encounter.position().x, encounter.position().y, encounter.position().z, encounter.yaw(), 0.0F);
         if (restored instanceof Mob mob) {
             mob.setPersistenceRequired();
-            ParasitePacifier.stripProactiveTargeting(mob);
+            ParasitePacifier.applyTargetingMode(mob);
         }
         level.addFreshEntity(restored);
     }

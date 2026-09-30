@@ -12,6 +12,9 @@ public final class CsrpmonConfig {
     public static final ModConfigSpec SPEC;
 
     public static final ModConfigSpec.BooleanValue PACIFY_CREATURES;
+    public static final ModConfigSpec.BooleanValue PROTECT_PLAYERS_AND_POKEMON;
+    public static final ModConfigSpec.BooleanValue ATTACK_ALL_MOBS;
+    public static final ModConfigSpec.BooleanValue ATTACK_OTHER_PARASITES;
     public static final ModConfigSpec.BooleanValue RETALIATE_WHEN_ATTACKED;
     public static final ModConfigSpec.BooleanValue ENCOUNTERS_ENABLED;
     public static final ModConfigSpec.BooleanValue REQUIRE_POKE_BALL;
@@ -25,15 +28,29 @@ public final class CsrpmonConfig {
         ModConfigSpec.Builder builder = new ModConfigSpec.Builder();
 
         builder.comment(
-                "Peaceful behaviour.",
-                "CSRP creatures do not attack other living things at all. They keep walking and let",
-                "you start a Cobblemon battle instead. Retaliation can be switched back on if you",
-                "want them to defend themselves.")
+                "Who CSRP creatures are allowed to fight.",
+                "By default they hunt every mob in the world except players and Cobblemon Pokemon.",
+                "Turn pacifyCreatures on instead if you would rather they were harmless.")
                 .push("behaviour");
         PACIFY_CREATURES = builder
                 .comment("Remove the proactive targeting goals from every CSRP creature and refuse",
-                        "to let them acquire a target they did not get attacked by.")
-                .define("pacifyCreatures", true);
+                        "to let them acquire a target they did not get attacked by. This overrides",
+                        "the hunting options below.")
+                .define("pacifyCreatures", false);
+        PROTECT_PLAYERS_AND_POKEMON = builder
+                .comment("Never let a CSRP creature target a player or a Cobblemon Pokemon.",
+                        "Off means creatures treat both as ordinary prey.")
+                .define("protectPlayersAndPokemon", true);
+        ATTACK_ALL_MOBS = builder
+                .comment("Widen targeting so creatures also hunt what CSRP's own filter skips:",
+                        "animals, water animals, villagers and creepers. Without this they only",
+                        "attack whatever CSRP already allowed, which is a much shorter list.")
+                .define("attackAllMobs", true);
+        ATTACK_OTHER_PARASITES = builder
+                .comment("Let CSRP creatures hunt each other. Off by default because CSRP's own",
+                        "isValidParasiteTarget is literally !(target instanceof Parasite): the mod",
+                        "is built so parasites do not fight their own kind.")
+                .define("attackOtherParasites", false);
         RETALIATE_WHEN_ATTACKED = builder
                 .comment("Allow a CSRP creature to target the entity that just damaged it.",
                         "Off by default: a CSRP creature never attacks another living thing.",
