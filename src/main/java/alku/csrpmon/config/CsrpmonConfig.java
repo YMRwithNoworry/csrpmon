@@ -11,7 +11,7 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 public final class CsrpmonConfig {
     public static final ModConfigSpec SPEC;
 
-    public static final ModConfigSpec.BooleanValue PACIFY_CREATURES;
+    public static final ModConfigSpec.BooleanValue PEACEFUL_MODE;
     public static final ModConfigSpec.BooleanValue PROTECT_PLAYERS_AND_POKEMON;
     public static final ModConfigSpec.BooleanValue ATTACK_ALL_MOBS;
     public static final ModConfigSpec.BooleanValue ATTACK_OTHER_PARASITES;
@@ -30,13 +30,17 @@ public final class CsrpmonConfig {
         builder.comment(
                 "Who CSRP creatures are allowed to fight.",
                 "By default they hunt every mob in the world except players and Cobblemon Pokemon.",
-                "Turn pacifyCreatures on instead if you would rather they were harmless.")
+                "Turn peacefulMode on instead if you would rather they were harmless.")
                 .push("behaviour");
-        PACIFY_CREATURES = builder
+        PEACEFUL_MODE = builder
                 .comment("Remove the proactive targeting goals from every CSRP creature and refuse",
                         "to let them acquire a target they did not get attacked by. This overrides",
-                        "the hunting options below.")
-                .define("pacifyCreatures", false);
+                        "the hunting options below.",
+                        "Note the name: this option used to be called pacifyCreatures, and an old",
+                        "config file still saying pacifyCreatures = true would otherwise have",
+                        "quietly kept every creature harmless. The rename means a stale file is",
+                        "ignored and the hunting default applies.")
+                .define("peacefulMode", false);
         PROTECT_PLAYERS_AND_POKEMON = builder
                 .comment("Never let a CSRP creature target a player or a Cobblemon Pokemon.",
                         "Off means creatures treat both as ordinary prey.")

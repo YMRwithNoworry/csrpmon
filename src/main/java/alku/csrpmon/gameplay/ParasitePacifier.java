@@ -66,7 +66,7 @@ public final class ParasitePacifier {
             event.setCanceled(true);
             return;
         }
-        if (!CsrpmonConfig.PACIFY_CREATURES.get()) {
+        if (!CsrpmonConfig.PEACEFUL_MODE.get()) {
             // Hunting normally: anything that got this far is a legitimate target.
             return;
         }
@@ -79,7 +79,7 @@ public final class ParasitePacifier {
 
     /** Applies the configured targeting behaviour to one creature. */
     public static void applyTargetingMode(Mob mob) {
-        if (CsrpmonConfig.PACIFY_CREATURES.get()) {
+        if (CsrpmonConfig.PEACEFUL_MODE.get()) {
             stripProactiveTargeting(mob);
         } else if (CsrpmonConfig.ATTACK_ALL_MOBS.get()) {
             addBroadHuntingGoal(mob);
