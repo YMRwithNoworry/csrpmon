@@ -84,10 +84,17 @@
   "moves": [
     "1:gust",
     "1:stringshot",
+    "1:viralneedle",
     "5:bugbite",
+    "5:parasiticcontact",
     "10:quickattack",
+    "11:infectionmark",
     "15:aerialace",
-    "20:uturn"
+    "17:laceration",
+    "20:uturn",
+    "23:needlesting",
+    "29:infectingbite",
+    "35:markedprey"
   ],
   "secondaryType": "flying",
   "evolutions": [

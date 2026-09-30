@@ -89,11 +89,20 @@
   "moves": [
     "1:confusion",
     "1:growl",
+    "1:scentmark",
+    "5:markedprey",
     "7:psybeam",
+    "11:infectionmark",
     "13:lightscreen",
+    "13:headlampsignal",
+    "17:berserkinfection",
     "19:reflect",
+    "23:frenzy",
     "25:psyshock",
-    "31:psychic"
+    "29:heightenedsenses",
+    "31:psychic",
+    "35:tissueregeneration",
+    "41:hivespread"
   ],
   "evolutions": [
     {

@@ -89,9 +89,18 @@
   "moves": [
     "1:mudslap",
     "1:harden",
+    "1:tetherdrag",
+    "5:tissueregeneration",
+    "11:parasiticcontact",
+    "13:liquidleap",
+    "17:waterambush",
+    "23:motorlag",
     "25:bulldoze",
+    "29:laceration",
     "30:metalclaw",
+    "35:markedprey",
     "36:ironhead",
+    "41:rendingpursuit",
     "42:earthquake",
     "48:flashcannon"
   ],

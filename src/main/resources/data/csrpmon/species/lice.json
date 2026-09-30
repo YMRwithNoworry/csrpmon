@@ -84,9 +84,16 @@
   "moves": [
     "1:scratch",
     "1:leer",
+    "1:dropanchor",
     "4:bugbite",
+    "5:parasiticcontact",
     "9:leechlife",
+    "11:infectingbite",
     "14:fellstinger",
-    "19:pinmissile"
+    "17:infectionmark",
+    "19:pinmissile",
+    "23:tissueregeneration",
+    "29:laceration",
+    "35:markedprey"
   ]
 }

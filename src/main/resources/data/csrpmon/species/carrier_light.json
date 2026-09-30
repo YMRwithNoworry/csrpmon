@@ -84,9 +84,16 @@
   "moves": [
     "1:gust",
     "1:quickattack",
+    "1:payloadrelease",
+    "5:parasiticcontact",
+    "11:parasiterelease",
+    "17:infectingbite",
     "23:wingattack",
+    "23:vomit",
     "28:aerialace",
+    "29:laceration",
     "33:uturn",
+    "35:infectionmark",
     "38:crunch",
     "43:bravebird"
   ],

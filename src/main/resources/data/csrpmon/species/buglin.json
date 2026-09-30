@@ -90,9 +90,15 @@
     "1:stringshot",
     "1:parasiticbite",
     "4:bugbite",
+    "5:parasiticcontact",
     "8:leechlife",
+    "11:infectingbite",
     "12:bite",
-    "16:furyswipes"
+    "16:furyswipes",
+    "17:infectionmark",
+    "23:laceration",
+    "29:needlesting",
+    "35:markedprey"
   ],
   "evolutions": [
     {

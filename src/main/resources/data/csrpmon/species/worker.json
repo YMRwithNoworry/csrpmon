@@ -88,11 +88,18 @@
   "moves": [
     "1:tackle",
     "1:harden",
+    "1:hivebulwark",
+    "5:tissueregeneration",
     "6:bugbite",
+    "11:parasiticcontact",
     "12:irondefense",
+    "17:infestedground",
     "18:dig",
+    "23:infectingbite",
     "24:xscissor",
-    "30:ironhead"
+    "29:infectionmark",
+    "30:ironhead",
+    "35:markedprey"
   ],
   "evolutions": [
     {

@@ -88,11 +88,17 @@
     "1:tackle",
     "1:stringshot",
     "1:bugbite",
+    "5:infectingbite",
+    "11:parasiticcontact",
     "13:ember",
     "17:hivebite",
+    "17:venomneedleburst",
     "21:bite",
+    "23:laceration",
     "26:lunge",
-    "31:flamethrower"
+    "29:rendingpursuit",
+    "31:flamethrower",
+    "35:markedprey"
   ],
   "secondaryType": "poison",
   "evolutions": [

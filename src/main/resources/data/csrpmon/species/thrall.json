@@ -89,10 +89,18 @@
     "1:scratch",
     "1:leer",
     "1:furyswipes",
+    "1:memorystrike",
+    "5:adaptivelearning",
+    "11:damageanalysis",
+    "17:laceration",
     "23:karatechop",
+    "23:rendingpursuit",
     "28:brickbreak",
+    "29:growthdevour",
     "34:crunch",
-    "40:closecombat"
+    "35:markedprey",
+    "40:closecombat",
+    "41:frenzy"
   ],
   "secondaryType": "fighting",
   "evolutions": [
