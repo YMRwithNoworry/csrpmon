@@ -1,4 +1,4 @@
-# No.8122 调度柱·三阶 / Stage II Dispatcher
+# No.8122 调度柱·二阶 / Stage II Dispatcher
 
 | | |
 |---|---|
