@@ -84,7 +84,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 3,
+      "pp": 15,
       "range": "全场",
       "effect": "对场上所有对手造成其最大 HP 1/5 的固定伤害并各附加 3 层【感染】；之后 4 回合内每回合结束追加 1/10 最大 HP 的伤害。使用后自身速度下降 1 阶段。",
       "trigger": "每场战斗只能使用 1 次。",
@@ -95,27 +95,33 @@
   "common": [
     {
       "id": "parasiterelease",
-      "why": "载荷释放是载虫的本职"
+      "why": "载荷释放是载虫的本职",
+      "pp": 25
     },
     {
       "id": "vomit",
-      "why": "证据：`spawnLingeringCloud()` 就是吐出体内生物质形成毒云"
+      "why": "证据：`spawnLingeringCloud()` 就是吐出体内生物质形成毒云",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "膨胀体壁接触即注入"
+      "why": "膨胀体壁接触即注入",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "爆炸碎片造成撕裂伤"
+      "why": "爆炸碎片造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "infectingbite",
-      "why": "残余口器仍能注入"
+      "why": "残余口器仍能注入",
+      "pp": 25
     },
     {
       "id": "infectionmark",
-      "why": "大批次投放前必须先把目标钉住"
+      "why": "大批次投放前必须先把目标钉住",
+      "pp": 25
     }
   ],
   "normal": [

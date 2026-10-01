@@ -83,7 +83,7 @@
       "cat": "A",
       "type": "虫",
       "cls": "特殊",
-      "pow": 70,
+      "pow": 90,
       "acc": 100,
       "pp": 15,
       "range": "全体对手",
@@ -96,35 +96,43 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "同化体共有的接触注染"
+      "why": "同化体共有的接触注染",
+      "pp": 25
     },
     {
       "id": "infectingbite",
-      "why": "它仍保留宿主的口部咬合"
+      "why": "它仍保留宿主的口部咬合",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "它的核心就是传播而不是战斗"
+      "why": "它的核心就是传播而不是战斗",
+      "pp": 25
     },
     {
       "id": "infectionmark",
-      "why": "它负责给巢群指认目标"
+      "why": "它负责给巢群指认目标",
+      "pp": 25
     },
     {
       "id": "parasiticspores",
-      "why": "光环扩散与孢子传播同源"
+      "why": "光环扩散与孢子传播同源",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "它仍握着武器"
+      "why": "它仍握着武器",
+      "pp": 25
     },
     {
       "id": "growthdevour",
-      "why": "两个击杀阈值说明它靠击杀积累"
+      "why": "两个击杀阈值说明它靠击杀积累",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "人形同化体的凝视更具压迫感"
+      "why": "人形同化体的凝视更具压迫感",
+      "pp": 25
     }
   ],
   "normal": [

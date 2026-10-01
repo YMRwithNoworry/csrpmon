@@ -83,9 +83,9 @@
       "cat": "A",
       "type": "一般",
       "cls": "物理",
-      "pow": 80,
+      "pow": 100,
       "acc": 100,
-      "pp": 10,
+      "pp": 15,
       "range": "单体",
       "effect": "先制 +1。命中后使目标获得 1 层【感染】，并使自身受到的反伤减半（冲锋的惯性抵消了反冲）。",
       "trigger": "无。",
@@ -96,27 +96,33 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "同化体共有的接触注染"
+      "why": "同化体共有的接触注染",
+      "pp": 25
     },
     {
       "id": "infectingbite",
-      "why": "牛的口部被寄生组织改造后具备咬合注染"
+      "why": "牛的口部被寄生组织改造后具备咬合注染",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "硬化蹄部与额角造成撕裂伤"
+      "why": "硬化蹄部与额角造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "所有同化体的攻击都会施加恐惧（`applyFearFromDamage`）"
+      "why": "所有同化体的攻击都会施加恐惧（`applyFearFromDamage`）",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "冲锋前需要锁定方向"
+      "why": "冲锋前需要锁定方向",
+      "pp": 25
     },
     {
       "id": "corrosivebite",
-      "why": "寄生组织改变了牛的唾液成分"
+      "why": "寄生组织改变了牛的唾液成分",
+      "pp": 25
     }
   ],
   "normal": [

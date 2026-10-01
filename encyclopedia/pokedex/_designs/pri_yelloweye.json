@@ -86,7 +86,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "单体",
       "effect": "锁定目标 4 回合：期间自身对其**所有招式必中**，且每回合结束标记层数 +1（最多 3 层）。每层使自身对其下一发炮击威力 +25%。**目标替换下场则锁定立即解除，层数清零。**",
       "trigger": "无。",
@@ -100,9 +100,9 @@
       "cat": "M",
       "type": "虫",
       "cls": "特殊",
-      "pow": 85,
+      "pow": 105,
       "acc": 90,
-      "pp": 10,
+      "pp": 15,
       "range": "单体，全场",
       "effect": "**无视距离**（只要目标在场即可命中）。命中率 90，但若目标已被自身锁定则改为必中且威力提高（每层锁定 +25%）。",
       "trigger": "无。",
@@ -113,31 +113,38 @@
   "common": [
     {
       "id": "heightenedsenses",
-      "why": "单眼是专职锁定器官"
+      "why": "单眼是专职锁定器官",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "锁定即指认，与它的核心机制同源"
+      "why": "锁定即指认，与它的核心机制同源",
+      "pp": 25
     },
     {
       "id": "infectionorb",
-      "why": "榴弹是球体类投射物"
+      "why": "榴弹是球体类投射物",
+      "pp": 25
     },
     {
       "id": "adaptivelearning",
-      "why": "原生体层级 supportsDamageAdaptation() 返回 true"
+      "why": "原生体层级 supportsDamageAdaptation() 返回 true",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "持续凝视会施加心理压力"
+      "why": "持续凝视会施加心理压力",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "被锁定目标在规避时会受限"
+      "why": "被锁定目标在规避时会受限",
+      "pp": 25
     },
     {
       "id": "parasiticsmoke",
-      "why": "榴弹落地后残留寄生组织"
+      "why": "榴弹落地后残留寄生组织",
+      "pp": 15
     }
   ],
   "normal": [

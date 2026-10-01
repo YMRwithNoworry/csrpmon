@@ -84,9 +84,9 @@
       "cat": "M",
       "type": "超能",
       "cls": "特殊",
-      "pow": 60,
+      "pow": 75,
       "acc": 95,
-      "pp": 10,
+      "pp": 15,
       "range": "单体，全场",
       "effect": "**连续攻击 3 次**（每次威力 60，对应 `LegacyProjectileAttackGoal(60, 30, 3)` 的 3 发）。**连续使用本招式时，每回合威力提高 15%（最多 +45%）**。",
       "trigger": "无。",
@@ -100,9 +100,9 @@
       "cat": "M",
       "type": "虫",
       "cls": "特殊",
-      "pow": 40,
+      "pow": 50,
       "acc": 100,
-      "pp": 10,
+      "pp": 15,
       "range": "全体对手",
       "effect": "对场上**所有对手**造成伤害并各附加 1 层【感染】。**连续使用时每次威力提高 10%（最多 +30%）**。",
       "trigger": "无。",
@@ -113,39 +113,48 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "接触注染仍然存在"
+      "why": "接触注染仍然存在",
+      "pp": 25
     },
     {
       "id": "infectionorb",
-      "why": "弹体属于球体类投射物"
+      "why": "弹体属于球体类投射物",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "炮击前锁定目标"
+      "why": "炮击前锁定目标",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "体量与滞空的压迫感"
+      "why": "体量与滞空的压迫感",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "连续炮击影响目标行动"
+      "why": "连续炮击影响目标行动",
+      "pp": 25
     },
     {
       "id": "heightenedsenses",
-      "why": "followRange 80 的感知能力"
+      "why": "followRange 80 的感知能力",
+      "pp": 25
     },
     {
       "id": "infectionpulse",
-      "why": "它是范围感染源"
+      "why": "它是范围感染源",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "翼膜前缘造成撕裂伤"
+      "why": "翼膜前缘造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "hunteraura",
-      "why": "高空压制的持续压迫"
+      "why": "高空压制的持续压迫",
+      "pp": 20
     }
   ],
   "normal": [

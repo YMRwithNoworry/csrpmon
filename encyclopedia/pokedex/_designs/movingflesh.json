@@ -85,7 +85,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "自身",
       "effect": "累积 1 层【融合】（上限 2 层）。每层使自身攻击与防御各提升 1 阶段；达到 2 层时（对应 `REQUIRED_MERGES = 2`）额外回复 30% 最大 HP 并使体型永久增大。被击倒时融合层数清空。",
       "trigger": "无。",
@@ -96,27 +96,33 @@
   "common": [
     {
       "id": "devourinstinct",
-      "why": "它整个身体表面都是临时口器，靠吞噬融合"
+      "why": "它整个身体表面都是临时口器，靠吞噬融合",
+      "pp": 25
     },
     {
       "id": "parasiticdrain",
-      "why": "融合过程本身就是吸取同类生物质"
+      "why": "融合过程本身就是吸取同类生物质",
+      "pp": 25
     },
     {
       "id": "tissueregeneration",
-      "why": "`REGEN_PER_TICK` 的持续再生"
+      "why": "`REGEN_PER_TICK` 的持续再生",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "接触即注入，这是它唯一的攻击方式"
+      "why": "接触即注入，这是它唯一的攻击方式",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "它需要找到**同类**，标记用于定位"
+      "why": "它需要找到**同类**，标记用于定位",
+      "pp": 25
     },
     {
       "id": "frenzy",
-      "why": "融合前的最后阶段会变得极具攻击性"
+      "why": "融合前的最后阶段会变得极具攻击性",
+      "pp": 25
     }
   ],
   "normal": [

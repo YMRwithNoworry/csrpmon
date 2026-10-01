@@ -3,7 +3,7 @@
   basePower: 0,
   category: "Status",
   name: "Parasitic Smoke Trail",
-  pp: 10,
+  pp: 15,
   priority: 0,
   flags: {"metronome":1},
   secondary: null,

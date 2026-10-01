@@ -3,7 +3,7 @@
   basePower: 0,
   category: "Status",
   name: "Heightened Senses",
-  pp: 20,
+  pp: 25,
   priority: 0,
   flags: {snatch:1,metronome:1},
   boosts: {atk: 1},

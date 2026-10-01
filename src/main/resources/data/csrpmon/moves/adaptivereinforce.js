@@ -3,7 +3,7 @@
   basePower: 0,
   category: "Status",
   name: "Adaptive Reinforce",
-  pp: 10,
+  pp: 15,
   priority: 0,
   flags: {snatch:1,metronome:1},
   boosts: {def: 1},
@@ -18,7 +18,7 @@
     onSourceModifyDamage(damage, source, target, move) {
       const turns = this.effectState.turns || 0;
       if (turns > 0) this.debug("adaptation reduces damage");
-      if (turns >= 1) return this.chainModify(0.8);
+      if (turns >= 1) return this.chainModify(0.75);
     },
   },
   secondary: null,

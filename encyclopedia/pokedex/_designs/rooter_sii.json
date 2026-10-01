@@ -84,7 +84,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 15,
+      "pp": 20,
       "range": "自身周围 24 格",
       "effect": "为范围内**所有寄生系友方**施加 PIVOT 与 PARATE 各 1 级（本阶半径 **24 格**，等级 **1**），持续 3 回合。**同类不享受**。造成 0 点伤害。",
       "trigger": "无。",
@@ -100,7 +100,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "自身周边",
       "effect": "**把自身本回合将受到的伤害转移给我方被加持过的单位**（对应 `StatusEffectEvents.linkToRooter` 建立的 `ROOTER_OWNERS` 从属关系）：由最多 3 只从属单位平摊。造成 0 点伤害。",
       "trigger": "我方场上必须有已被自身加持过的单位。",
@@ -111,35 +111,43 @@
   "common": [
     {
       "id": "hivespread",
-      "why": "NEXUS 根须柱的职能来源"
+      "why": "NEXUS 根须柱的职能来源",
+      "pp": 25
     },
     {
       "id": "nestestablishment",
-      "why": "NEXUS 根须柱的职能来源"
+      "why": "NEXUS 根须柱的职能来源",
+      "pp": 25
     },
     {
       "id": "infestedground",
-      "why": "NEXUS 根须柱的职能来源"
+      "why": "NEXUS 根须柱的职能来源",
+      "pp": 25
     },
     {
       "id": "infectionpulse",
-      "why": "NEXUS 根须柱的职能来源"
+      "why": "NEXUS 根须柱的职能来源",
+      "pp": 25
     },
     {
       "id": "parasiticfield",
-      "why": "NEXUS 根须柱的职能来源"
+      "why": "NEXUS 根须柱的职能来源",
+      "pp": 25
     },
     {
       "id": "hivemothercall",
-      "why": "NEXUS 根须柱的职能来源"
+      "why": "NEXUS 根须柱的职能来源",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "NEXUS 根须柱的职能来源"
+      "why": "NEXUS 根须柱的职能来源",
+      "pp": 25
     },
     {
       "id": "hiveoppression",
-      "why": "NEXUS 根须柱的职能来源"
+      "why": "NEXUS 根须柱的职能来源",
+      "pp": 25
     }
   ],
   "normal": [

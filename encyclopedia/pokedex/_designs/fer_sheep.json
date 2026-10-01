@@ -82,7 +82,7 @@
       "cat": "A",
       "type": "一般",
       "cls": "物理",
-      "pow": 50,
+      "pow": 65,
       "acc": 100,
       "pp": 15,
       "range": "单体",
@@ -95,31 +95,38 @@
   "common": [
     {
       "id": "frenzy",
-      "why": "野化体的核心状态"
+      "why": "野化体的核心状态",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "卷角接触即注染"
+      "why": "卷角接触即注染",
+      "pp": 25
     },
     {
       "id": "growthdevour",
-      "why": "击杀回复的机制来源"
+      "why": "击杀回复的机制来源",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "外翻卷角造成撕裂伤"
+      "why": "外翻卷角造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "挤压限制目标行动"
+      "why": "挤压限制目标行动",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "野化体的压迫感"
+      "why": "野化体的压迫感",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "数量本身就是扩散方式"
+      "why": "数量本身就是扩散方式",
+      "pp": 25
     }
   ],
   "normal": [

@@ -83,9 +83,9 @@
       "cat": "A",
       "type": "毒",
       "cls": "特殊",
-      "pow": 95,
+      "pow": 120,
       "acc": 90,
-      "pp": 10,
+      "pp": 15,
       "range": "单体",
       "effect": "造成伤害并使目标**中毒**；若目标已被感染，改为**腐蚀其防御 2 阶段**。**使用后需间隔 2 回合才能再次使用**（对应 VOMIT_COOLDOWN_TICKS = 200）。",
       "trigger": "无。",
@@ -96,31 +96,38 @@
   "common": [
     {
       "id": "corrosivebite",
-      "why": "呕吐物与唾液同源"
+      "why": "呕吐物与唾液同源",
+      "pp": 25
     },
     {
       "id": "corrosionmark",
-      "why": "消化液持续腐蚀护甲"
+      "why": "消化液持续腐蚀护甲",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "掠夺化体的接触注染"
+      "why": "掠夺化体的接触注染",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "BLEED_CHANCE = 0.15F 的流血效果"
+      "why": "BLEED_CHANCE = 0.15F 的流血效果",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "腐蚀液影响目标行动"
+      "why": "腐蚀液影响目标行动",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "呕吐前锁定目标"
+      "why": "呕吐前锁定目标",
+      "pp": 25
     },
     {
       "id": "infectionmark",
-      "why": "呕吐物同时携带感染"
+      "why": "呕吐物同时携带感染",
+      "pp": 25
     }
   ],
   "normal": [

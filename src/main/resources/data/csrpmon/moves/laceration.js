@@ -1,9 +1,9 @@
 {
   accuracy: 100,
-  basePower: 55,
+  basePower: 70,
   category: "Physical",
   name: "Laceration",
-  pp: 20,
+  pp: 25,
   priority: 0,
   flags: {contact:1,protect:1,mirror:1,metronome:1},
   volatileStatus: "laceration",

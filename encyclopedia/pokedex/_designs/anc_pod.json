@@ -85,7 +85,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 5,
+      "pp": 15,
       "range": "全场",
       "effect": "荚壳纵向裂开并**释放装载的 1 只寄生体**（来自白名单）。**使用后自身立即被击倒**（容器打开后即失效）。造成 0 点伤害。",
       "trigger": "自身必须仍有装载。",
@@ -101,7 +101,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "自身周围 2 格",
       "effect": "**立刻释放装载单位并同时污染周围地面**：此后 2 回合内，该范围内的对手每回合结束获得 1 层【感染】。**自身保留在场**（与主招式的自我销毁相反）。造成 0 点伤害。",
       "trigger": "自身必须仍有装载。",
@@ -112,43 +112,53 @@
   "common": [
     {
       "id": "parasiterelease",
-      "why": "ANCIENT 空投容器的职能来源"
+      "why": "ANCIENT 空投容器的职能来源",
+      "pp": 25
     },
     {
       "id": "infestedground",
-      "why": "ANCIENT 空投容器的职能来源"
+      "why": "ANCIENT 空投容器的职能来源",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "ANCIENT 空投容器的职能来源"
+      "why": "ANCIENT 空投容器的职能来源",
+      "pp": 25
     },
     {
       "id": "nestestablishment",
-      "why": "ANCIENT 空投容器的职能来源"
+      "why": "ANCIENT 空投容器的职能来源",
+      "pp": 25
     },
     {
       "id": "parasiticfield",
-      "why": "ANCIENT 空投容器的职能来源"
+      "why": "ANCIENT 空投容器的职能来源",
+      "pp": 25
     },
     {
       "id": "tissueregeneration",
-      "why": "ANCIENT 空投容器的职能来源"
+      "why": "ANCIENT 空投容器的职能来源",
+      "pp": 25
     },
     {
       "id": "infectionpulse",
-      "why": "它是范围感染源"
+      "why": "它是范围感染源",
+      "pp": 25
     },
     {
       "id": "dormancyregen",
-      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）"
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）",
+      "pp": 10
     },
     {
       "id": "hiveoppression",
-      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）"
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）"
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）",
+      "pp": 25
     }
   ],
   "normal": [

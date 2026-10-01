@@ -90,9 +90,9 @@
       "en": "Parasitic Bite",
       "type": "虫",
       "cls": "物理",
-      "pow": 60,
+      "pow": 75,
       "acc": 100,
-      "pp": 20,
+      "pp": 25,
       "range": "单体",
       "effect": "造成伤害后回复造成伤害的 1/3。",
       "trigger": "无。",
@@ -103,27 +103,33 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "它就是 Call Of The Hive 的接触传播者"
+      "why": "它就是 Call Of The Hive 的接触传播者",
+      "pp": 25
     },
     {
       "id": "infectingbite",
-      "why": "Buglin 的主要攻击方式就是咬"
+      "why": "Buglin 的主要攻击方式就是咬",
+      "pp": 25
     },
     {
       "id": "infectionmark",
-      "why": "巢群需要一个指认猎物的角色，Buglin 是先遣"
+      "why": "巢群需要一个指认猎物的角色，Buglin 是先遣",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "齿环撕开伤口，属于所有寄生体的基础能力"
+      "why": "齿环撕开伤口，属于所有寄生体的基础能力",
+      "pp": 25
     },
     {
       "id": "needlesting",
-      "why": "Buglin 体表的锯齿突起即微型针"
+      "why": "Buglin 体表的锯齿突起即微型针",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "INBORN 的群体猎杀需要目标指示"
+      "why": "INBORN 的群体猎杀需要目标指示",
+      "pp": 25
     }
   ],
   "normal": [

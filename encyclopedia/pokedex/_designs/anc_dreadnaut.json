@@ -83,9 +83,9 @@
       "cat": "M",
       "type": "虫",
       "cls": "特殊",
-      "pow": 55,
+      "pow": 70,
       "acc": 95,
-      "pp": 10,
+      "pp": 15,
       "range": "全体对手",
       "effect": "对场上**所有对手连续攻击 3 次**（每次威力 55）。**每破坏自身 1 个部位，段数减少 1 段**。对应 `DreadVolleyGoal`。",
       "trigger": "无。",
@@ -101,7 +101,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 5,
+      "pp": 15,
       "range": "全场",
       "effect": "从腹部投下 **1 具空投仓**（对应 `DreadPodGoal`），下回合从白名单中释放 **1 只寄生体**。**对应独立实体 `csrp:anc_pod`**。造成 0 点伤害。",
       "trigger": "无。",
@@ -112,43 +112,53 @@
   "common": [
     {
       "id": "parasiterelease",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "hivemothercall",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "hiveoppression",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "parasiticfield",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "infectionpulse",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "infestedground",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "nestestablishment",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     }
   ],
   "normal": [

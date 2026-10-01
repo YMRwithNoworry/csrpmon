@@ -111,35 +111,43 @@
   "common": [
     {
       "id": "markedprey",
-      "why": "它是巢群在天上的标记者"
+      "why": "它是巢群在天上的标记者",
+      "pp": 25
     },
     {
       "id": "heightenedsenses",
-      "why": "全向感光头部的感知能力"
+      "why": "全向感光头部的感知能力",
+      "pp": 25
     },
     {
       "id": "infectionpulse",
-      "why": "它是范围感染源"
+      "why": "它是范围感染源",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "接触注染仍然存在"
+      "why": "接触注染仍然存在",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "被持续监视产生压迫感"
+      "why": "被持续监视产生压迫感",
+      "pp": 25
     },
     {
       "id": "hunteraura",
-      "why": "它让整片区域都在巢群视野内"
+      "why": "它让整片区域都在巢群视野内",
+      "pp": 20
     },
     {
       "id": "laceration",
-      "why": "翼膜前缘造成撕裂伤"
+      "why": "翼膜前缘造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "infectionmark",
-      "why": "它是巢群在天上的标记者"
+      "why": "它是巢群在天上的标记者",
+      "pp": 25
     }
   ],
   "normal": [

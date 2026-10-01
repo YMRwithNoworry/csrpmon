@@ -1,9 +1,9 @@
 {
   accuracy: 100,
-  basePower: 35,
+  basePower: 45,
   category: "Physical",
   name: "Cluster Payload",
-  pp: 10,
+  pp: 15,
   priority: 0,
   flags: {contact:1,protect:1,mirror:1,metronome:1},
   volatileStatus: "clusterpayload",
@@ -17,7 +17,7 @@
     onSourceModifyDamage(damage, source, target, move) {
       const turns = this.effectState.turns || 0;
       if (turns > 0) this.debug("adaptation reduces damage");
-      if (turns >= 1) return this.chainModify(0.8);
+      if (turns >= 1) return this.chainModify(0.75);
     },
   },
   secondary: null,

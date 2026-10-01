@@ -83,7 +83,7 @@
       "cat": "A",
       "type": "格斗",
       "cls": "物理",
-      "pow": 80,
+      "pow": 100,
       "acc": 100,
       "pp": 15,
       "range": "单体",
@@ -96,31 +96,38 @@
   "common": [
     {
       "id": "frenzy",
-      "why": "野化体的核心状态"
+      "why": "野化体的核心状态",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "鼻端接触即注染"
+      "why": "鼻端接触即注染",
+      "pp": 25
     },
     {
       "id": "growthdevour",
-      "why": "击杀回复的机制来源"
+      "why": "击杀回复的机制来源",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "硬化鼻端造成撕裂伤"
+      "why": "硬化鼻端造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "撞击冲击影响目标行动"
+      "why": "撞击冲击影响目标行动",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "野化体的压迫感"
+      "why": "野化体的压迫感",
+      "pp": 25
     },
     {
       "id": "laststandrage",
-      "why": "低血量带来的狂暴"
+      "why": "低血量带来的狂暴",
+      "pp": 25
     }
   ],
   "normal": [

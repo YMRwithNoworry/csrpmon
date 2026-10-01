@@ -83,9 +83,9 @@
       "cat": "N",
       "type": "飞行",
       "cls": "物理",
-      "pow": 85,
+      "pow": 105,
       "acc": 95,
-      "pp": 10,
+      "pp": 15,
       "range": "单体",
       "effect": "先制 +1。命中后对目标附加 2 层【感染】并使目标速度下降 1 阶段。若使用者在本回合开始时位于空中（未受到接触类招式），威力额外 +25%。",
       "trigger": "无。",
@@ -96,27 +96,33 @@
   "common": [
     {
       "id": "parasiterelease",
-      "why": "载荷释放是载虫本职"
+      "why": "载荷释放是载虫本职",
+      "pp": 25
     },
     {
       "id": "vomit",
-      "why": "`spawnLingeringCloud()` 的空中版本"
+      "why": "`spawnLingeringCloud()` 的空中版本",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "俯冲接触时注入"
+      "why": "俯冲接触时注入",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "俯冲撞击造成撕裂伤"
+      "why": "俯冲撞击造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "infectionmark",
-      "why": "空投前需要锁定落点"
+      "why": "空投前需要锁定落点",
+      "pp": 25
     },
     {
       "id": "rendingpursuit",
-      "why": "证据：FlyingCombatGoal 说明它有空中追击行为，俯冲撕咬是其战斗方式"
+      "why": "证据：FlyingCombatGoal 说明它有空中追击行为，俯冲撕咬是其战斗方式",
+      "pp": 25
     }
   ],
   "normal": [

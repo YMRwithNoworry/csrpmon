@@ -1,9 +1,9 @@
 {
   accuracy: 100,
-  basePower: 80,
+  basePower: 100,
   category: "Physical",
   name: "Rooting Ram",
-  pp: 10,
+  pp: 15,
   priority: 1,
   recoil: [1, 4],
   flags: {contact:1,protect:1,mirror:1,metronome:1},

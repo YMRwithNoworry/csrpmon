@@ -84,9 +84,9 @@
       "cat": "M",
       "type": "虫",
       "cls": "特殊",
-      "pow": 22,
+      "pow": 30,
       "acc": 95,
-      "pp": 5,
+      "pp": 10,
       "range": "单体，全场",
       "effect": "**连续攻击 7 次**（每次威力 22，合计约 154）。使用后本招式**进入 3 回合冷却**。**使用后下一回合自身的接触类招式先制 +1**（拖拽）。",
       "trigger": "无。",
@@ -97,31 +97,38 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "掠夺化体的接触注染"
+      "why": "掠夺化体的接触注染",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "BLEED_CHANCE = 0.15F 的流血效果"
+      "why": "BLEED_CHANCE = 0.15F 的流血效果",
+      "pp": 25
     },
     {
       "id": "rendingpursuit",
-      "why": "拖拽后的近身追击"
+      "why": "拖拽后的近身追击",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "齐射前必须锁定目标"
+      "why": "齐射前必须锁定目标",
+      "pp": 25
     },
     {
       "id": "infectionorb",
-      "why": "骨刺球属于球体类投射物"
+      "why": "骨刺球属于球体类投射物",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "七连齐射的连续冲击"
+      "why": "七连齐射的连续冲击",
+      "pp": 25
     },
     {
       "id": "corrosionmark",
-      "why": "骨刺球持续磨损护甲"
+      "why": "骨刺球持续磨损护甲",
+      "pp": 25
     }
   ],
   "normal": [

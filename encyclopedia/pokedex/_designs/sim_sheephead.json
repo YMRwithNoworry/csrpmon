@@ -76,7 +76,7 @@
       "cat": "A",
       "type": "一般",
       "cls": "物理",
-      "pow": 65,
+      "pow": 80,
       "acc": 100,
       "pp": 15,
       "range": "单体",
@@ -89,27 +89,33 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "整个头颅都是接触注染面"
+      "why": "整个头颅都是接触注染面",
+      "pp": 25
     },
     {
       "id": "infectingbite",
-      "why": "齿列仍能注染"
+      "why": "齿列仍能注染",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "头颅的使命就是扩散"
+      "why": "头颅的使命就是扩散",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "钩扫前锁定目标"
+      "why": "钩扫前锁定目标",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "卷角与齿列造成撕裂伤"
+      "why": "卷角与齿列造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "会动的头颅本身即恐惧源"
+      "why": "会动的头颅本身即恐惧源",
+      "pp": 25
     }
   ],
   "normal": [

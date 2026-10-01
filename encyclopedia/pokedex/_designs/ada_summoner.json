@@ -80,7 +80,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 5,
+      "pp": 10,
       "range": "我方场地",
       "effect": "吐出一枚生物质囊：其后 2 回合每回合结束造成 1/10 最大 HP 伤害；第 3 回合孵化并追加威力 80 的一击、附加 3 层【感染】。**场上同时最多存在 3 枚囊体**，且每枚囊体存在时自身受到的伤害减少 10%。",
       "trigger": "无。",
@@ -94,7 +94,7 @@
       "cat": "N",
       "type": "虫",
       "cls": "物理",
-      "pow": 70,
+      "pow": 90,
       "acc": 100,
       "pp": 15,
       "range": "单体",
@@ -107,35 +107,43 @@
   "common": [
     {
       "id": "callreinforcement",
-      "why": "它仍然是全族召唤能力最强的生物之一"
+      "why": "它仍然是全族召唤能力最强的生物之一",
+      "pp": 25
     },
     {
       "id": "parasiterelease",
-      "why": "产出方式依然是释放体内储存的寄生体"
+      "why": "产出方式依然是释放体内储存的寄生体",
+      "pp": 25
     },
     {
       "id": "vomit",
-      "why": "`VomitGoal` 明确存在于适应形态"
+      "why": "`VomitGoal` 明确存在于适应形态",
+      "pp": 25
     },
     {
       "id": "rapidadaptation",
-      "why": "源码支持伤害适应，适应形态的适应速度更快"
+      "why": "源码支持伤害适应，适应形态的适应速度更快",
+      "pp": 25
     },
     {
       "id": "combatevolution",
-      "why": "适应形态开始把战场数据转化为自身强化"
+      "why": "适应形态开始把战场数据转化为自身强化",
+      "pp": 25
     },
     {
       "id": "parasiticspores",
-      "why": "囊体的孢子扩散机制"
+      "why": "囊体的孢子扩散机制",
+      "pp": 25
     },
     {
       "id": "adaptivelearning",
-      "why": "sourcesDamageAdaptation() 返回 true"
+      "why": "sourcesDamageAdaptation() 返回 true",
+      "pp": 25
     },
     {
       "id": "tissueregeneration",
-      "why": "持续生产需要高强度自我修复"
+      "why": "持续生产需要高强度自我修复",
+      "pp": 25
     }
   ],
   "normal": [

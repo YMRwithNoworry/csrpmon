@@ -82,9 +82,9 @@
       "cat": "A",
       "type": "虫",
       "cls": "物理",
-      "pow": 75,
+      "pow": 95,
       "acc": 100,
-      "pp": 15,
+      "pp": 20,
       "range": "单体",
       "effect": "造成伤害后有 40% 概率使目标获得 2 层【感染】；若目标已带【感染】，改为直接造成 3 层并使其无法在本回合被替换。",
       "trigger": "概率性注入，与源码的 20% 同源（宝可梦侧提高到 40% 以体现主动使用）。",
@@ -95,35 +95,43 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "颚部接触即注入是它的基础机制"
+      "why": "颚部接触即注入是它的基础机制",
+      "pp": 25
     },
     {
       "id": "infectingbite",
-      "why": "咬合传播是它的主要攻击方式"
+      "why": "咬合传播是它的主要攻击方式",
+      "pp": 25
     },
     {
       "id": "infectionpulse",
-      "why": "作为原生体已经具备范围感染手段"
+      "why": "作为原生体已经具备范围感染手段",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "三排副齿造成撕裂伤"
+      "why": "三排副齿造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "devourinstinct",
-      "why": "咬住之后会持续吞食"
+      "why": "咬住之后会持续吞食",
+      "pp": 25
     },
     {
       "id": "adaptivelearning",
-      "why": "源码中原生体层级 supportsDamageAdaptation() 返回 true"
+      "why": "源码中原生体层级 supportsDamageAdaptation() 返回 true",
+      "pp": 25
     },
     {
       "id": "corrosionmark",
-      "why": "它的星球体效果来自配置化的湮灭球"
+      "why": "它的星球体效果来自配置化的湮灭球",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "锁定目标后不可推动，说明它会持续咬定同一个对象"
+      "why": "锁定目标后不可推动，说明它会持续咬定同一个对象",
+      "pp": 25
     }
   ],
   "normal": [

@@ -82,9 +82,9 @@
       "cat": "Q",
       "type": "地面",
       "cls": "物理",
-      "pow": 60,
+      "pow": 75,
       "acc": 100,
-      "pp": 10,
+      "pp": 15,
       "range": "单体",
       "effect": "蓄力招式：第一回合潜入地下并蓄力（不造成伤害，受伤减 40%），第二回合破土。破土时威力为 60 ×（1 + 蓄力层数×0.5）；每多停留一回合蓄力层数 +1（最多 3 层），但停留期间每回合损失 1/16 最大 HP。",
       "trigger": "层数由玩家主动决定何时破土——停留越久伤害越高，但自身持续掉血。",
@@ -95,31 +95,38 @@
   "common": [
     {
       "id": "adaptivelearning",
-      "why": "源码明确 supportsDamageAdaptation() == true"
+      "why": "源码明确 supportsDamageAdaptation() == true",
+      "pp": 25
     },
     {
       "id": "resistancelog",
-      "why": "作为这条线的终点，它把适应结果固化下来"
+      "why": "作为这条线的终点，它把适应结果固化下来",
+      "pp": 15
     },
     {
       "id": "infestedground",
-      "why": "它掘过的地层被彻底改造"
+      "why": "它掘过的地层被彻底改造",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "深潜突袭会打断目标的行动节奏"
+      "why": "深潜突袭会打断目标的行动节奏",
+      "pp": 25
     },
     {
       "id": "growthdevour",
-      "why": "`HOST_TO_HOSTII_KILLS = 40` 证明它靠击杀成长"
+      "why": "`HOST_TO_HOSTII_KILLS = 40` 证明它靠击杀成长",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "三层环状齿列造成更深的创口"
+      "why": "三层环状齿列造成更深的创口",
+      "pp": 25
     },
     {
       "id": "dormancyregen",
-      "why": "`MAX_BURIED_TIMER = 8.3F` 的长时间潜伏对应地下恢复"
+      "why": "`MAX_BURIED_TIMER = 8.3F` 的长时间潜伏对应地下恢复",
+      "pp": 10
     }
   ],
   "normal": [

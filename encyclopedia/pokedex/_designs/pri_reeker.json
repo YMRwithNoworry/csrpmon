@@ -85,9 +85,9 @@
       "cat": "A",
       "type": "毒",
       "cls": "特殊",
-      "pow": 80,
+      "pow": 100,
       "acc": 95,
-      "pp": 10,
+      "pp": 15,
       "range": "全体对手",
       "effect": "对场上所有对手造成伤害并使其中毒。**根据当前皮肤追加不同效果**：病毒皮肤 → 额外附加【病毒侵蚀】；狂战皮肤 → 额外附加流血；厚重皮肤 → 威力提高 20%；脆弱皮肤 → 自身速度提升 1 阶段。",
       "trigger": "效果取决于出场时随机到的皮肤，不可主动更换。",
@@ -98,35 +98,43 @@
   "common": [
     {
       "id": "vomit",
-      "why": "喷散腔的吐出行为"
+      "why": "喷散腔的吐出行为",
+      "pp": 25
     },
     {
       "id": "parasiticspores",
-      "why": "雾体扩散与孢子传播同源"
+      "why": "雾体扩散与孢子传播同源",
+      "pp": 25
     },
     {
       "id": "corrosivebite",
-      "why": "毒液具备腐蚀性"
+      "why": "毒液具备腐蚀性",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "接触注入是基础机制"
+      "why": "接触注入是基础机制",
+      "pp": 25
     },
     {
       "id": "adaptivelearning",
-      "why": "原生体层级 supportsDamageAdaptation() 返回 true"
+      "why": "原生体层级 supportsDamageAdaptation() 返回 true",
+      "pp": 25
     },
     {
       "id": "infectionorb",
-      "why": "`MobsConfig.reekerOrbEffects()` 明确记录它的球体效果"
+      "why": "`MobsConfig.reekerOrbEffects()` 明确记录它的球体效果",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "中毒与弹飞都会影响目标行动"
+      "why": "中毒与弹飞都会影响目标行动",
+      "pp": 25
     },
     {
       "id": "callreinforcement",
-      "why": "`ReekerRecruitFollowersGoal` 是源码中存在的招募行为"
+      "why": "`ReekerRecruitFollowersGoal` 是源码中存在的招募行为",
+      "pp": 25
     }
   ],
   "normal": [

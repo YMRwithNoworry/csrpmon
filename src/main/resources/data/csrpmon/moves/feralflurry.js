@@ -1,9 +1,9 @@
 {
   accuracy: 100,
-  basePower: 35,
+  basePower: 45,
   category: "Physical",
   name: "Feral Flurry",
-  pp: 10,
+  pp: 15,
   priority: 0,
   multihit: 3,
   flags: {contact:1,protect:1,mirror:1,metronome:1},

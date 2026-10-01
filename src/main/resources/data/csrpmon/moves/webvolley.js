@@ -1,9 +1,9 @@
 {
   accuracy: 100,
-  basePower: 45,
+  basePower: 55,
   category: "Special",
   name: "Web Volley",
-  pp: 10,
+  pp: 15,
   priority: 0,
   flags: {protect:1,mirror:1,metronome:1},
   volatileStatus: "webvolley",

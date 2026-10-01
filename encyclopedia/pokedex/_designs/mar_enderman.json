@@ -85,9 +85,9 @@
       "cat": "P",
       "type": "超能",
       "cls": "物理",
-      "pow": 100,
+      "pow": 125,
       "acc": 100,
-      "pp": 10,
+      "pp": 15,
       "range": "单体，全场",
       "effect": "先制 +1，**无视距离**（followRange 64）。命中后目标**本回合无法替换下场**，且自身速度提升 1 阶段。**冷却仅 1 回合**（对应 TELEPORT_COOLDOWN_TICKS = 20）。",
       "trigger": "无。",
@@ -98,31 +98,38 @@
   "common": [
     {
       "id": "hunterteleport",
-      "why": "传送是它的核心战斗方式"
+      "why": "传送是它的核心战斗方式",
+      "pp": 25
     },
     {
       "id": "parasiticblink",
-      "why": "位移与它绑定"
+      "why": "位移与它绑定",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "掠夺化体的接触注染"
+      "why": "掠夺化体的接触注染",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "BLEED_CHANCE = 0.15F 的流血效果"
+      "why": "BLEED_CHANCE = 0.15F 的流血效果",
+      "pp": 25
     },
     {
       "id": "corrosionmark",
-      "why": "钩状指骨与寄生组织持续磨损护甲"
+      "why": "钩状指骨与寄生组织持续磨损护甲",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "掠夺化末影人的凝视压迫感最强"
+      "why": "掠夺化末影人的凝视压迫感最强",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "传送前锁定坐标"
+      "why": "传送前锁定坐标",
+      "pp": 25
     }
   ],
   "normal": [

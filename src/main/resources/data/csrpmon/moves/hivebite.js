@@ -1,9 +1,9 @@
 {
   accuracy: 95,
-  basePower: 25,
+  basePower: 30,
   category: "Physical",
   name: "Hive Bite",
-  pp: 15,
+  pp: 20,
   priority: 0,
   flags: { contact: 1, protect: 1, mirror: 1, metronome: 1 },
   multihit: [2, 3],

@@ -82,9 +82,9 @@
       "cat": "Q",
       "type": "岩石",
       "cls": "物理",
-      "pow": 90,
+      "pow": 115,
       "acc": 100,
-      "pp": 5,
+      "pp": 15,
       "range": "自身周围",
       "effect": "对场上所有对手造成伤害，并对自己造成最大 HP 1/4 的反伤。若使用者尚未满 4 回合，威力减半；若已满 4 回合，改为威力 ×1.5 且不再反伤。",
       "trigger": "无。",
@@ -95,27 +95,33 @@
   "common": [
     {
       "id": "laceration",
-      "why": "未成形的裂缝边缘仍然锐利"
+      "why": "未成形的裂缝边缘仍然锐利",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "CRUDE 层共有的接触注入"
+      "why": "CRUDE 层共有的接触注入",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "它的石质外壳接触会拖慢目标"
+      "why": "它的石质外壳接触会拖慢目标",
+      "pp": 25
     },
     {
       "id": "corrosionmark",
-      "why": "CRUDE 层开始出现腐蚀能力"
+      "why": "CRUDE 层开始出现腐蚀能力",
+      "pp": 25
     },
     {
       "id": "tissueregeneration",
-      "why": "成形过程中需要持续修复外壳"
+      "why": "成形过程中需要持续修复外壳",
+      "pp": 25
     },
     {
       "id": "heightenedsenses",
-      "why": "它必须提前感知威胁才能活到成熟"
+      "why": "它必须提前感知威胁才能活到成熟",
+      "pp": 25
     }
   ],
   "normal": [

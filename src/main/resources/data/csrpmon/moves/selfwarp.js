@@ -3,7 +3,7 @@
   basePower: 0,
   category: "Status",
   name: "Self Warp",
-  pp: 10,
+  pp: 15,
   priority: 2,
   flags: {snatch:1,metronome:1},
   boosts: {atk: 1},

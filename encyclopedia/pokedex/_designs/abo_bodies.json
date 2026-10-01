@@ -84,9 +84,9 @@
       "cat": "A",
       "type": "恶",
       "cls": "物理",
-      "pow": 40,
+      "pow": 50,
       "acc": 85,
-      "pp": 15,
+      "pp": 20,
       "range": "单体，连续 3 次",
       "effect": "**连续攻击 3 次**（每次威力 40，命中 85%）。**每次未命中的攻击会使下一次命中率提高 10%**（多个头依次尝试）。",
       "trigger": "无。",
@@ -97,31 +97,38 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     },
     {
       "id": "frenzy",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     },
     {
       "id": "growthdevour",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     }
   ],
   "normal": [

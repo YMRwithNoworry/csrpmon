@@ -1,9 +1,9 @@
 {
   accuracy: 100,
-  basePower: 70,
+  basePower: 90,
   category: "Physical",
   name: "Water Ambush",
-  pp: 20,
+  pp: 25,
   priority: 1,
   flags: {contact:1,protect:1,mirror:1,metronome:1},
   secondary: {chance: 100, boosts: {spe: -1}},

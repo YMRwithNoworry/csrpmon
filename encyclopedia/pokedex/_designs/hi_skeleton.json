@@ -84,7 +84,7 @@
       "cat": "G",
       "type": "虫",
       "cls": "特殊",
-      "pow": 70,
+      "pow": 90,
       "acc": 100,
       "pp": 15,
       "range": "单体，全场",
@@ -97,27 +97,33 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "接触注染仍然存在"
+      "why": "接触注染仍然存在",
+      "pp": 25
     },
     {
       "id": "infectionorb",
-      "why": "骨刺球属于球体类投射物"
+      "why": "骨刺球属于球体类投射物",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "点射前必须锁定目标"
+      "why": "点射前必须锁定目标",
+      "pp": 25
     },
     {
       "id": "needlesting",
-      "why": "骨刺属于针刺系"
+      "why": "骨刺属于针刺系",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "连续点射影响目标行动"
+      "why": "连续点射影响目标行动",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "骨刺造成穿刺撕裂"
+      "why": "骨刺造成穿刺撕裂",
+      "pp": 25
     }
   ],
   "normal": [

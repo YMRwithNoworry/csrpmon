@@ -84,7 +84,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "我方全体",
       "effect": "我方全体回复 25% 最大 HP，并清除所有【感染】层数。**自身不回复**（它把资源全给了别人）。造成 0 点伤害。",
       "trigger": "无。",
@@ -100,7 +100,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "我方单体",
       "effect": "**与一只我方宝可梦建立链接**（3 回合）：期间该宝可梦每回合回复 6% 最大 HP，而**自身受到的伤害提高 30%**（它把防护也一并承担了）。造成 0 点伤害。",
       "trigger": "无。",
@@ -111,39 +111,48 @@
   "common": [
     {
       "id": "tissueregeneration",
-      "why": "援护的核心机制就是再生"
+      "why": "援护的核心机制就是再生",
+      "pp": 25
     },
     {
       "id": "dormancyregen",
-      "why": "它在后方维持队友状态"
+      "why": "它在后方维持队友状态",
+      "pp": 10
     },
     {
       "id": "parasiticcontact",
-      "why": "接触注染仍然存在"
+      "why": "接触注染仍然存在",
+      "pp": 25
     },
     {
       "id": "parasiterelease",
-      "why": "它负责把资源投送给同伴"
+      "why": "它负责把资源投送给同伴",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "它的辉光本身就是巢群信号"
+      "why": "它的辉光本身就是巢群信号",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "援护前锁定最需要支援的同伴"
+      "why": "援护前锁定最需要支援的同伴",
+      "pp": 25
     },
     {
       "id": "hiveoppression",
-      "why": "PREEMINENT 层单位的威压"
+      "why": "PREEMINENT 层单位的威压",
+      "pp": 25
     },
     {
       "id": "parasiticfield",
-      "why": "PREEMINENT 援护单位所处的巢穴环境来源"
+      "why": "PREEMINENT 援护单位所处的巢穴环境来源",
+      "pp": 25
     },
     {
       "id": "hivemothercall",
-      "why": "PREEMINENT 援护单位所处的巢穴环境来源"
+      "why": "PREEMINENT 援护单位所处的巢穴环境来源",
+      "pp": 25
     }
   ],
   "normal": [

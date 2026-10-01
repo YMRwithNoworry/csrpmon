@@ -82,9 +82,9 @@
       "cat": "Q",
       "type": "地面",
       "cls": "物理",
-      "pow": 95,
+      "pow": 120,
       "acc": 100,
-      "pp": 10,
+      "pp": 15,
       "range": "单体",
       "effect": "对飞行属性或浮空目标**必中**且威力提高 50%；命中后使目标速度下降 2 阶段并在本回合无法使用先制招式。对地面目标按 95 结算且无追加效果。",
       "trigger": "目标必须处于空中/浮空状态才能触发强化。",
@@ -95,31 +95,38 @@
   "common": [
     {
       "id": "laceration",
-      "why": "杵状前肢造成的钝器撕裂"
+      "why": "杵状前肢造成的钝器撕裂",
+      "pp": 25
     },
     {
       "id": "deeplaceration",
-      "why": "厚重的下压会造成深层创口"
+      "why": "厚重的下压会造成深层创口",
+      "pp": 25
     },
     {
       "id": "devourinstinct",
-      "why": "吞噬猎物是它的主要进食方式"
+      "why": "吞噬猎物是它的主要进食方式",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "下压接触面注染"
+      "why": "下压接触面注染",
+      "pp": 25
     },
     {
       "id": "adaptivelearning",
-      "why": "原生体层级 supportsDamageAdaptation() 返回 true"
+      "why": "原生体层级 supportsDamageAdaptation() 返回 true",
+      "pp": 25
     },
     {
       "id": "growthdevour",
-      "why": "吞噬系的击杀成长"
+      "why": "吞噬系的击杀成长",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "坠地后的冲击影响行动"
+      "why": "坠地后的冲击影响行动",
+      "pp": 25
     }
   ],
   "normal": [

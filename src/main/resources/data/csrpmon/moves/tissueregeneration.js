@@ -3,7 +3,7 @@
   basePower: 0,
   category: "Status",
   name: "Tissue Regeneration",
-  pp: 20,
+  pp: 25,
   priority: 0,
   heal: [1, 2],
   flags: {snatch:1,metronome:1},

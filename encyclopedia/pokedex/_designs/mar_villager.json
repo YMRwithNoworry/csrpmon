@@ -85,7 +85,7 @@
       "cat": "M",
       "type": "虫",
       "cls": "特殊",
-      "pow": 40,
+      "pow": 50,
       "acc": 100,
       "pp": 15,
       "range": "单体，全场",
@@ -98,31 +98,38 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "掠夺化体的接触注染"
+      "why": "掠夺化体的接触注染",
+      "pp": 25
     },
     {
       "id": "infectionorb",
-      "why": "骨刺球属于球体类投射物"
+      "why": "骨刺球属于球体类投射物",
+      "pp": 25
     },
     {
       "id": "infectionmark",
-      "why": "它负责快速指认目标"
+      "why": "它负责快速指认目标",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "BLEED_CHANCE = 0.15F 的流血效果"
+      "why": "BLEED_CHANCE = 0.15F 的流血效果",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "连续射击限制目标行动"
+      "why": "连续射击限制目标行动",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "连射前锁定目标"
+      "why": "连射前锁定目标",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "交递本能在掠夺化后的转向"
+      "why": "交递本能在掠夺化后的转向",
+      "pp": 25
     }
   ],
   "normal": [

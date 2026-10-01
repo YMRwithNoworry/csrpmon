@@ -1,9 +1,9 @@
 {
   accuracy: 100,
-  basePower: 85,
+  basePower: 105,
   category: "Physical",
   name: "Tentacle Ambush",
-  pp: 10,
+  pp: 15,
   priority: 1,
   flags: {contact:1,protect:1,mirror:1,metronome:1},
   volatileStatus: "tentacleambush",

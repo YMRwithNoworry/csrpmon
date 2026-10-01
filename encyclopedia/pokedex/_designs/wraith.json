@@ -85,9 +85,9 @@
       "cat": "M",
       "type": "幽灵",
       "cls": "特殊",
-      "pow": 75,
+      "pow": 95,
       "acc": 95,
-      "pp": 10,
+      "pp": 15,
       "range": "单体，全场",
       "effect": "**连续攻击 3 次**，但三次的形态不同：**第 1 发为普通弹**（威力 75）、**第 2 发为雷弹**（威力 60，命中后目标速度下降 1 阶段）、**第 3 发为普通弹**。对应 `ELVIA_BALL → ELVIA_NADE → ELVIA_BALL` 的交替。",
       "trigger": "无。",
@@ -101,9 +101,9 @@
       "cat": "M",
       "type": "幽灵",
       "cls": "特殊",
-      "pow": 120,
+      "pow": 150,
       "acc": 90,
-      "pp": 5,
+      "pp": 15,
       "range": "单体，全场",
       "effect": "**把两种弹体合并成一次投射**：造成高额伤害并使目标速度下降 2 阶段。**使用后本招式进入 2 回合冷却**（需要重新装填两种弹体）。",
       "trigger": "无。",
@@ -114,39 +114,48 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "接触注染仍然存在"
+      "why": "接触注染仍然存在",
+      "pp": 25
     },
     {
       "id": "infectionorb",
-      "why": "弹体属于球体类投射物"
+      "why": "弹体属于球体类投射物",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "投掷前锁定目标"
+      "why": "投掷前锁定目标",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "幽魂之名的凝视压迫感"
+      "why": "幽魂之名的凝视压迫感",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "雷弹的减速是它的核心控制"
+      "why": "雷弹的减速是它的核心控制",
+      "pp": 25
     },
     {
       "id": "heightenedsenses",
-      "why": "followRange 80 的感知能力"
+      "why": "followRange 80 的感知能力",
+      "pp": 25
     },
     {
       "id": "infectionpulse",
-      "why": "它是范围感染源"
+      "why": "它是范围感染源",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "翼膜前缘造成撕裂伤"
+      "why": "翼膜前缘造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "hunteraura",
-      "why": "高空压制的持续压迫"
+      "why": "高空压制的持续压迫",
+      "pp": 20
     }
   ],
   "normal": [

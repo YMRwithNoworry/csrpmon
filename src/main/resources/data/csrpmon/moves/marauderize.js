@@ -3,7 +3,7 @@
   basePower: 0,
   category: "Status",
   name: "Marauderize",
-  pp: 10,
+  pp: 15,
   priority: 0,
   flags: {snatch:1,metronome:1},
   boosts: {atk: 1},

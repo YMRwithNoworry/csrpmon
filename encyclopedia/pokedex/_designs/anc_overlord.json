@@ -82,9 +82,9 @@
       "cat": "M",
       "type": "超能",
       "cls": "特殊",
-      "pow": 95,
+      "pow": 120,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "单体，全场",
       "effect": "**必定命中**（追踪弹，对应 `OverlordHomingGoal`）。命中后使目标**本回合无法替换下场**。对应它是追猎型灾害。",
       "trigger": "无。",
@@ -98,9 +98,9 @@
       "cat": "Q",
       "type": "虫",
       "cls": "物理",
-      "pow": 135,
+      "pow": 170,
       "acc": 95,
-      "pp": 10,
+      "pp": 15,
       "range": "自身周围 1 格",
       "effect": "对接触范围内所有对手造成伤害。**若目标本回合已被追猎弹命中，威力提高 30%**。对应 `OverlordMeleeGoal`。",
       "trigger": "与追猎弹是否命中相关。",
@@ -111,43 +111,53 @@
   "common": [
     {
       "id": "parasiterelease",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "hivemothercall",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "hiveoppression",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "parasiticfield",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "infectionpulse",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "hunteraura",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 20
     },
     {
       "id": "hivespread",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "nestestablishment",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "ANCIENT 层的灾害级职能来源"
+      "why": "ANCIENT 层的灾害级职能来源",
+      "pp": 25
     }
   ],
   "normal": [

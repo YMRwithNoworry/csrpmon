@@ -86,9 +86,9 @@
       "cat": "C",
       "type": "格斗",
       "cls": "物理",
-      "pow": 85,
+      "pow": 105,
       "acc": 100,
-      "pp": 10,
+      "pp": 15,
       "range": "单体",
       "effect": "**若自身与目标距离 ≥3 格，本招式先制 +2 且威力提高 25%**；若已在近身距离，按 85 结算且无加成。命中后自身速度提升 1 阶段。",
       "trigger": "距离条件——它是一招\"从远处发动\"的攻击，贴脸时反而没有优势。",
@@ -99,31 +99,38 @@
   "common": [
     {
       "id": "laceration",
-      "why": "四指钩爪造成的撕裂伤"
+      "why": "四指钩爪造成的撕裂伤",
+      "pp": 25
     },
     {
       "id": "rendingpursuit",
-      "why": "突进后持续追猎是它的战斗方式"
+      "why": "突进后持续追猎是它的战斗方式",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "钩爪接触面注染"
+      "why": "钩爪接触面注染",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "突进前必须锁定落点"
+      "why": "突进前必须锁定落点",
+      "pp": 25
     },
     {
       "id": "adaptivelearning",
-      "why": "原生体层级 supportsDamageAdaptation() 返回 true"
+      "why": "原生体层级 supportsDamageAdaptation() 返回 true",
+      "pp": 25
     },
     {
       "id": "hunteraura",
-      "why": "它是明确的追猎单位"
+      "why": "它是明确的追猎单位",
+      "pp": 20
     },
     {
       "id": "needlesting",
-      "why": "钩爪表面带细刺"
+      "why": "钩爪表面带细刺",
+      "pp": 25
     }
   ],
   "normal": [

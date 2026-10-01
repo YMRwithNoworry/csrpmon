@@ -83,9 +83,9 @@
       "cat": "M",
       "type": "龙",
       "cls": "特殊",
-      "pow": 180,
+      "pow": 225,
       "acc": 95,
-      "pp": 5,
+      "pp": 15,
       "range": "全体对手",
       "effect": "对场上**所有对手**造成极高伤害并使各获得 3 层【感染】。**持续 2 回合**（对应 `FIRE_BREATH_DURATION_TICKS = 40`，本图鉴以回合折算）。对应 `STATUS_FLAME = 10`。",
       "trigger": "无。",
@@ -101,7 +101,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "自身",
       "effect": "在**地面形态**与**飞行形态**之间切换（对应 `STATUS_FLIGHT_TRANSITION = 3`）：地面形态防御提升 1 阶段；飞行形态速度提升 2 阶段且免疫地面类招式。造成 0 点伤害。",
       "trigger": "无。",
@@ -112,43 +112,53 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "infectionpulse",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "parasiticfield",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "infestedground",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "corrosionmark",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "heightenedsenses",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     }
   ],
   "normal": [

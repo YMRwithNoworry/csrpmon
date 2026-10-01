@@ -85,7 +85,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 5,
+      "pp": 15,
       "range": "全体对手",
       "effect": "标记场上所有对手 4 回合：本阵营对其造成的伤害 +20%，且它们无法通过替换清除自身异常状态。使用后本场战斗内此招式冷却 3 回合。",
       "trigger": "冷却较长，对应 `SCENT_COOLDOWN_TICKS = 1000`。",
@@ -101,7 +101,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "我方全体",
       "effect": "我方全体回复 20% 最大 HP，并清除一项能力下降。使用后自身防御下降 1 阶段——**顶端神经节在释放信号时会完全暴露**。",
       "trigger": "无。",
@@ -112,31 +112,38 @@
   "common": [
     {
       "id": "markedprey",
-      "why": "它是巢群的指认者"
+      "why": "它是巢群的指认者",
+      "pp": 25
     },
     {
       "id": "infectionmark",
-      "why": "气味与感染标记是同一套指认逻辑"
+      "why": "气味与感染标记是同一套指认逻辑",
+      "pp": 25
     },
     {
       "id": "berserkinfection",
-      "why": "`RAGE_SKILL` 的对应；它会把狂怒传染给目标"
+      "why": "`RAGE_SKILL` 的对应；它会把狂怒传染给目标",
+      "pp": 25
     },
     {
       "id": "frenzy",
-      "why": "`rage` 效果的另一种表达"
+      "why": "`rage` 效果的另一种表达",
+      "pp": 25
     },
     {
       "id": "heightenedsenses",
-      "why": "六根触须是专职感受器"
+      "why": "六根触须是专职感受器",
+      "pp": 25
     },
     {
       "id": "tissueregeneration",
-      "why": "作为支援单位需要维持在场"
+      "why": "作为支援单位需要维持在场",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "SCENT 能力与巢群传播同源"
+      "why": "SCENT 能力与巢群传播同源",
+      "pp": 25
     }
   ],
   "normal": [

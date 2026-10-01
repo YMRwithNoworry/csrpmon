@@ -84,7 +84,7 @@
       "cat": "C",
       "type": "格斗",
       "cls": "物理",
-      "pow": 70,
+      "pow": 90,
       "acc": 100,
       "pp": 15,
       "range": "单体",
@@ -97,31 +97,38 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "徒手接触即注染"
+      "why": "徒手接触即注染",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "钩状指骨与 BLEED_CHANCE = 0.15F"
+      "why": "钩状指骨与 BLEED_CHANCE = 0.15F",
+      "pp": 25
     },
     {
       "id": "rendingpursuit",
-      "why": "不放手就是追猎的极端形式"
+      "why": "不放手就是追猎的极端形式",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "攀附让目标行动受限"
+      "why": "攀附让目标行动受限",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "扑上前必须锁定目标"
+      "why": "扑上前必须锁定目标",
+      "pp": 25
     },
     {
       "id": "frenzy",
-      "why": "掠夺化体的狂暴状态"
+      "why": "掠夺化体的狂暴状态",
+      "pp": 25
     },
     {
       "id": "growthdevour",
-      "why": "持续伤害带来的成长"
+      "why": "持续伤害带来的成长",
+      "pp": 25
     }
   ],
   "normal": [

@@ -82,7 +82,7 @@
       "cat": "C",
       "type": "格斗",
       "cls": "物理",
-      "pow": 75,
+      "pow": 95,
       "acc": 95,
       "pp": 15,
       "range": "单体",
@@ -95,27 +95,33 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "整个头颅都是接触注染面"
+      "why": "整个头颅都是接触注染面",
+      "pp": 25
     },
     {
       "id": "infectingbite",
-      "why": "齿列仍能注染"
+      "why": "齿列仍能注染",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "砸击前锁定目标"
+      "why": "砸击前锁定目标",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "颅骨边缘造成的钝器撕裂"
+      "why": "颅骨边缘造成的钝器撕裂",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "大型头颅的视觉压迫更强"
+      "why": "大型头颅的视觉压迫更强",
+      "pp": 25
     },
     {
       "id": "tissueregeneration",
-      "why": "厚重头颅的重建效率更高"
+      "why": "厚重头颅的重建效率更高",
+      "pp": 25
     }
   ],
   "normal": [

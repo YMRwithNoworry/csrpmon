@@ -85,7 +85,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 5,
+      "pp": 15,
       "range": "我方全体",
       "effect": "**只有自身当前不是对手攻击目标时可用**。为我方全体回复 20% 最大 HP 并各清除 1 层【感染】；同时使自己在本回合内**不会被选为攻击目标**（对应\"无目标时才招募\"）。造成 0 点伤害。",
       "trigger": "**自身必须未被锁定**。",
@@ -101,7 +101,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "我方单体",
       "effect": "**把我方一只宝可梦拉入水中**（若场地无水则改为使其免疫下一次地面类招式），并使其速度提升 1 阶段。对应 `CarrierWaterLeapGoal`。造成 0 点伤害。",
       "trigger": "无。",
@@ -112,39 +112,48 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "接触注染仍然存在"
+      "why": "接触注染仍然存在",
+      "pp": 25
     },
     {
       "id": "waterambush",
-      "why": "它的全部战斗都在水中发生"
+      "why": "它的全部战斗都在水中发生",
+      "pp": 25
     },
     {
       "id": "drowningpursuit",
-      "why": "水域追猎是它的主场"
+      "why": "水域追猎是它的主场",
+      "pp": 25
     },
     {
       "id": "parasiterelease",
-      "why": "它的职能就是投放与扩军"
+      "why": "它的职能就是投放与扩军",
+      "pp": 25
     },
     {
       "id": "tissueregeneration",
-      "why": "CarrierBuffGoal 的常驻增益"
+      "why": "CarrierBuffGoal 的常驻增益",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "它是巢群的扩散与集结节点"
+      "why": "它是巢群的扩散与集结节点",
+      "pp": 25
     },
     {
       "id": "infectionpulse",
-      "why": "它是范围感染源"
+      "why": "它是范围感染源",
+      "pp": 25
     },
     {
       "id": "infestedground",
-      "why": "水域被它彻底污染"
+      "why": "水域被它彻底污染",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "跃出前锁定岸上的目标"
+      "why": "跃出前锁定岸上的目标",
+      "pp": 25
     }
   ],
   "normal": [

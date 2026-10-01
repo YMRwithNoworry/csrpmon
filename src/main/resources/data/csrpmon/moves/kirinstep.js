@@ -1,9 +1,9 @@
 {
   accuracy: 100,
-  basePower: 120,
+  basePower: 150,
   category: "Physical",
   name: "Kirin Step",
-  pp: 10,
+  pp: 15,
   priority: 0,
   flags: {contact:1,protect:1,mirror:1,metronome:1},
   secondary: {chance: 100, boosts: {spe: -1}},

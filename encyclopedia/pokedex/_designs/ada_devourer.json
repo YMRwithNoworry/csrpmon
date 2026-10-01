@@ -82,9 +82,9 @@
       "cat": "Q",
       "type": "地面",
       "cls": "物理",
-      "pow": 110,
+      "pow": 140,
       "acc": 100,
-      "pp": 10,
+      "pp": 15,
       "range": "单体",
       "effect": "对飞行/浮空目标必中且威力提高 50%；**在水属性场地或雨天时对任何目标均必中且威力提高 35%**。命中后使目标速度下降 2 阶段并封锁先制招式 1 回合。",
       "trigger": "空中目标或水域环境均可触发强化，两者同时满足时不叠加（取较高值）。",
@@ -98,9 +98,9 @@
       "cat": "A",
       "type": "虫",
       "cls": "物理",
-      "pow": 110,
+      "pow": 140,
       "acc": 90,
-      "pp": 10,
+      "pp": 15,
       "range": "单体",
       "effect": "造成伤害。**若本次攻击击倒目标，自身回复 40% 最大 HP 并永久获得 1 层攻击提升**（对应吞噬成长）。若未击倒，自身防御下降 1 阶段。",
       "trigger": "无。",
@@ -111,35 +111,43 @@
   "common": [
     {
       "id": "laceration",
-      "why": "杵状前肢的钝器撕裂"
+      "why": "杵状前肢的钝器撕裂",
+      "pp": 25
     },
     {
       "id": "devourinstinct",
-      "why": "吞噬行为保留"
+      "why": "吞噬行为保留",
+      "pp": 25
     },
     {
       "id": "waterambush",
-      "why": "`TryFindWaterGoal` / `RandomSwimmingGoal` 明确记录水域行为"
+      "why": "`TryFindWaterGoal` / `RandomSwimmingGoal` 明确记录水域行为",
+      "pp": 25
     },
     {
       "id": "rapidadaptation",
-      "why": "适应形态的适应速度更快"
+      "why": "适应形态的适应速度更快",
+      "pp": 25
     },
     {
       "id": "growthdevour",
-      "why": "吞噬系的击杀成长"
+      "why": "吞噬系的击杀成长",
+      "pp": 25
     },
     {
       "id": "resistancelog",
-      "why": "适应形态把记录结果固化"
+      "why": "适应形态把记录结果固化",
+      "pp": 15
     },
     {
       "id": "drowningpursuit",
-      "why": "水域追猎与它的游动行为同源"
+      "why": "水域追猎与它的游动行为同源",
+      "pp": 25
     },
     {
       "id": "infectingbite",
-      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ADAPTED）"
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ADAPTED）",
+      "pp": 25
     }
   ],
   "normal": [

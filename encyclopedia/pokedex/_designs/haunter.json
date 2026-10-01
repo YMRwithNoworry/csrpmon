@@ -91,9 +91,9 @@
       "cat": "A",
       "type": "幽灵",
       "cls": "物理",
-      "pow": 170,
+      "pow": 215,
       "acc": 95,
-      "pp": 5,
+      "pp": 15,
       "range": "自身周围 1 格",
       "effect": "对接触范围内**所有**对手造成极高伤害（对应 damage 110.0，全图鉴最高）。**只在近战形态可用**。对应 `HaunterMeleeAoeGoal`——它是范围近战，不是单体。",
       "trigger": "**必须处于近战形态**。",
@@ -107,9 +107,9 @@
       "cat": "M",
       "type": "幽灵",
       "cls": "特殊",
-      "pow": 85,
+      "pow": 105,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "单体，全场",
       "effect": "**必定命中**（追踪弹，对应 `HaunterHomingBurstGoal`）。**只在远程形态可用**。命中后自身立即切换为近战形态。",
       "trigger": "**必须处于远程形态**。",
@@ -120,39 +120,48 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "锤板接触即注染"
+      "why": "锤板接触即注染",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "骨板边缘造成撕裂伤"
+      "why": "骨板边缘造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "Haunter 之名的凝视压迫感最强"
+      "why": "Haunter 之名的凝视压迫感最强",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "重压冲击彻底打乱目标行动"
+      "why": "重压冲击彻底打乱目标行动",
+      "pp": 25
     },
     {
       "id": "corrosionmark",
-      "why": "渗出物持续腐蚀护甲"
+      "why": "渗出物持续腐蚀护甲",
+      "pp": 25
     },
     {
       "id": "hunteraura",
-      "why": "缓慢逼近的绝对压迫"
+      "why": "缓慢逼近的绝对压迫",
+      "pp": 20
     },
     {
       "id": "infestedground",
-      "why": "落点地面被彻底污染"
+      "why": "落点地面被彻底污染",
+      "pp": 25
     },
     {
       "id": "growthdevour",
-      "why": "高生命带来的长期成长"
+      "why": "高生命带来的长期成长",
+      "pp": 25
     },
     {
       "id": "hiveoppression",
-      "why": "8 套目标与 360 点生命带来的全场威压"
+      "why": "8 套目标与 360 点生命带来的全场威压",
+      "pp": 25
     }
   ],
   "normal": [

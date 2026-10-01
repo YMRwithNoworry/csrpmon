@@ -87,9 +87,9 @@
       "cat": "J",
       "type": "恶",
       "cls": "物理",
-      "pow": 70,
+      "pow": 90,
       "acc": 100,
-      "pp": 10,
+      "pp": 15,
       "range": "单体",
       "effect": "若目标在本场战斗中击倒过我方任意一只宝可梦，本招式威力提升为 105 并必定命中；否则按 70 结算。",
       "trigger": "目标身上带有\"曾击倒我方\"的记录时触发强化。",
@@ -100,31 +100,38 @@
   "common": [
     {
       "id": "adaptivelearning",
-      "why": "源码明确 supportsDamageAdaptation() == true，这是它的核心能力"
+      "why": "源码明确 supportsDamageAdaptation() == true，这是它的核心能力",
+      "pp": 25
     },
     {
       "id": "damageanalysis",
-      "why": "同为适应系，且它曾是会用战术的冒险者"
+      "why": "同为适应系，且它曾是会用战术的冒险者",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "残破武器与裂开的下颚都会造成撕裂伤"
+      "why": "残破武器与裂开的下颚都会造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "rendingpursuit",
-      "why": "高速追击是它最主要的战斗方式"
+      "why": "高速追击是它最主要的战斗方式",
+      "pp": 25
     },
     {
       "id": "growthdevour",
-      "why": "CRUDE 层共有的击杀成长"
+      "why": "CRUDE 层共有的击杀成长",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "它在追猎特定的目标"
+      "why": "它在追猎特定的目标",
+      "pp": 25
     },
     {
       "id": "frenzy",
-      "why": "低血时会进入残存的战斗本能"
+      "why": "低血时会进入残存的战斗本能",
+      "pp": 25
     }
   ],
   "normal": [

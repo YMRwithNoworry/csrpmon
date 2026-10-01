@@ -86,7 +86,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 15,
+      "pp": 20,
       "range": "全场",
       "effect": "从装填中释放 **1 只寄生体**，**作用范围为整个场地**（对应 `blockRange = 18.0`，前三阶仅 3 格）。**最多同时存在 12 只**。**同时清除对手全部场地类效果**（对应 `maxBlockHardness = 5.0`）。造成 0 点伤害。",
       "trigger": "需要装填数 > 0，且当前召唤数 < 12。",
@@ -102,7 +102,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 5,
+      "pp": 10,
       "range": "自身",
       "effect": "**主动塌缩自身**：立即移除自身在场上的全部召唤物，并按其数量对我方全体施加等量的攻击提升（每只 +1 阶段，最多 +3）。**自身被击倒**。对应 `TEMPORARY_BECKON_LIFETIME = 300` 的临时召唤柱机制。",
       "trigger": "无。",
@@ -113,43 +113,53 @@
   "common": [
     {
       "id": "parasiterelease",
-      "why": "它储存并释放已有的 SRP 生物"
+      "why": "它储存并释放已有的 SRP 生物",
+      "pp": 25
     },
     {
       "id": "hiverecall",
-      "why": "终阶具备菌巢召回能力"
+      "why": "终阶具备菌巢召回能力",
+      "pp": 25
     },
     {
       "id": "nestestablishment",
-      "why": "它是成熟的巢穴核心"
+      "why": "它是成熟的巢穴核心",
+      "pp": 25
     },
     {
       "id": "hivemothercall",
-      "why": "完整的巢母呼唤"
+      "why": "完整的巢母呼唤",
+      "pp": 25
     },
     {
       "id": "hiveoppression",
-      "why": "12 只同时在场的绝对威压"
+      "why": "12 只同时在场的绝对威压",
+      "pp": 25
     },
     {
       "id": "parasiticfield",
-      "why": "18 格范围的寄生领域"
+      "why": "18 格范围的寄生领域",
+      "pp": 25
     },
     {
       "id": "infectionpulse",
-      "why": "它是全层最强的范围感染源"
+      "why": "它是全层最强的范围感染源",
+      "pp": 25
     },
     {
       "id": "infestedground",
-      "why": "18 格地表纹路彻底改造地形"
+      "why": "18 格地表纹路彻底改造地形",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "它是巢穴扩散的终点"
+      "why": "它是巢穴扩散的终点",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "召唤前指认目标"
+      "why": "召唤前指认目标",
+      "pp": 25
     }
   ],
   "normal": [

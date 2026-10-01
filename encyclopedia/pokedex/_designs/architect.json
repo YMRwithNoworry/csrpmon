@@ -84,7 +84,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "场地",
       "effect": "在场上建立**巢穴结构**（持续 4 回合）：期间我方 PREEMINENT / PURE 层级宝可梦每回合回复 8% 最大 HP，且对手每回合结束获得 1 层【感染】。造成 0 点伤害。",
       "trigger": "无。",
@@ -100,7 +100,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "我方场地",
       "effect": "**修复我方已建立的场地结构**：延长其持续时间 2 回合，并回复我方全体 12% 最大 HP。对应它是 `ArchitectEntity`（*flying colony architect*）。造成 0 点伤害。",
       "trigger": "我方场上必须存在场地类效果。",
@@ -111,39 +111,48 @@
   "common": [
     {
       "id": "infestedground",
-      "why": "构筑的产物就是污染地面"
+      "why": "构筑的产物就是污染地面",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "巢穴结构本身是扩散节点"
+      "why": "巢穴结构本身是扩散节点",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "接触注染仍然存在"
+      "why": "接触注染仍然存在",
+      "pp": 25
     },
     {
       "id": "parasiterelease",
-      "why": "结构用于投放与储存"
+      "why": "结构用于投放与储存",
+      "pp": 25
     },
     {
       "id": "infectionpulse",
-      "why": "结构是范围感染源"
+      "why": "结构是范围感染源",
+      "pp": 25
     },
     {
       "id": "tissueregeneration",
-      "why": "修复是它的核心职能"
+      "why": "修复是它的核心职能",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "构筑前锁定需要覆盖的区域"
+      "why": "构筑前锁定需要覆盖的区域",
+      "pp": 25
     },
     {
       "id": "hiveoppression",
-      "why": "它建造的结构本身就是威压来源"
+      "why": "它建造的结构本身就是威压来源",
+      "pp": 25
     },
     {
       "id": "parasiticfield",
-      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（PREEMINENT）"
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（PREEMINENT）",
+      "pp": 25
     }
   ],
   "normal": [

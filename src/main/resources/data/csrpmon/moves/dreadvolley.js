@@ -1,9 +1,9 @@
 {
   accuracy: 100,
-  basePower: 55,
+  basePower: 70,
   category: "Special",
   name: "Dread Volley",
-  pp: 10,
+  pp: 15,
   priority: 0,
   multihit: 3,
   flags: {protect:1,mirror:1,metronome:1},

@@ -3,7 +3,7 @@
   basePower: 0,
   category: "Status",
   name: "Web Pull (Adapted)",
-  pp: 15,
+  pp: 20,
   priority: 0,
   flags: {"metronome":1},
   secondary: null,

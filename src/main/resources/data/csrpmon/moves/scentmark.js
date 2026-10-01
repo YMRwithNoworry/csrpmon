@@ -3,7 +3,7 @@
   basePower: 0,
   category: "Status",
   name: "Scent Mark",
-  pp: 10,
+  pp: 15,
   priority: 0,
   flags: {snatch:1,metronome:1},
   secondary: null,

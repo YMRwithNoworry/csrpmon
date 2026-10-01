@@ -80,7 +80,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 5,
+      "pp": 15,
       "range": "我方场地",
       "effect": "吐出一枚生物质囊：在其后 2 回合内每回合结束对目标造成 1/12 最大 HP 伤害；第 3 回合囊体孵化，对目标追加一次等同于裂噬兽一击的伤害（威力 65）并附加 2 层【感染】。场上同时最多存在 2 枚囊体。",
       "trigger": "无。",
@@ -91,31 +91,38 @@
   "common": [
     {
       "id": "callreinforcement",
-      "why": "它是全族召唤能力最明确的原生体"
+      "why": "它是全族召唤能力最明确的原生体",
+      "pp": 25
     },
     {
       "id": "parasiterelease",
-      "why": "它的产出方式就是释放体内储存的寄生体"
+      "why": "它的产出方式就是释放体内储存的寄生体",
+      "pp": 25
     },
     {
       "id": "vomit",
-      "why": "`VOMIT_COOLDOWN_TICKS = 180` 明确记录它具备呕吐行为"
+      "why": "`VOMIT_COOLDOWN_TICKS = 180` 明确记录它具备呕吐行为",
+      "pp": 25
     },
     {
       "id": "parasiticspores",
-      "why": "生物质囊的孢子扩散与寄生孢子同源"
+      "why": "生物质囊的孢子扩散与寄生孢子同源",
+      "pp": 25
     },
     {
       "id": "adaptivelearning",
-      "why": "原生体层级 supportsDamageAdaptation() 返回 true"
+      "why": "原生体层级 supportsDamageAdaptation() 返回 true",
+      "pp": 25
     },
     {
       "id": "tissueregeneration",
-      "why": "持续生产需要不断自我修复"
+      "why": "持续生产需要不断自我修复",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "它需要为产出的单位指认目标"
+      "why": "它需要为产出的单位指认目标",
+      "pp": 25
     }
   ],
   "normal": [

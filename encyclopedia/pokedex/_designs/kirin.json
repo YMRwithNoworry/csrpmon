@@ -84,9 +84,9 @@
       "cat": "Q",
       "type": "妖精",
       "cls": "特殊",
-      "pow": 140,
+      "pow": 175,
       "acc": 100,
-      "pp": 10,
+      "pp": 15,
       "range": "单体，全场",
       "effect": "**无视距离**（followRange 80）造成伤害。**若目标距离自身 3 格以上，威力提高 25%**；若已贴身，改为使目标特防下降 2 阶段。",
       "trigger": "与距离相关。",
@@ -100,9 +100,9 @@
       "cat": "Q",
       "type": "地面",
       "cls": "物理",
-      "pow": 120,
+      "pow": 150,
       "acc": 95,
-      "pp": 10,
+      "pp": 15,
       "range": "自身周围 2 格",
       "effect": "对周围所有对手造成伤害并使地面类场地效果**对自身不再生效**（它把地面踩平）。副作用：自身速度下降 1 阶段。",
       "trigger": "无。",
@@ -113,43 +113,53 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "infectionpulse",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "parasiticfield",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "corrosionmark",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     },
     {
       "id": "infestedground",
-      "why": "DERIVED 灾害级生物的职能来源"
+      "why": "DERIVED 灾害级生物的职能来源",
+      "pp": 25
     }
   ],
   "normal": [

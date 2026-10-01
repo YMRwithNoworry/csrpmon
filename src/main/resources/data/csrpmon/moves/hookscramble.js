@@ -1,9 +1,9 @@
 {
   accuracy: 100,
-  basePower: 75,
+  basePower: 95,
   category: "Physical",
   name: "Hook Scramble",
-  pp: 10,
+  pp: 15,
   priority: 1,
   flags: {contact:1,protect:1,mirror:1,metronome:1},
   secondary: null,

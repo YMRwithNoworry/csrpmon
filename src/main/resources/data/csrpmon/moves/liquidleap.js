@@ -1,9 +1,9 @@
 {
   accuracy: 100,
-  basePower: 70,
+  basePower: 90,
   category: "Physical",
   name: "Liquid Leap",
-  pp: 10,
+  pp: 15,
   priority: 1,
   multihit: 2,
   flags: {contact:1,protect:1,mirror:1,metronome:1},

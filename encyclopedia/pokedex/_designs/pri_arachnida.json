@@ -95,31 +95,38 @@
   "common": [
     {
       "id": "motorlag",
-      "why": "蛛丝造成的行动迟滞与它同源"
+      "why": "蛛丝造成的行动迟滞与它同源",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "前两对捕捉足带锯齿"
+      "why": "前两对捕捉足带锯齿",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "八足接触面注染"
+      "why": "八足接触面注染",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "伏击前必须锁定网中目标"
+      "why": "伏击前必须锁定网中目标",
+      "pp": 25
     },
     {
       "id": "adaptivelearning",
-      "why": "原生体层级 supportsDamageAdaptation() 返回 true"
+      "why": "原生体层级 supportsDamageAdaptation() 返回 true",
+      "pp": 25
     },
     {
       "id": "tissueregeneration",
-      "why": "腹部纺器需要持续再生丝蛋白"
+      "why": "腹部纺器需要持续再生丝蛋白",
+      "pp": 25
     },
     {
       "id": "needlesting",
-      "why": "绒毛中的细刺属于针刺系基础"
+      "why": "绒毛中的细刺属于针刺系基础",
+      "pp": 25
     }
   ],
   "normal": [

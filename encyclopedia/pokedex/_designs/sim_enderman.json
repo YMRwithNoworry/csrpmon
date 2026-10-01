@@ -85,7 +85,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "我方全体",
       "effect": "**把自身与我方全体一同重新部署到对手周围**：本回合我方全体受到的伤害减少 30%，且下一回合我方全体的先制招式先制度 +1。使用后 3 回合内不能再次使用。",
       "trigger": "冷却 3 回合，对应 `ALLY_TELEPORT_COOLDOWN = 40` 长于自身传送的 `SELF_TELEPORT_COOLDOWN = 20`。",
@@ -112,31 +112,38 @@
   "common": [
     {
       "id": "parasiticblink",
-      "why": "它是全族传送能力的原型"
+      "why": "它是全族传送能力的原型",
+      "pp": 25
     },
     {
       "id": "hunterteleport",
-      "why": "`TARGET_GRACE_TICKS = 80` 说明它会直接出现在目标身边"
+      "why": "`TARGET_GRACE_TICKS = 80` 说明它会直接出现在目标身边",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "同化体共有的接触注染"
+      "why": "同化体共有的接触注染",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "末影人的凝视与同化体的恐惧机制叠加"
+      "why": "末影人的凝视与同化体的恐惧机制叠加",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "传送前必须锁定目标位置"
+      "why": "传送前必须锁定目标位置",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "瞬移突袭打乱目标节奏"
+      "why": "瞬移突袭打乱目标节奏",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "细长指爪造成撕裂伤"
+      "why": "细长指爪造成撕裂伤",
+      "pp": 25
     }
   ],
   "normal": [

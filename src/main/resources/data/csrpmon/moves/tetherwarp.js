@@ -1,9 +1,9 @@
 {
   accuracy: 100,
-  basePower: 100,
+  basePower: 125,
   category: "Physical",
   name: "Tether Warp",
-  pp: 10,
+  pp: 15,
   priority: 1,
   flags: {contact:1,protect:1,mirror:1,metronome:1},
   volatileStatus: "tetherwarp",

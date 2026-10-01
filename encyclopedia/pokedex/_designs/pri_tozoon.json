@@ -89,7 +89,7 @@
       "cat": "Q",
       "type": "地面",
       "cls": "物理",
-      "pow": 70,
+      "pow": 90,
       "acc": 100,
       "pp": 15,
       "range": "自身周围 3 格",
@@ -102,31 +102,38 @@
   "common": [
     {
       "id": "infestedground",
-      "why": "它掘过的地层被寄生组织污染"
+      "why": "它掘过的地层被寄生组织污染",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "头冠硬质突起造成撕裂伤"
+      "why": "头冠硬质突起造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "体节接触面注染"
+      "why": "体节接触面注染",
+      "pp": 25
     },
     {
       "id": "corrosionmark",
-      "why": "震荡会磨损对手护甲"
+      "why": "震荡会磨损对手护甲",
+      "pp": 25
     },
     {
       "id": "adaptivelearning",
-      "why": "原生体层级 supportsDamageAdaptation() 返回 true"
+      "why": "原生体层级 supportsDamageAdaptation() 返回 true",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "环震冲击显著影响行动"
+      "why": "环震冲击显著影响行动",
+      "pp": 25
     },
     {
       "id": "tissueregeneration",
-      "why": "多节躯体需要持续修复"
+      "why": "多节躯体需要持续修复",
+      "pp": 25
     }
   ],
   "normal": [

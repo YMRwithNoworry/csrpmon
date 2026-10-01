@@ -84,9 +84,9 @@
       "cat": "Q",
       "type": "地面",
       "cls": "物理",
-      "pow": 90,
+      "pow": 115,
       "acc": 95,
-      "pp": 10,
+      "pp": 15,
       "range": "自身周围",
       "effect": "对场上所有对手造成伤害。**只能在自身与目标水平距离 ≥2 格、且垂直高度差在 -2 到 +4 之间时使用**；距离过近或高低差过大时招式失败。",
       "trigger": "距离与高度双条件，直接来自源码的 `SHOCKWAVE_MIN_DISTANCE_SQR` 与 `SHOCKWAVE_MIN_VERTICAL_DISTANCE / MAX`。",
@@ -100,9 +100,9 @@
       "cat": "M",
       "type": "毒",
       "cls": "特殊",
-      "pow": 70,
+      "pow": 90,
       "acc": 100,
-      "pp": 10,
+      "pp": 15,
       "range": "单体，射程 4",
       "effect": "必中。命中后使目标获得 1 层【感染】并降低 1 阶段特防。",
       "trigger": "无。",
@@ -113,31 +113,38 @@
   "common": [
     {
       "id": "laceration",
-      "why": "钝锤状末端造成的钝器撕裂伤"
+      "why": "钝锤状末端造成的钝器撕裂伤",
+      "pp": 25
     },
     {
       "id": "deeplaceration",
-      "why": "第二形态以上才具备的深层撕裂，它已具备"
+      "why": "第二形态以上才具备的深层撕裂，它已具备",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "锤击接触面同样带注染组织"
+      "why": "锤击接触面同样带注染组织",
+      "pp": 25
     },
     {
       "id": "adaptivelearning",
-      "why": "原生体层级 supportsDamageAdaptation() 返回 true"
+      "why": "原生体层级 supportsDamageAdaptation() 返回 true",
+      "pp": 25
     },
     {
       "id": "infectionorb",
-      "why": "它的灾厄球与寄生球系同源"
+      "why": "它的灾厄球与寄生球系同源",
+      "pp": 25
     },
     {
       "id": "waterambush",
-      "why": "`WaterLeapAtTargetGoal` 明确记录它的水域跳跃能力"
+      "why": "`WaterLeapAtTargetGoal` 明确记录它的水域跳跃能力",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "震波冲击会显著影响目标行动"
+      "why": "震波冲击会显著影响目标行动",
+      "pp": 25
     }
   ],
   "normal": [

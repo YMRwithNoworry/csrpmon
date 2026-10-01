@@ -82,9 +82,9 @@
       "cat": "C",
       "type": "恶",
       "cls": "物理",
-      "pow": 80,
+      "pow": 100,
       "acc": true,
-      "pp": 20,
+      "pp": 15,
       "range": "单体，全场",
       "effect": "**必定命中且无视距离**（对应 `followRange 32` 与\"永不失去目标\"）。**若目标本回合尝试过替换或提升闪避，威力提高 50%**。",
       "trigger": "无。",
@@ -100,7 +100,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "自身",
       "effect": "**清除自身全部异常状态并回复 25% 最大 HP**，但本回合无法攻击。对应 `FlightPursuitGoal(0.50D)`——它没有「放弃」这个状态，也没有「减速」这个状态。",
       "trigger": "无。",
@@ -111,39 +111,48 @@
   "common": [
     {
       "id": "markedprey",
-      "why": "它就是为标记与追击而存在的"
+      "why": "它就是为标记与追击而存在的",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "接触注染仍然存在"
+      "why": "接触注染仍然存在",
+      "pp": 25
     },
     {
       "id": "rendingpursuit",
-      "why": "追猎是它的全部"
+      "why": "追猎是它的全部",
+      "pp": 25
     },
     {
       "id": "hunteraura",
-      "why": "持续追击带来的压迫感"
+      "why": "持续追击带来的压迫感",
+      "pp": 20
     },
     {
       "id": "heightenedsenses",
-      "why": "锁定目标所需的感知"
+      "why": "锁定目标所需的感知",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "翼膜前缘造成撕裂伤"
+      "why": "翼膜前缘造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "追击命中限制目标行动"
+      "why": "追击命中限制目标行动",
+      "pp": 25
     },
     {
       "id": "hiveoppression",
-      "why": "PREEMINENT 层单位的威压"
+      "why": "PREEMINENT 层单位的威压",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（PREEMINENT）"
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（PREEMINENT）",
+      "pp": 25
     }
   ],
   "normal": [

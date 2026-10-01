@@ -82,9 +82,9 @@
       "cat": "A",
       "type": "虫",
       "cls": "特殊",
-      "pow": 55,
+      "pow": 70,
       "acc": 100,
-      "pp": 15,
+      "pp": 20,
       "range": "全体对手",
       "effect": "对场上所有对手造成伤害并各附加 2 层【感染】。**使用后自身进入跳跃状态**（下一回合先制 +1）。",
       "trigger": "无。",
@@ -95,27 +95,33 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "整个头颅都是接触注染面"
+      "why": "整个头颅都是接触注染面",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "它的光环就是巢群传播"
+      "why": "它的光环就是巢群传播",
+      "pp": 25
     },
     {
       "id": "infectingbite",
-      "why": "命中施加 COTH 是源码明确写出的"
+      "why": "命中施加 COTH 是源码明确写出的",
+      "pp": 25
     },
     {
       "id": "parasiticspores",
-      "why": "光环扩散与孢子传播同源"
+      "why": "光环扩散与孢子传播同源",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "源码注释写明命中同时施加 COTH 与 FEAR"
+      "why": "源码注释写明命中同时施加 COTH 与 FEAR",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "跳跃前锁定落点"
+      "why": "跳跃前锁定落点",
+      "pp": 25
     }
   ],
   "normal": [

@@ -86,7 +86,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 10,
+      "pp": 15,
       "range": "我方全体",
       "effect": "我方全体回复 25% 最大 HP 并清除一项能力下降。**病毒皮时**：追加使对手全体获得 1 层【感染】；**厚重皮时**：追加使我方全体防御 +1 阶段。",
       "trigger": "效果取决于出场时的皮肤。",
@@ -97,31 +97,38 @@
   "common": [
     {
       "id": "tissueregeneration",
-      "why": "支援单位需要长时间留在场上"
+      "why": "支援单位需要长时间留在场上",
+      "pp": 25
     },
     {
       "id": "parasiticcontact",
-      "why": "病毒皮时接触即注入"
+      "why": "病毒皮时接触即注入",
+      "pp": 25
     },
     {
       "id": "infectionorb",
-      "why": "`MobsConfig.bolsterOrbEffects()` 明确记录它的球体效果"
+      "why": "`MobsConfig.bolsterOrbEffects()` 明确记录它的球体效果",
+      "pp": 25
     },
     {
       "id": "adaptivelearning",
-      "why": "原生体层级 supportsDamageAdaptation() 返回 true"
+      "why": "原生体层级 supportsDamageAdaptation() 返回 true",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "它的增益以巢群为单位传播"
+      "why": "它的增益以巢群为单位传播",
+      "pp": 25
     },
     {
       "id": "corrosivebite",
-      "why": "腺体分泌物具备腐蚀性"
+      "why": "腺体分泌物具备腐蚀性",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "它需要替同伴指认目标"
+      "why": "它需要替同伴指认目标",
+      "pp": 25
     }
   ],
   "normal": [

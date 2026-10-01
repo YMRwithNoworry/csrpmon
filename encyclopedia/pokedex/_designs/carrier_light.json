@@ -85,7 +85,7 @@
       "cls": "变化",
       "pow": 0,
       "acc": true,
-      "pp": 5,
+      "pp": 15,
       "range": "我方场地",
       "effect": "展开载荷：立刻对目标造成其最大 HP 1/6 的固定伤害并附加 2 层感染。之后 3 回合内，每回合结束对目标追加 1 次 1/12 最大 HP 的伤害（代表载荷爬出后的持续啃食）。",
       "trigger": "无。",
@@ -96,27 +96,33 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "膨胀的体壁接触时就会注入感染"
+      "why": "膨胀的体壁接触时就会注入感染",
+      "pp": 25
     },
     {
       "id": "parasiterelease",
-      "why": "它就是载荷的释放者，这是它的本职"
+      "why": "它就是载荷的释放者，这是它的本职",
+      "pp": 25
     },
     {
       "id": "infectingbite",
-      "why": "密封盖下方的残余口器仍能注入"
+      "why": "密封盖下方的残余口器仍能注入",
+      "pp": 25
     },
     {
       "id": "vomit",
-      "why": "`spawnLingeringCloud()` 的毒云与呕吐同源"
+      "why": "`spawnLingeringCloud()` 的毒云与呕吐同源",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "爆炸时飞散的体壁碎片会造成撕裂伤"
+      "why": "爆炸时飞散的体壁碎片会造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "infectionmark",
-      "why": "投放前需要先给目标\"点名\""
+      "why": "投放前需要先给目标\"点名\"",
+      "pp": 25
     }
   ],
   "normal": [

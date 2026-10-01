@@ -1,9 +1,9 @@
 {
   accuracy: 100,
-  basePower: 45,
+  basePower: 55,
   category: "Special",
   name: "Spineball Volley",
-  pp: 10,
+  pp: 15,
   priority: 0,
   multihit: 3,
   flags: {protect:1,mirror:1,metronome:1},
@@ -22,7 +22,7 @@
     onResidualOrder: 8,
     onResidual(pokemon) {
       const layers = this.effectState.layers || 1;
-      this.damage(pokemon.maxhp * layers / 16, pokemon, this.effectState.source);
+      this.damage(pokemon.maxhp * layers / 12, pokemon, this.effectState.source);
     },
     onTrapPokemon(pokemon) {
       if ((this.effectState.layers || 1) >= 3) pokemon.tryTrap();

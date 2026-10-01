@@ -95,31 +95,38 @@
   "common": [
     {
       "id": "markedprey",
-      "why": "它是整个巢群的标记者"
+      "why": "它是整个巢群的标记者",
+      "pp": 25
     },
     {
       "id": "heightenedsenses",
-      "why": "followRange 32 的感知能力"
+      "why": "followRange 32 的感知能力",
+      "pp": 25
     },
     {
       "id": "infestedground",
-      "why": "基部根须污染周围地面"
+      "why": "基部根须污染周围地面",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "它是巢群的扩散节点"
+      "why": "它是巢群的扩散节点",
+      "pp": 25
     },
     {
       "id": "infectionmark",
-      "why": "标记与感染指认同源"
+      "why": "标记与感染指认同源",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "被持续注视产生压迫感"
+      "why": "被持续注视产生压迫感",
+      "pp": 25
     },
     {
       "id": "infectionorb",
-      "why": "发射管射出的是传染性投射物"
+      "why": "发射管射出的是传染性投射物",
+      "pp": 25
     }
   ],
   "normal": [

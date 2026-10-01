@@ -84,9 +84,9 @@
       "cat": "M",
       "type": "虫",
       "cls": "特殊",
-      "pow": 110,
+      "pow": 140,
       "acc": 95,
-      "pp": 10,
+      "pp": 15,
       "range": "单体，全场",
       "effect": "无视距离造成伤害并附加 2 层【感染】。**使用后需间隔 2 回合才能再次使用**（对应 `SHOT_COOLDOWN_TICKS = 100` 与村民的 40 形成对比）。",
       "trigger": "无。",
@@ -97,27 +97,33 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "掠夺化体的接触注染"
+      "why": "掠夺化体的接触注染",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "BLEED_CHANCE = 0.15F 的流血效果"
+      "why": "BLEED_CHANCE = 0.15F 的流血效果",
+      "pp": 25
     },
     {
       "id": "infectionorb",
-      "why": "骨刺球属于球体类投射物"
+      "why": "骨刺球属于球体类投射物",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "长蓄力前必须锁定目标"
+      "why": "长蓄力前必须锁定目标",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "重击命中影响目标行动"
+      "why": "重击命中影响目标行动",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "羊的群体本能残留"
+      "why": "羊的群体本能残留",
+      "pp": 25
     }
   ],
   "normal": [

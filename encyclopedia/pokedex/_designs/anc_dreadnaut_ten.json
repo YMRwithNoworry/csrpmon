@@ -82,7 +82,7 @@
       "cat": "A",
       "type": "地面",
       "cls": "物理",
-      "pow": 65,
+      "pow": 80,
       "acc": 100,
       "pp": 15,
       "range": "自身周围 1 格",
@@ -98,9 +98,9 @@
       "cat": "C",
       "type": "地面",
       "cls": "物理",
-      "pow": 70,
+      "pow": 90,
       "acc": 100,
-      "pp": 10,
+      "pp": 15,
       "range": "单体",
       "effect": "造成伤害并把目标**向自身方向拖拽**（使其本回合无法替换下场，且下一次受到的齐射类伤害提高 20%）。对应它是恐慑的地面部件。",
       "trigger": "无。",
@@ -111,43 +111,53 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "ANCIENT 地面部件的职能来源"
+      "why": "ANCIENT 地面部件的职能来源",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "ANCIENT 地面部件的职能来源"
+      "why": "ANCIENT 地面部件的职能来源",
+      "pp": 25
     },
     {
       "id": "infestedground",
-      "why": "ANCIENT 地面部件的职能来源"
+      "why": "ANCIENT 地面部件的职能来源",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "ANCIENT 地面部件的职能来源"
+      "why": "ANCIENT 地面部件的职能来源",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "ANCIENT 地面部件的职能来源"
+      "why": "ANCIENT 地面部件的职能来源",
+      "pp": 25
     },
     {
       "id": "hivespread",
-      "why": "ANCIENT 地面部件的职能来源"
+      "why": "ANCIENT 地面部件的职能来源",
+      "pp": 25
     },
     {
       "id": "corrosionmark",
-      "why": "ANCIENT 地面部件的职能来源"
+      "why": "ANCIENT 地面部件的职能来源",
+      "pp": 25
     },
     {
       "id": "parasiticdrain",
-      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）"
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）",
+      "pp": 25
     },
     {
       "id": "growthdevour",
-      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）"
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）"
+      "why": "ANCIENT/PREEMINENT/ADAPTED 层的基础职能来源（ANCIENT）",
+      "pp": 25
     }
   ],
   "normal": [

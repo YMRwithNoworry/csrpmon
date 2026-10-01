@@ -3,7 +3,7 @@
   basePower: 0,
   category: "Status",
   name: "Combat Evolution",
-  pp: 20,
+  pp: 25,
   priority: 0,
   flags: {snatch:1,metronome:1},
   boosts: {spa: 1},
@@ -18,7 +18,7 @@
     onSourceModifyDamage(damage, source, target, move) {
       const turns = this.effectState.turns || 0;
       if (turns > 0) this.debug("adaptation reduces damage");
-      if (turns >= 1) return this.chainModify(0.8);
+      if (turns >= 1) return this.chainModify(0.75);
     },
   },
   secondary: null,

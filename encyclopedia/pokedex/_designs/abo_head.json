@@ -84,9 +84,9 @@
       "cat": "C",
       "type": "超能",
       "cls": "物理",
-      "pow": 105,
+      "pow": 130,
       "acc": 100,
-      "pp": 10,
+      "pp": 15,
       "range": "单体",
       "effect": "造成伤害并**无视对手的闪避率变化**（巨颚方向明确）。**若目标本回合已行动过，威力提高 30%**。",
       "trigger": "与目标本回合是否已行动相关。",
@@ -97,31 +97,38 @@
   "common": [
     {
       "id": "parasiticcontact",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     },
     {
       "id": "feargaze",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     },
     {
       "id": "growthdevour",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     },
     {
       "id": "corrosionmark",
-      "why": "ABOMINATION 层的近战职能来源"
+      "why": "ABOMINATION 层的近战职能来源",
+      "pp": 25
     }
   ],
   "normal": [

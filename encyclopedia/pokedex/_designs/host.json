@@ -81,9 +81,9 @@
       "cat": "Q",
       "type": "地面",
       "cls": "物理",
-      "pow": 80,
+      "pow": 100,
       "acc": 95,
-      "pp": 10,
+      "pp": 15,
       "range": "单体",
       "effect": "第一回合潜入地下（本回合不造成伤害且受到的伤害减少 50%），第二回合破土攻击。破土时若目标本回合尚未行动，威力提高 30% 且必定命中。",
       "trigger": "两回合结算；潜入回合不能被替换打断。",
@@ -94,31 +94,38 @@
   "common": [
     {
       "id": "adaptivelearning",
-      "why": "源码明确 supportsDamageAdaptation() == true"
+      "why": "源码明确 supportsDamageAdaptation() == true",
+      "pp": 25
     },
     {
       "id": "infestedground",
-      "why": "它掘过的地面会被寄生组织污染"
+      "why": "它掘过的地面会被寄生组织污染",
+      "pp": 25
     },
     {
       "id": "motorlag",
-      "why": "从地下突袭会打乱目标的行动节奏"
+      "why": "从地下突袭会打乱目标的行动节奏",
+      "pp": 25
     },
     {
       "id": "laceration",
-      "why": "外翻咽部的环状齿列会造成撕裂伤"
+      "why": "外翻咽部的环状齿列会造成撕裂伤",
+      "pp": 25
     },
     {
       "id": "growthdevour",
-      "why": "`HOST_TO_HOSTII_KILLS = 40` 说明它靠击杀成长"
+      "why": "`HOST_TO_HOSTII_KILLS = 40` 说明它靠击杀成长",
+      "pp": 25
     },
     {
       "id": "markedprey",
-      "why": "伏击前必须在土下锁定目标位置"
+      "why": "伏击前必须在土下锁定目标位置",
+      "pp": 25
     },
     {
       "id": "dormancyregen",
-      "why": "`MAX_BURIED_TIMER = 4.8F` 的长时间潜伏对应它的地下恢复"
+      "why": "`MAX_BURIED_TIMER = 4.8F` 的长时间潜伏对应它的地下恢复",
+      "pp": 10
     }
   ],
   "normal": [
